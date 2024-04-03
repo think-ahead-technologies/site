@@ -45,8 +45,13 @@ export default defineConfig({
           'currency-exchange',
           'voice-presentation',
           'business-contact',
+          'settings',
+          'lock',
           'database',
         ],
+        'material-symbols': [
+            'cloud'
+        ]
       },
     }),
 
