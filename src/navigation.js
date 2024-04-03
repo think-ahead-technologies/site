@@ -3,28 +3,20 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Homes',
+      text: 'About us',
+      href: getPermalink('/about'),
+    },
+    {
+      text: 'Partners',
       links: [
         {
-          text: 'SaaS',
-          href: getPermalink('/homes/saas'),
-        },
-        {
-          text: 'Startup',
-          href: getPermalink('/homes/startup'),
-        },
-        {
-          text: 'Mobile App',
-          href: getPermalink('/homes/mobile-app'),
-        },
-        {
-          text: 'Personal',
-          href: getPermalink('/homes/personal'),
-        },
+          text: 'TODO',
+          href: getPermalink('/partners/todo'),
+        }
       ],
     },
     {
-      text: 'Pages',
+      text: 'Possible Pages',
       links: [
         {
           text: 'Features (Anchor Link)',
@@ -115,7 +107,7 @@ export const headerData = {
       href: '#',
     },
   ],
-  actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
+  actions: [{ text: 'GitHub', href: 'https://github.com/Think-Ahead-Technologies/', target: '_blank' }],
 };
 
 export const footerData = {
