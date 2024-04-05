@@ -1,6 +1,6 @@
 site:
   name: Think Ahead Technologies
-  site: 'https://www.think-ahead.tech'
+  site: 'https://think-ahead-technologies.netlify.app/'
   base: '/'
   trailingSlash: false
 
