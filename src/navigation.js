@@ -3,8 +3,8 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Who we are',
-      href: getPermalink('/who-we-are'),
+      text: "Who we are",
+      href: getPermalink(`/who-we-are`),
     },
     {
       text: 'Our solutions',
@@ -36,9 +36,9 @@ export const footerData = {
     {
       title: 'Services',
       links: [
-        { text: 'Platform & Cloud', href: '/solutions/cloud' },
-        { text: 'Security & Compliance', href: '/solutions/security' },
-        { text: 'Training & Workshops', href: '/solutions/training' },
+        { text: 'Platform & Cloud', href: getPermalink('/solutions/cloud') },
+        { text: 'Security & Compliance', href: getPermalink('/solutions/security') },
+        { text: 'Training & Workshops', href: getPermalink('/solutions/training') },
       ],
     }
   ],
@@ -47,7 +47,7 @@ export const footerData = {
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [
-    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/think-ahead-tech/' },,
+    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/think-ahead-tech/' },
     { ariaLabel: 'GitHub', icon: 'tabler:brand-github', href: 'https://github.com/Think-Ahead-Technologies' },
   ],
   footNote: `
