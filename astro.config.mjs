@@ -9,6 +9,7 @@ import mdx from '@astrojs/mdx';
 import partytown from '@astrojs/partytown';
 import icon from 'astro-icon';
 import compress from 'astro-compress';
+import paraglide from "@inlang/paraglide-js-adapter-astro"
 
 import astrowind from './src/integration';
 
@@ -27,12 +28,24 @@ const whenExternalScripts = (items = []) =>
 export default defineConfig({
   output: 'static',
 
+	i18n: {
+		locales: ["en", "de"],
+		defaultLocale: "en",
+        routing: {
+            prefixDefaultLocale: true
+        }
+	},
+
   integrations: [
     tailwind({
       applyBaseStyles: false,
     }),
     sitemap(),
     mdx(),
+    paraglide({
+        project: "./project.inlang",
+        outdir: "./src/paraglide", //where your files should be
+    }),
     icon({
       include: {
         tabler: ['*'],
