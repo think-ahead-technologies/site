@@ -31,6 +31,9 @@ export default defineConfig({
 	i18n: {
 		locales: ["en", "de"],
 		defaultLocale: "en",
+        fallback: {
+            de: "en"
+        },
         routing: {
             prefixDefaultLocale: true
         }
@@ -44,7 +47,7 @@ export default defineConfig({
     mdx(),
     paraglide({
         project: "./project.inlang",
-        outdir: "./src/paraglide", //where your files should be
+        outdir: "./src/paraglide", // these files are available to be imported into code
     }),
     icon({
       include: {
