@@ -9,6 +9,10 @@ import { getHomePermalink } from "~/utils/permalinks";
 import { trimSlash, getAsset } from "~/utils/permalinks";
 import type { CallToAction } from "~/types";
 
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 interface Link {
   text?: string;
   href?: string;
@@ -113,7 +117,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`
                   ]}
                   href={href}
                 >
-                  {text} {href}
+                  {t(text)} {href}
                 </a>
               )}
             </li>

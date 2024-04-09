@@ -1,9 +1,13 @@
 import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 
+// import { getLangFromUrl, useTranslations } from "./i18n/utils";
+// const lang = getLangFromUrl(Astro.url);
+// const t = useTranslations(lang);
+
 export const headerData = {
   links: [
     {
-      text: "Who we are",
+      text: "nav.about",
       href: getPermalink(`/who-we-are`),
     },
     {
