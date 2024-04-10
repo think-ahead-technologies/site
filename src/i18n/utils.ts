@@ -1,7 +1,7 @@
 import { ui, defaultLang } from './ui';
 
-export const PRIMARY_LANGUAGE = 'en'
-export const SECONDARY_LANGUAGE = 'de'
+export const PRIMARY_LANGUAGE = 'de'
+export const SECONDARY_LANGUAGE = 'en'
 
 export function getLangFromUrl(url: URL) {
   const [, lang] = url.pathname.split('/');
