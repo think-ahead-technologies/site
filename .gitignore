@@ -11,6 +11,9 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+# secondary language(s)
+src/pages/en
+src/pages/de
 
 # environment variables
 .env

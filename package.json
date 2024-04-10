@@ -4,9 +4,9 @@
   "version": "1.0.0-beta.21",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
+    "dev": "./scripts/i18n.sh && astro dev",
+    "start": "./scripts/i18n.sh && astro dev",
+    "build": "./scripts/i18n.sh && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier -w .",
