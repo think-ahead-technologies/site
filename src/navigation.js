@@ -11,15 +11,15 @@ export const headerData = {
       href: getPermalink(`/who-we-are`),
     },
     {
-      text: 'Our solutions',
+      text: 'nav.solutions',
       links: [
-        { text: 'Platform & Cloud', href: getPermalink('/solutions/cloud') },
-        { text: 'Security & Compliance', href: getPermalink('/solutions/security') },
-        { text: 'Training & Workshops', href: getPermalink('/solutions/training') }
+        { text: 'nav.platform', href: getPermalink('/solutions/cloud') },
+        { text: 'nav.security', href: getPermalink('/solutions/security') },
+        { text: 'nav.training', href: getPermalink('/solutions/training') }
       ]
     },
     // {
-    //   text: 'Partners',
+    //   text: 'nav.partners',
     //   links: [
     //     {
     //       text: 'TODO',
@@ -28,7 +28,7 @@ export const headerData = {
     //   ],
     // },
     {
-      text: 'Our insights',
+      text: 'nav.blog',
       href: getBlogPermalink(),
     }
   ],
@@ -38,23 +38,28 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: 'Services',
+      title: 'nav.solutions',
       links: [
-        { text: 'Platform & Cloud', href: getPermalink('/solutions/cloud') },
-        { text: 'Security & Compliance', href: getPermalink('/solutions/security') },
-        { text: 'Training & Workshops', href: getPermalink('/solutions/training') },
+        { text: 'nav.platform', href: getPermalink('/solutions/cloud') },
+        { text: 'nav.security', href: getPermalink('/solutions/security') },
+        { text: 'nav.training', href: getPermalink('/solutions/training') },
       ],
-    }
+    },
+    {
+        title: 'nav.languages',
+        links: [
+          { text: 'lang.de', href: getPermalink() },
+          { text: 'lang.en', href: getPermalink('/solutions/security') }
+        ],
+      }
   ],
   secondaryLinks: [
-    { text: 'Terms', href: getPermalink('/terms') },
-    { text: 'Privacy Policy', href: getPermalink('/privacy') },
+    { text: 'nav.terms', href: getPermalink('/terms') },
+    { text: 'nav.privacypolicy', href: getPermalink('/privacy') },
   ],
   socialLinks: [
     { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/think-ahead-tech/' },
-    { ariaLabel: 'GitHub', icon: 'tabler:brand-github', href: 'https://github.com/Think-Ahead-Technologies' },
+    { ariaLabel: 'GitHub', icon: 'tabler:brand-github', href: 'https://github.com/think-ahead-technologies' },
   ],
-  footNote: `
-    Copyright © <span class="dark:text-muted"> Think Ahead Technologies GmbH</span> 2024 · All rights reserved.
-  `,
+  footNote: `nav.footnote`,
 };
