@@ -1,9 +1,5 @@
 import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 
-// import { getLangFromUrl, useTranslations } from "./i18n/utils";
-// const lang = getLangFromUrl(Astro.url);
-// const t = useTranslations(lang);
-
 export const headerData = {
   links: [
     {
@@ -13,7 +9,7 @@ export const headerData = {
     {
       text: 'nav.solutions',
       links: [
-        { text: 'nav.platform', href: getPermalink('/solutions/cloud') },
+        { text: 'nav.platform', href: getPermalink('/solutions/platform') },
         { text: 'nav.security', href: getPermalink('/solutions/security') },
         { text: 'nav.training', href: getPermalink('/solutions/training') }
       ]

@@ -3,14 +3,57 @@
     "title": "Wilkommen",
     "splash": {
       "surtitle": "Expensive, complex infrastructure isn't actually safer",
-      "title": "Let's <0>Think Ahead</0> together (DE)",
-      "subtitle": "SOMETHING <0>secure</0>, <1>simple</1> and <2>effective</2> infrastructure solutions for the <3>future of technology</3>."
+      "title": "Let's <0>Think Ahead</0> together",
+      "subtitle": "Pioneering <0>secure</0>, <1>simple</1> and <2>effective</2> infrastructure solutions for the <3>future of technology</3>."
+    },
+    "learnmore": "Learn more"
+  },
+
+  "whoweare": {
+    "title": "Wer wir sind",
+    "subtitle": "Supporting the future with <0> drive and experience</0>",
+    "description": "A small team of passionate consultants, we leverage our wide range of industry experience to bring you the infrastructure solutions you need to make working with technology a joy, not a chore. We're used to working in large and small organisations, using Agile practices to implement solutions speedily but without compromise."
+  },
+
+  "solutions": {
+    "intro": "What solutions do we provide?",
+    "subtitle": "We have a wide range of skills and experience to help you with your infrastruture needs",
+    "platform": {
+        "title": "Platform & Cloud",
+        "description": "Design and implementation of solutions on both public and private clouds. Site reliability engineering"
+    },
+    "security": {
+        "title": "Security & Compliance",
+        "description": "Secure software supply chain. Secure development practices. Container security. Cloud security. Kubernetes security. Zero-trust infrastructure access"
+
+    },
+    "training": {
+        "title": "Training & Workshops",
+        "description": "Providing customer support for any technical issues related to the templates or their implementation."
     }
   },
-  "whoweare": {
-    "title": "Wer wir sind"
-  },
+
   "contact": {
-    "book": "Book a meeting"
+    "title": "Contact us",
+    "getintouch": "Get in touch",
+    "letsconnect": "Let's connect!",
+    "subtitle": "Let's discuss how we can help you build the infrastructure you want to work with!",
+    "book": "Book a meeting",
+    "email": {
+        "title": "Email"
+    },
+    "post": {
+        "title": "Location"
+    },
+    "videocall": {
+        "title": "Book a meeting",
+        "description": "Schedule a video call with us to discuss your needs in more detail.",
+        "booknow": "Book now"
+    }
+  },
+
+  "blog": {
+    "title": "Thinking Ahead",
+    "subtitle": "News, tutorials, resources and other thoughts from the team"
   }
 }

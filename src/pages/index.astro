@@ -5,6 +5,7 @@ import Hero from "~/components/widgets/Hero.astro";
 import CallToAction from "~/components/widgets/CallToAction.astro";
 import Features2 from "~/components/widgets/Features2.astro";
 import { Trans } from "astro-i18next/components";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
 changeLanguage("en");
 
@@ -44,7 +45,7 @@ const metadata = {
   <Features2
     id="about-us"
     title={t("whoweare.title") || "Error"}
-    subtitle="A small team of passionate consultants, we leverage our wide range of industry experience to bring you the infrastructure solutions you need to make working with technology a joy, not a chore. We're used to working in large and small organisations, using Agile practices to implement solutions speedily but without compromise."
+    subtitle={t("whoweare.description") || "Error"}
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
@@ -82,36 +83,50 @@ const metadata = {
 
   <Features2
     id="solutions"
-    title="What solutions do we provide?"
-    subtitle="We have a wide range of skills and experience to help you with your infrastruture needs"
+    title={t("solutions.intro") || "Error"}
+    subtitle={t("solutions.subtitle") || "Error"}
     items={[
       {
-        title: 'Security & Compliance',
-        description:
-          `Secure software supply chain. Secure development practices. Container security. Cloud security. Kubernetes security. Zero-trust infrastructure access
-          <div class="mt-2 font-bold highlight"><a href="/solutions/security">Learn more</a></div>`,
+        title: t("solutions.security.title") || "Error",
+        description: t("solutions.security.description") || "Error",
         icon: 'flat-color-icons:lock',
+        callToAction: {
+          variant: 'link',
+          text: 'Learn more',
+          href: getRelativeLocaleUrl(Astro.currentLocale || 'en', '/solutions/security'),
+          icon: 'tabler:circle-arrow-right'
+        }
       },
       {
-        title: 'Platform & Cloud',
-        description:
-          `Design and implementation of solutions on both public and private clouds. Site reliability engineering
-          <div class="mt-2 font-bold highlight"><a href="/solutions/cloud">Learn more</a></div>`,
+        title: t("solutions.platform.title") || "Error",
+        description: t("solutions.platform.description") || "Error",
         icon: 'material-symbols:cloud',
+        callToAction: {
+          variant: 'link',
+          text: 'Learn more',
+          href: getRelativeLocaleUrl(Astro.currentLocale || 'en', '/solutions/platform'),
+          icon: 'tabler:circle-arrow-right'
+        }
       },
       {
-        title: 'Training & Workshops',
-        description:
-          `Providing customer support for any technical issues related to the templates or their implementation.
-          <div class="mt-2 font-bold highlight"><a href="/solutions/training">Learn more</a></div>`,
+        title: t("solutions.training.title") || "Error",
+        description: t("solutions.training.description") || "Error",
         icon: 'flat-color-icons:voice-presentation',
-      },
+        callToAction: {
+          variant: 'link',
+          text: 'Learn more',
+          href: getRelativeLocaleUrl(Astro.currentLocale || 'en', '/solutions/training'),
+          icon: 'tabler:circle-arrow-right'
+        }
+      }
     ]}
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Features2>
+
+
 
   <!-- Features Widget *************** -->
 
@@ -141,16 +156,16 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Contact us',
+        text: t('contact.title') || "Error",
         href: '/contact',
         icon: 'tabler:mail',
       },
     ]}
   >
-    <Fragment slot="title">Get in touch</Fragment>
+    <Fragment slot="title">{t('contact.getintouch') || "Error"}</Fragment>
 
     <Fragment slot="subtitle">
-      Let's discuss how we can help you build the infrastructure you want to work with!
+      {t('contact.subtitle') || "Error"}
     </Fragment>
   </CallToAction>
 </Layout>

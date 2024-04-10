@@ -1,14 +1,12 @@
 ---
-import { changeLanguage } from "i18next";
+import { t, changeLanguage } from "i18next";
 import Layout from "~/layouts/PageLayout.astro";
-import HeroText from "~/components/widgets/HeroText.astro";
-import ContactUs from "~/components/widgets/Contact.astro";
 import Features2 from "~/components/widgets/Features2.astro";
 
 changeLanguage("en");
 
 const metadata = {
-    title: "Contact",
+    title: t("contact.title"),
 };
 ---
 
@@ -45,7 +43,7 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Let's connect!"
+    title={t("contact.letsconnect") || "Error"}
     items={[
       {
         title: 'Get in touch',
@@ -62,17 +60,24 @@ const metadata = {
     //       'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
     //   },
       {
-        title: 'Book a meeting',
-        description: '<a class="mt-2 font-bold highlight" href="https://outlook.office365.com/owa/calendar/ThinkAheadTechnologies@think-ahead.tech/bookings/">Schedule a video call</a> with us to discuss your needs in more detail!',
-        icon: 'tabler:headset',
+        title: t('contact.videocall.title') || "Error",
+        description: t('contact.videocall.description') || "Error",
+        icon: 'tabler:video',
+        callToAction: {
+            variant: 'secondary',
+            target: '_blank',
+            text: t('contact.videocall.booknow') || "Error",
+            href: 'https://outlook.office365.com/owa/calendar/ThinkAheadTechnologies@think-ahead.tech/bookings/',
+            icon: 'tabler:calendar',
+        }
       },
       {
-        title: 'Email',
+        title: t('contact.email.title') || "Error",
         description: 'contact@think-ahead.tech',
         icon: 'tabler:mail',
       },
       {
-        title: 'Location',
+        title: t('contact.post.title') || "Error",
         description: 'Lautenschlagerstraße 16, 70173 Stuttgart',
         icon: 'tabler:map-pin',
       },
