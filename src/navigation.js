@@ -7,7 +7,7 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: "nav.about",
+      text: "nav.whoweare",
       href: getPermalink(`/who-we-are`),
     },
     {

@@ -10,6 +10,7 @@ import { trimSlash, getAsset } from "~/utils/permalinks";
 import type { CallToAction } from "~/types";
 
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import Language from "../common/Language.astro";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
@@ -33,6 +34,7 @@ export interface Props {
   isSticky?: boolean;
   isDark?: boolean;
   isFullWidth?: boolean;
+  showLanguage?: boolean;
   showToggleTheme?: boolean;
   showRssFeed?: boolean;
   position?: string;
@@ -45,6 +47,7 @@ const {
   isSticky = false,
   isDark = false,
   isFullWidth = false,
+  showLanguage = false,
   showToggleTheme = false,
   showRssFeed = false,
   position = "center",
@@ -132,6 +135,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`
       ]}
     >
       <div class="items-center flex justify-between w-full md:w-auto">
+        {showLanguage && <Language iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" />}
         <div class="flex">
           {showToggleTheme && <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" />}
           {

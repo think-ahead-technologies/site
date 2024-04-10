@@ -8,15 +8,15 @@ export const languages = {
   export const ui = {
     en: {
       'nav.home': 'Welcome',
-      'nav.solutions': 'Our solutions',
       'nav.whoweare': 'Who we are',
+      'nav.solutions': 'Our solutions',
       'nav.platform': 'Platform & Cloud',
       'nav.security': 'Security & Compliance',
-      'nav.training': 'Training & Workshops',
+      'nav.training': 'Trainings & Workshops',
       'nav.partners': 'Partners',
       'nav.terms': 'Terms',
       'nav.privacypolicy': 'Privacy Policy',
-      'nav.footnote': 'Copyright © <span class="dark:text-muted"> Think Ahead Technologies GmbH</span> 2024 · All rights reserved.',
+      'nav.footnote': 'Copyright © <span class="dark:text-muted">Think Ahead Technologies GmbH</span> 2024 · All rights reserved.',
       'nav.blog': 'Our insights',
       'nav.languages': 'Languages',
       'lang.en': 'English',
@@ -24,6 +24,18 @@ export const languages = {
     },
     de: {
       'nav.home': 'Wilkommen',
-      'nav.about': 'Wer wir sind',
+      'nav.whoweare': 'Wer wir sind',
+      'nav.solutions': 'Unsere Lösungen',
+      'nav.platform': 'Plattform & Cloud',
+      'nav.security': 'Sicherheit & Compliance',
+      'nav.training': 'Trainings & Workshops',
+      'nav.partners': 'Partner',
+      'nav.terms': 'AGBs',
+      'nav.privacypolicy': 'Datenschutz',
+      'nav.footnote': 'Copyright © <span class="dark:text-muted">Think Ahead Technologies GmbH</span> 2024 · Alle Rechte vorbehalten.',
+      'nav.blog': 'Unsere Einblicke',
+      'nav.languages': 'Sprache',
+      'lang.en': 'English',
+      'lang.de': 'Deutsch'
     },
   } as const;

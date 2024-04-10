@@ -1,0 +1,49 @@
+---
+import { Icon } from 'astro-icon/components';
+
+import { UI } from 'astrowind:config';
+
+export interface Props {
+  label?: string;
+  class?: string;
+  iconClass?: string;
+  iconName?: string;
+  text?: string;
+}
+
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const {
+  label = 'lang.switch',
+  class:
+    className = 'hover:text-link dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center',
+  iconClass = 'w-6 h-6',
+  iconName = 'tabler:sun'
+} = Astro.props;
+
+const PRIMARY_LANGUAGE = 'en'
+const SECONDARY_LANGUAGE = 'de'
+
+const path = Astro.url.pathname.charAt(3) === '/' || Astro.url.pathname === `/${SECONDARY_LANGUAGE}`
+    ? Astro.url.pathname.substring(3)
+    : Astro.url.pathname
+const pathNoSlash = path.charAt(0) === '/' ? path.substring(1) : path
+
+const currentLocale = Astro.currentLocale
+const otherLocale = currentLocale === PRIMARY_LANGUAGE
+    ? `${SECONDARY_LANGUAGE}${pathNoSlash === '' ? '' : '/'}`
+    : ''
+const href = `/${otherLocale}${pathNoSlash}`
+
+const text = (currentLocale === SECONDARY_LANGUAGE ? PRIMARY_LANGUAGE : SECONDARY_LANGUAGE).toLocaleUpperCase()
+---
+
+{
+  !(UI.theme && UI.theme.endsWith(':only')) && (
+    <button type="button" class={className} aria-label={label}>
+      <a href={href}>{text}</a>
+    </button>
+  )
+}
