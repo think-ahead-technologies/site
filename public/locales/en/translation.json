@@ -1,8 +1,17 @@
 {
-    "index": {
-      "title": "Welcome"
+  "index": {
+    "title": "Welcome",
+    "splash": {
+      "surtitle": "Expensive, complex infrastructure isn't actually safer",
+      "title": "Let's <0>Think Ahead</0> together",
+      "subtitle": "Pioneering <0>secure</0>, <1>simple</1> and <2>effective</2> infrastructure solutions for the <3>future of technology</3>."
     },
-    "whoweare": {
-      "title": "Who we are"
-    }
+    "learnmore": "Learn more"
+  },
+  "whoweare": {
+    "title": "Who we are"
+  },
+  "contact": {
+    "book": "Book a meeting"
   }
+}

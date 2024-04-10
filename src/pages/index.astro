@@ -1,25 +1,15 @@
 ---
-import { changeLanguage } from "i18next";
+import { t, changeLanguage } from "i18next";
 import Layout from "~/layouts/PageLayout.astro";
 import Hero from "~/components/widgets/Hero.astro";
 import CallToAction from "~/components/widgets/CallToAction.astro";
 import Features2 from "~/components/widgets/Features2.astro";
-import Features from "~/components/widgets/Features.astro";
-import Stats from "~/components/widgets/Stats.astro";
-import Features3 from "~/components/widgets/Features3.astro";
-import FAQs from "~/components/widgets/FAQs.astro";
-import Brands from "~/components/widgets/Brands.astro";
 import { Trans } from "astro-i18next/components";
-
-import { getLangFromUrl, useTranslations } from "~/i18n/utils";
 
 changeLanguage("en");
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
-
 const metadata = {
-    title: "Welcome",
+    title: t("index.title"),
 };
 ---
 
@@ -27,25 +17,24 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline=`Expensive, complex infrastructure isn't actually safer (${Astro.currentLocale})`
+    tagline={t('index.splash.surtitle') || 'Error'}
     actions={[
       {
         variant: 'primary',
         target: '_blank',
-        text: 'Book a meeting',
+        text: t('contact.book') || "Error",
         href: 'https://outlook.office365.com/owa/calendar/ThinkAheadTechnologies@think-ahead.tech/bookings/',
         icon: 'tabler:calendar',
       },
-      { text: 'Learn more', href: '#solutions' },
+      { text: t('index.learnmore') || "Error", href: '#solutions' },
     ]}
   >
     <Fragment slot="title">
-      Let's <span
-        class="text-accent dark:text-white highlight">Think Ahead</span> together
+      <Trans i18nKey="index.splash.title">Let's <span class="text-accent dark:text-white highlight">Think Ahead</span> together</Trans>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Pioneering <span class="font-semibold">secure</span>, <span class="font-semibold">simple</span> and <span class="font-semibold">effective</span> infrastructure solutions for the <span class="font-semibold">future of technology</span>.
+      <Trans i18nKey="index.splash.subtitle">Pioneering <span class="font-semibold">secure</span>, <span class="font-semibold">simple</span> and <span class="font-semibold">effective</span> infrastructure solutions for the <span class="font-semibold">future of technology</span>.</Trans>
     </Fragment>
 
   </Hero>
@@ -54,7 +43,7 @@ const metadata = {
 
   <Features2
     id="about-us"
-    title={t("nav.home")}
+    title={t("whoweare.title") || "Error"}
     subtitle="A small team of passionate consultants, we leverage our wide range of industry experience to bring you the infrastructure solutions you need to make working with technology a joy, not a chore. We're used to working in large and small organisations, using Agile practices to implement solutions speedily but without compromise."
   >
     <Fragment slot="bg">

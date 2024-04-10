@@ -4,12 +4,13 @@
   "version": "1.0.0-beta.21",
   "private": true,
   "scripts": {
-    "dev": "./scripts/i18n.sh && astro dev",
-    "start": "./scripts/i18n.sh && astro dev",
-    "build": "./scripts/i18n.sh && astro build",
+    "dev": "npm run i18n && astro dev",
+    "start": "npm run i18n && astro dev",
+    "build": "npm run i18n && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier -w .",
+    "i18n": "npx astro-i18next generate",
     "lint:eslint": "eslint . --ext .js,.ts,.astro"
   },
   "dependencies": {

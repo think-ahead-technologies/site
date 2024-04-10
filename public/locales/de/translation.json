@@ -1,8 +1,16 @@
 {
-    "index": {
-      "title": "Wilkommen"
-    },
-    "whoweare": {
-      "title": "Wer wir sind"
+  "index": {
+    "title": "Wilkommen",
+    "splash": {
+      "surtitle": "Expensive, complex infrastructure isn't actually safer",
+      "title": "Let's <0>Think Ahead</0> together (DE)",
+      "subtitle": "SOMETHING <0>secure</0>, <1>simple</1> and <2>effective</2> infrastructure solutions for the <3>future of technology</3>."
     }
+  },
+  "whoweare": {
+    "title": "Wer wir sind"
+  },
+  "contact": {
+    "book": "Book a meeting"
   }
+}
