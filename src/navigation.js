@@ -31,12 +31,13 @@ export const headerData = {
   actions: [{ text: 'Contact', href: '/contact' }],
 };
 
+// NB URLs here are altered for locales by components/common/widgets/Footer.astro
 export const footerData = {
   links: [
     {
       title: 'nav.solutions',
       links: [
-        { text: 'nav.platform', href: getPermalink('/solutions/cloud') },
+        { text: 'nav.platform', href: getPermalink('/solutions/platform') },
         { text: 'nav.security', href: getPermalink('/solutions/security') },
         { text: 'nav.training', href: getPermalink('/solutions/training') },
       ],
@@ -44,8 +45,8 @@ export const footerData = {
     {
         title: 'nav.languages',
         links: [
-          { text: 'lang.de', href: getPermalink() },
-          { text: 'lang.en', href: getPermalink('/solutions/security') }
+          { text: 'lang.de', href: 'de' },
+          { text: 'lang.en', href: 'en' }
         ],
       }
   ],

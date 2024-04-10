@@ -5,12 +5,12 @@ import ToggleTheme from "~/components/common/ToggleTheme.astro";
 import ToggleMenu from "~/components/common/ToggleMenu.astro";
 import Button from "~/components/ui/Button.astro"
 
-import { getHomePermalink } from "~/utils/permalinks";
 import { trimSlash, getAsset } from "~/utils/permalinks";
 import type { CallToAction } from "~/types";
 
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 import Language from "../common/Language.astro";
+import { getRelativeLocaleUrl } from "astro:i18n";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
@@ -74,7 +74,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`
     ]}
   >
     <div class:list={[{ "mr-auto rtl:mr-0 rtl:ml-auto": position === "right" }, "flex justify-between"]}>
-      <a class="flex items-center" href={getHomePermalink()}>
+      <a class="flex items-center" href={getRelativeLocaleUrl(Astro.currentLocale, '')?.replace(/\/$/, "")}>
         <Logo />
       </a>
       <div class="flex items-center md:hidden">
@@ -104,7 +104,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`
                             "first:rounded-t last:rounded-b md:hover:bg-gray-100 hover:text-link dark:hover:text-white dark:hover:bg-gray-700 py-2 px-5 block whitespace-no-wrap",
                             { "aw-link-active" : href2 === currentPath}
                           ]}
-                          href={href2}
+                          href={getRelativeLocaleUrl(Astro.currentLocale, href2)}
                         >
                           {t(text2)}
                         </a>
@@ -118,7 +118,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`
                     "hover:text-link dark:hover:text-white px-4 py-3 flex items-centers",
                     { "aw-link-active": href === currentPath }
                   ]}
-                  href={href}
+                  href={getRelativeLocaleUrl(Astro.currentLocale, href)}
                 >
                   {t(text)}
                 </a>
