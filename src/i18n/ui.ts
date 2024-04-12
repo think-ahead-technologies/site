@@ -30,7 +30,7 @@ export const languages = {
       'nav.security': 'Sicherheit & Compliance',
       'nav.training': 'Trainings & Workshops',
       'nav.partners': 'Partner',
-      'nav.terms': 'AGBs',
+      'nav.terms': 'Impressum',
       'nav.privacypolicy': 'Datenschutz',
       'nav.footnote': 'Copyright © <span class="dark:text-muted">Think Ahead Technologies GmbH</span> 2024 · Alle Rechte vorbehalten.',
       'nav.blog': 'Unsere Einblicke',

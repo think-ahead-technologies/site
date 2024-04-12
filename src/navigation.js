@@ -51,7 +51,7 @@ export const footerData = {
       }
   ],
   secondaryLinks: [
-    { text: 'nav.terms', href: getPermalink('/terms') },
+    { text: 'nav.terms', href: getPermalink('/impressum') },
     { text: 'nav.privacypolicy', href: getPermalink('/privacy') },
   ],
   socialLinks: [
