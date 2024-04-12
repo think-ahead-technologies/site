@@ -4,10 +4,10 @@ title: Transitioning to a startup
 excerpt: We talk about what we're doing
 image: https://images.unsplash.com/photo-1637144113536-9c6e917be447?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80
 tags:
-  - startup
-  - founding
-  - consulting
-  - service
+    - startup
+    - founding
+    - consulting
+    - service
 ---
 
 ## Magna nunc senectus torquent per fusce sapien ligula tempus cra
@@ -18,13 +18,13 @@ Tristique eleifend enim praesent mollis sem leo, molestie dictum penatibus sodal
 
 ## Magna lacus tortor luctus platea co
 
-- Luctus molestie taciti aliquam dictumst imperdiet, donec torquent nisi.
+-   Luctus molestie taciti aliquam dictumst imperdiet, donec torquent nisi.
 
-- Montes cursus habitant risus platea senectus, lectus sagittis mi.
+-   Montes cursus habitant risus platea senectus, lectus sagittis mi.
 
-- Eleifend facilisi quam ultricies, accumsan aliquet euismod velit, sem tortor.
+-   Eleifend facilisi quam ultricies, accumsan aliquet euismod velit, sem tortor.
 
-- Senectus nisl potenti congue sociosqu at, porttitor habitant vivamus.
+-   Senectus nisl potenti congue sociosqu at, porttitor habitant vivamus.
 
 Nostra dictum porta consequat quisque diam nisl iaculis velit varius, placerat curabitur risus commodo condimentum morbi eros dictumst phasellus, tempor duis libero ultrices est rhoncus mattis nam. Quisque lectus massa lobortis nulla enim, praesent eu ut elementum. Felis placerat nibh donec erat platea rutrum taciti cursus, elementum metus semper feugiat risus tellus nulla, aliquam hendrerit faucibus inceptos commodo justo porta.
 

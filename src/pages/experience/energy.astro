@@ -10,34 +10,39 @@ import Layout from "~/layouts/PageLayout.astro";
 changeLanguage("de");
 
 const metadata = {
-    title: "Services",
+    title: "Services"
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
+    <!-- Hero Widget ******************* -->
 
-  <Hero
-    tagline="Energy & Utilities"
-    subtitle="We have worked extensively with automotive manufacturors and are familiar with their unique needs and challenges."
-    actions={[{ variant:"primary", target: '_blank', text: 'Start exploring', href: '/' }]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Think Ahead Hero Image',
-    }}
-  />
+    <Hero
+        tagline="Energy & Utilities"
+        subtitle="We have worked extensively with automotive manufacturors and are familiar with their unique needs and challenges."
+        actions={[
+            {
+                variant: "primary",
+                target: "_blank",
+                text: "Start exploring",
+                href: "/"
+            }
+        ]}
+        image={{
+            src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+            alt: "Think Ahead Hero Image"
+        }}
+    />
 
-  <!-- Problems the client has (what we understand)
+    <!-- Problems the client has (what we understand)
 
   How we can solve it
 
   Our approach / details -->
 
+    <!-- Features2 Widget ************** -->
 
-
-  <!-- Features2 Widget ************** -->
-
-  <!-- <Features2
+    <!-- <Features2
     title="Explore our diverse templates"
     subtitle="Discover our selection below to streamline and elevate your projects."
     columns={3}
@@ -97,9 +102,9 @@ const metadata = {
     ]}
   /> -->
 
-  <!-- Content Widget **************** -->
+    <!-- Content Widget **************** -->
 
-  <!-- <Content
+    <!-- <Content
     isReversed
     items={[
       {
@@ -125,9 +130,9 @@ const metadata = {
     </Fragment>
   </Content> -->
 
-  <!-- Content Widget **************** -->
+    <!-- Content Widget **************** -->
 
-  <!-- <Content
+    <!-- <Content
     isAfterContent
     items={[
       {
@@ -153,9 +158,9 @@ const metadata = {
     </Fragment>
   </Content> -->
 
-  <!-- Testimonials Widget *********** -->
+    <!-- Testimonials Widget *********** -->
 
-  <!-- <Testimonials
+    <!-- <Testimonials
     title="Words from real customers"
     testimonials={[
       {
@@ -176,15 +181,17 @@ const metadata = {
     }}
   /> -->
 
-  <!-- CallToAction Widget *********** -->
+    <!-- CallToAction Widget *********** -->
 
-  <CallToAction
-    actions={[{
-      variant: "primary",
-      text: 'Start exploring',
-      href: '/',
-    }]}
-    title="Work in progress"
-    subtitle="This page will be extended soon! Please watch this space."
-  />
+    <CallToAction
+        actions={[
+            {
+                variant: "primary",
+                text: "Start exploring",
+                href: "/"
+            }
+        ]}
+        title="Work in progress"
+        subtitle="This page will be extended soon! Please watch this space."
+    />
 </Layout>

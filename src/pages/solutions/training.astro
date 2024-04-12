@@ -7,35 +7,40 @@ import Layout from "~/layouts/PageLayout.astro";
 changeLanguage("de");
 
 const metadata = {
-    title: t("solutions.training.title"),
+    title: t("solutions.training.title")
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
+    <!-- Hero Widget ******************* -->
 
-  <Hero
-    tagline={t("solutions.training.title") || "Error"}
-    title={t("solutions.training.splash") || "Error" }
-    subtitle={t("solutions.training.subtitle") || "Error" }
-    actions={[{ variant:"primary", target: '_blank', text: t('general.startexploring') || "Error", href: '/' }]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Think Ahead Hero Image',
-    }}
-  />
+    <Hero
+        tagline={t("solutions.training.title") || "Error"}
+        title={t("solutions.training.splash") || "Error"}
+        subtitle={t("solutions.training.subtitle") || "Error"}
+        actions={[
+            {
+                variant: "primary",
+                target: "_blank",
+                text: t("general.startexploring") || "Error",
+                href: "/"
+            }
+        ]}
+        image={{
+            src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+            alt: "Think Ahead Hero Image"
+        }}
+    />
 
-  <!-- Problems the client has (what we understand)
+    <!-- Problems the client has (what we understand)
 
   How we can solve it
 
   Our approach / details -->
 
+    <!-- Features2 Widget ************** -->
 
-
-  <!-- Features2 Widget ************** -->
-
-  <!-- <Features2
+    <!-- <Features2
     title="Explore our diverse templates"
     subtitle="Discover our selection below to streamline and elevate your projects."
     columns={3}
@@ -95,9 +100,9 @@ const metadata = {
     ]}
   /> -->
 
-  <!-- Content Widget **************** -->
+    <!-- Content Widget **************** -->
 
-  <!-- <Content
+    <!-- <Content
     isReversed
     items={[
       {
@@ -123,9 +128,9 @@ const metadata = {
     </Fragment>
   </Content> -->
 
-  <!-- Content Widget **************** -->
+    <!-- Content Widget **************** -->
 
-  <!-- <Content
+    <!-- <Content
     isAfterContent
     items={[
       {
@@ -151,9 +156,9 @@ const metadata = {
     </Fragment>
   </Content> -->
 
-  <!-- Testimonials Widget *********** -->
+    <!-- Testimonials Widget *********** -->
 
-  <!-- <Testimonials
+    <!-- <Testimonials
     title="Words from real customers"
     testimonials={[
       {
@@ -174,15 +179,17 @@ const metadata = {
     }}
   /> -->
 
-  <!-- CallToAction Widget *********** -->
+    <!-- CallToAction Widget *********** -->
 
-  <CallToAction
-    actions={[{
-      variant: "primary",
-      text: t('general.startexploring') || "Error",
-      href: '/',
-    }]}
-    title={t('general.wip') || "Error"}
-    subtitle={t('general.comingsoon') || "Error"}
-  />
+    <CallToAction
+        actions={[
+            {
+                variant: "primary",
+                text: t("general.startexploring") || "Error",
+                href: "/"
+            }
+        ]}
+        title={t("general.wip") || "Error"}
+        subtitle={t("general.comingsoon") || "Error"}
+    />
 </Layout>

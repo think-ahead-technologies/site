@@ -1,6 +1,6 @@
 ---
-title: 'Impressum'
-layout: '~/layouts/MarkdownLayout.astro'
+title: "Impressum"
+layout: "~/layouts/MarkdownLayout.astro"
 ---
 
 _Last updated_: April 11, 2024

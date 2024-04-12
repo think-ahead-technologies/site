@@ -1,70 +1,70 @@
 {
-  "index": {
-    "title": "Welcome",
-    "splash": {
-      "surtitle": "Expensive, complex infrastructure isn't actually safer",
-      "title": "Let's <0>Think Ahead</0> together",
-      "subtitle": "Pioneering <0>secure</0>, <1>simple</1> and <2>effective</2> infrastructure solutions for the <3>future of technology</3>."
+    "index": {
+        "title": "Welcome",
+        "splash": {
+            "surtitle": "Expensive, complex infrastructure isn't actually safer",
+            "title": "Let's <0>Think Ahead</0> together",
+            "subtitle": "Pioneering <0>secure</0>, <1>simple</1> and <2>effective</2> infrastructure solutions for the <3>future of technology</3>."
+        },
+        "learnmore": "Learn more"
     },
-    "learnmore": "Learn more"
-  },
 
-  "general": {
-    "startexploring": "Start exploring",
-    "wip": "Work in progress",
-    "comingsoon": "This page will be extended soon! Please watch this space."
-  },
-
-  "whoweare": {
-    "title": "Who we are",
-    "tagline": "Who we are",
-    "subtitle": "Supporting the future with <0> drive and experience</0>",
-    "description": "A small team of passionate consultants, we leverage our wide range of industry experience to bring you the infrastructure solutions you need to make working with technology a joy, not a chore. We're used to working in large and small organisations, using Agile practices to implement solutions speedily but without compromise."
-  },
-
-  "solutions": {
-    "intro": "What solutions do we provide?",
-    "subtitle": "We have a wide range of skills and experience to help you with your infrastruture needs",
-    "platform": {
-        "title": "Platform & Cloud",
-        "description": "Whether you're on a public or a private cloud, we can help with the design, development and operation of your infrastructure",
-        "splash": "We can design and build your ideal infrastructure",
-        "subtitle": "With years of experience across clouds and clients, we can build lots of things for you."
+    "general": {
+        "startexploring": "Start exploring",
+        "wip": "Work in progress",
+        "comingsoon": "This page will be extended soon! Please watch this space."
     },
-    "security": {
-        "title": "Security & Compliance",
-        "description": "Security and compliance are no secondary concern for us: they are part of the entire development cycle. This makes meeting NIS2 and Cyber Resilience Act requirements a breeze.",
-        "splash": "We can make your infrastructure secure",
-        "subtitle": "With years of experience across clouds and clients, we can help you secure your assets."
+
+    "whoweare": {
+        "title": "Who we are",
+        "tagline": "Who we are",
+        "subtitle": "Supporting the future with <0> drive and experience</0>",
+        "description": "A small team of passionate consultants, we leverage our wide range of industry experience to bring you the infrastructure solutions you need to make working with technology a joy, not a chore. We're used to working in large and small organisations, using Agile practices to implement solutions speedily but without compromise."
     },
-    "training": {
-        "title": "Training & Workshops",
-        "description": "Providing customer support for any technical issues related to the templates or their implementation.",
-        "splash": "We can help your team build sustainable solutions",
-        "subtitle": "With years of experience across clouds and clients, we can tell you lots of things."
+
+    "solutions": {
+        "intro": "What solutions do we provide?",
+        "subtitle": "We have a wide range of skills and experience to help you with your infrastruture needs",
+        "platform": {
+            "title": "Platform & Cloud",
+            "description": "Whether you're on a public or a private cloud, we can help with the design, development and operation of your infrastructure",
+            "splash": "We can design and build your ideal infrastructure",
+            "subtitle": "With years of experience across clouds and clients, we can build lots of things for you."
+        },
+        "security": {
+            "title": "Security & Compliance",
+            "description": "Security and compliance are no secondary concern for us: they are part of the entire development cycle. This makes meeting NIS2 and Cyber Resilience Act requirements a breeze.",
+            "splash": "We can make your infrastructure secure",
+            "subtitle": "With years of experience across clouds and clients, we can help you secure your assets."
+        },
+        "training": {
+            "title": "Training & Workshops",
+            "description": "Providing customer support for any technical issues related to the templates or their implementation.",
+            "splash": "We can help your team build sustainable solutions",
+            "subtitle": "With years of experience across clouds and clients, we can tell you lots of things."
+        }
+    },
+
+    "contact": {
+        "title": "Contact us",
+        "letsconnect": "Let's get to know each other!",
+        "subtitle": "Let's discuss how we can help you build the infrastructure you want to work with.",
+        "book": "Book a meeting",
+        "email": {
+            "title": "Email"
+        },
+        "post": {
+            "title": "Location"
+        },
+        "videocall": {
+            "title": "Book a meeting",
+            "description": "Schedule a video call with us to discuss your needs in more detail.",
+            "booknow": "Book now"
+        }
+    },
+
+    "blog": {
+        "title": "Thinking Ahead",
+        "subtitle": "News, tutorials, resources and other thoughts from the team"
     }
-  },
-
-  "contact": {
-    "title": "Contact us",
-    "letsconnect": "Let's get to know each other!",
-    "subtitle": "Let's discuss how we can help you build the infrastructure you want to work with.",
-    "book": "Book a meeting",
-    "email": {
-        "title": "Email"
-    },
-    "post": {
-        "title": "Location"
-    },
-    "videocall": {
-        "title": "Book a meeting",
-        "description": "Schedule a video call with us to discuss your needs in more detail.",
-        "booknow": "Book now"
-    }
-  },
-
-  "blog": {
-    "title": "Thinking Ahead",
-    "subtitle": "News, tutorials, resources and other thoughts from the team"
-  }
 }

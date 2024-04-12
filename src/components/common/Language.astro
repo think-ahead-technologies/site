@@ -1,43 +1,39 @@
 ---
-import { Icon } from 'astro-icon/components';
+import { Icon } from "astro-icon/components";
 
-import { UI } from 'astrowind:config';
-import { PRIMARY_LANGUAGE, SECONDARY_LANGUAGE, getPathWithoutLocale } from '~/i18n/utils'
+import { UI } from "astrowind:config";
+import { PRIMARY_LANGUAGE, SECONDARY_LANGUAGE, getPathWithoutLocale } from "~/i18n/utils";
 
 export interface Props {
-  label?: string;
-  class?: string;
-  iconClass?: string;
-  iconName?: string;
-  text?: string;
+    label?: string;
+    class?: string;
+    iconClass?: string;
+    iconName?: string;
+    text?: string;
 }
 
+const path = getPathWithoutLocale(Astro.url.pathname);
 
-const path = getPathWithoutLocale(Astro.url.pathname)
+const currentLocale = Astro.currentLocale;
+const otherLocale = currentLocale === PRIMARY_LANGUAGE ? `${SECONDARY_LANGUAGE}${path === "" ? "" : "/"}` : "";
+const href = `/${otherLocale}${path}`;
 
-const currentLocale = Astro.currentLocale
-const otherLocale = currentLocale === PRIMARY_LANGUAGE
-    ? `${SECONDARY_LANGUAGE}${path === '' ? '' : '/'}`
-    : ''
-const href = `/${otherLocale}${path}`
-
-const icon = (currentLocale === SECONDARY_LANGUAGE ? PRIMARY_LANGUAGE : SECONDARY_LANGUAGE)
+const icon = currentLocale === SECONDARY_LANGUAGE ? PRIMARY_LANGUAGE : SECONDARY_LANGUAGE;
 
 const {
-  label = 'lang.switch',
-  class:
-    className = 'hover:text-link dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center',
-  iconClass = 'w-6 h-6',
-  iconName = `circle-flags:${icon}`
+    label = "lang.switch",
+    class: className = "hover:text-link dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center",
+    iconClass = "w-6 h-6",
+    iconName = `circle-flags:${icon}`
 } = Astro.props;
 ---
 
 {
-  !(UI.theme && UI.theme.endsWith(':only')) && (
-    <a href={href}>
-      <button type="button" class={className} aria-label={label}>
-        <Icon name={iconName} class={iconClass} />
-      </button>
-    </a>
-  )
+    !(UI.theme && UI.theme.endsWith(":only")) && (
+        <a href={href}>
+            <button type="button" class={className} aria-label={label}>
+                <Icon name={iconName} class={iconClass} />
+            </button>
+        </a>
+    )
 }

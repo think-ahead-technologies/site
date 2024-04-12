@@ -7,13 +7,13 @@
 
 **AstroWind** is a free and open-source template to make your website using **[Astro 4.0](https://astro.build/) + [Tailwind CSS](https://tailwindcss.com/)**. Ready to start a new project and designed taking into account web best practices.
 
-- ✅ **Production-ready** scores in **PageSpeed Insights** reports.
-- ✅ Integration with **Tailwind CSS** supporting **Dark mode** and **_RTL_**.
-- ✅ **Fast and SEO friendly blog** with automatic **RSS feed**, **MDX** support, **Categories & Tags**, **Social Share**, ...
-- ✅ **Image Optimization** (using new **Astro Assets** and **Unpic** for Universal image CDN).
-- ✅ Generation of **project sitemap** based on your routes.
-- ✅ **Open Graph tags** for social media sharing.
-- ✅ **Analytics** built-in Google Analytics, and Splitbee integration.
+-   ✅ **Production-ready** scores in **PageSpeed Insights** reports.
+-   ✅ Integration with **Tailwind CSS** supporting **Dark mode** and **_RTL_**.
+-   ✅ **Fast and SEO friendly blog** with automatic **RSS feed**, **MDX** support, **Categories & Tags**, **Social Share**, ...
+-   ✅ **Image Optimization** (using new **Astro Assets** and **Unpic** for Universal image CDN).
+-   ✅ Generation of **project sitemap** based on your routes.
+-   ✅ **Open Graph tags** for social media sharing.
+-   ✅ **Analytics** built-in Google Analytics, and Splitbee integration.
 
 <br>
 
@@ -32,18 +32,18 @@
 <details open>
 <summary>Table of Contents</summary>
 
-- [Demo](#demo)
-- [Upcoming: AstroWind 2.0 – We Need Your Vision!](#-upcoming-astrowind-20--we-need-your-vision)
-- [Getting started](#getting-started)
-  - [Project structure](#project-structure)
-  - [Commands](#commands)
-  - [Configuration](#configuration)
-  - [Deploy](#deploy)
-- [Frequently Asked Questions](#frequently-asked-questions)
-- [Related Projects](#related-projects)
-- [Contributing](#contributing)
-- [Acknowledgements](#acknowledgements)
-- [License](#license)
+-   [Demo](#demo)
+-   [Upcoming: AstroWind 2.0 – We Need Your Vision!](#-upcoming-astrowind-20--we-need-your-vision)
+-   [Getting started](#getting-started)
+    -   [Project structure](#project-structure)
+    -   [Commands](#commands)
+    -   [Configuration](#configuration)
+    -   [Deploy](#deploy)
+-   [Frequently Asked Questions](#frequently-asked-questions)
+-   [Related Projects](#related-projects)
+-   [Contributing](#contributing)
+-   [Acknowledgements](#acknowledgements)
+-   [License](#license)
 
 </details>
 
@@ -158,102 +158,102 @@ Basic configuration file: `./src/config.yaml`
 
 ```yaml
 site:
-  name: 'Example'
-  site: 'https://example.com'
-  base: '/' # Change this if you need to deploy to Github Pages, for example
-  trailingSlash: false # Generate permalinks with or without "/" at the end
+    name: "Example"
+    site: "https://example.com"
+    base: "/" # Change this if you need to deploy to Github Pages, for example
+    trailingSlash: false # Generate permalinks with or without "/" at the end
 
-  googleSiteVerificationId: false # Or some value,
+    googleSiteVerificationId: false # Or some value,
 
 # Default SEO metadata
 metadata:
-  title:
-    default: 'Example'
-    template: '%s — Example'
-  description: 'This is the default meta description of Example website'
-  robots:
-    index: true
-    follow: true
-  openGraph:
-    site_name: 'Example'
-    images:
-      - url: '~/assets/images/default.png'
-        width: 1200
-        height: 628
-    type: website
-  twitter:
-    handle: '@twitter_user'
-    site: '@twitter_user'
-    cardType: summary_large_image
+    title:
+        default: "Example"
+        template: "%s — Example"
+    description: "This is the default meta description of Example website"
+    robots:
+        index: true
+        follow: true
+    openGraph:
+        site_name: "Example"
+        images:
+            - url: "~/assets/images/default.png"
+              width: 1200
+              height: 628
+        type: website
+    twitter:
+        handle: "@twitter_user"
+        site: "@twitter_user"
+        cardType: summary_large_image
 
 i18n:
-  language: en
-  textDirection: ltr
+    language: en
+    textDirection: ltr
 
 apps:
-  blog:
-    isEnabled: true # If the blog will be enabled
-    postsPerPage: 6 # Number of posts per page
+    blog:
+        isEnabled: true # If the blog will be enabled
+        postsPerPage: 6 # Number of posts per page
 
-    post:
-      isEnabled: true
-      permalink: '/blog/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
-      robots:
-        index: true
+        post:
+            isEnabled: true
+            permalink: "/blog/%slug%" # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
+            robots:
+                index: true
 
-    list:
-      isEnabled: true
-      pathname: 'blog' # Blog main path, you can change this to "articles" (/articles)
-      robots:
-        index: true
+        list:
+            isEnabled: true
+            pathname: "blog" # Blog main path, you can change this to "articles" (/articles)
+            robots:
+                index: true
 
-    category:
-      isEnabled: true
-      pathname: 'category' # Category main path /category/some-category, you can change this to "group" (/group/some-category)
-      robots:
-        index: true
+        category:
+            isEnabled: true
+            pathname: "category" # Category main path /category/some-category, you can change this to "group" (/group/some-category)
+            robots:
+                index: true
 
-    tag:
-      isEnabled: true
-      pathname: 'tag' # Tag main path /tag/some-tag, you can change this to "topics" (/topics/some-category)
-      robots:
-        index: false
+        tag:
+            isEnabled: true
+            pathname: "tag" # Tag main path /tag/some-tag, you can change this to "topics" (/topics/some-category)
+            robots:
+                index: false
 
-    isRelatedPostsEnabled: true # If a widget with related posts is to be displayed below each post
-    relatedPostsCount: 4 # Number of related posts to display
+        isRelatedPostsEnabled: true # If a widget with related posts is to be displayed below each post
+        relatedPostsCount: 4 # Number of related posts to display
 
 analytics:
-  vendors:
-    googleAnalytics:
-      id: null # or "G-XXXXXXXXXX"
+    vendors:
+        googleAnalytics:
+            id: null # or "G-XXXXXXXXXX"
 
 ui:
-  theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+    theme: "system" # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
 
-  tokens:
-    default:
-      fonts:
-        sans: InterVariable
-        serif: InterVariable
-        heading: InterVariable
-      colors:
-        default: rgb(16 16 16)
-        heading: rgb(0 0 0)
-        muted: rgb(16 16 16 / 66%)
-        bgPage: rgb(255 255 255)
-        primary: rgb(1 97 239)
-        secondary: rgb(1 84 207)
-        accent: rgb(109 40 217)
-    dark:
-      fonts: {}
-      colors:
-        default: rgb(229 236 246)
-        heading: rgb(247, 248, 248)
-        muted: rgb(229 236 246 / 66%)
-        bgPage: rgb(3 6 32)
-        primary: rgb(1 97 239)
-        secondary: rgb(1 84 207)
-        accent: rgb(109 40 217)
+    tokens:
+        default:
+            fonts:
+                sans: InterVariable
+                serif: InterVariable
+                heading: InterVariable
+            colors:
+                default: rgb(16 16 16)
+                heading: rgb(0 0 0)
+                muted: rgb(16 16 16 / 66%)
+                bgPage: rgb(255 255 255)
+                primary: rgb(1 97 239)
+                secondary: rgb(1 84 207)
+                accent: rgb(109 40 217)
+        dark:
+            fonts: {}
+            colors:
+                default: rgb(229 236 246)
+                heading: rgb(247, 248, 248)
+                muted: rgb(229 236 246 / 66%)
+                bgPage: rgb(3 6 32)
+                primary: rgb(1 97 239)
+                secondary: rgb(1 84 207)
+                accent: rgb(109 40 217)
 ```
 
 <br>
@@ -288,7 +288,7 @@ Clone this repository on own GitHub account and deploy to Vercel:
 
 ## Frequently Asked Questions
 
-- Why?
+-   Why?
 -
 -
 
@@ -296,8 +296,8 @@ Clone this repository on own GitHub account and deploy to Vercel:
 
 ## Related projects
 
-- [TailNext](https://tailnext.vercel.app/) - Free template using Next.js 14 and Tailwind CSS with the new App Router.
-- [Qwind](https://qwind.pages.dev/) - Free template to make your website using Qwik + Tailwind CSS.
+-   [TailNext](https://tailnext.vercel.app/) - Free template using Next.js 14 and Tailwind CSS with the new App Router.
+-   [Qwind](https://qwind.pages.dev/) - Free template to make your website using Qwik + Tailwind CSS.
 
 ## Contributing
 

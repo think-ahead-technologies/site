@@ -10,51 +10,52 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 changeLanguage("de");
 
 const metadata = {
-    title: t("index.title"),
+    title: t("index.title")
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
+    <!-- Hero Widget ******************* -->
 
-  <Hero
-    tagline={t('index.splash.surtitle') || 'Error'}
-    actions={[
-      {
-        variant: 'primary',
-        target: '_blank',
-        text: t('contact.book') || "Error",
-        href: 'https://outlook.office365.com/owa/calendar/ThinkAheadTechnologies@think-ahead.tech/bookings/',
-        icon: 'tabler:calendar',
-      },
-      { text: t('index.learnmore') || "Error", href: '#solutions' },
-    ]}
-  >
-    <Fragment slot="title">
-      <Trans i18nKey="index.splash.title">Let's <span class="text-accent dark:text-white highlight">Think Ahead</span> together</Trans>
-    </Fragment>
+    <Hero
+        tagline={t("index.splash.surtitle") || "Error"}
+        actions={[
+            {
+                variant: "primary",
+                target: "_blank",
+                text: t("contact.book") || "Error",
+                href: "https://outlook.office365.com/owa/calendar/ThinkAheadTechnologies@think-ahead.tech/bookings/",
+                icon: "tabler:calendar"
+            },
+            { text: t("index.learnmore") || "Error", href: "#solutions" }
+        ]}
+    >
+        <Fragment slot="title">
+            <Trans i18nKey="index.splash.title"
+                >Let's <span class="text-accent dark:text-white highlight">Think Ahead</span> together</Trans
+            >
+        </Fragment>
 
-    <Fragment slot="subtitle">
-      <Trans i18nKey="index.splash.subtitle">Pioneering <span class="font-semibold">secure</span>, <span class="font-semibold">simple</span> and <span class="font-semibold">effective</span> infrastructure solutions for the <span class="font-semibold">future of technology</span>.</Trans>
-    </Fragment>
+        <Fragment slot="subtitle">
+            <Trans i18nKey="index.splash.subtitle"
+                >Pioneering <span class="font-semibold">secure</span>, <span class="font-semibold">simple</span> and <span
+                    class="font-semibold">effective</span
+                > infrastructure solutions for the <span class="font-semibold">future of technology</span>.</Trans
+            >
+        </Fragment>
+    </Hero>
 
-  </Hero>
+    <!-- Features2 Widget ************** -->
 
-  <!-- Features2 Widget ************** -->
+    <Features2 id="about-us" title={t("whoweare.title") || "Error"} subtitle={t("whoweare.description") || "Error"}>
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+    </Features2>
 
-  <Features2
-    id="about-us"
-    title={t("whoweare.title") || "Error"}
-    subtitle={t("whoweare.description") || "Error"}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
+    <!-- Stats Widget ****************** -->
 
-  <!-- Stats Widget ****************** -->
-
-  <!-- <Stats
+    <!-- <Stats
     title="Discover the impressive impact of Astrowind"
     subtitle="The numbers below reflect the trust our users have placed in us and the remarkable outcomes we've helped them achieve."
     stats={[
@@ -65,9 +66,9 @@ const metadata = {
     ]}
   /> -->
 
-  <!-- Brands Widget ****************** -->
+    <!-- Brands Widget ****************** -->
 
-  <!-- <Brands
+    <!-- <Brands
     title="Partnerships & Collaborations"
     subtitle="At Astrowind, we believe in the power of collaboration to drive innovation and create exceptional experiences."
     icons={[]}
@@ -79,58 +80,56 @@ const metadata = {
     ]}
   /> -->
 
-  <!-- Features2 Widget ************** -->
+    <!-- Features2 Widget ************** -->
 
-  <Features2
-    id="solutions"
-    title={t("solutions.intro") || "Error"}
-    subtitle={t("solutions.subtitle") || "Error"}
-    items={[
-      {
-        title: t("solutions.security.title") || "Error",
-        description: t("solutions.security.description") || "Error",
-        icon: 'flat-color-icons:lock',
-        callToAction: {
-          variant: 'link',
-          text: 'Learn more',
-          href: getRelativeLocaleUrl(Astro.currentLocale || 'en', '/solutions/security'),
-          icon: 'tabler:circle-arrow-right'
-        }
-      },
-      {
-        title: t("solutions.platform.title") || "Error",
-        description: t("solutions.platform.description") || "Error",
-        icon: 'material-symbols:cloud',
-        callToAction: {
-          variant: 'link',
-          text: 'Learn more',
-          href: getRelativeLocaleUrl(Astro.currentLocale || 'en', '/solutions/platform'),
-          icon: 'tabler:circle-arrow-right'
-        }
-      },
-      {
-        title: t("solutions.training.title") || "Error",
-        description: t("solutions.training.description") || "Error",
-        icon: 'flat-color-icons:voice-presentation',
-        callToAction: {
-          variant: 'link',
-          text: 'Learn more',
-          href: getRelativeLocaleUrl(Astro.currentLocale || 'en', '/solutions/training'),
-          icon: 'tabler:circle-arrow-right'
-        }
-      }
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
+    <Features2
+        id="solutions"
+        title={t("solutions.intro") || "Error"}
+        subtitle={t("solutions.subtitle") || "Error"}
+        items={[
+            {
+                title: t("solutions.security.title") || "Error",
+                description: t("solutions.security.description") || "Error",
+                icon: "flat-color-icons:lock",
+                callToAction: {
+                    variant: "link",
+                    text: "Learn more",
+                    href: getRelativeLocaleUrl(Astro.currentLocale || "en", "/solutions/security"),
+                    icon: "tabler:circle-arrow-right"
+                }
+            },
+            {
+                title: t("solutions.platform.title") || "Error",
+                description: t("solutions.platform.description") || "Error",
+                icon: "material-symbols:cloud",
+                callToAction: {
+                    variant: "link",
+                    text: "Learn more",
+                    href: getRelativeLocaleUrl(Astro.currentLocale || "en", "/solutions/platform"),
+                    icon: "tabler:circle-arrow-right"
+                }
+            },
+            {
+                title: t("solutions.training.title") || "Error",
+                description: t("solutions.training.description") || "Error",
+                icon: "flat-color-icons:voice-presentation",
+                callToAction: {
+                    variant: "link",
+                    text: "Learn more",
+                    href: getRelativeLocaleUrl(Astro.currentLocale || "en", "/solutions/training"),
+                    icon: "tabler:circle-arrow-right"
+                }
+            }
+        ]}
+    >
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+    </Features2>
 
+    <!-- Features Widget *************** -->
 
-
-  <!-- Features Widget *************** -->
-
-  <!-- <Features
+    <!-- <Features
     id="features"
     title="Main features of our templates"
     subtitle="Possess several key characteristics to effectively cater to the needs of startups and entrepreneurs."
@@ -150,22 +149,22 @@ const metadata = {
     ]}
   /> -->
 
-  <!-- CallToAction Widget *********** -->
+    <!-- CallToAction Widget *********** -->
 
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: t('contact.title') || "Error",
-        href: '/contact',
-        icon: 'tabler:mail',
-      },
-    ]}
-  >
-    <Fragment slot="title">{t('contact.letsconnect') || "Error"}</Fragment>
+    <CallToAction
+        actions={[
+            {
+                variant: "primary",
+                text: t("contact.title") || "Error",
+                href: "/contact",
+                icon: "tabler:mail"
+            }
+        ]}
+    >
+        <Fragment slot="title">{t("contact.letsconnect") || "Error"}</Fragment>
 
-    <Fragment slot="subtitle">
-      {t('contact.subtitle') || "Error"}
-    </Fragment>
-  </CallToAction>
+        <Fragment slot="subtitle">
+            {t("contact.subtitle") || "Error"}
+        </Fragment>
+    </CallToAction>
 </Layout>

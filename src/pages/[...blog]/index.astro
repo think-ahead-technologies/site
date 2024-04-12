@@ -22,22 +22,30 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 const { post } = Astro.props as Props;
 const url = getCanonical(getPermalink(post.permalink, "post"));
 const image = (await findImage(post.image)) as ImageMetadata | string | undefined;
-const metadata = merge({
+const images = {
+    url: image,
+    width: (image as ImageMetadata)?.width,
+    height: (image as ImageMetadata)?.height
+};
+const baseMetadata = {
     title: post.title,
     description: post.excerpt,
     robots: {
         index: blogPostRobots?.index,
-        follow: blogPostRobots?.follow,
+        follow: blogPostRobots?.follow
     },
     openGraph: {
         type: "article",
-        ...(image ? { images: [{ url: image, width: (image as ImageMetadata)?.width, height: (image as ImageMetadata)?.height }] } : {}),
-    },
-}, { ...(post?.metadata ? { ...post.metadata, canonical: post.metadata?.canonical || url } : {}) }) as MetaData;
+        ...(image ? { images: [images] } : {})
+    }
+};
+const metadata = merge(baseMetadata, {
+    ...(post?.metadata ? { ...post.metadata, canonical: post.metadata?.canonical || url } : {})
+}) as MetaData;
 ---
 
 <Layout metadata={metadata}>
-  <SinglePost post={{ ...post, image: image }} url={url} />
-  <ToBlogLink />
-  <RelatedPosts post={post} />
+    <SinglePost post={{ ...post, image: image }} url={url} />
+    <ToBlogLink />
+    <RelatedPosts post={post} />
 </Layout>

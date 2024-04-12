@@ -1,12 +1,12 @@
 {
-  "extends": "astro/tsconfigs/base",
-  "compilerOptions": {
-    "moduleResolution": "Bundler",
-    "strictNullChecks": true,
-    "allowJs": true,
-    "baseUrl": ".",
-    "paths": {
-      "~/*": ["src/*"]
+    "extends": "astro/tsconfigs/base",
+    "compilerOptions": {
+        "moduleResolution": "Bundler",
+        "strictNullChecks": true,
+        "allowJs": true,
+        "baseUrl": ".",
+        "paths": {
+            "~/*": ["src/*"]
+        }
     }
-  }
 }
