@@ -1,5 +1,5 @@
 ---
-import { changeLanguage } from "i18next";
+import { t, changeLanguage } from "i18next";
 import CallToAction from "~/components/widgets/CallToAction.astro";
 import Content from "~/components/widgets/Content.astro";
 import Features2 from "~/components/widgets/Features2.astro";
@@ -10,7 +10,7 @@ import Layout from "~/layouts/PageLayout.astro";
 changeLanguage("de");
 
 const metadata = {
-    title: "Services",
+    title: t("solutions.platform.title"),
 };
 ---
 
@@ -18,9 +18,9 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="Platform & Cloud solutions"
-    title="We can design and build your ideal infrastructure"
-    subtitle="With years of experience across clouds and clients, we can build lots of things for you."
+    tagline={t("solutions.platform.title") || "Error" }
+    title={t("solutions.platform.splash") || "Error" }
+    subtitle={t("solutions.platform.subtitle") || "Error" }
     actions={[{ variant:"primary", target: '_blank', text: 'Start exploring', href: '/' }]}
     image={{
       src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',

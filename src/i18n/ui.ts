@@ -14,13 +14,15 @@ export const languages = {
       'nav.security': 'Security & Compliance',
       'nav.training': 'Trainings & Workshops',
       'nav.partners': 'Partners',
+      'nav.contact': 'Contact',
       'nav.terms': 'Terms',
       'nav.privacypolicy': 'Privacy Policy',
       'nav.footnote': 'Copyright © <span class="dark:text-muted">Think Ahead Technologies GmbH</span> 2024 · All rights reserved.',
       'nav.blog': 'Our insights',
       'nav.languages': 'Languages',
       'lang.en': 'English',
-      'lang.de': 'Deutsch'
+      'lang.de': 'Deutsch',
+      'banner': '',
     },
     de: {
       'nav.home': 'Wilkommen',
@@ -30,12 +32,14 @@ export const languages = {
       'nav.security': 'Sicherheit & Compliance',
       'nav.training': 'Trainings & Workshops',
       'nav.partners': 'Partner',
+      'nav.contact': 'Kontaktieren',
       'nav.terms': 'Impressum',
       'nav.privacypolicy': 'Datenschutz',
       'nav.footnote': 'Copyright © <span class="dark:text-muted">Think Ahead Technologies GmbH</span> 2024 · Alle Rechte vorbehalten.',
       'nav.blog': 'Unsere Einblicke',
       'nav.languages': 'Sprache',
       'lang.en': 'English',
-      'lang.de': 'Deutsch'
+      'lang.de': 'Deutsch',
+      'banner': '',
     },
   } as const;

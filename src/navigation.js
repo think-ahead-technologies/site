@@ -1,4 +1,4 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getPermalink, getBlogPermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
@@ -17,10 +17,7 @@ export const headerData = {
     // {
     //   text: 'nav.partners',
     //   links: [
-    //     {
-    //       text: 'TODO',
-    //       href: getPermalink('/partners/todo'),
-    //     }
+    //     { text: 'TODO', href: getPermalink('/partners/todo') }
     //   ],
     // },
     {
@@ -28,7 +25,7 @@ export const headerData = {
       href: getBlogPermalink(),
     }
   ],
-  actions: [{ text: 'Contact', href: '/contact' }],
+  actions: [{ text: 'nav.contact', href: '/contact' }],
 };
 
 // NB URLs here are altered for locales by components/common/widgets/Footer.astro
@@ -57,6 +54,7 @@ export const footerData = {
   socialLinks: [
     { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/think-ahead-tech/' },
     { ariaLabel: 'GitHub', icon: 'tabler:brand-github', href: 'https://github.com/think-ahead-technologies' },
+    { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://twitter.com/thinkaheadtech' }
   ],
   footNote: `nav.footnote`,
 };

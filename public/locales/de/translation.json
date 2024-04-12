@@ -9,9 +9,16 @@
     "learnmore": "Mehr erfahren"
   },
 
+  "general": {
+    "startexploring": "Beginnen",
+    "wip": "Hier entsteht was Neues",
+    "comingsoon": "Diese Seite wird demnächst erweitert! Bitte beachten Sie diesen Bereich."
+  },
+
   "whoweare": {
-    "title": "Wer sind wir?",
-    "subtitle": "Ihr verlässlicher Partner mit <0> Antrieb und Erfahrung</0>",
+    "title": "Wer wir sind",
+    "tagline": "Wer sind wir?",
+    "subtitle": "Ihr verlässlicher Partner mit <0>Antrieb und Erfahrung</0>",
     "description": "Wir sind ein kleines Team passionierter Entwickler, we leverage our wide range of industry experience to bring you the infrastructure solutions you need to make working with technology a joy, not a chore. We're used to working in large and small organisations, using Agile practices to implement solutions speedily but without compromise."
  },
 
@@ -20,24 +27,28 @@
     "subtitle": "Passend zu Ihren Infrastruktur Anforderungen bieten wir ein breites Spektrum an Fähigkeiten und Erfahrung",
     "platform": {
         "title": "Plattform & Cloud",
-        "description": "Egal ob public oder private Cloud. Wir unterstützen bei Entwurf, Entwicklung und Betrieb Ihrer Cloud Umgebung"
+        "description": "Egal ob public oder private Cloud. Wir unterstützen bei Entwurf, Entwicklung und Betrieb Ihrer Cloud Umgebung.",
+        "splash": "Wir können Ihre ideale Infrastruktur entwerfen und bauen",
+        "subtitle": "Mit jahrelanger Erfahrung in Clouds und Clients können wir viele Dinge für Sie entwickeln."
     },
     "security": {
         "title": "Sicherheit & Compliance",
-        "description": "Sicherheit und Compliance sind für uns keine Nebensache. Sie sind Teil des gesamten Entwicklungszykluses. So erfüllen Sie Anforderunge aus NIS2 und Cyber Resilience Act wesentlich einfacher und schneller"
-
+        "description": "Sicherheit und Compliance sind für uns keine Nebensache. Sie sind Teil des gesamten Entwicklungszykluses. So erfüllen Sie Anforderunge aus NIS2 und Cyber Resilience Act wesentlich einfacher und schneller.",
+        "splash": "Wir machen Ihre Infrastruktur sicher",
+        "subtitle": "Mit jahrelanger Erfahrung in Clouds und Clients können wir Ihnen helfen, Ihre Vermögenswerte zu schützen."
     },
     "training": {
         "title": "Schulungen & Workshops",
-        "description": "Fördern Sie das Wachstum Ihrer Mitarbeiter mit unseren interaktiven Schulungen und Workshops rund um Cloud, Sicherheit und moderne Softwareentwicklung."
+        "description": "Fördern Sie das Wachstum Ihrer Mitarbeiter mit unseren interaktiven Schulungen und Workshops rund um Cloud, Sicherheit und moderne Softwareentwicklung.",
+        "splash": "Wir können Ihrem Team helfen, nachhaltige Lösungen zu entwickeln",
+        "subtitle": "Dank unserer jahrelangen Erfahrung mit Clouds und Clients können wir Ihnen viel sagen."
     }
   },
 
   "contact": {
     "title": "Kontaktieren Sie uns",
-    "getintouch": "Get in touch",
-    "letsconnect": "Let's connect!",
-    "subtitle": "Let's discuss how we can help you build the infrastructure you want to work with!",
+    "letsconnect": "Lassen wir uns kennenlernen!",
+    "subtitle": "Wir freuen uns über einen Austausch über eine Cloud Infrastruktur mit der Sie gerne arbeiten.",
     "book": "Termin buchen",
     "email": {
         "title": "Email"

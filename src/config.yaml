@@ -1,5 +1,5 @@
 site:
-  name: Think Ahead Technologies
+  name: Think Ahead
   site: 'https://think-ahead-technologies.netlify.app/'
   base: '/'
   trailingSlash: false
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: Think Ahead Technologies
+    default: Think Ahead
     template: '%s — Think Ahead Technologies'
   description: "\U0001F680 Pioneering secure, simple and effective infrastructure solutions for the future of technology."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: Think Ahead Technologies
+    site_name: Think Ahead
     images:
       - url: '~/assets/images/default.png'
         width: 1200

@@ -1,8 +1,13 @@
 ---
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const bannerText = t('banner')
 ---
 
-<div
+{bannerText && <div
   class="dark text-muted text-sm bg-black dark:bg-transparent dark:border-b dark:border-slate-800 dark:text-slate-400 hidden md:block overflow-hidden px-3 py-2 relative text-ellipsis whitespace-nowrap"
 >
-    We've freshly started!
-</div>
+    {bannerText}
+</div>}

@@ -1,5 +1,5 @@
 ---
-import { changeLanguage } from "i18next";
+import { t, changeLanguage } from "i18next";
 import CallToAction from "~/components/widgets/CallToAction.astro";
 import Hero from "~/components/widgets/Hero.astro";
 import Layout from "~/layouts/PageLayout.astro";
@@ -7,7 +7,7 @@ import Layout from "~/layouts/PageLayout.astro";
 changeLanguage("de");
 
 const metadata = {
-    title: "Services",
+    title: t("solutions.training.title"),
 };
 ---
 
@@ -15,10 +15,10 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="Training & Workshops"
-    title="We can help your team build sustainable solutions"
-    subtitle="With years of experience across clouds and clients, we can tell you lots of things."
-    actions={[{ variant:"primary", target: '_blank', text: 'Start exploring', href: '/' }]}
+    tagline={t("solutions.training.title") || "Error"}
+    title={t("solutions.training.splash") || "Error" }
+    subtitle={t("solutions.training.subtitle") || "Error" }
+    actions={[{ variant:"primary", target: '_blank', text: t('general.startexploring') || "Error", href: '/' }]}
     image={{
       src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
       alt: 'Think Ahead Hero Image',
@@ -179,10 +179,10 @@ const metadata = {
   <CallToAction
     actions={[{
       variant: "primary",
-      text: 'Start exploring',
+      text: t('general.startexploring') || "Error",
       href: '/',
     }]}
-    title="Work in progress"
-    subtitle="This page will be extended soon! Please watch this space."
+    title={t('general.wip') || "Error"}
+    subtitle={t('general.comingsoon') || "Error"}
   />
 </Layout>
