@@ -1,6 +1,6 @@
 site:
     name: Think Ahead
-    site: "https://think-ahead-technologies.netlify.app/"
+    site: "https://think-ahead.tech/"
     base: "/"
     trailingSlash: false
 
@@ -23,12 +23,12 @@ metadata:
               height: 628
         type: website
     twitter:
-        handle: "@onwidget"
-        site: "@onwidget"
+        handle: "@ThinkAheadTech"
+        site: "@ThinkAheadTech"
         cardType: summary_large_image
 
 i18n:
-    language: en
+    language: de
     textDirection: ltr
 
 apps:
