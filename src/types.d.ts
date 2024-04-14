@@ -158,6 +158,7 @@ export interface Testimonial {
 
 export interface Input {
     type: HTMLInputTypeAttribute;
+    required?: boolean;
     name: string;
     label?: string;
     autocomplete?: string;
@@ -167,12 +168,14 @@ export interface Input {
 export interface Textarea {
     label?: string;
     name?: string;
+    required?: boolean;
     placeholder?: string;
     rows?: number;
 }
 
 export interface Disclaimer {
     label?: string;
+    required?: boolean;
 }
 
 // COMPONENTS

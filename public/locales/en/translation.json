@@ -60,6 +60,17 @@
             "title": "Book a meeting",
             "description": "Schedule a video call with us to discuss your needs in more detail.",
             "booknow": "Book now"
+        },
+        "form": {
+            "title": "Or, drop us a message now!",
+            "subtitle": "Our team will be delighted to help you.",
+            "name": "Name",
+            "email": "Email",
+            "message": "Message",
+            "message-placeholder": "How can we help?",
+            "disclaimer": "By submitting this contact form, you acknowledge and agree to the collection of your personal information according to our <0>privacy policy</0>.",
+            "submit": "Contact us",
+            "description": "Our team typically responds within 24 business hours."
         }
     },
 

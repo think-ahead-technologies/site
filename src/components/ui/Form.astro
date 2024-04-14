@@ -1,15 +1,16 @@
 ---
 import type { Form as Props } from "~/types";
 import Button from "~/components/ui/Button.astro";
+import { Trans } from "astro-i18next/components";
 
 const { inputs, textarea, disclaimer, button = "Contact us", description = "" } = Astro.props;
 ---
 
-<form>
+<form data-netlify="true">
     {
         inputs &&
             inputs.map(
-                ({ type = "text", name, label = "", autocomplete = "on", placeholder = "" }) =>
+                ({ type = "text", required, name, label = "", autocomplete = "on", placeholder = "" }) =>
                     name && (
                         <div class="mb-6">
                             {label && (
@@ -21,6 +22,7 @@ const { inputs, textarea, disclaimer, button = "Contact us", description = "" } 
                                 type={type}
                                 name={name}
                                 id={name}
+                                required={required}
                                 autocomplete={autocomplete}
                                 placeholder={placeholder}
                                 class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
@@ -38,6 +40,7 @@ const { inputs, textarea, disclaimer, button = "Contact us", description = "" } 
                 </label>
                 <textarea
                     id="textarea"
+                    required
                     name={textarea.name ? textarea.name : "message"}
                     rows={textarea.rows ? textarea.rows : 4}
                     placeholder={textarea.placeholder}
@@ -53,6 +56,7 @@ const { inputs, textarea, disclaimer, button = "Contact us", description = "" } 
                 <div class="flex mt-0.5">
                     <input
                         id="disclaimer"
+                        required={disclaimer.required}
                         name="disclaimer"
                         type="checkbox"
                         class="cursor-pointer mt-1 py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
@@ -60,7 +64,13 @@ const { inputs, textarea, disclaimer, button = "Contact us", description = "" } 
                 </div>
                 <div class="ml-3">
                     <label for="disclaimer" class="cursor-pointer select-none text-sm text-gray-600 dark:text-gray-400">
-                        {disclaimer.label}
+                        <Trans i18nKey={disclaimer.label}>
+                            {disclaimer.label} See our our{" "}
+                            <a target="_blank" class="mt-2 space-x-5 font-bold highlight" href="/privacy">
+                                privacy policy
+                            </a>
+                            .
+                        </Trans>
                     </label>
                 </div>
             </div>

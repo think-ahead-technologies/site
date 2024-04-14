@@ -2,6 +2,7 @@
 import { t, changeLanguage } from "i18next";
 import Layout from "~/layouts/PageLayout.astro";
 import Features2 from "~/components/widgets/Features2.astro";
+import ContactUs from "~/components/widgets/Contact.astro";
 
 changeLanguage("de");
 
@@ -14,31 +15,6 @@ const metadata = {
     <!-- HeroText Widget ******************* -->
 
     <!-- <HeroText tagline="Contact" title="Let's Connect!" /> -->
-
-    <!-- <ContactUs
-    title="Drop us a message today!"
-    subtitle="Our team will be delighted to help you."
-    inputs={[
-      {
-        type: 'text',
-        name: 'name',
-        label: 'Name',
-      },
-      {
-        type: 'email',
-        name: 'email',
-        label: 'Email',
-      },
-    ]}
-    textarea={{
-      label: 'Message',
-    }}
-    disclaimer={{
-      label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
-    }}
-    description="Our support team typically responds within 24 business hours."
-  /> -->
 
     <!-- Features2 Widget ************** -->
 
@@ -79,5 +55,34 @@ const metadata = {
                 icon: "tabler:map-pin"
             }
         ]}
+    />
+
+    <ContactUs
+        title={t("contact.form.title") || "Error"}
+        subtitle={t("contact.form.subtitle") || "Error"}
+        inputs={[
+            {
+                type: "text",
+                name: "name",
+                label: t("contact.form.name") || "Error"
+            },
+            {
+                type: "email",
+                required: true,
+                name: "email",
+                label: t("contact.form.email") || "Error"
+            }
+        ]}
+        textarea={{
+            label: t("contact.form.message") || "Error",
+            required: true,
+            placeholder: t("contact.form.message-placeholder") || "Error"
+        }}
+        disclaimer={{
+            required: true,
+            label: "contact.form.disclaimer"
+        }}
+        description={t("contact.form.description") || "Error"}
+        button={t("contact.form.submit") || "Error"}
     />
 </Layout>
