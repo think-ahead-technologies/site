@@ -33,7 +33,7 @@ export const ui = {
         "nav.security": "Sicherheit & Compliance",
         "nav.training": "Trainings & Workshops",
         "nav.partners": "Partner",
-        "nav.contact": "Kontaktieren",
+        "nav.contact": "Jetzt kontaktieren",
         "nav.terms": "Impressum",
         "nav.privacypolicy": "Datenschutz",
         "nav.footnote":

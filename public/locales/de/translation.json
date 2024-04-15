@@ -11,15 +11,15 @@
 
     "general": {
         "startexploring": "Beginnen",
-        "wip": "Hier entsteht was Neues",
-        "comingsoon": "Diese Seite wird demnächst erweitert! Bitte beachten Sie diesen Bereich."
+        "wip": "Hier entsteht etwas Neues",
+        "comingsoon": "Diese Seite wird demnächst erweitert! Bitte besuchen Sie uns bald wieder."
     },
 
     "whoweare": {
         "title": "Wer wir sind",
         "tagline": "Wer sind wir?",
         "subtitle": "Ihr verlässlicher Partner mit <0>Antrieb und Erfahrung</0>",
-        "description": "Wir sind ein kleines Team passionierter Entwickler, we leverage our wide range of industry experience to bring you the infrastructure solutions you need to make working with technology a joy, not a chore. We're used to working in large and small organisations, using Agile practices to implement solutions speedily but without compromise."
+        "description": "Wir sind ein kleines Team von passionierten Technologen.  Wir bieten maßgeschneiderte IT Lösungen für alle Branchen. Dank unserer Leidenschaft für komplexe Probleme, sind wir ideal geeignet die Effizienz und Sicherheit Ihrer Geschäftsabläufe zu verbessern. Wir reden nicht nur von agil. Wir leben Flexibilität und Innovation. Dank unserer langjährigen Erfahrung kennen wir die Nuancen der Technologie und die besonderen Anforderungen moderner Unternehmen. Ganz gleich, ob Sie in die Cloud migrieren, Ihre IT-Infrastruktur verbessern oder Ihre digitalen Ressourcen sichern möchten, Think Ahead steht Ihnen bei jedem Schritt zur Seite. Erleben Sie eine Zusammenarbeit, die zu echten Ergebnissen führt und Ihr nachhaltiges Wachstum fördert."
     },
 
     "solutions": {
@@ -47,7 +47,7 @@
 
     "contact": {
         "title": "Kontaktieren Sie uns",
-        "letsconnect": "Lassen wir uns kennenlernen!",
+        "letsconnect": "Schön Sie kennen zu lernen!",
         "subtitle": "Wir freuen uns über einen Austausch über eine Cloud Infrastruktur mit der Sie gerne arbeiten.",
         "book": "Termin buchen",
         "email": {
@@ -62,15 +62,15 @@
             "booknow": "Jetzt buchen"
         },
         "form": {
-            "title": "Or, drop us a message now!",
-            "subtitle": "Our team will be delighted to help you.",
+            "title": "Oder hinterlassen Sie uns direkt eine Nachricht!",
+            "subtitle": "Unser Team freut sich Ihnen weiterhelfen zu können.",
             "name": "Name",
             "email": "Email",
-            "message": "Message",
-            "message-placeholder": "How can we help?",
-            "disclaimer": "By submitting this contact form, you acknowledge and agree to the collection of your personal information according to our <0>privacy policy</0>.",
-            "submit": "Contact us",
-            "description": "Our team typically responds within 24 business hours."
+            "message": "Nachricht",
+            "message-placeholder": "Wie können wir helfen?",
+            "disclaimer": "Mit absenden des Formulars stimmen Sie unseren <0>Datenschutzbestimmungen</0> und der Sammlung Ihrer eingegeben persönlichen Informationen zum Zweck der Beantwortung der Anfrage zu.",
+            "submit": "Jetzt abschicken",
+            "description": "Unser Team antwortet wochentags innerhalb von 24 Stunden."
         }
     },
 
