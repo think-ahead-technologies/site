@@ -11,7 +11,7 @@ metadata:
     title:
         default: Think Ahead
         template: "%s — Think Ahead Technologies"
-    description: "\U0001F680 Pioneering secure, simple and effective infrastructure solutions for the future of technology."
+    description: "Pioneering secure, simple and effective infrastructure solutions for the future of technology."
     robots:
         index: true
         follow: true
