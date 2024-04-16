@@ -18,9 +18,9 @@ metadata:
     openGraph:
         site_name: Think Ahead
         images:
-            - url: "~/assets/images/default.png"
+            - url: "~/assets/images/de-home-light.png"
               width: 1200
-              height: 628
+              height: 630
         type: website
     twitter:
         handle: "@ThinkAheadTech"
