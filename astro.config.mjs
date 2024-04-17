@@ -63,7 +63,12 @@ export default defineConfig({
                     "lock",
                     "database"
                 ],
-                "material-symbols": ["cloud"]
+                "material-symbols": [
+                    "cloud",
+                    "smartphone-outline",
+                    "account-balance-outline-rounded"
+                ],
+                "ph": ["graduation-cap"]
             }
         }),
 

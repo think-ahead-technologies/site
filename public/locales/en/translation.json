@@ -15,11 +15,23 @@
         "comingsoon": "This page will be extended soon! Please watch this space."
     },
 
-    "whoweare": {
+    "who-we-are": {
         "title": "Who we are",
         "tagline": "Who we are",
         "subtitle": "Supporting the future with <0> drive and experience</0>",
-        "description": "A small team of passionate consultants, we leverage our wide range of industry experience to bring you the infrastructure solutions you need to make working with technology a joy, not a chore. We're used to working in large and small organisations, using Agile practices to implement solutions speedily but without compromise."
+        "summary": "A small team of passionate consultants, we leverage our wide range of industry experience to bring you the infrastructure solutions you need to make working with technology a joy, not a chore. We're used to working in large and small organisations, using Agile practices to implement solutions speedily but without compromise.",
+        "introduction": {
+            "1": "We are a small team of <0>passionate technologists</0>, offering tailor-made IT solutions for all industries. Our passion for complex problems makes us perfect for improving the <0>efficiency and security</0> of your business processes.",
+            "2": "We're not just talking about <0>Agile</0>: we live by <0>flexibility and innovation</0>. Through our <0>years of experience</0>, we're familiar with the nuances of technology and the requirements of modern companies in particular.",
+            "3": "Whether you're looking to <0>migrate to the cloud</0>, improve your <0>IT infrastructure</0>, or <0>secure your digital assets</0>, <1>Think Ahead</1> is here to help you every step of the way. Experience collaboration that leads to <0>real results</0> and promotes your <0>sustainable growth</0>."
+        },
+        "stats": {
+            "title": "Our experience",
+            "experience-years": "Total years of cloud experience",
+            "cloud-providers": "Cloud providers",
+            "industries": "Industries",
+            "countries": "Countries"
+        }
     },
 
     "solutions": {

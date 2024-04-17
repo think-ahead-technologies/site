@@ -8,7 +8,7 @@ export const defaultLang = "de";
 export const ui = {
     en: {
         "nav.home": "Welcome",
-        "nav.whoweare": "Who we are",
+        "nav.who-we-are": "Who we are",
         "nav.solutions": "Our solutions",
         "nav.platform": "Platform & Cloud",
         "nav.security": "Security & Compliance",
@@ -27,7 +27,7 @@ export const ui = {
     },
     de: {
         "nav.home": "Wilkommen",
-        "nav.whoweare": "Wer wir sind",
+        "nav.who-we-are": "Wer wir sind",
         "nav.solutions": "Unsere Lösungen",
         "nav.platform": "Plattform & Cloud",
         "nav.security": "Sicherheit & Compliance",

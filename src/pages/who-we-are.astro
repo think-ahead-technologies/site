@@ -8,7 +8,7 @@ import Layout from "~/layouts/PageLayout.astro";
 changeLanguage("de");
 
 const metadata = {
-    title: t("whoweare.title")
+    title: t("who-we-are.title")
 };
 ---
 
@@ -16,32 +16,91 @@ const metadata = {
     <!-- Hero Widget ******************* -->
 
     <Hero
-        tagline={t("whoweare.tagline") || "Error"}
+        tagline={t("who-we-are.tagline") || "Error"}
         image={{
             src: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
             alt: "Caos Image"
         }}
     >
         <Fragment slot="title">
-            <Trans i18nKey="whoweare.subtitle">
+            <Trans i18nKey="who-we-are.subtitle">
                 Supporting the future with <div class="text-accent dark:text-white highlight">drive and experience</div>
             </Trans>
         </Fragment>
 
         <Fragment slot="subtitle">
-            {t("whoweare.description")}
+            <p class="mb-3"><Trans i18nKey="who-we-are.introduction.1">
+                Paragraph 1, with <span class="font-semibold">emphasis</span>
+            </Trans></p>
+            <p class="mb-3"><Trans i18nKey="who-we-are.introduction.2">
+                Paragraph 2, with <span class="font-semibold">emphasis</span>
+            </Trans></p>
+            <p class=""><Trans i18nKey="who-we-are.introduction.3">
+                Paragraph 3, with <span class="font-semibold">emphasis</span> and <span class="text-accent dark:text-white highlight">our name</span>
+            </Trans></p>
         </Fragment>
     </Hero>
 
     <!-- Stats Widget ****************** -->
-
     <Stats
-        title="Statistics about us"
+        title={t("who-we-are.stats.title") || "Error"}
         stats={[
-            { title: "Offices", amount: "4" },
-            { title: "Employees", amount: "248" },
-            { title: "Templates", amount: "12" },
-            { title: "Awards", amount: "24" }
+            {
+                title: t("who-we-are.stats.experience-years") || "Error",
+                // 10 Waldemar (of 11 total) + 5 Martin (of 9 total)
+                amount: "15"
+            },
+            {
+                title: t("who-we-are.stats.cloud-providers") || "Error",
+                amount: "7",
+                icons: [
+                    "aws",
+                    "microsoftazure",
+                    "googlecloud",
+                    "scaleway",
+                    "hetzner",
+                    "redhatopenshift",
+                    "openstack"
+                    // also StackIt, but icon not freely available
+                ]
+            },
+            // {
+            //     title:"Fluent languages",
+            //     amount: "3",
+            //     icons: [
+            //         "circle-flags:de",
+            //         "circle-flags:en",
+            //         "circle-flags:fr"
+            //     ]
+            // },
+            {
+                title: t("who-we-are.stats.industries") || "Error",
+                amount: "8",
+                icons: [
+
+                    // Waldemar: automotive, retail, gaming, energy, public services
+                    "tabler:car",
+                    "tabler:shopping-bag",
+                    "tabler:device-gamepad-2",
+                    "tabler:bolt",
+                    "material-symbols:account-balance-outline-rounded",
+
+                    // Martin: academic, insurance, consumer electronics, automotive again
+                    "ph:graduation-cap",
+                    "tabler:report-money",
+                    "material-symbols:smartphone-outline"
+                ]
+            },
+            {
+                title: t("who-we-are.stats.countries") || "Error",
+                amount: "4",
+                icons: [
+                    "circle-flags:de",
+                    "circle-flags:en",
+                    "circle-flags:ch",
+                    "circle-flags:at"
+                ]
+            },
         ]}
     />
 
