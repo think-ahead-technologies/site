@@ -29,19 +29,19 @@
             "title": "Platform & Cloud",
             "description": "Whether you're on a public or a private cloud, we can help with the design, development and operation of your infrastructure",
             "splash": "We can design and build your ideal infrastructure",
-            "subtitle": "With years of experience across clouds and clients, we can build lots of things for you."
+            "subtitle": "Our experience across many clouds and industries makes us an ideal partner for perfecting your infrastructure."
         },
         "security": {
             "title": "Security & Compliance",
             "description": "Security and compliance are no secondary concern for us: they are part of the entire development cycle. This makes meeting NIS2 and Cyber Resilience Act requirements a breeze.",
-            "splash": "We can make your infrastructure secure",
-            "subtitle": "With years of experience across clouds and clients, we can help you secure your assets."
+            "splash": "We can ensure your assets are safe, whatever the environment",
+            "subtitle": "Security is core to how we work. We can help you meet regulations or simply build with peace of mind."
         },
         "training": {
             "title": "Training & Workshops",
-            "description": "Providing customer support for any technical issues related to the templates or their implementation.",
-            "splash": "We can help your team build sustainable solutions",
-            "subtitle": "With years of experience across clouds and clients, we can tell you lots of things."
+            "description": "Promote the growth of your employees with our interactive training and workshops on cloud, security and modern software development.",
+            "splash": "We can make your team's best even better",
+            "subtitle": "Our enthusiastic team shares our deep knowledge of tools and best practices in a range of interactive workshops and seminars."
         }
     },
 
@@ -72,6 +72,14 @@
             "submit": "Contact us",
             "description": "Our team typically responds within 24 business hours."
         }
+    },
+
+    "404": {
+        "title": "Error 404",
+        "error": "Error",
+        "not-found": "Sorry, we couldn't find this page.",
+        "go-home": "But dont worry, you can find plenty of other things on our homepage.",
+        "to-homepage": "Back to homepage"
     },
 
     "blog": {

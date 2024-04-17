@@ -21,8 +21,7 @@ const metadata = {
         actions={[
             {
                 variant: "primary",
-                target: "_blank",
-                text: "Start exploring",
+                text: t("general.startexploring") || "Error",
                 href: "/"
             }
         ]}
@@ -185,11 +184,11 @@ const metadata = {
         actions={[
             {
                 variant: "primary",
-                text: "Start exploring",
+                text: t("general.startexploring") || "Error",
                 href: "/"
             }
         ]}
-        title="Work in progress"
-        subtitle="This page will be extended soon! Please watch this space."
+        title={t("general.wip") || "Error"}
+        subtitle={t("general.comingsoon") || "Error"}
     />
 </Layout>

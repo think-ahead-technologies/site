@@ -29,10 +29,10 @@ export const headerData = {
         //     { text: 'TODO', href: getPermalink('/partners/todo') }
         //   ],
         // },
-        {
-            text: "nav.blog",
-            href: getBlogPermalink()
-        }
+        // {
+        //     text: "nav.blog",
+        //     href: getBlogPermalink()
+        // }
     ],
     actions: [{ text: "nav.contact", href: "/contact" }]
 };
