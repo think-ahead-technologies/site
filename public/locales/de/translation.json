@@ -26,11 +26,11 @@
             "3": "Ganz gleich, ob Sie <0>in die Cloud migrieren</0>, Ihre <0>IT-Infrastruktur verbessern</0> oder Ihre <0>digitalen Ressourcen sichern möchten</0>, <1>Think Ahead</1> steht Ihnen bei jedem Schritt zur Seite. Erleben Sie eine Zusammenarbeit, die zu <0>echten Ergebnissen</0> führt und Ihr <0>nachhaltiges Wachstum</0> fördert."
         },
         "stats": {
-            "title": "Our experience",
-            "experience-years": "Total years of cloud experience",
-            "cloud-providers": "Cloud providers",
-            "industries": "Industries",
-            "countries": "Countries"
+            "title": "Unsere Erfahrung",
+            "experience-years": "Jahre an Cloud Erfahrung",
+            "cloud-providers": "Cloud Anbieter",
+            "industries": "Industrien",
+            "countries": "Länder"
         }
     },
 
@@ -40,20 +40,20 @@
         "platform": {
             "title": "Plattform & Cloud",
             "description": "Egal ob public oder private Cloud. Wir unterstützen bei Entwurf, Entwicklung und Betrieb Ihrer Cloud Umgebung.",
-            "splash": "Wir können Ihre ideale Infrastruktur entwerfen und bauen",
-            "subtitle": "Our experience across many clouds and industries makes us an ideal partner for perfecting your infrastructure."
+            "splash": "Wir entwerfen und implementieren die ideale Infrastruktur für Sie",
+            "subtitle": "Sie können sich auf unsere langjährige Erfahrung mit Cloud Computing über alle Industrien hinweg vertrauen."
         },
         "security": {
             "title": "Sicherheit & Compliance",
             "description": "Sicherheit und Compliance sind für uns keine Nebensache. Sie sind Teil des gesamten Entwicklungszykluses. So erfüllen Sie Anforderunge aus NIS2 und Cyber Resilience Act wesentlich einfacher und schneller.",
-            "splash": "We can ensure your assets are safe, whatever the environment",
+            "splash": "Wir stellen sicher, dass alle Ihre Assets sicher sind. Egal wo.",
             "subtitle": "Security is core to how we work. We can help you meet regulations or simply build with peace of mind."
         },
         "training": {
             "title": "Schulungen & Workshops",
             "description": "Fördern Sie das Wachstum Ihrer Mitarbeiter mit unseren interaktiven Schulungen und Workshops rund um Cloud, Sicherheit und moderne Softwareentwicklung.",
-            "splash": "We can make your team's best even better",
-            "subtitle": "Our enthusiastic team shares our deep knowledge of tools and best practices in a range of interactive workshops and seminars."
+            "splash": "Holen Sie das Beste aus Ihren Teams",
+            "subtitle": "Erfahren Sie alles was Sie wissen müssen über aktuelle Technologien, Best Practices und moderne Entwicklungsmethoden in unserem breiten Spektrum an interaktiven Workshops und Seminaren."
         }
     },
 
@@ -87,11 +87,11 @@
     },
 
     "404": {
-        "title": "Error 404",
-        "error": "Error",
-        "not-found": "Sorry, we couldn't find this page.",
-        "go-home": "But dont worry, you can find plenty of other things on our homepage.",
-        "to-homepage": "Back to homepage"
+        "title": "Fehler 404",
+        "error": "Fehler",
+        "not-found": "Leider konnte diese Seite nicht gefunden werden.",
+        "go-home": "Es gibt aber ganz viele andere Seiten zu entdecken.",
+        "to-homepage": "Zurück zur Hauptseite"
     },
 
     "blog": {
