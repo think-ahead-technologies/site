@@ -4,7 +4,7 @@
         "splash": {
             "surtitle": "Teure, komplexe Infrastruktur ist nicht gleich sicher",
             "title": "Es geht auch anders. Mit <0>Think Ahead</0>!",
-            "subtitle": "Wir sind Pioniere für <0>sichere</0>, <1>einfache</1> und <2>effektive</2> Infrastruktur Lösungen für Ihre <3>technologische Zukunft</3>."
+            "subtitle": "Wir sind Pioniere für <0>sichere</0>, <1>einfache</1> und <2>effektive</2> Infrastruktur Lösungen für Ihre <3>digitale Zukunft</3>."
         },
         "who-we-are": {
             "subtitle": "Erfahrene Technologie Berater mit dem Ziel, die Welt ein Stückchen besser zu machen",
@@ -91,14 +91,14 @@
             "cloud-providers": "Cloud Anbieter",
             "industries": {
                 "title": "Industrien",
-                "retail": "Retail",
+                "retail": "Handel",
                 "automotive": "Automotive",
                 "gaming": "Gaming",
-                "energy": "Energy",
-                "public": "Public sector",
-                "academic": "Academic",
-                "insurance": "Insurance",
-                "consumer-electronics": "Consumer electronics"
+                "energy": "Energie",
+                "public": "Öffentlicher Dienst",
+                "academic": "Wissenschaft",
+                "insurance": "Versicherung",
+                "consumer-electronics": "Unterhaltungselektronik"
             },
             "countries": {
                 "title": "Länder",
@@ -112,7 +112,7 @@
 
     "solutions": {
         "intro": "Welche Lösungen bieten wir an?",
-        "subtitle": "Passend zu Ihren Infrastruktur Anforderungen bieten wir ein breites Spektrum an Fähigkeiten und Erfahrung",
+        "subtitle": "Passend zu Ihren Infrastruktur Anforderungen bieten wir ein breites Spektrum an Kompetenzen und Erfahrung",
         "platform": {
             "title": "Plattform & Cloud",
             "description": "Egal ob public oder private Cloud. Wir unterstützen bei Entwurf, Entwicklung und Betrieb Ihrer Cloud Umgebung.",
