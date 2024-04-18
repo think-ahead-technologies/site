@@ -1,6 +1,7 @@
 ---
 import { Trans } from "astro-i18next/components";
 import { t, changeLanguage } from "i18next";
+import Content from "~/components/widgets/Content.astro";
 import Hero from "~/components/widgets/Hero.astro";
 import Stats from "~/components/widgets/Stats.astro";
 import Layout from "~/layouts/PageLayout.astro";
@@ -15,43 +16,107 @@ const metadata = {
 <Layout metadata={metadata}>
     <!-- Hero Widget ******************* -->
 
-    <Hero
-        tagline={t("who-we-are.tagline") || "Error"}
-        image={{
-            src: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-            alt: "Caos Image"
-        }}
-    >
+    <Hero tagline={t("who-we-are.tagline")} subtitle={t("who-we-are.subtitle")}>
         <Fragment slot="title">
-            <Trans i18nKey="who-we-are.subtitle">
-                Supporting the future with <div class="text-accent dark:text-white highlight">drive and experience</div>
+            <Trans i18nKey="who-we-are.splash">
+                Text with <div class="text-accent dark:text-white highlight">emphasis</div>
             </Trans>
-        </Fragment>
-
-        <Fragment slot="subtitle">
-            <p class="mb-3"><Trans i18nKey="who-we-are.introduction.1">
-                Paragraph 1, with <span class="font-semibold">emphasis</span>
-            </Trans></p>
-            <p class="mb-3"><Trans i18nKey="who-we-are.introduction.2">
-                Paragraph 2, with <span class="font-semibold">emphasis</span>
-            </Trans></p>
-            <p class=""><Trans i18nKey="who-we-are.introduction.3">
-                Paragraph 3, with <span class="font-semibold">emphasis</span> and <span class="text-accent dark:text-white highlight">our name</span>
-            </Trans></p>
         </Fragment>
     </Hero>
 
+    <!-- Our values ******************* -->
+
+    <Content
+        isReversed
+        items={[
+            {
+                title: t("who-we-are.values.proactivity.title"),
+                icon: "tabler:run",
+                description: t("who-we-are.values.proactivity.description")
+            },
+            {
+                title: t("who-we-are.values.learning.title"),
+                icon: "fa:lightbulb-o",
+                description: t("who-we-are.values.learning.description")
+            },
+            {
+                title: t("who-we-are.values.trustworthiness.title"),
+                icon: "material-symbols:handshake-outline",
+                description: t("who-we-are.values.trustworthiness.description")
+            },
+            {
+                title: t("who-we-are.values.cheerfulness.title"),
+                icon: "material-symbols:sunny-outline-rounded",
+                description: t("who-we-are.values.cheerfulness.description")
+            }
+        ]}
+        image={{ src: "/finland.jpg", alt: t("who-we-are.values.image-alt") }}
+    >
+        <Fragment slot="content">
+            <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+                {t("who-we-are.values.title")}
+            </h3>
+            {t("who-we-are.values.subtitle")}
+        </Fragment>
+
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+    </Content>
+
+    <!-- Our impact ******************* -->
+
+    <Content
+        items={[
+            {
+                title: t("who-we-are.impact.productivity.title"),
+                icon: "material-symbols:settings-heart",
+                description: t("who-we-are.impact.productivity.description")
+            },
+            {
+                title: t("who-we-are.impact.costs.title"),
+                icon: "material-symbols:euro-symbol-rounded",
+                description: t("who-we-are.impact.costs.description")
+            },
+            {
+                title: t("who-we-are.impact.focus.title"),
+                icon: "tabler:target-arrow",
+                description: t("who-we-are.impact.focus.description")
+            },
+            {
+                title: t("who-we-are.impact.adaptation.title"),
+                icon: "material-symbols:deployed-code-history-outline",
+                description: t("who-we-are.impact.adaptation.description")
+            }
+        ]}
+        image={{
+            src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+            alt: t("who-we-are.impact.image-alt")
+        }}
+    >
+        <Fragment slot="content">
+            <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+                {t("who-we-are.impact.title")}
+            </h3>
+            {t("who-we-are.impact.subtitle")}
+        </Fragment>
+
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+    </Content>
+
     <!-- Stats Widget ****************** -->
     <Stats
-        title={t("who-we-are.stats.title") || "Error"}
+        title={t("who-we-are.stats.title")}
         stats={[
             {
-                title: t("who-we-are.stats.experience-years") || "Error",
+                title: t("who-we-are.stats.experience-years"),
                 // 10 Waldemar (of 11 total) + 5 Martin (of 9 total)
                 amount: "15"
             },
             {
-                title: t("who-we-are.stats.cloud-providers") || "Error",
+                title: t("who-we-are.stats.cloud-providers"),
                 amount: "7",
                 icons: [
                     "aws",
@@ -74,13 +139,12 @@ const metadata = {
             //     ]
             // },
             {
-                title: t("who-we-are.stats.industries") || "Error",
+                title: t("who-we-are.stats.industries"),
                 amount: "8",
                 icons: [
-
-                    // Waldemar: automotive, retail, gaming, energy, public services
-                    "tabler:car",
+                    // Waldemar: retail, automotive, gaming, energy, public services
                     "tabler:shopping-bag",
+                    "tabler:car",
                     "tabler:device-gamepad-2",
                     "tabler:bolt",
                     "material-symbols:account-balance-outline-rounded",
@@ -92,15 +156,10 @@ const metadata = {
                 ]
             },
             {
-                title: t("who-we-are.stats.countries") || "Error",
+                title: t("who-we-are.stats.countries"),
                 amount: "4",
-                icons: [
-                    "circle-flags:de",
-                    "circle-flags:en",
-                    "circle-flags:ch",
-                    "circle-flags:at"
-                ]
-            },
+                icons: ["circle-flags:de", "circle-flags:en", "circle-flags:ch", "circle-flags:at"]
+            }
         ]}
     />
 

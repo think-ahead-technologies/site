@@ -22,7 +22,7 @@ export const headerData = {
                     href: getPermalink("/solutions/training")
                 }
             ]
-        },
+        }
         // {
         //   text: 'nav.partners',
         //   links: [

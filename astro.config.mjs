@@ -64,11 +64,18 @@ export default defineConfig({
                     "database"
                 ],
                 "material-symbols": [
+                    "account-balance-outline-rounded",
                     "cloud",
+                    "deployed-code-history-outline",
+                    "dataset-linked-rounded",
+                    "euro-symbol-rounded",
+                    "handshake-outline",
+                    "settings-heart",
                     "smartphone-outline",
-                    "account-balance-outline-rounded"
+                    "sunny-outline-rounded"
                 ],
-                "ph": ["graduation-cap"]
+                fa: ["lightbulb-o"],
+                ph: ["graduation-cap"]
             }
         }),
 

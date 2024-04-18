@@ -6,6 +6,7 @@ import CallToAction from "~/components/widgets/CallToAction.astro";
 import Features2 from "~/components/widgets/Features2.astro";
 import { Trans } from "astro-i18next/components";
 import { getRelativeLocaleUrl } from "astro:i18n";
+import Content from "~/components/widgets/Content.astro";
 
 changeLanguage("de");
 
@@ -47,11 +48,73 @@ const metadata = {
 
     <!-- Features2 Widget ************** -->
 
-    <Features2 id="about-us" title={t("who-we-are.title") || "Error"} subtitle={t("who-we-are.description") || "Error"}>
+    <!-- <Features2 id="about-us" title={t("who-we-are.title") || "Error"} subtitle={t("who-we-are.description") || "Error"}>
         <Fragment slot="bg">
             <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
         </Fragment>
-    </Features2>
+    </Features2> -->
+
+    <!-- Features3 Widget ************** -->
+
+    <!-- <Features3
+     title={t("who-we-are.title")}
+     subtitle={t("who-we-are.description")}
+     columns={3}
+     isBeforeContent={true}
+     items={[
+         {
+             title: "Small team",
+             description:
+                 "Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.",
+             icon: "tabler:template"
+         },
+         {
+             title: "Broad experience",
+             description:
+                 "Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.",
+             icon: "tabler:template"
+         },
+         {
+             title: "Enthusiastic",
+             description:
+                 "Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.",
+             icon: "tabler:template"
+         }
+     ]}
+ /> -->
+
+    <!-- Content Widget **************** -->
+
+    <Content
+        isReversed
+        items={[
+            {
+                title: t("index.who-we-are.accessible.title"),
+                icon: "tabler:map-pin",
+                description: t("index.who-we-are.accessible.description")
+            },
+            {
+                title: t("index.who-we-are.experienced.title"),
+                icon: "tabler:heart-handshake",
+                description: t("index.who-we-are.experienced.description")
+            },
+            {
+                title: t("index.who-we-are.enthusiastic.title"),
+                icon: "tabler:device-desktop-heart",
+                description: t("index.who-we-are.enthusiastic.description")
+            }
+        ]}
+        image={{ src: "/cloud.jpg", alt: t("index.who-we-are.image-alt") }}
+    >
+        <Fragment slot="content">
+            <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">{t("who-we-are.title")}</h3>
+            {t("who-we-are.subtitle")}
+        </Fragment>
+
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+    </Content>
 
     <!-- Stats Widget ****************** -->
 

@@ -1,6 +1,8 @@
 import type { AstroComponentFactory } from "astro/runtime/server/index.js";
 import type { HTMLAttributes, ImageMetadata } from "astro/types";
 
+export type TranslatedString = string | null;
+
 export interface Post {
     /** A unique ID number that identifies a post. */
     id: string;
@@ -101,9 +103,9 @@ export interface Widget {
 }
 
 export interface Headline {
-    title?: string;
-    subtitle?: string;
-    tagline?: string;
+    title?: TranslatedString;
+    subtitle?: TranslatedString;
+    tagline?: TranslatedString;
     classes?: Record<string, string>;
 }
 
@@ -123,14 +125,14 @@ interface Social {
 
 export interface Stat {
     amount?: number | string;
-    title?: string;
+    title?: TranslatedString;
     icons?: string[];
     icon?: string;
 }
 
 export interface Item {
-    title?: string;
-    description?: string;
+    title?: TranslatedString;
+    description?: TranslatedString;
     icon?: string;
     classes?: Record<string, string>;
     callToAction?: CallToAction;
@@ -182,7 +184,7 @@ export interface Disclaimer {
 // COMPONENTS
 export interface CallToAction extends Omit<HTMLAttributes<"a">, "slot"> {
     variant?: "primary" | "secondary" | "tertiary" | "link";
-    text?: string;
+    text?: TranslatedString;
     icon?: string;
     classes?: Record<string, string>;
     type?: "button" | "submit" | "reset";

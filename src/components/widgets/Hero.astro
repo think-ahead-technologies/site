@@ -1,14 +1,14 @@
 ---
 import Image from "~/components/common/Image.astro";
 import Button from "~/components/ui/Button.astro";
-import type { CallToAction } from "~/types";
+import type { CallToAction, TranslatedString } from "~/types";
 
 export interface Props {
     id?: string;
-    title?: string;
-    subtitle?: string;
-    tagline?: string;
-    content?: string;
+    title?: TranslatedString;
+    subtitle?: TranslatedString;
+    tagline?: TranslatedString;
+    content?: TranslatedString;
     actions?: string | CallToAction[];
     image?: string | any; // TODO: find HTMLElementProps
 }

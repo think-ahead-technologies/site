@@ -31,6 +31,7 @@
         "@astrojs/partytown": "^2.0.4",
         "@astrojs/tailwind": "5.1.0",
         "@iconify-json/circle-flags": "^1.1.47",
+        "@iconify-json/fa": "^1.1.8",
         "@iconify-json/flat-color-icons": "^1.1.10",
         "@iconify-json/material-symbols": "^1.1.76",
         "@iconify-json/ph": "^1.1.12",

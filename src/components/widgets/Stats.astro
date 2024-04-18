@@ -37,8 +37,13 @@ const {
                         {title && (
                             <div class="text-sm font-medium uppercase tracking-widest text-gray-800 dark:text-slate-400 lg:text-base">
                                 {title}
-                                { icons && <p class="text-xl">{ icons.map(iconName =>
-                                    <Icon class="inline ml-1 mr-1" name={iconName} />)}</p>}
+                                {icons && (
+                                    <p class="text-xl">
+                                        {icons.map((iconName) => (
+                                            <Icon class="inline ml-1 mr-1" name={iconName} />
+                                        ))}
+                                    </p>
+                                )}
                             </div>
                         )}
                     </div>
