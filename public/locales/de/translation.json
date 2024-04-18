@@ -7,19 +7,19 @@
             "subtitle": "Wir sind Pioniere für <0>sichere</0>, <1>einfache</1> und <2>effektive</2> Infrastruktur Lösungen für Ihre <3>technologische Zukunft</3>."
         },
         "who-we-are": {
-            "subtitle": "Experienced technology consultants making the world a better place",
-            "image-alt": "Technology consultancy",
+            "subtitle": "Erfahrene Technologie Berater mit dem Ziel, die Welt ein Stückchen besser zu machen",
+            "image-alt": "Technologie Beratung",
             "accessible": {
-                "title": "Accessible and flexible",
-                "description": "Based in Stuttgart, our agile approach allows us to fit your needs as a business."
+                "title": "Erreichbar und flexibel",
+                "description": "Wir sitzen im Herzen Stuttgarts. Unsere Nähe und Agilität ist ideal, um Ihre idividuellen Geschäftsanforderungen zu erfüllen"
             },
             "experienced": {
-                "title": "Experienced and knowledgeable",
-                "description": "We've seen it all, with 15 years of cloud experience in businesses large and small, across a range of industries and countries."
+                "title": "Erfahren und sachkundig",
+                "description": "Mit über 15 Jahren Cloud Erfahrung vom Mittelstand bis hin zu internationalen Konzernen über alle Industrien hinweg. Wir haben schon alles gesehen."
             },
             "enthusiastic": {
-                "title": "Enthusiastic and dependable",
-                "description": "Technology is our passion. Our clients trust us because we care about building the right solution, not just fulfilling a contract."
+                "title": "Enthusiatisch und verlässlich",
+                "description": "Technologie ist unsere Leidenschaft. Unsere Kunden schätzen uns, weil es uns um die Entwicklung der richtigen Lösung und nicht nur um die Erfüllung eines Vertrags geht."
             }
         },
         "learnmore": "Mehr erfahren"
@@ -37,45 +37,45 @@
         "splash": "Ihr verlässlicher Partner mit <0>Antrieb und Erfahrung</0>",
         "subtitle": "Our knowledgeable, flexible team in Stuttgart is ready to jump into your world.",
         "values": {
-            "title": "Our values",
-            "subtitle": "It isn't an accident that our approach produces results — our work is built on some powerful core principles.",
-            "image-alt": "Still coding in the wintry depths of Lapland",
+            "title": "Unsere Werte",
+            "subtitle": "Unser Erfolg ist kein Zufall — unsere Arbeit basiert auf einem starken Wertesystem.",
+            "image-alt": "Wir programmieren auch im winterlichen Lappland, wenn es sein muss",
             "proactivity": {
-                "title": "Be proactive",
-                "description": "Solving a problem when asked means solving it too late. We're always on the lookout for ways to improve your business."
+                "title": "Sei proaktiv",
+                "description": "Ein Problem erst dann zu lösen, wenn man danach gefragt wird, ist bereits zu spät . Wir halten immer Ausschau nach Verbesserungsmöglichkeiten."
             },
             "learning": {
-                "title": "Learn fast",
-                "description": "Technology is a huge field, and nobody can know everything. Learning, then, is the most important thing - and it's at the core of our approach."
+                "title": "Lerne schnell",
+                "description": "Technologie entwickelt sich rasend schnell. Niemand kann alles wissen. Deswegen gehört kontinuierliches Lernen zu unseren wichtigsten Werten."
             },
             "trustworthiness": {
-                "title": "Be trustworthy",
-                "description": "When questions or issues arise, we believe firmly that raising them directly and openly allows for more effective, more enjoyable collaboration."
+                "title": "Verdiene dir Vertrauen",
+                "description": "Wir sind der festen Überzeugung, dass bei Fragen oder Probleme, eine direkte und offene Kommunikation zur effektivsten und angenehmsten Zusammenarbeit führt.."
             },
             "cheerfulness": {
-                "title": "Light up the day",
-                "description": "Solving hard problems is fun! Our infectious enthusiasm makes it a joy to work together, no matter the subject matter."
+                "title": "Schenke ein Lächeln",
+                "description": "Harte Probleme zu lösen macht Spaß! Mit dieser Begeisterung wollen wir auch alle anderen anstecken, mit denen wir zusammenarbeiten."
             }
         },
         "impact": {
-            "title": "Our impact",
-            "subtitle": "Our passionate approach can benefit your business in a range of ways.",
-            "image-alt": "Working together",
+            "title": "Unser Impact",
+            "subtitle": "Ihr Unternehmen profitiert gleich mehrfach von unserem Ansatz",
+            "image-alt": "Zusammenarbeit - Sinnbild",
             "productivity": {
-                "title": "Boost productivity",
-                "description": "Get more done with less. Make the most of your team, your tech and your position in the market."
+                "title": "Steigerung der Produktivität",
+                "description": "Erreichen Sie mehr mit weniger Einsatz. Machen Sie das Beste aus Ihrem Team, Ihrer Technologie und Ihrer Position auf dem Markt."
             },
             "costs": {
-                "title": "Optimise costs",
-                "description": "From streamlining deployments to adopting more tailored tools, there are many ways to save money on your infrastructure."
+                "title": "Optimierung der Kosten",
+                "description": "Von der Vereinfachung und Automatisierung von Deployment bis hin zur Einführung maßgeschneiderter Tools gibt es viele Möglichkeiten, bei Ihrer Infrastruktur Geld zu sparen."
             },
             "focus": {
-                "title": "Focus on what matters",
-                "description": "Technology offers limitless possibilities - we can help you prioritise those that actually benefit your business."
+                "title": "Fokus auf das wesentliche",
+                "description": "Investieren Sie dort, wo es am meisten bewirkt, statt in überteuerte Infrastrukturprojekte."
             },
             "adaptation": {
-                "title": "Adapt faster",
-                "description": "Stay ahead of your customers' ever-changing needs by delivering regularly, reliably and rapidly."
+                "title": "Schnellere Anpassung",
+                "description": "Seien Sie den sich ständig ändernden Anforderungen Ihrer Kunden immer einen Schritt voraus. Liefern Sie Ihre digitalen Produkte zuverlässig und schnell. "
             }
         },
         "unused": {
@@ -123,7 +123,7 @@
             "title": "Sicherheit & Compliance",
             "description": "Sicherheit und Compliance sind für uns keine Nebensache. Sie sind Teil des gesamten Entwicklungszykluses. So erfüllen Sie Anforderunge aus NIS2 und Cyber Resilience Act wesentlich einfacher und schneller.",
             "splash": "Wir stellen sicher, dass alle Ihre Assets sicher sind. Egal wo.",
-            "subtitle": "Security is core to how we work. We can help you meet regulations or simply build with peace of mind."
+            "subtitle": "Cybersicherheit ist der Kern unserer Arbeit. Wir können Ihnen dabei helfen, Vorschriften einzuhalten oder einfach nur mit ruhigem Gewissen neue Produkte zu entwickeln."
         },
         "training": {
             "title": "Schulungen & Workshops",
