@@ -39,9 +39,15 @@ const {
                                 {title}
                                 {icons && (
                                     <p class="text-xl">
-                                        {icons.map((iconName) => (
-                                            <Icon class="inline ml-1 mr-1" name={iconName} />
-                                        ))}
+                                        {icons.map((i) =>
+                                            typeof i === "string" ? (
+                                                <Icon class="inline ml-1 mr-1" name={i} />
+                                            ) : (
+                                                <span title={i.alt}>
+                                                    <Icon title={i.alt} class="inline ml-1 mr-1" name={i.icon} />
+                                                </span>
+                                            )
+                                        )}
                                     </p>
                                 )}
                             </div>

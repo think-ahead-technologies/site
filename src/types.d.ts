@@ -123,10 +123,15 @@ interface Social {
     href?: string;
 }
 
+type IconWithAlt = {
+    icon: string;
+    alt: string;
+};
+
 export interface Stat {
     amount?: number | string;
     title?: TranslatedString;
-    icons?: string[];
+    icons?: (string | IconWithAlt)[];
     icon?: string;
 }
 

@@ -79,18 +79,34 @@
             }
         },
         "unused": {
-            "tagline": "Experience collaboration that leads to <0>real results</0> and promotes your <0>sustainable growth</0>.",
-            "old-blurb": "A small team of passionate consultants, we leverage our wide range of industry experience to bring you the infrastructure solutions you need to make working with technology a joy, not a chore. We're used to working in large and small organisations, using Agile practices to implement solutions speedily but without compromise.",
-            "intro1": "We are a small team of <0>passionate technologists</0>, offering tailor-made IT solutions for all industries. Our passion for complex problems makes us perfect for improving the <0>efficiency and security</0> of your business processes.",
-            "intro2": "We're not just talking about <0>Agile</0>: we live by <0>flexibility and innovation</0>. Through our <0>years of experience</0>, we're familiar with the nuances of technology and the requirements of modern companies in particular.",
-            "intro3": "Whether you're looking to <0>migrate to the cloud</0>, improve your <0>IT infrastructure</0>, or <0>secure your digital assets</0>, <1>Think Ahead</1> is here to help you every step of the way. Experience collaboration that leads to <0>real results</0> and promotes your <0>sustainable growth</0>."
+            "old-blurb": "[never translated]",
+            "tagline": "Erleben Sie eine Zusammenarbeit, die zu <0>echten Ergebnissen</0> führt und Ihr <0>nachhaltiges Wachstum</0> fördert.",
+            "intro1": "Wir sind ein kleines Team von <0>passionierten Technologen</0>. Wir bieten maßgeschneiderte IT-Lösungen für alle Branchen. Dank unserer Leidenschaft für komplexe Probleme sind wir ideal geeignet, die <0>Effizienz und Sicherheit</0> Ihrer Geschäftsabläufe zu verbessern.",
+            "intro2": "Wir reden nicht nur von <0>Agil</0>. Wir leben <0>Flexibilität und Innovation</0>. Dank unserer <0>langjährigen Erfahrung</0> kennen wir die Nuancen der Technologie und die Anforderungen insbesondere moderner Unternehmen.",
+            "intro3": "Ganz gleich, ob Sie <0>in die Cloud migrieren</0>, Ihre <0>IT-Infrastruktur verbessern</0> oder Ihre <0>digitalen Ressourcen sichern möchten</0>, <1>Think Ahead</1> steht Ihnen bei jedem Schritt zur Seite. Erleben Sie eine Zusammenarbeit, die zu <0>echten Ergebnissen</0> führt und Ihr <0>nachhaltiges Wachstum</0> fördert."
         },
         "stats": {
             "title": "Unsere Erfahrung",
             "experience-years": "Jahre an Cloud Erfahrung",
             "cloud-providers": "Cloud Anbieter",
-            "industries": "Industrien",
-            "countries": "Länder"
+            "industries": {
+                "title": "Industrien",
+                "retail": "Retail",
+                "automotive": "Automotive",
+                "gaming": "Gaming",
+                "energy": "Energy",
+                "public": "Public sector",
+                "academic": "Academic",
+                "insurance": "Insurance",
+                "consumer-electronics": "Consumer electronics"
+            },
+            "countries": {
+                "title": "Länder",
+                "de": "Deutschland",
+                "en": "Vereinigtes Königreich",
+                "ch": "Schweiz",
+                "at": "Österreich"
+            }
         }
     },
 

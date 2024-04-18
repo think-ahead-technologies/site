@@ -119,13 +119,13 @@ const metadata = {
                 title: t("who-we-are.stats.cloud-providers"),
                 amount: "7",
                 icons: [
-                    "aws",
-                    "microsoftazure",
-                    "googlecloud",
-                    "scaleway",
-                    "hetzner",
-                    "redhatopenshift",
-                    "openstack"
+                    { icon: "aws", alt: "Amazon Web Services" },
+                    { icon: "microsoftazure", alt: "Microsoft Azure" },
+                    { icon: "googlecloud", alt: "Google Cloud Platform" },
+                    { icon: "scaleway", alt: "Scaleway" },
+                    { icon: "hetzner", alt: "Hetzner" },
+                    { icon: "redhatopenshift", alt: "Red Hat OpenShift" },
+                    { icon: "openstack", alt: "OpenStack" }
                     // also StackIt, but icon not freely available
                 ]
             },
@@ -139,26 +139,37 @@ const metadata = {
             //     ]
             // },
             {
-                title: t("who-we-are.stats.industries"),
+                title: t("who-we-are.stats.industries.title"),
                 amount: "8",
                 icons: [
                     // Waldemar: retail, automotive, gaming, energy, public services
-                    "tabler:shopping-bag",
-                    "tabler:car",
-                    "tabler:device-gamepad-2",
-                    "tabler:bolt",
-                    "material-symbols:account-balance-outline-rounded",
+                    { icon: "tabler:shopping-bag", alt: t("who-we-are.stats.industries.retail") },
+                    { icon: "tabler:car", alt: t("who-we-are.stats.industries.automotive") },
+                    { icon: "tabler:device-gamepad-2", alt: t("who-we-are.stats.industries.gaming") },
+                    { icon: "tabler:bolt", alt: t("who-we-are.stats.industries.energy") },
+                    {
+                        icon: "material-symbols:account-balance-outline-rounded",
+                        alt: t("who-we-are.stats.industries.public")
+                    },
 
                     // Martin: academic, insurance, consumer electronics, automotive again
-                    "ph:graduation-cap",
-                    "tabler:report-money",
-                    "material-symbols:smartphone-outline"
+                    { icon: "ph:graduation-cap", alt: t("who-we-are.stats.industries.academic") },
+                    { icon: "tabler:report-money", alt: t("who-we-are.stats.industries.insurance") },
+                    {
+                        icon: "material-symbols:smartphone-outline",
+                        alt: t("who-we-are.stats.industries.consumer-electronics")
+                    }
                 ]
             },
             {
-                title: t("who-we-are.stats.countries"),
+                title: t("who-we-are.stats.countries.title"),
                 amount: "4",
-                icons: ["circle-flags:de", "circle-flags:en", "circle-flags:ch", "circle-flags:at"]
+                icons: [
+                    { icon: "circle-flags:de", alt: t("who-we-are.stats.countries.de") },
+                    { icon: "circle-flags:en", alt: t("who-we-are.stats.countries.en") },
+                    { icon: "circle-flags:ch", alt: t("who-we-are.stats.countries.ch") },
+                    { icon: "circle-flags:at", alt: t("who-we-are.stats.countries.at") }
+                ]
             }
         ]}
     />
