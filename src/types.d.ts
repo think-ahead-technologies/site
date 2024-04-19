@@ -168,16 +168,16 @@ export interface Input {
     type: HTMLInputTypeAttribute;
     required?: boolean;
     name: string;
-    label?: string;
+    label?: TranslatedString;
     autocomplete?: string;
     placeholder?: string;
 }
 
 export interface Textarea {
-    label?: string;
+    label?: TranslatedString;
     name?: string;
     required?: boolean;
-    placeholder?: string;
+    placeholder?: TranslatedString;
     rows?: number;
 }
 
@@ -214,8 +214,8 @@ export interface Form {
     inputs?: Array<Input>;
     textarea?: Textarea;
     disclaimer?: Disclaimer;
-    button?: string;
-    description?: string;
+    button?: TranslatedString;
+    description?: TranslatedString;
 }
 
 // WIDGETS

@@ -1,0 +1,4 @@
+#!/bin/bash -e
+
+npm run i18n:check
+npm run format:check

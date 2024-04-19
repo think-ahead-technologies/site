@@ -92,8 +92,6 @@
             "industries": {
                 "title": "Industrien",
                 "retail": "Handel",
-                "automotive": "Automotive",
-                "gaming": "Gaming",
                 "energy": "Energie",
                 "public": "Öffentlicher Dienst",
                 "academic": "Wissenschaft",
@@ -138,9 +136,6 @@
         "letsconnect": "Schön Sie kennen zu lernen!",
         "subtitle": "Wir freuen uns über einen Austausch über eine Cloud Infrastruktur mit der Sie gerne arbeiten.",
         "book": "Termin buchen",
-        "email": {
-            "title": "Email"
-        },
         "post": {
             "title": "Standort"
         },
@@ -152,8 +147,6 @@
         "form": {
             "title": "Oder hinterlassen Sie uns direkt eine Nachricht!",
             "subtitle": "Unser Team freut sich Ihnen weiterhelfen zu können.",
-            "name": "Name",
-            "email": "Email",
             "message": "Nachricht",
             "message-placeholder": "Wie können wir helfen?",
             "disclaimer": "Mit absenden des Formulars stimmen Sie unseren <0>Datenschutzbestimmungen</0> und der Sammlung Ihrer eingegeben persönlichen Informationen zum Zweck der Beantwortung der Anfrage zu.",
@@ -171,7 +164,6 @@
     },
 
     "blog": {
-        "title": "Thinking Ahead",
         "subtitle": "Neuigkeiten, Anleitungen, Erfahrungsberichte und andere Ideen vom Think Ahead Team"
     }
 }

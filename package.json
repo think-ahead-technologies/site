@@ -10,7 +10,9 @@
         "preview": "astro preview",
         "astro": "astro",
         "format": "prettier -wl .",
+        "format:check": "prettier -c .",
         "i18n": "npx astro-i18next generate",
+        "i18n:check": "bash ./scripts/check_translations.sh",
         "lint:eslint": "eslint . --ext .js,.ts,.astro"
     },
     "dependencies": {

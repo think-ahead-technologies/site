@@ -19,16 +19,16 @@ const metadata = {
     <!-- Hero Widget ******************* -->
 
     <Hero
-        tagline={t("index.splash.surtitle") || "Error"}
+        tagline={t("index.splash.surtitle")}
         actions={[
             {
                 variant: "primary",
                 target: "_blank",
-                text: t("contact.book") || "Error",
+                text: t("contact.book"),
                 href: "https://outlook.office365.com/owa/calendar/ThinkAheadTechnologies@think-ahead.tech/bookings/",
                 icon: "tabler:calendar"
             },
-            { text: t("index.learnmore") || "Error", href: "#solutions" }
+            { text: t("index.learnmore"), href: "#solutions" }
         ]}
     >
         <Fragment slot="title">
@@ -48,7 +48,7 @@ const metadata = {
 
     <!-- Features2 Widget ************** -->
 
-    <!-- <Features2 id="about-us" title={t("who-we-are.title") || "Error"} subtitle={t("who-we-are.description") || "Error"}>
+    <!-- <Features2 id="about-us" title={t("who-we-are.title")} subtitle={t("who-we-are.description")}>
         <Fragment slot="bg">
             <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
         </Fragment>
@@ -147,12 +147,12 @@ const metadata = {
 
     <Features2
         id="solutions"
-        title={t("solutions.intro") || "Error"}
-        subtitle={t("solutions.subtitle") || "Error"}
+        title={t("solutions.intro")}
+        subtitle={t("solutions.subtitle")}
         items={[
             {
-                title: t("solutions.security.title") || "Error",
-                description: t("solutions.security.description") || "Error",
+                title: t("solutions.security.title"),
+                description: t("solutions.security.description"),
                 icon: "flat-color-icons:lock",
                 callToAction: {
                     variant: "link",
@@ -162,8 +162,8 @@ const metadata = {
                 }
             },
             {
-                title: t("solutions.platform.title") || "Error",
-                description: t("solutions.platform.description") || "Error",
+                title: t("solutions.platform.title"),
+                description: t("solutions.platform.description"),
                 icon: "material-symbols:cloud",
                 callToAction: {
                     variant: "link",
@@ -173,8 +173,8 @@ const metadata = {
                 }
             },
             {
-                title: t("solutions.training.title") || "Error",
-                description: t("solutions.training.description") || "Error",
+                title: t("solutions.training.title"),
+                description: t("solutions.training.description"),
                 icon: "flat-color-icons:voice-presentation",
                 callToAction: {
                     variant: "link",
@@ -215,19 +215,15 @@ const metadata = {
     <!-- CallToAction Widget *********** -->
 
     <CallToAction
+        title={t("contact.letsconnect")}
+        subtitle={t("contact.subtitle")}
         actions={[
             {
                 variant: "primary",
-                text: t("contact.title") || "Error",
+                text: t("contact.title"),
                 href: "/contact",
                 icon: "tabler:mail"
             }
         ]}
-    >
-        <Fragment slot="title">{t("contact.letsconnect") || "Error"}</Fragment>
-
-        <Fragment slot="subtitle">
-            {t("contact.subtitle") || "Error"}
-        </Fragment>
-    </CallToAction>
+    />
 </Layout>

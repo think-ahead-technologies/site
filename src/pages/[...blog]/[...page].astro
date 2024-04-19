@@ -34,7 +34,7 @@ const metadata = {
 <Layout metadata={metadata}>
     <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
         <Headline subtitle={t("blog.subtitle")}>
-            {t("blog.title")}
+            {t("blog.title", "Thinking Ahead")}
         </Headline>
         <BlogList posts={page.data} />
         <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />

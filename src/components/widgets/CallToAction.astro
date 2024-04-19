@@ -1,13 +1,13 @@
 ---
 import WidgetWrapper from "../ui/WidgetWrapper.astro";
-import type { CallToAction, Widget } from "~/types";
+import type { CallToAction, TranslatedString, Widget } from "~/types";
 import Headline from "~/components/ui/Headline.astro";
 import Button from "~/components/ui/Button.astro";
 
 interface Props extends Widget {
-    title?: string;
-    subtitle?: string;
-    tagline?: string;
+    title?: TranslatedString;
+    subtitle?: TranslatedString;
+    tagline?: TranslatedString;
     callToAction?: CallToAction;
     actions?: string | CallToAction[];
 }

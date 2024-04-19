@@ -19,8 +19,8 @@ const metadata = {
     <!-- Features2 Widget ************** -->
 
     <Features2
-        title={t("contact.letsconnect") || "Error"}
-        subtitle={t("contact.subtitle") || "Error"}
+        title={t("contact.letsconnect")}
+        subtitle={t("contact.subtitle")}
         items={[
             //   {
             //     title: 'Contact sales',
@@ -33,24 +33,24 @@ const metadata = {
             //       'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
             //   },
             {
-                title: t("contact.email.title") || "Error",
+                title: t("contact.email.title", "Email"),
                 description: "contact@think-ahead.tech",
                 icon: "tabler:mail"
             },
             {
-                title: t("contact.videocall.title") || "Error",
-                description: t("contact.videocall.description") || "Error",
+                title: t("contact.videocall.title"),
+                description: t("contact.videocall.description"),
                 icon: "tabler:video",
                 callToAction: {
                     variant: "secondary",
                     target: "_blank",
-                    text: t("contact.videocall.booknow") || "Error",
+                    text: t("contact.videocall.booknow"),
                     href: "https://outlook.office365.com/owa/calendar/ThinkAheadTechnologies@think-ahead.tech/bookings/",
                     icon: "tabler:calendar"
                 }
             },
             {
-                title: t("contact.post.title") || "Error",
+                title: t("contact.post.title"),
                 description: "Lautenschlagerstraße 16, 70173 Stuttgart",
                 icon: "tabler:map-pin"
             }
@@ -58,31 +58,31 @@ const metadata = {
     />
 
     <ContactUs
-        title={t("contact.form.title") || "Error"}
-        subtitle={t("contact.form.subtitle") || "Error"}
+        title={t("contact.form.title")}
+        subtitle={t("contact.form.subtitle")}
         inputs={[
             {
                 type: "text",
                 name: "name",
-                label: t("contact.form.name") || "Error"
+                label: t("contact.form.name", "Name")
             },
             {
                 type: "email",
                 required: true,
                 name: "email",
-                label: t("contact.form.email") || "Error"
+                label: t("contact.form.email", "Email")
             }
         ]}
         textarea={{
-            label: t("contact.form.message") || "Error",
+            label: t("contact.form.message"),
             required: true,
-            placeholder: t("contact.form.message-placeholder") || "Error"
+            placeholder: t("contact.form.message-placeholder")
         }}
         disclaimer={{
             required: true,
             label: "contact.form.disclaimer"
         }}
-        description={t("contact.form.description") || "Error"}
-        button={t("contact.form.submit") || "Error"}
+        description={t("contact.form.description")}
+        button={t("contact.form.submit")}
     />
 </Layout>

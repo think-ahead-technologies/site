@@ -90,10 +90,8 @@
             "experience-years": "Total years of cloud experience",
             "cloud-providers": "Cloud providers",
             "industries": {
-                "title": "Industrien",
+                "title": "Industries",
                 "retail": "Retail",
-                "automotive": "Automotive",
-                "gaming": "Gaming",
                 "energy": "Energy",
                 "public": "Public sector",
                 "academic": "Academic",
@@ -101,11 +99,11 @@
                 "consumer-electronics": "Consumer electronics"
             },
             "countries": {
-                "title": "Länder",
-                "de": "Deutschland",
-                "en": "Vereinigtes Königreich",
-                "ch": "Schweiz",
-                "at": "Österreich"
+                "title": "Countries",
+                "de": "Germany",
+                "en": "UK",
+                "ch": "Switzerland",
+                "at": "Austria"
             }
         }
     },
@@ -138,9 +136,6 @@
         "letsconnect": "Let's get to know each other!",
         "subtitle": "Let's discuss how we can help you build the infrastructure you want to work with.",
         "book": "Book a meeting",
-        "email": {
-            "title": "Email"
-        },
         "post": {
             "title": "Location"
         },
@@ -152,8 +147,6 @@
         "form": {
             "title": "Or, drop us a message now!",
             "subtitle": "Our team will be delighted to help you.",
-            "name": "Name",
-            "email": "Email",
             "message": "Message",
             "message-placeholder": "How can we help?",
             "disclaimer": "By submitting this contact form, you acknowledge and agree to the collection of your personal information according to our <0>privacy policy</0>.",
@@ -171,7 +164,6 @@
     },
 
     "blog": {
-        "title": "Thinking Ahead",
         "subtitle": "News, tutorials, resources and other thoughts from the team"
     }
 }
