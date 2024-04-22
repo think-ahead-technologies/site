@@ -34,10 +34,10 @@ export default defineConfig({
         defaultLocale: "de",
         fallback: {
             en: "de"
+        },
+        routing: {
+            prefixDefaultLocale: true
         }
-        // routing: {
-        //     prefixDefaultLocale: true
-        // }
     },
 
     integrations: [

@@ -7,7 +7,7 @@ Static public site for _Think Ahead Technologies GmbH_, built on [Astro 4.0](htt
 ![Homepage preview](/src/assets/images/en-home-dark.png)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/96e3f8ad-35c5-4c9a-991b-1d089bc86c72/deploy-status)](https://app.netlify.com/sites/think-ahead-technologies/deploys)
-[![License](https://img.shields.io/github/license/think-ahead-technologies/site?style=flat-square&color=dddddd&labelColor=000000)](https://github.com/think-ahead-technologies/site/blob/main/LICENSE.md)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Maintained](https://img.shields.io/badge/maintained%3F-yes-brightgreen.svg?style=flat-square)](https://github.com/think-ahead-technologies)
 [![Known Vulnerabilities](https://snyk.io/test/github/think-ahead-technologies/site/badge.svg?style=flat-square)](https://snyk.io/test/github/think-ahead-technologies/site)
 

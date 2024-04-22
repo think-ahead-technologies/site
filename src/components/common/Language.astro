@@ -15,8 +15,9 @@ export interface Props {
 const path = getPathWithoutLocale(Astro.url.pathname);
 
 const currentLocale = Astro.currentLocale;
-const otherLocale = currentLocale === PRIMARY_LANGUAGE ? `${SECONDARY_LANGUAGE}${path === "" ? "" : "/"}` : "";
-const href = `/${otherLocale}${path}`;
+const otherLocale = currentLocale === PRIMARY_LANGUAGE ? SECONDARY_LANGUAGE : PRIMARY_LANGUAGE;
+const trailingSlash = path === "" ? "" : "/";
+const href = `/${otherLocale}${trailingSlash}${path}`;
 
 const icon = currentLocale === SECONDARY_LANGUAGE ? PRIMARY_LANGUAGE : SECONDARY_LANGUAGE;
 

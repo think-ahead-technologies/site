@@ -8,14 +8,14 @@ import Button from "~/components/ui/Button.astro";
 import { trimSlash, getAsset } from "~/utils/permalinks";
 import type { CallToAction } from "~/types";
 
-import { PRIMARY_LANGUAGE, getLangFromUrl, useTranslations } from "../../i18n/utils";
+import { PRIMARY_LANGUAGE, getLangFromUrl, useTranslations, type TranslationKey } from "../../i18n/utils";
 import Language from "../common/Language.astro";
 import { getRelativeLocaleUrl } from "astro:i18n";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 interface Link {
-    text?: string;
+    text?: TranslationKey;
     href?: string;
     ariaLabel?: string;
     icon?: string;
@@ -74,10 +74,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
         ]}
     >
         <div class:list={[{ "mr-auto rtl:mr-0 rtl:ml-auto": position === "right" }, "flex justify-between"]}>
-            <a
-                class="flex items-center"
-                href={Astro.currentLocale === PRIMARY_LANGUAGE ? "/" : `/${Astro.currentLocale}`}
-            >
+            <a class="flex items-center" href={`/${Astro.currentLocale}`}>
                 <Logo />
             </a>
             <div class="flex items-center md:hidden">
@@ -113,7 +110,10 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
                                                             "aw-link-active": href2 === currentPath
                                                         }
                                                     ]}
-                                                    href={getRelativeLocaleUrl(Astro.currentLocale, href2)}
+                                                    href={getRelativeLocaleUrl(
+                                                        Astro.currentLocale || PRIMARY_LANGUAGE,
+                                                        href2
+                                                    )}
                                                 >
                                                     {t(text2)}
                                                 </a>
@@ -129,7 +129,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
                                             "aw-link-active": href === currentPath
                                         }
                                     ]}
-                                    href={getRelativeLocaleUrl(Astro.currentLocale, href)}
+                                    href={getRelativeLocaleUrl(Astro.currentLocale || PRIMARY_LANGUAGE, href)}
                                 >
                                     {t(text)}
                                 </a>
@@ -167,6 +167,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
                             {actions.map((btnProps) => (
                                 <Button
                                     {...btnProps}
+                                    href={`/${Astro.currentLocale}${btnProps.href}`}
                                     text={t(btnProps.text)}
                                     class="ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm w-auto"
                                 />

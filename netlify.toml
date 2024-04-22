@@ -7,3 +7,26 @@
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+[[redirects]]
+  from = "/"
+  to = "/de"
+  status = 301
+  force = true
+  conditions = {Language = ["de"]}
+
+[[redirects]]
+  from = "/"
+  to = "/en"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/*"
+  to = "/en/404.html"
+  status = 404
+
+[[redirects]]
+  from = "/*"
+  to = "/de/404.html"
+  status = 404

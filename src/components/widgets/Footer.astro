@@ -3,20 +3,26 @@ import { Icon } from "astro-icon/components";
 import { SITE } from "astrowind:config";
 import { getHomePermalink } from "~/utils/permalinks";
 
-import { getLangFromUrl, getPathWithoutLocale, useTranslations } from "../../i18n/utils";
+import {
+    PRIMARY_LANGUAGE,
+    getLangFromUrl,
+    getPathWithoutLocale,
+    useTranslations,
+    type TranslationKey
+} from "../../i18n/utils";
 import { getRelativeLocaleUrl } from "astro/virtual-modules/i18n.js";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 interface Link {
-    text?: string;
+    text?: TranslationKey;
     href?: string;
     ariaLabel?: string;
     icon?: string;
 }
 
 interface Links {
-    title?: string;
+    title?: TranslationKey;
     links: Array<Link>;
 }
 
@@ -24,18 +30,23 @@ export interface Props {
     links: Array<Links>;
     secondaryLinks: Array<Link>;
     socialLinks: Array<Link>;
-    footNote?: string;
+    footNote?: TranslationKey;
     theme?: string;
 }
 
-const { socialLinks = [], secondaryLinks = [], links = [], footNote = "", theme = "light" } = Astro.props;
+const { socialLinks = [], secondaryLinks = [], links = [], footNote = undefined, theme = "light" } = Astro.props;
 
 const getFooterHref = (title: Links["title"], href: Link["href"]): Link["href"] => {
-    const currentLocale = Astro.currentLocale || "other";
+    const currentLocale = Astro.currentLocale || PRIMARY_LANGUAGE;
     if (title === "nav.languages") {
         if (href === currentLocale) {
+            // When pointing to the current locale, just stay on the same page.
             return Astro.url.pathname;
+        } else if (!href || getPathWithoutLocale(Astro.url.pathname).length <= 3) {
+            // If we're at a language homepage, don't put a slash at the end.
+            return `/${href}`;
         } else {
+            // Otherwise, delegate to Astro.
             return getRelativeLocaleUrl(href, getPathWithoutLocale(Astro.url.pathname));
         }
     }

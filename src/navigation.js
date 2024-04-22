@@ -66,8 +66,8 @@ export const footerData = {
         }
     ],
     secondaryLinks: [
-        { text: "nav.terms", href: getPermalink("/impressum") },
-        { text: "nav.privacypolicy", href: getPermalink("/privacy") }
+        { text: "nav.terms", href: getPermalink("/de/impressum") },
+        { text: "nav.privacypolicy", href: getPermalink("/de/privacy") }
     ],
     socialLinks: [
         {
