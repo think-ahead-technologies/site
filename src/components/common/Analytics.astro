@@ -11,3 +11,8 @@ import { ANALYTICS } from "astrowind:config";
         />
     ) : null
 }
+{
+    ANALYTICS?.vendors?.plausible?.domain ? (
+        <script defer data-domain={ANALYTICS?.vendors?.plausible?.domain} src="https://plausible.io/js/script.js" />
+    ) : null
+}
