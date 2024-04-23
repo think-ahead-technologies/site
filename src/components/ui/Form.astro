@@ -6,7 +6,7 @@ import { Trans } from "astro-i18next/components";
 const { inputs, textarea, disclaimer, button = "Contact us", description = "" } = Astro.props;
 ---
 
-<form data-netlify="true">
+<form data-netlify="true" name="Contact form" class="plausible-event-name=Contact+form+submission">
     {
         inputs &&
             inputs.map(
@@ -66,7 +66,7 @@ const { inputs, textarea, disclaimer, button = "Contact us", description = "" } 
                     <label for="disclaimer" class="cursor-pointer select-none text-sm text-gray-600 dark:text-gray-400">
                         <Trans i18nKey={disclaimer.label}>
                             {disclaimer.label} See our our{" "}
-                            <a target="_blank" class="mt-2 space-x-5 font-bold highlight" href="/privacy">
+                            <a target="_blank" class="mt-2 space-x-5 font-bold highlight" href="/de/privacy">
                                 privacy policy
                             </a>
                             .
