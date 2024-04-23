@@ -1,0 +1,26 @@
+---
+import { t, changeLanguage } from "i18next";
+import Layout from "~/layouts/PageLayout.astro";
+import Hero from "~/components/widgets/Hero.astro";
+
+changeLanguage("de");
+
+const metadata = {
+    title: t("contact.title")
+};
+---
+
+<Layout metadata={metadata}>
+    <Hero
+        title={t("contact.form-success.title")}
+        subtitle={t("contact.form-success.subtitle")}
+        actions={[
+            {
+                variant: "primary",
+                text: t("contact.form-success.home-link"),
+                icon: "material-symbols:navigate-next",
+                href: `/${Astro.currentLocale}`
+            }
+        ]}
+    />
+</Layout>

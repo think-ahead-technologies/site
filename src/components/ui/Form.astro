@@ -2,11 +2,17 @@
 import type { Form as Props } from "~/types";
 import Button from "~/components/ui/Button.astro";
 import { Trans } from "astro-i18next/components";
+import { PRIMARY_LANGUAGE } from "~/i18n/utils";
 
 const { inputs, textarea, disclaimer, button = "Contact us", description = "" } = Astro.props;
 ---
 
-<form data-netlify="true" name="Contact form" class="plausible-event-name=Contact+form+submission">
+<form
+    action=`/${Astro.currentLocale || PRIMARY_LANGUAGE}/contact-success`
+    data-netlify="true"
+    name="Contact form"
+    class="plausible-event-name=Contact+form+submission"
+>
     {
         inputs &&
             inputs.map(

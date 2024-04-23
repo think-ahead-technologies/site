@@ -70,6 +70,7 @@ export default defineConfig({
                     "dataset-linked-rounded",
                     "euro-symbol-rounded",
                     "handshake-outline",
+                    "navigate-next",
                     "settings-heart",
                     "smartphone-outline",
                     "sunny-outline-rounded"

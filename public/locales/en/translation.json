@@ -133,8 +133,12 @@
 
     "contact": {
         "title": "Contact us",
-        "letsconnect": "Let's get to know each other!",
-        "subtitle": "Let's discuss how we can help you build the infrastructure you want to work with.",
+        "header": "Let's get to know each other!",
+        "index-description": "Let's discuss how we can help you build the infrastructure you want to work with.",
+        "methods": {
+            "title": "Or, let's meet!",
+            "subtitle": "Our team is ready to jump on a call or meet in person."
+        },
         "book": "Book a meeting",
         "post": {
             "title": "Location"
@@ -145,13 +149,17 @@
             "booknow": "Book now"
         },
         "form": {
-            "title": "Or, drop us a message now!",
-            "subtitle": "Our team will be delighted to help you.",
+            "subtitle": "Ask a question or give a comment - we want to hear from you!",
             "message": "Message",
             "message-placeholder": "How can we help?",
             "disclaimer": "By submitting this contact form, you acknowledge and agree to the collection of your personal information according to our <0>privacy policy</0> (in German).",
             "submit": "Contact us",
             "description": "Our team typically responds within 24 business hours."
+        },
+        "form-success": {
+            "title": "Thanks for getting in touch!",
+            "subtitle": "Our team will get back to you as soon as we can.",
+            "home-link": "Keep exploring"
         }
     },
 

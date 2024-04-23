@@ -133,8 +133,12 @@
 
     "contact": {
         "title": "Kontaktieren Sie uns",
-        "letsconnect": "Schön Sie kennen zu lernen!",
-        "subtitle": "Wir freuen uns über einen Austausch über eine Cloud Infrastruktur mit der Sie gerne arbeiten.",
+        "header": "Schön, Sie kennenzulernen!",
+        "index-description": "Wir freuen uns über einen Austausch über eine Cloud Infrastruktur mit der Sie gerne arbeiten.",
+        "methods": {
+            "title": "Or, let's meet!",
+            "subtitle": "Our team is ready to jump on a call or meet in person."
+        },
         "book": "Termin buchen",
         "post": {
             "title": "Standort"
@@ -145,13 +149,17 @@
             "booknow": "Jetzt buchen"
         },
         "form": {
-            "title": "Oder hinterlassen Sie uns direkt eine Nachricht!",
-            "subtitle": "Unser Team freut sich Ihnen weiterhelfen zu können.",
+            "subtitle": "Ask a question or give a comment - we want to hear from you!",
             "message": "Nachricht",
             "message-placeholder": "Wie können wir helfen?",
             "disclaimer": "Mit absenden des Formulars stimmen Sie unseren <0>Datenschutzbestimmungen</0> und der Sammlung Ihrer eingegeben persönlichen Informationen zum Zweck der Beantwortung der Anfrage zu.",
             "submit": "Jetzt abschicken",
             "description": "Unser Team antwortet wochentags innerhalb von 24 Stunden."
+        },
+        "form-success": {
+            "title": "Thanks for getting in touch!",
+            "subtitle": "Our team will get back to you as soon as we can.",
+            "home-link": "Keep exploring"
         }
     },
 
