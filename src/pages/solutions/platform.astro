@@ -1,7 +1,10 @@
 ---
 import { t, changeLanguage } from "i18next";
 import CallToAction from "~/components/widgets/CallToAction.astro";
-import Hero from "~/components/widgets/Hero.astro";
+import Content from "~/components/widgets/Content.astro";
+import Features from "~/components/widgets/Features.astro";
+import Features3 from "~/components/widgets/Features3.astro";
+import Hero from "~/components/widgets/Hero2.astro";
 import Layout from "~/layouts/PageLayout.astro";
 
 changeLanguage("de");
@@ -16,6 +19,31 @@ const metadata = {
 
     <Hero
         tagline={t("solutions.platform.title")}
+        actions={[
+            {
+                variant: "primary",
+                target: "_blank",
+                text: "Get Started",
+                href: "https://github.com/onwidget/astrowind"
+            },
+            { text: "Learn more", href: "#features" }
+        ]}
+        image={{
+            src: "https://images.unsplash.com/photo-1580481072645-022f9a6dbf27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+            alt: "AstroWind Hero Image"
+        }}
+    >
+        <Fragment slot="title">
+            {t("solutions.platform.splash")}
+        </Fragment>
+
+        <Fragment slot="subtitle">
+            {t("solutions.platform.subtitle")}
+        </Fragment>
+    </Hero>
+
+    <!-- <Hero
+        tagline={t("solutions.platform.title")}
         title={t("solutions.platform.splash")}
         subtitle={t("solutions.platform.subtitle")}
         actions={[
@@ -29,131 +57,119 @@ const metadata = {
             src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
             alt: "Think Ahead Hero Image"
         }}
-    />
-
-    <!-- Problems the client has (what we understand)
-
-  How we can solve it
-
-  Our approach / details -->
+    />-->
 
     <!-- Features2 Widget ************** -->
 
-    <!-- <Features2
-    title="Explore our diverse templates"
-    subtitle="Discover our selection below to streamline and elevate your projects."
-    columns={3}
-    items={[
-      {
-        title: 'Educational',
-        description:
-          'By harmonizing instructional design and visual appeal, templates streamline content creation for varied materials, expediting development and cultivating engaging educational spaces.',
-        icon: 'tabler:school',
-      },
-      {
-        title: 'Interior Design',
-        description:
-          'Crafting functional, visually appealing spaces for residential and commercial use. Templates emphasize layout, colors, and furniture setups, offering a versatile toolkit for your design vision.',
-        icon: 'tabler:home-star',
-      },
-      {
-        title: 'Photography',
-        description: `Empowering photographers, our templates facilitate captivating storytelling. With a keen focus on layout, galleries, and typography, they cater to both professionals and enthusiasts.`,
-        icon: 'tabler:photo',
-      },
-      {
-        title: 'E-commerce',
-        description:
-          'Developing engaging online stores, our E-commerce templates ensure a dynamic presence to effectively showcase products. Ideal for startups or revamps.',
-        icon: 'tabler:shopping-cart',
-      },
-      {
-        title: 'Blog',
-        description:
-          'With attention to typography, these templates empower effective content presentation for writers at any stage, ensuring visually engaging and user-friendly blogs.',
-        icon: 'tabler:article',
-      },
-      {
-        title: 'Business',
-        description:
-          'Providing polished options for effective visual communication, these templates empower both startups and established companies for a professional brand presence.',
-        icon: 'tabler:building-store',
-      },
-      {
-        title: 'Branding',
-        description:
-          'Offering pre-designed elements for a consistent brand identity, including logos and marketing materials. Ideal for new ventures or revamps.',
-        icon: 'tabler:arrow-big-up-lines',
-      },
-      {
-        title: 'Medical',
-        description: `From presentations to patient forms, these tools enhance communication effectiveness for healthcare professionals. Ideal for medical practices and research pursuits.`,
-        icon: 'tabler:vaccine',
-      },
-      {
-        title: 'Fashion Design',
-        description:
-          'With attention to detail, customization, and contemporary design, they empower designers to showcase ideas cohesively. Ideal for all levels of designers.',
-        icon: 'tabler:tie',
-      },
-    ]}
-  /> -->
+    <Features
+        title="Platform Engineering is Essential for Your Business"
+        columns={2}
+        items={[
+            {
+                title: "Alignment with Business Goals",
+                description:
+                    "Platform engineering aligns technology infrastructure with business goals, ensuring that every tech investment and process improvement directly supports your strategic objectives. This alignment increases the ROI of technology spending and accelerates business growth.",
+                icon: "tabler:school"
+            },
+            {
+                title: "Predictability in Outcomes:",
+                description: `By standardizing development environments and operational processes, platform engineering reduces variables that lead to project delays and budget overruns. This standardization helps in setting realistic expectations and consistently meeting project timelines and budget, providing a predictable model for business planning and financial forecasting.`,
+                icon: "tabler:photo"
+            },
+            {
+                title: "Rapid Response to Market Changes",
+                description:
+                    "In today’s dynamic market, the ability to adapt quickly is crucial. Platform engineering equips your business with agile and flexible technology frameworks that can easily integrate new tools and adapt to changing market demands, keeping you ahead of competitors.",
+                icon: "tabler:school"
+            },
+            {
+                title: "Reduced IT Complexity",
+                description:
+                    "Our platforms reduce complexity and friction by standardizing tools and processes across projects and teams. This simplification not only cuts costs but also decreases the time needed for onboarding new developers, allowing them to contribute more effectively and quickly.",
+                icon: "tabler:home-star"
+            },
+            {
+                title: "Security and Compliance",
+                description: `With the growing importance of data security and regulatory compliance, platform engineering ensures that your infrastructure is built with these considerations from the ground up. This proactive approach mitigates risks and protects your assets from emerging threats.`,
+                icon: "tabler:photo"
+            },
+            {
+                title: "Sustainability and Scalability",
+                description: ` We design platforms that are both sustainable and scalable, supporting long-term growth and adaptation. This approach ensures that your IT infrastructure can expand seamlessly as your business grows, without needing constant redesigns or adjustments.`,
+                icon: "tabler:photo"
+            }
+        ]}
+    />
+
+    <Features3
+        id="features"
+        title="Our solutions"
+        subtitle="There is no one size fits platform. With our experience we will help you to navigate the complex cloud native landscape and build a platform that fits your needs."
+        columns={2}
+        items={[
+            {
+                title: "Platform Assessment and Strategy:",
+                description: `Evaluate your current IT landscape and align it with both user and business needs to develop a strategic platform vision. This process involves a thorough analysis of existing infrastructure, identifying gaps, and setting a clear, actionable roadmap. Our approach ensures that your platform strategy is cohesive, forward-thinking, and tailored to drive business success efficiently and effectively.`,
+                icon: "tabler:square-number-1"
+            },
+            {
+                title: "Internal Developer Platform",
+                description:
+                    "Enable developer self-service and build golden paths so that developers get stuff done. Reduce cognitive load on developers without abstracting away context and underlying technologies. Following best practices, we treat platforms as a product and build it based on user research and continuously improve it.",
+                icon: "tabler:square-number-2"
+            },
+            {
+                title: "Hybrid Cloud / Multi Cloud",
+                description:
+                    "For most enterprises hybrid cloud is inevitable, so you better have a good plan for how to make the best use of it. Split worksloads across different clouds or on-premises environments in an efficient and meaningful way and ensure security and compliance across all environments.",
+                icon: "tabler:square-number-3"
+            },
+            {
+                title: "AI & IoT Platfrom ",
+                description: `Integrate artificial intelligence and the Internet of Things into a unified platform for real-time data analytics and actionable insights. This platform leverages AI's predictive power and IoT's sensor networks to enhance operational efficiency, personalize experiences, and proactively manage maintenance, boosting reliability and sustainability.`,
+                icon: "tabler:square-number-4"
+            }
+        ]}
+        image={{
+            src: "https://images.unsplash.com/photo-1521517407911-565264e7d82d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80",
+            alt: "Colorful Image"
+        }}
+    />
 
     <!-- Content Widget **************** -->
 
-    <!-- <Content
-    isReversed
-    items={[
-      {
-        title: 'High-Quality Designs',
-        description:
-          'Our templates feature top-tier designs that ensure a professional and polished appearance for your projects.',
-        icon: 'tabler:wand',
-      },
-      {
-        title: 'Customization Tools',
-        description:
-          'Tailor each template to your unique needs with user-friendly customization tools that let you personalize colors, fonts, and content.',
-        icon: 'tabler:settings',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
-      alt: 'Features Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Main Features</h3>
-    </Fragment>
-  </Content> -->
-
-    <!-- Content Widget **************** -->
-
-    <!-- <Content
-    isAfterContent
-    items={[
-      {
-        title: 'Time Savings',
-        description:
-          'Streamline your workflow, enabling you to create stunning materials efficiently and allocate more time to your core tasks.',
-        icon: 'tabler:clock',
-      },
-      {
-        title: 'Instant Download',
-        description:
-          'Enjoy immediate access to your chosen templates upon purchase, enabling you to begin working on your projects without delay.',
-        icon: 'tabler:file-download',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Benefits Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Benefits</h3>
-    </Fragment>
-  </Content> -->
+    <Content
+        isReversed
+        items={[
+            {
+                title: "We deliver value. Constantly.",
+                description:
+                    "With Continuous Integration and Continuous Delivery we optimize for delivering value to our clients as quick as possible.",
+                icon: "tabler:settings"
+            },
+            {
+                title: "We know how technology works",
+                description:
+                    "We are passionate technologists with multiple years of experience. We know modern technology stacks like Azure, AWS, GCP, Kubernetes, Openshift, Docker, Terraform, and many more.",
+                icon: "tabler:wand"
+            },
+            {
+                title: "We are fun to work with",
+                description: "TODO: Insert description here.",
+                icon: "tabler:settings"
+            }
+        ]}
+        image={{
+            src: "https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+            alt: "Features Image"
+        }}
+    >
+        <Fragment slot="content">
+            <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+                Think Ahead is your ideal partner
+            </h3>
+        </Fragment>
+    </Content>
 
     <!-- Testimonials Widget *********** -->
 
