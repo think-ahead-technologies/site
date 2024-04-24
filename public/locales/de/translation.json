@@ -2,9 +2,9 @@
     "index": {
         "title": "Wilkommen",
         "splash": {
-            "surtitle": "Teure, komplexe Infrastruktur ist nicht gleich sicher",
+            "surtitle": "Teure, komplexe Cloud-Infrastruktur ist nicht gleich sicher",
             "title": "Es geht auch anders. Mit <0>Think Ahead</0>!",
-            "subtitle": "Wir sind Pioniere für <0>sichere</0>, <1>einfache</1> und <2>effektive</2> Infrastruktur Lösungen für Ihre <3>digitale Zukunft</3>."
+            "subtitle": "Wir sind Pioniere für <0>sichere</0>, <0>einfache</0> und <0>effektive</0> Cloud Lösungen für Ihre <0>digitale Zukunft</0>."
         },
         "who-we-are": {
             "subtitle": "Erfahrene Technologie Berater mit dem Ziel, die Welt ein Stückchen besser zu machen",
@@ -33,9 +33,9 @@
 
     "who-we-are": {
         "title": "Wer wir sind",
-        "tagline": "Wer sind wir?",
-        "splash": "Ihr verlässlicher Partner mit <0>Antrieb und Erfahrung</0>",
-        "subtitle": "Unser kompetentes Team in Stuttgart ist bereit für Ihre Herausforderungen.",
+        "tagline": "Wir sind",
+        "splash": "Ihr verlässlicher Technologie Partner <0>aus Stuttgart</0>",
+        "subtitle": "Egal ob Cloud, Plattformen oder Sicherheit. Wir sind bereit für Ihre Herausforderungen.",
         "values": {
             "title": "Unsere Werte",
             "subtitle": "Unser Erfolg ist kein Zufall — unsere Arbeit basiert auf einem starken Wertesystem.",
@@ -136,8 +136,8 @@
         "header": "Schön, Sie kennenzulernen!",
         "index-description": "Wir freuen uns über einen Austausch über eine Cloud Infrastruktur mit der Sie gerne arbeiten.",
         "methods": {
-            "title": "Or, let's meet!",
-            "subtitle": "Our team is ready to jump on a call or meet in person."
+            "title": "Oder lassen Sie uns direkt reden!",
+            "subtitle": "Unser Team freut sich über einen persönlichen Austausch."
         },
         "book": "Termin buchen",
         "post": {
@@ -149,25 +149,25 @@
             "booknow": "Jetzt buchen"
         },
         "form": {
-            "subtitle": "Ask a question or give a comment - we want to hear from you!",
+            "subtitle": "Fragen oder kommentieren Sie hier - wir freuen uns auf Ihren Input!",
             "message": "Nachricht",
             "message-placeholder": "Wie können wir helfen?",
-            "disclaimer": "Mit absenden des Formulars stimmen Sie unseren <0>Datenschutzbestimmungen</0> und der Sammlung Ihrer eingegeben persönlichen Informationen zum Zweck der Beantwortung der Anfrage zu.",
+            "disclaimer": "Mit Absenden des Formulars stimmen Sie unseren <0>Datenschutzbestimmungen</0> und der Speicherung Ihrer eingegeben persönlichen Informationen zum Zweck der Beantwortung der Anfrage zu.",
             "submit": "Jetzt abschicken",
             "description": "Unser Team antwortet wochentags innerhalb von 24 Stunden."
         },
         "form-success": {
-            "title": "Thanks for getting in touch!",
-            "subtitle": "Our team will get back to you as soon as we can.",
-            "home-link": "Keep exploring"
+            "title": "Vielen Dank für Ihre Nachricht!",
+            "subtitle": "Unser Team meldet sich bald bei Ihnen.",
+            "home-link": "Weiter entdecken"
         }
     },
 
     "404": {
         "title": "Fehler 404",
         "error": "Fehler",
-        "not-found": "Leider konnte diese Seite nicht gefunden werden.",
-        "go-home": "Es gibt aber ganz viele andere Seiten zu entdecken.",
+        "not-found": "Diese Seite konnte leider nicht gefunden werden.",
+        "go-home": "Es gibt aber viel mehr zu entdecken.",
         "to-homepage": "Zurück zur Hauptseite"
     },
 

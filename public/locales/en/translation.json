@@ -2,9 +2,9 @@
     "index": {
         "title": "Welcome",
         "splash": {
-            "surtitle": "Expensive, complex infrastructure isn't actually safer",
+            "surtitle": "Expensive, complex cloud infrastructure isn't actually safer",
             "title": "Let's <0>Think Ahead</0> together",
-            "subtitle": "Pioneering <0>secure</0>, <1>simple</1> and <2>effective</2> infrastructure solutions for your <3>digital future</3>."
+            "subtitle": "Pioneering <0>secure</0>, <0>simple</0> and <0>effective</0> cloud solutions for your <0>digital future</0>."
         },
         "who-we-are": {
             "subtitle": "Experienced technology consultants making the world a better place",
@@ -33,9 +33,9 @@
 
     "who-we-are": {
         "title": "Who we are",
-        "tagline": "Who we are",
-        "splash": "Supporting the future with <0>drive and experience</0>",
-        "subtitle": "Our competent team in Stuttgart is ready to rise to your challenges.",
+        "tagline": "We are",
+        "splash": "Your reliable technology partner <0>from Stuttgart</0>",
+        "subtitle": "Whether in cloud, platforms or security, we are ready to rise to your challenges.",
         "values": {
             "title": "Our values",
             "subtitle": "It isn't an accident that our approach produces results — our work is built on some powerful core principles.",
