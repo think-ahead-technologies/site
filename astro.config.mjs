@@ -66,11 +66,15 @@ export default defineConfig({
                 "material-symbols": [
                     "account-balance-outline-rounded",
                     "cloud",
+                    "deployed-code-outline",
+                    "deployed-code-account-outline",
                     "deployed-code-history-outline",
                     "dataset-linked-rounded",
+                    "emoji-people",
                     "euro-symbol-rounded",
                     "handshake-outline",
                     "navigate-next",
+                    "person-raised-hand-outline",
                     "settings-heart",
                     "smartphone-outline",
                     "sunny-outline-rounded"

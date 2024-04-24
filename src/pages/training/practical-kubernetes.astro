@@ -1,0 +1,232 @@
+---
+import { t, changeLanguage } from "i18next";
+import Features from "~/components/widgets/Features.astro";
+import Hero from "~/components/widgets/Hero.astro";
+import Layout from "~/layouts/PageLayout.astro";
+import ContactUs from "~/components/widgets/Contact.astro";
+import Content from "~/components/widgets/Content.astro";
+
+changeLanguage("de");
+
+function lastNDayInMonth(year: number, month: number, dayOfWeek: 0 | 1 | 2 | 3 | 4 | 5 | 6) {
+    var lastDay = new Date(year, month + 1, 0);
+    if (lastDay.getDay() < dayOfWeek) {
+        lastDay.setDate(lastDay.getDate() - 7);
+    }
+    lastDay.setDate(lastDay.getDate() - (lastDay.getDay() - dayOfWeek));
+    return lastDay;
+}
+
+const courseDates = (): { start: Date | number; end: Date | number }[] =>
+    [new Date(), new Date(), new Date()]
+        .map((v, k) => v.setMonth(v.getMonth() + k))
+        .map((date) => lastNDayInMonth(new Date(date).getFullYear(), new Date(date).getMonth(), 4))
+        .map((end) => ({ start: new Date(end.getFullYear(), end.getMonth(), end.getDate() - 2), end }));
+
+const courseDatesList = () => {
+    const dates = courseDates();
+    return (
+        "<ul>" +
+        dates
+            .map(
+                (course) =>
+                    `<li class="ps-5">&bull; ${formatDate(course.start)} ${t("general.month.to")} ${formatDate(course.end)}</li>`
+            )
+            .join("") +
+        "</ul>"
+    );
+};
+
+const formatDate = (when: Date | number): string => {
+    const date = new Date(when);
+    return `${date.getDate()} ${t(`general.month.${date.getMonth()}`)} ${date.getFullYear()}`;
+};
+
+const metadata = {
+    title: t("solutions.training.title")
+};
+---
+
+<Layout metadata={metadata}>
+    <!-- Hero Widget ******************* -->
+
+    <Hero
+        tagline={t("solutions.training.title")}
+        title={t("training.kubernetes.title")}
+        subtitle={t("training.kubernetes.subtitle")}
+        class:list={"mb-18"}
+    />
+
+    <Features
+        title={t("training.at-a-glance.title")}
+        columns={3}
+        classes={{ container: "-mt-32" }}
+        items={[
+            {
+                title: t("training.at-a-glance.who.title"),
+                subitems: [
+                    {
+                        title: t("training.at-a-glance.who.developers"),
+                        // icon: "material-symbols:manage-accounts-outline"
+                        icon: "tabler:check"
+                    },
+                    {
+                        title: t("training.at-a-glance.who.platform"),
+                        icon: "tabler:check"
+                    },
+                    {
+                        title: t("training.at-a-glance.who.devops"),
+                        icon: "tabler:check"
+                    }
+                ],
+                icon: "material-symbols:emoji-people"
+            },
+            {
+                title: t("training.at-a-glance.what"),
+                subitems: [
+                    {
+                        title: `3 ${t("training.at-a-glance.days")}`,
+                        icon: "tabler:calendar"
+                    },
+                    {
+                        title: t("training.at-a-glance.online"),
+                        icon: "tabler:world"
+                    },
+                    {
+                        title: t("training.at-a-glance.interactive"),
+                        icon: "material-symbols:person-raised-hand-outline"
+                    },
+                    {
+                        title: `1600€ ${t("training.at-a-glance.plus-vat")}`,
+                        icon: "tabler:coin-euro"
+                    }
+                ],
+                icon: "tabler:map-pin"
+            },
+            {
+                title: t("training.at-a-glance.why"),
+                subitems: [
+                    {
+                        title: t("training.kubernetes.deploy"),
+                        // icon: "kubernetes"
+                        icon: "material-symbols:deployed-code-outline"
+                    },
+                    {
+                        title: t("training.kubernetes.manage"),
+                        icon: "material-symbols:deployed-code-account-outline"
+                    },
+                    {
+                        title: t("training.kubernetes.optimise"),
+                        icon: "tabler:sparkles"
+                    }
+                ],
+                icon: "fa:lightbulb-o"
+            }
+        ]}
+    />
+
+    <Content
+        image={{
+            src: "/lightbulb-junior-ferreira-unsplash.jpg",
+            alt: t("images.lightbulb")
+        }}
+        items={[
+            {
+                title: t("training.kubernetes.you-will-learn.basics.title"),
+                description: t("training.kubernetes.you-will-learn.basics.description"),
+                icon: "kubernetes"
+            },
+            {
+                title: t("training.kubernetes.you-will-learn.skills.title"),
+                description: t("training.kubernetes.you-will-learn.skills.description"),
+                icon: "tabler:cloud-star"
+            },
+            {
+                title: t("training.kubernetes.you-will-learn.advanced.title"),
+                description: t("training.kubernetes.you-will-learn.advanced.description"),
+                icon: "tabler:stars"
+            }
+        ]}
+    >
+        <Fragment slot="content">
+            <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+                {t("training.you-will-learn")}
+            </h3>
+        </Fragment>
+    </Content>
+
+    <Content
+        isReversed={true}
+        image={{
+            src: "/working-together-scott-graham-unsplash.jpg",
+            alt: t("images.working-together")
+        }}
+        items={[
+            {
+                title: t("training.about.format"),
+                description: t("training.kubernetes.about.format"),
+                icon: "tabler:user-screen"
+            },
+            {
+                title: t("training.about.instructors"),
+                description: t("training.kubernetes.about.instructors"),
+                icon: "ph:graduation-cap"
+            },
+            {
+                title: t("training.about.benefits"),
+                description: t("training.kubernetes.about.benefits"),
+                icon: "tabler:award"
+            },
+            {
+                title: t("training.about.schedule"),
+                description: t("training.kubernetes.about.schedule") + courseDatesList(),
+                icon: "tabler:calendar"
+            }
+        ]}
+    >
+        <Fragment slot="content">
+            <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About the course</h3>
+        </Fragment>
+    </Content>
+
+    <ContactUs
+        name="Training signup"
+        target=`/training/signup-success`
+        title={t("Sign up now")}
+        subtitle={"Ready to take your skills to the next level? Enter your details to request your spot in our next session."}
+        inputs={[
+            {
+                type: "hidden",
+                name: "course",
+                value: "Practical Kubernetes"
+            },
+            {
+                type: "hidden",
+                name: "language",
+                value: Astro.currentLocale || "unknown"
+            },
+            {
+                type: "text",
+                name: "name",
+                required: true,
+                label: t("contact.form.name", "Name")
+            },
+            {
+                type: "text",
+                name: "company",
+                label: t("contact.form.company")
+            },
+            {
+                type: "email",
+                required: true,
+                name: "email",
+                label: t("contact.form.email", "Email")
+            }
+        ]}
+        disclaimer={{
+            required: true,
+            label: "contact.form.disclaimer"
+        }}
+        button={t("training.signup.submit")}
+    />
+</Layout>

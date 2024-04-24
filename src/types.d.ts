@@ -87,7 +87,7 @@ export interface MetaDataTwitter {
 
 export interface Image {
     src: string;
-    alt?: string;
+    alt?: TranslatedString;
 }
 
 export interface Video {
@@ -139,6 +139,8 @@ export interface Item {
     title?: TranslatedString;
     description?: TranslatedString;
     icon?: string;
+    /** Think Ahead addition, not supported everywhere */
+    subitems?: Array<Omit<Item, "callToAction">>;
     classes?: Record<string, string>;
     callToAction?: CallToAction;
     image?: Image;
@@ -166,6 +168,7 @@ export interface Testimonial {
 
 export interface Input {
     type: HTMLInputTypeAttribute;
+    value?: string;
     required?: boolean;
     name: string;
     label?: TranslatedString;
@@ -211,6 +214,8 @@ export interface Collapse {
 }
 
 export interface Form {
+    name: string;
+    target: string;
     inputs?: Array<Input>;
     textarea?: Textarea;
     disclaimer?: Disclaimer;
@@ -291,4 +296,8 @@ export interface Content extends Omit<Headline, "classes">, Widget {
     callToAction?: CallToAction;
 }
 
-export interface Contact extends Omit<Headline, "classes">, Form, Widget {}
+export interface Contact extends Omit<Headline, "classes">, Form, Widget {
+    name: string;
+    /** Where the user is taken on clicking Submit */
+    target: string;
+}

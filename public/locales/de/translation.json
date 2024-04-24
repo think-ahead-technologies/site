@@ -26,6 +26,21 @@
     },
 
     "general": {
+        "month": {
+            "to": "bis",
+            "0": "Januar",
+            "1": "Februar",
+            "2": "März",
+            "3": "April ",
+            "4": "Mai",
+            "5": "Juni",
+            "6": "Juli",
+            "7": "August ",
+            "8": "September ",
+            "9": "Oktober",
+            "10": "November ",
+            "11": "Dezember"
+        },
         "startexploring": "Beginnen",
         "wip": "Hier entsteht etwas Neues",
         "comingsoon": "Diese Seite wird demnächst erweitert! Bitte besuchen Sie uns bald wieder."
@@ -131,6 +146,68 @@
         }
     },
 
+    "training": {
+        "at-a-glance": {
+            "title": "At a glance",
+            "who": {
+                "title": "Who?",
+                "developers": "Developers",
+                "platform": "Platform engineers",
+                "devops": "DevOps engineers"
+            },
+            "what": "What?",
+            "why": "Why?",
+            "days": "days",
+            "online": "Online",
+            "interactive": "Interactive",
+            "plus-vat": "+ VAT"
+        },
+        "you-will-learn": "You will learn",
+        "about": {
+            "format": "Format",
+            "instructors": "Instructor Profile",
+            "benefits": "Benefits",
+            "schedule": "Schedule"
+        },
+        "signup": {
+            "title": "Sign up now",
+            "subtitle": "Ready to take your skills to the next level? Enter your details to request your spot in our next session.",
+            "submit": "Sign up"
+        },
+        "kubernetes": {
+            "title": "Practical Kubernetes",
+            "subtitle": "Whether you are new to container orchestration or looking to formalize your skills, this course offers a comprehensive introduction and deep dive into Kubernetes' core functionalities.",
+            "deploy": "Deploy Kubernetes",
+            "manage": "Manage Kubernetes",
+            "optimise": "Optimise Kubernetes",
+            "you-will-learn": {
+                "basics": {
+                    "title": "Foundational Knowledge",
+                    "description": "Understand the history and architecture of Kubernetes."
+                },
+                "skills": {
+                    "title": "Practical Skills",
+                    "description": "Set up environments, deploy applications, scale and monitor their performance efficiently."
+                },
+                "advanced": {
+                    "title": "Advanced Techniques",
+                    "description": "Secure your Kubernetes environments and applications, reduce costs, and minimize the carbon footprint of your deployments."
+                }
+            },
+            "about": {
+                "format": "This course will be delivered through video lectures, real-time discussions, and hands-on labs, spread over three days.",
+                "instructors": "Learn from the best. Our instructors are seasoned Kubernetes practitioners, leveraging their extensive experience in consultancy to provide you with real-world insights and practical knowledge.",
+                "benefits": "Prepare to harness the full potential of Kubernetes for developing and managing modern cloud-native applications, significantly boosting your professional capabilities and career prospects.",
+                "schedule": "Scheduled sessions take place from Tuesday to Thursday in the last week of each month. For the coming months, these will fall on:"
+            }
+        }
+    },
+
+    "images": {
+        "lightbulb": "Learning. Photo by Junior Ferreira on Unsplash",
+        "working-together": "Working together. Photo by Scott Graham on Unsplash"
+    },
+
     "contact": {
         "title": "Kontaktieren Sie uns",
         "header": "Schön, Sie kennenzulernen!",
@@ -151,6 +228,7 @@
         "form": {
             "subtitle": "Fragen oder kommentieren Sie hier - wir freuen uns auf Ihren Input!",
             "message": "Nachricht",
+            "company": "Company",
             "message-placeholder": "Wie können wir helfen?",
             "disclaimer": "Mit Absenden des Formulars stimmen Sie unseren <0>Datenschutzbestimmungen</0> und der Speicherung Ihrer eingegeben persönlichen Informationen zum Zweck der Beantwortung der Anfrage zu.",
             "submit": "Jetzt abschicken",

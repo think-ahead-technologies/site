@@ -1,0 +1,32 @@
+---
+import { t, changeLanguage } from "i18next";
+import Layout from "~/layouts/PageLayout.astro";
+import Hero from "~/components/widgets/Hero.astro";
+import Trans from "node_modules/astro-i18next/src/components/Trans.astro";
+
+changeLanguage("de");
+
+const metadata = {
+    title: t("contact.title")
+};
+---
+
+<Layout metadata={metadata}>
+    <Hero
+        title={t("Thanks for signing up!")}
+        subtitle={t("Our team will be in touch soon with more information and course dates.")}
+        actions={[
+            {
+                variant: "primary",
+                text: t("contact.form-success.home-link"),
+                icon: "material-symbols:navigate-next",
+                href: `/${Astro.currentLocale}/solutions/training`
+            }
+        ]}
+    />
+    <Fragment slot="title">
+        <Trans i18nKey="index.splash.title"
+            >Let's <span class="text-accent dark:text-white highlight">Think Ahead</span> together</Trans
+        >
+    </Fragment>
+</Layout>

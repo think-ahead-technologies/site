@@ -32,7 +32,7 @@ const {
                 containerClass
             )}
         >
-            {items.map(({ title, description, icon, callToAction, classes: itemClasses = {} }) => (
+            {items.map(({ title, description, subitems, icon, callToAction, classes: itemClasses = {} }) => (
                 <div>
                     <div class={twMerge("flex flex-row max-w-md", panelClass, itemClasses?.panel)}>
                         <div class="flex justify-center">
@@ -60,6 +60,22 @@ const {
                                     )}
                                     set:html={description}
                                 />
+                            )}
+                            {subitems && (
+                                <ul
+                                    class={twMerge(
+                                        `${title ? "mt-3" : ""} text-muted`,
+                                        descriptionClass,
+                                        itemClasses?.description
+                                    )}
+                                >
+                                    {subitems.map((subitem) => (
+                                        <li>
+                                            <Icon class="inline mr-1" name={subitem.icon} />
+                                            {subitem.title}
+                                        </li>
+                                    ))}
+                                </ul>
                             )}
                             {callToAction && (
                                 <div

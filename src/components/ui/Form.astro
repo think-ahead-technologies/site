@@ -4,29 +4,30 @@ import Button from "~/components/ui/Button.astro";
 import { Trans } from "astro-i18next/components";
 import { PRIMARY_LANGUAGE } from "~/i18n/utils";
 
-const { inputs, textarea, disclaimer, button = "Contact us", description = "" } = Astro.props;
+const { name, target, inputs, textarea, disclaimer, button = "Contact us", description = "" } = Astro.props;
 ---
 
 <form
-    action=`/${Astro.currentLocale || PRIMARY_LANGUAGE}/contact-success`
+    action=`/${Astro.currentLocale || PRIMARY_LANGUAGE}${target}`
     data-netlify="true"
-    name="Contact form"
-    class="plausible-event-name=Contact+form+submission"
+    name={name}
+    class=`plausible-event-name=${name.replaceAll(" ", "+")}+submission`
 >
     {
         inputs &&
             inputs.map(
-                ({ type = "text", required, name, label = "", autocomplete = "on", placeholder = "" }) =>
+                ({ type = "text", required, name, value, label = "", autocomplete = "on", placeholder = "" }) =>
                     name && (
                         <div class="mb-6">
                             {label && (
                                 <label for={name} class="block text-sm font-medium">
-                                    {label}
+                                    {label} {required && " *"}
                                 </label>
                             )}
                             <input
                                 type={type}
                                 name={name}
+                                value={value}
                                 id={name}
                                 required={required}
                                 autocomplete={autocomplete}
@@ -76,7 +77,8 @@ const { inputs, textarea, disclaimer, button = "Contact us", description = "" } 
                                 privacy policy
                             </a>
                             .
-                        </Trans>
+                        </Trans>{" "}
+                        {disclaimer.required && "*"}
                     </label>
                 </div>
             </div>

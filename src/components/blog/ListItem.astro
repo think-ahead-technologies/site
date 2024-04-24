@@ -10,6 +10,7 @@ import type { Post } from "~/types";
 import { getPermalink } from "~/utils/permalinks";
 import { findImage } from "~/utils/images";
 import { getFormattedDate } from "~/utils/utils";
+import { PRIMARY_LANGUAGE } from "~/i18n/utils";
 
 export interface Props {
     post: Post;
@@ -79,7 +80,7 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, "post") : 
                     link ? (
                         <a
                             class="hover:text-primary dark:hover:text-blue-700 transition ease-in duration-200"
-                            href={link}
+                            href={`/${Astro.currentLocale || PRIMARY_LANGUAGE}${link}`}
                         >
                             {post.title}
                         </a>
