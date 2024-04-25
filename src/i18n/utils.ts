@@ -29,3 +29,10 @@ export function getPathWithoutLocale(fullPath: string): string {
     const pathNoSlash = path.charAt(0) === "/" ? path.substring(1) : path;
     return pathNoSlash;
 }
+
+/** Omit from the sitemap any pages that aren't prefixed with a locale */
+export const sitemapIgnoreRoot = (fullPath: string): boolean => {
+    // Extract the file path without the full site name
+    const path = fullPath.replace(/https?:\/\/[a-z.-]*\//, "/");
+    return path === "/" || !!path.match(/^[/][a-z]{2}(-[a-zA-Z]{2})?([/]|$)/);
+};

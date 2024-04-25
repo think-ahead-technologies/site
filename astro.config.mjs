@@ -11,6 +11,7 @@ import icon from "astro-icon";
 import compress from "astro-compress";
 
 import astroI18next from "astro-i18next";
+import { sitemapIgnoreRoot } from "./src/i18n/utils";
 
 import astrowind from "./src/integration";
 
@@ -45,6 +46,7 @@ export default defineConfig({
             applyBaseStyles: false
         }),
         sitemap({
+            filter: sitemapIgnoreRoot,
             i18n: {
                 defaultLocale: "de",
                 locales: {
