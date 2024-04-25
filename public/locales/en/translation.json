@@ -43,6 +43,7 @@
         },
         "startexploring": "Start exploring",
         "wip": "Work in progress",
+        "coming-soon": "Coming soon",
         "comingsoon": "This page will be extended soon! Please watch this space."
     },
 
@@ -140,13 +141,17 @@
         },
         "training": {
             "title": "Training & Workshops",
-            "description": "Promote the growth of your employees with our interactive training and workshops on cloud, security and modern software development.",
-            "splash": "We'll make your team's best even better",
-            "subtitle": "Our enthusiastic team shares our deep knowledge of best practices and current in a range of interactive workshops and seminars."
+            "description": "Promote the growth of your employees with our interactive training and workshops on cloud, security and modern software development."
         }
     },
 
     "training": {
+        "splash": "We'll make your team's best even better",
+        "subtitle": "Our enthusiastic team shares our deep knowledge of best practices and current technologies in a range of interactive workshops and seminars.",
+        "courses": "Currently available courses",
+        "courses-subtitle": "Sign up now to one of our practical, expert-led courses.",
+        "coming-soon": "More courses will be released in the near future. Watch this space!",
+        "view-more": "View more",
         "at-a-glance": {
             "title": "At a glance",
             "who": {

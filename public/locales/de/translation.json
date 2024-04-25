@@ -43,6 +43,7 @@
         },
         "startexploring": "Beginnen",
         "wip": "Hier entsteht etwas Neues",
+        "coming-soon": "Coming soon",
         "comingsoon": "Diese Seite wird demnächst erweitert! Bitte besuchen Sie uns bald wieder."
     },
 
@@ -140,13 +141,17 @@
         },
         "training": {
             "title": "Schulungen & Workshops",
-            "description": "Fördern Sie das Wachstum Ihrer Mitarbeiter mit unseren interaktiven Schulungen und Workshops rund um Cloud, Sicherheit und moderne Softwareentwicklung.",
-            "splash": "Holen Sie das Beste aus Ihren Teams",
-            "subtitle": "Erfahren Sie alles was Sie wissen müssen über aktuelle Technologien, Best Practices und moderne Entwicklungsmethoden in unserem breiten Spektrum an interaktiven Workshops und Seminaren."
+            "description": "Fördern Sie das Wachstum Ihrer Mitarbeiter mit unseren interaktiven Schulungen und Workshops rund um Cloud, Sicherheit und moderne Softwareentwicklung."
         }
     },
 
     "training": {
+        "splash": "We'll make your team's best even better",
+        "subtitle": "Our enthusiastic team shares our deep knowledge of best practices and current technologies in a range of interactive workshops and seminars.",
+        "courses": "Currently available courses",
+        "courses-subtitle": "Sign up now to one of our practical, expert-led courses.",
+        "coming-soon": "More courses will be released in the near future. Watch this space!",
+        "view-more": "View more",
         "at-a-glance": {
             "title": "Auf einem Blick",
             "who": {

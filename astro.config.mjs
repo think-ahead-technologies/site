@@ -66,6 +66,7 @@ export default defineConfig({
                 "material-symbols": [
                     "account-balance-outline-rounded",
                     "cloud",
+                    "construction",
                     "deployed-code-outline",
                     "deployed-code-account-outline",
                     "deployed-code-history-outline",
