@@ -171,6 +171,7 @@
         },
         "you-will-learn": "Sie lernen",
         "about": {
+            "title": "Informationen zum Kurs",
             "instructors": "Unsere Dozenten",
             "benefits": "Vorteile",
             "schedule": "Termine"

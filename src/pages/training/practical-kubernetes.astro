@@ -185,15 +185,17 @@ const metadata = {
         ]}
     >
         <Fragment slot="content">
-            <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About the course</h3>
+            <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+                {t("training.about.title")}
+            </h3>
         </Fragment>
     </Content>
 
     <ContactUs
         name="Training signup"
         target=`/training/signup-success`
-        title={t("Sign up now")}
-        subtitle={"Ready to take your skills to the next level? Enter your details to request your spot in our next session."}
+        title={t("training.signup.title")}
+        subtitle={t("training.signup.subtitle")}
         inputs={[
             {
                 type: "hidden",

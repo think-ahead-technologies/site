@@ -3,6 +3,7 @@ import { Icon } from "astro-icon/components";
 
 import { UI } from "astrowind:config";
 import { PRIMARY_LANGUAGE, SECONDARY_LANGUAGE, getPathWithoutLocale } from "~/i18n/utils";
+import { footerData } from "~/navigation";
 
 export interface Props {
     label?: string;
@@ -17,7 +18,7 @@ const path = getPathWithoutLocale(Astro.url.pathname);
 const currentLocale = Astro.currentLocale;
 const otherLocale = currentLocale === PRIMARY_LANGUAGE ? SECONDARY_LANGUAGE : PRIMARY_LANGUAGE;
 const trailingSlash = path === "" ? "" : "/";
-const href = `/${otherLocale}${trailingSlash}${path}`;
+const href = footerData.noTranslation.includes(path) ? `/${otherLocale}` : `/${otherLocale}${trailingSlash}${path}`;
 
 const icon = currentLocale === SECONDARY_LANGUAGE ? PRIMARY_LANGUAGE : SECONDARY_LANGUAGE;
 

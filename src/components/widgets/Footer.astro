@@ -28,29 +28,54 @@ interface Links {
 
 export interface Props {
     links: Array<Links>;
+    noTranslation: Array<string>;
     secondaryLinks: Array<Link>;
     socialLinks: Array<Link>;
     footNote?: TranslationKey;
     theme?: string;
 }
 
-const { socialLinks = [], secondaryLinks = [], links = [], footNote = undefined, theme = "light" } = Astro.props;
+const {
+    socialLinks = [],
+    secondaryLinks = [],
+    noTranslation = [],
+    links = [],
+    footNote = undefined,
+    theme = "light"
+} = Astro.props;
 
 const getFooterHref = (title: Links["title"], href: Link["href"]): Link["href"] => {
     const currentLocale = Astro.currentLocale || PRIMARY_LANGUAGE;
-    if (title === "nav.languages") {
-        if (href === currentLocale) {
-            // When pointing to the current locale, just stay on the same page.
-            return Astro.url.pathname;
-        } else if (!href || getPathWithoutLocale(Astro.url.pathname).length <= 3) {
-            // If we're at a language homepage, don't put a slash at the end.
-            return `/${href}`;
-        } else {
-            // Otherwise, delegate to Astro.
-            return getRelativeLocaleUrl(href, getPathWithoutLocale(Astro.url.pathname));
-        }
+    // Most links just point to their locale equivalent.
+    if (title !== "nav.languages") {
+        return getRelativeLocaleUrl(currentLocale, href);
     }
-    return getRelativeLocaleUrl(currentLocale, href);
+    // In special cases, the href just indicates a locale.
+    const locale = href;
+    // The link to the current locale should just stay on the same page.
+    if (locale === currentLocale) {
+        return Astro.url.pathname;
+        // Some pages don't have equivalents.
+    } else if (noTranslation.includes(getPathWithoutLocale(Astro.url.pathname))) {
+        return Astro.url.pathname;
+        // If we're at a language homepage, don't put a slash at the end.
+    } else if (!locale || getPathWithoutLocale(Astro.url.pathname).length <= 3) {
+        return `/${locale}`;
+        // Otherwise, delegate to Astro to produce a link in the current language
+    } else {
+        return getRelativeLocaleUrl(locale, getPathWithoutLocale(Astro.url.pathname));
+    }
+};
+
+const getFooterText = (title: string | undefined, text: TranslationKey | undefined): TranslationKey | undefined => {
+    if (title !== "nav.languages" || !noTranslation.includes(getPathWithoutLocale(Astro.url.pathname))) {
+        return text;
+    }
+    const lang = text?.replace("lang.", "");
+    if (getLangFromUrl(Astro.url.pathname) === lang) {
+        return text;
+    }
+    return `lang.nope.${lang}` as TranslationKey;
 };
 ---
 
@@ -87,7 +112,7 @@ const getFooterHref = (title: Links["title"], href: Link["href"]): Link["href"] 
                                             href={getFooterHref(title, href)}
                                             aria-label={ariaLabel}
                                         >
-                                            <Fragment set:html={t(text)} />
+                                            <Fragment set:html={t(getFooterText(title, text))} />
                                         </a>
                                     </li>
                                 ))}

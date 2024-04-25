@@ -5,8 +5,9 @@ export const SECONDARY_LANGUAGE = "en";
 
 export type TranslationKey = keyof (typeof ui)[typeof defaultLang];
 
-export function getLangFromUrl(url: URL) {
-    const [, lang] = url.pathname.split("/");
+export function getLangFromUrl(url: string | URL) {
+    const path = typeof url === "string" ? url : url.pathname;
+    const [, lang] = path.split("/");
     if (lang in ui) return lang as keyof typeof ui;
     return defaultLang;
 }

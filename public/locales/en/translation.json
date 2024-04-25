@@ -171,6 +171,7 @@
         },
         "you-will-learn": "You will learn",
         "about": {
+            "title": "About the course",
             "instructors": "Instructor Profile",
             "benefits": "Benefits",
             "schedule": "Schedule"

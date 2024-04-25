@@ -65,6 +65,8 @@ export const footerData = {
             ]
         }
     ],
+    /** These links won't link to the /en/equivalent page in the nav.languages footer. */
+    noTranslation: ["impressum", "privacy"],
     secondaryLinks: [
         { text: "nav.terms", href: getPermalink("/de/impressum") },
         { text: "nav.privacypolicy", href: getPermalink("/de/privacy") }

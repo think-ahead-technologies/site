@@ -42,6 +42,8 @@ export const ui = {
         "nav.languages": "Sprache",
         "lang.en": "English",
         "lang.de": "Deutsch",
+        "lang.nope.en": "Unavailable in English",
+        "lang.nope.de": "Nicht auf Deutsch verfügbar",
         banner: ""
     }
 } as const;

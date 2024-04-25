@@ -3,7 +3,7 @@ title: "Impressum"
 layout: "~/layouts/MarkdownLayout.astro"
 ---
 
-_Last updated_: April 11, 2024
+_Letzte Änderung_: 11 April 2024
 
 Think Ahead Technologies GmbH
 
