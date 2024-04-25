@@ -179,7 +179,9 @@
         "signup": {
             "title": "Sign up now",
             "subtitle": "Ready to take your skills to the next level? Enter your details to request your spot in our next session.",
-            "submit": "Sign up"
+            "submit": "Sign up",
+            "thanks": "Thanks for signing up!",
+            "next-steps": "Our team will be in touch soon with more information and course dates."
         },
         "kubernetes": {
             "title": "Practical Kubernetes",

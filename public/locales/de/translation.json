@@ -179,7 +179,9 @@
         "signup": {
             "title": "Jetzt Anmelden",
             "subtitle": "Sind Sie bereit Ihre Fähigkeiten auf ein neues Level zu heben? Sichern Sie sich Ihren Platz.",
-            "submit": "Anmelden"
+            "submit": "Anmelden",
+            "thanks": "Danke für Ihre Anfrage!",
+            "next-steps": "Unser Team meldet sich in Kürze mit weiteren Informationen und der Anmeldebestätigung."
         },
         "kubernetes": {
             "title": "Kubernetes für Praktiker",

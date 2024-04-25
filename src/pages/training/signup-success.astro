@@ -13,8 +13,8 @@ const metadata = {
 
 <Layout metadata={metadata}>
     <Hero
-        title={t("Thanks for signing up!")}
-        subtitle={t("Our team will be in touch soon with more information and course dates.")}
+        title={t("training.signup.thanks")}
+        subtitle={t("training.signup.next-steps")}
         actions={[
             {
                 variant: "primary",
@@ -24,9 +24,4 @@ const metadata = {
             }
         ]}
     />
-    <Fragment slot="title">
-        <Trans i18nKey="index.splash.title"
-            >Let's <span class="text-accent dark:text-white highlight">Think Ahead</span> together</Trans
-        >
-    </Fragment>
 </Layout>
