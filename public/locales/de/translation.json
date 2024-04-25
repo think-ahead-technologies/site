@@ -150,13 +150,13 @@
         "at-a-glance": {
             "title": "Auf einem Blick",
             "who": {
-                "title": "Wer?",
+                "title": "Zielgruppe",
                 "developers": "Entwickler",
                 "platform": "Plattform Engineers",
                 "devops": "DevOps Engineers"
             },
-            "what": "Was?",
-            "why": "Wieso?",
+            "what": "Fakten?",
+            "why": "Inhalte?",
             "days": "Tage",
             "online": "online",
             "interactive": "Interaktiv",
@@ -164,7 +164,6 @@
         },
         "you-will-learn": "Sie lernen",
         "about": {
-            "format": "Format",
             "instructors": "Unsere Dozenten",
             "benefits": "Vorteile",
             "schedule": "Termine"
@@ -182,15 +181,15 @@
             "optimise": "Kubernetes optimieren",
             "you-will-learn": {
                 "basics": {
-                    "title": "Grundlagen",
+                    "title": "Kubernetes Grundlagen",
                     "description": "Sie kennen die Historie von Kubernetes und verstehen die Architektur."
                 },
                 "skills": {
-                    "title": "Praktische Fähigkeiten",
+                    "title": "Kubernetes im Alltag",
                     "description": "Bereitstellen von Umgebungen, Deployen, Skalieren und Monitoren von Applikationen."
                 },
                 "advanced": {
-                    "title": "Fortegschrittene Techniken",
+                    "title": "Kubernetes für Fortgeschrittene",
                     "description": "Absichern von Kubernetes Umgebungen und Applikationen, Reduktion der Betirebskosten und der CO2 Emissionen der Deployments."
                 }
             },
