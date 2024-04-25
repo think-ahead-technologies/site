@@ -185,6 +185,7 @@
         },
         "kubernetes": {
             "title": "Kubernetes für Praktiker",
+            "description": "Das perfekte Training, um Kubernetes einfach, effizient und sicher im Alltag einsetzen zu können.",
             "subtitle": "Egal, ob Sie neu in der Container-Orchestrierung sind oder Ihre Fähigkeiten vertiefen wollen, dieser Kurs bietet eine umfassende Einführung und einen tiefen Einblick in die Kernfunktionen von Kubernetes.",
             "deploy": "Kubernetes deployen",
             "manage": "Kubernetes managen",

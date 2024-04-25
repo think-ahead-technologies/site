@@ -185,6 +185,7 @@
         },
         "kubernetes": {
             "title": "Practical Kubernetes",
+            "description": "The perfect training, to utilize Kubernetes in production in a simple, efficient and secure way.",
             "subtitle": "Whether you are new to container orchestration or looking to formalize your skills, this course offers a comprehensive introduction and deep dive into Kubernetes' core functionalities.",
             "deploy": "Deploy Kubernetes",
             "manage": "Manage Kubernetes",
