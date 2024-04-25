@@ -4,7 +4,8 @@
         "splash": {
             "surtitle": "Teure, komplexe Cloud-Infrastruktur ist nicht gleich sicher",
             "title": "Es geht auch anders. Mit <0>Think Ahead</0>!",
-            "subtitle": "Wir sind Pioniere für <0>sichere</0>, <0>einfache</0> und <0>effektive</0> Cloud Lösungen für Ihre <0>digitale Zukunft</0>."
+            "subtitle": "Wir sind Pioniere für <0>sichere</0>, <0>einfache</0> und <0>effektive</0> Cloud Lösungen für Ihre <0>digitale Zukunft</0>.",
+            "description": "Wir sind Pioniere für sichere, einfache und effektive Cloud Lösungen für Ihre digitale Zukunft."
         },
         "who-we-are": {
             "subtitle": "Erfahrene Technologie Berater mit dem Ziel, die Welt ein Stückchen besser zu machen",
@@ -51,6 +52,7 @@
         "title": "Wer wir sind",
         "tagline": "Wir sind",
         "splash": "Ihr verlässlicher Technologie Partner <0>aus Stuttgart</0>",
+        "description": "Egal ob Cloud, Plattformen oder Sicherheit. Wir sind Ihr verlässlicher Technologie Partner aus Stuttgart",
         "subtitle": "Egal ob Cloud, Plattformen oder Sicherheit. Wir sind bereit für Ihre Herausforderungen.",
         "values": {
             "title": "Unsere Werte",
@@ -130,7 +132,7 @@
         "platform": {
             "title": "Plattform & Cloud",
             "description": "Egal ob public oder private Cloud. Wir unterstützen bei Entwurf, Entwicklung und Betrieb Ihrer Cloud Umgebung.",
-            "splash": "Wir entwerfen und implementieren die ideale Cloud Infrastruktur für Sie",
+            "splash": "Wir entwerfen und implementieren die ideale Cloud Plattform für Sie",
             "subtitle": "Vertrauen Sie unsere langjährige Erfahrung mit Cloud Computing über alle Industrien hinweg."
         },
         "security": {

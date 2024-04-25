@@ -4,7 +4,8 @@
         "splash": {
             "surtitle": "Expensive, complex cloud infrastructure isn't actually safer",
             "title": "Let's <0>Think Ahead</0> together",
-            "subtitle": "Pioneering <0>secure</0>, <0>simple</0> and <0>effective</0> cloud solutions for your <0>digital future</0>."
+            "subtitle": "Pioneering <0>secure</0>, <0>simple</0> and <0>effective</0> cloud solutions for your <0>digital future</0>.",
+            "description": "Pioneering secure, simple and effective cloud solutions for your digital future."
         },
         "who-we-are": {
             "subtitle": "Experienced technology consultants making the world a better place",
@@ -51,6 +52,7 @@
         "title": "Who we are",
         "tagline": "We are",
         "splash": "Your reliable technology partner <0>from Stuttgart</0>",
+        "description": "Whether in cloud, platforms or security. We are your reliable technology partner from Stuttgart.",
         "subtitle": "Whether in cloud, platforms or security, we are ready to rise to your challenges.",
         "values": {
             "title": "Our values",
@@ -130,7 +132,7 @@
         "platform": {
             "title": "Platform & Cloud",
             "description": "Whether you're on a public or a private cloud, we can help with the design, development and operation of your infrastructure",
-            "splash": "We'll design and build your ideal cloud infrastructure",
+            "splash": "We'll design and build your ideal cloud platform",
             "subtitle": "Our experience across many clouds and industries makes us an ideal partner for perfecting your infrastructure."
         },
         "security": {
