@@ -129,19 +129,19 @@
         "platform": {
             "title": "Platform & Cloud",
             "description": "Whether you're on a public or a private cloud, we can help with the design, development and operation of your infrastructure",
-            "splash": "We can design and build your ideal infrastructure",
+            "splash": "We'll design and build your ideal cloud infrastructure",
             "subtitle": "Our experience across many clouds and industries makes us an ideal partner for perfecting your infrastructure."
         },
         "security": {
             "title": "Security & Compliance",
             "description": "Security and compliance are no secondary concern for us: they are part of the entire development cycle. This makes meeting NIS2 and Cyber Resilience Act requirements a breeze.",
-            "splash": "We can ensure your assets are safe, whatever the environment",
+            "splash": "We'll ensure your assets are safe, whatever the environment",
             "subtitle": "Security is core to how we work. We can help you meet regulations or simply build with peace of mind."
         },
         "training": {
             "title": "Training & Workshops",
             "description": "Promote the growth of your employees with our interactive training and workshops on cloud, security and modern software development.",
-            "splash": "We can make your team's best even better",
+            "splash": "We'll make your team's best even better",
             "subtitle": "Our enthusiastic team shares our deep knowledge of best practices and current in a range of interactive workshops and seminars."
         }
     },
