@@ -44,7 +44,15 @@ export default defineConfig({
         tailwind({
             applyBaseStyles: false
         }),
-        sitemap(),
+        sitemap({
+            i18n: {
+                defaultLocale: "de",
+                locales: {
+                    en: "en",
+                    de: "de" // The `defaultLocale` value must present in `locales` keys
+                }
+            }
+        }),
         mdx(),
         astroI18next(),
         icon({

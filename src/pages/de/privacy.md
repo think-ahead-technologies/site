@@ -72,7 +72,7 @@ Lautenschlagerstraße 16
 Geschäftsführer: Waldemar Kindler
 
 E-Mail: admin@think-ahead.tech
-Website: www.think-ahead.tech
+Website: https://think-ahead.tech
 
 ## 3. Cookies
 
