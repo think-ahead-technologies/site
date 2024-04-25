@@ -44,7 +44,7 @@
         },
         "startexploring": "Beginnen",
         "wip": "Hier entsteht etwas Neues",
-        "coming-soon": "Coming soon",
+        "coming-soon": "Demnächst verfügbar",
         "comingsoon": "Diese Seite wird demnächst erweitert! Bitte besuchen Sie uns bald wieder."
     },
 
@@ -148,12 +148,12 @@
     },
 
     "training": {
-        "splash": "We'll make your team's best even better",
-        "subtitle": "Our enthusiastic team shares our deep knowledge of best practices and current technologies in a range of interactive workshops and seminars.",
-        "courses": "Currently available courses",
-        "courses-subtitle": "Sign up now to one of our practical, expert-led courses.",
-        "coming-soon": "More courses will be released in the near future. Watch this space!",
-        "view-more": "View more",
+        "splash": "Wir holen das Beste aus Ihren Teams",
+        "subtitle": "Unser enthusiastisches Team gibt sein umfassendes Wissen über Best Practices und aktuelle Technologien in einer Reihe von interaktiven Workshops und Seminaren weiter.",
+        "courses": "Aktuell Verfügbare Kurse",
+        "courses-subtitle": "Melden Sie sich jetzt für einen unserer Kurse an.",
+        "coming-soon": "Weitere Kurse folgen in Kürze. Schauen Sie bald wieder vorbei!",
+        "view-more": "Mehr anzeigen",
         "at-a-glance": {
             "title": "Auf einem Blick",
             "who": {
@@ -162,8 +162,8 @@
                 "platform": "Plattform Engineers",
                 "devops": "DevOps Engineers"
             },
-            "what": "Fakten?",
-            "why": "Inhalte?",
+            "what": "Fakten",
+            "why": "Inhalte",
             "days": "Tage",
             "online": "online",
             "interactive": "Interaktiv",
