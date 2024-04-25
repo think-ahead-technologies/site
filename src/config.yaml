@@ -8,7 +8,7 @@ site:
 metadata:
     title:
         default: Think Ahead
-        template: "%s — Think Ahead Technologies"
+        template: "%s — Think Ahead"
     description: "Pioneering secure, simple and effective infrastructure solutions for the future of technology."
     robots:
         index: true
