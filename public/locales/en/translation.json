@@ -23,7 +23,7 @@
                 "description": "Technology is our passion. Our clients trust us because we care about building the right solution, not just fulfilling a contract."
             }
         },
-        "learnmore": "Learn more"
+        "learn-more": "Learn more"
     },
 
     "general": {
@@ -129,12 +129,6 @@
     "solutions": {
         "intro": "What solutions do we provide?",
         "subtitle": "We have a wide range of skills and experience to help you with your infrastruture needs",
-        "platform": {
-            "title": "Platform & Cloud",
-            "description": "Whether you're on a public or a private cloud, we can help with the design, development and operation of your infrastructure",
-            "splash": "We'll design and build your ideal cloud platform",
-            "subtitle": "Our experience across many clouds and industries makes us an ideal partner for perfecting your infrastructure."
-        },
         "security": {
             "title": "Security & Compliance",
             "description": "Security and compliance are no secondary concern for us: they are part of the entire development cycle. This makes meeting NIS2 and Cyber Resilience Act requirements a breeze.",
@@ -144,6 +138,62 @@
         "training": {
             "title": "Training & Workshops",
             "description": "Promote the growth of your employees with our interactive training and workshops on cloud, security and modern software development."
+        },
+        "get-in-touch": "Interested? Get in touch!"
+    },
+
+    "platform": {
+        "title": "Platform & Cloud",
+        "description": "Whether you're on a public or a private cloud, we can help with the design, development and operation of your infrastructure",
+        "splash": "We'll design and build your ideal cloud platform",
+        "subtitle": "Our experience across many clouds and industries makes us an ideal partner for perfecting your infrastructure.",
+        "essential": {
+            "title": "Platform engineering is essential for your business",
+            "subtitle": "Well-built and tailored infrastructure can provide you a wide range of benefits.",
+            "goals": {
+                "title": "Achieving business goals",
+                "description": "Platform engineering aligns technology with business goals, ensuring every investment and process improvement directly supports your strategic objectives."
+            },
+            "adaptation": {
+                "title": "Response to market changes",
+                "description": "In today’s dynamic market, the ability to adapt quickly is crucial. Platform engineering equips your business with technology frameworks that can easily integrate new tools and adapt to changing market demands, keeping you ahead of competitors."
+            },
+            "complexity": {
+                "title": "Reduced IT complexity",
+                "description": "Our platforms reduce complexity and friction by standardising tools and processes across projects and teams. This cuts costs while also decreasing the time needed to onboard new developers, allowing them to contribute faster and more effectively."
+            },
+            "predictability": {
+                "title": "Predictability in outcomes",
+                "description": "Standardisation reduces variables that lead to project delays and budget overruns. You can then set realistic expectations to consistently meet project timelines and budget, providing a predictable environment for business planning and financial forecasting."
+            },
+            "security": {
+                "title": "Security and compliance",
+                "description": "Data security and regulatory compliance are always growing in importance. Platform engineering ensures your infrastructure is built with these in mind from the ground up. This proactively mitigates risks and protects your assets from emerging threats."
+            },
+            "sustainability": {
+                "title": "Sustainability and scalability",
+                "description": "We design platforms that are built to last, even through long-term growth and adaptation. Help your IT infrastructure expand seamlessly as your business grows: no constant redesigns and adjustments."
+            }
+        },
+        "solutions": {
+            "title": "Our platform engineering solutions",
+            "subtitle": "There is no one-size-fits-all solution. We will help you to navigate the complex cloud-native landscape and build infrastructure that fits your needs.",
+            "assessment": {
+                "title": "Platform Assessment and Strategy",
+                "description": "Evaluate your current IT landscape: develop a strategic platform vision to align with business and user needs. Make a thorough analysis of existing infrastructure, identify gaps, then create a clear, actionable roadmap. We ensure that your platform strategy is cohesive, forward-thinking, and tailored to drive business success efficiently and effectively."
+            },
+            "developers": {
+                "title": "Internal Developer Platform",
+                "description": "Enable developer self-service and build golden paths so that developers can get things done. Reduce their cognitive load without abstracting away context and underlying technologies. We follow best practices by treating platforms as a product, building and continually improving based on user research."
+            },
+            "hybrid": {
+                "title": "Hybrid Cloud / Multi Cloud",
+                "description": "For most enterprises hybrid cloud is inevitable, so planning is critical to make the best use of it. Split workloads across different clouds or on-premises environments in an efficient and meaningful way, while maintaining consistent security and compliance in all environments."
+            },
+            "ai": {
+                "title": "AI & IoT Platform",
+                "description": "Leverage the predictive power of AI and the the sensor networks of the IoT. Boost reliability and sustainability by building a unified platform for real-time data analytics and actionable insights. Enhance operational efficiency, personalise experiences, and proactively manage maintenance."
+            }
         }
     },
 
@@ -215,6 +265,8 @@
 
     "images": {
         "lightbulb": "Learning. Photo by Junior Ferreira on Unsplash",
+        "discussing": "Discussing. Photo by Headway on Unsplash",
+        "workshop": "Workshop. Photo by Jason Goodman on Unsplash",
         "working-together": "Working together. Photo by Scott Graham on Unsplash"
     },
 

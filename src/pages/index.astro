@@ -30,7 +30,7 @@ const metadata = {
                 href: "https://outlook.office365.com/owa/calendar/ThinkAheadTechnologies@think-ahead.tech/bookings/",
                 icon: "tabler:calendar"
             },
-            { text: t("index.learnmore"), href: "#solutions" }
+            { text: t("index.learn-more"), href: "#solutions" }
         ]}
     >
         <Fragment slot="title">
@@ -158,18 +158,18 @@ const metadata = {
                 icon: "flat-color-icons:lock",
                 callToAction: {
                     variant: "link",
-                    text: t("index.learnmore"),
+                    text: t("index.learn-more"),
                     href: getRelativeLocaleUrl(Astro.currentLocale || "en", "/solutions/security"),
                     icon: "tabler:circle-arrow-right"
                 }
             },
             {
-                title: t("solutions.platform.title"),
-                description: t("solutions.platform.description"),
+                title: t("platform.title"),
+                description: t("platform.description"),
                 icon: "material-symbols:cloud",
                 callToAction: {
                     variant: "link",
-                    text: t("index.learnmore"),
+                    text: t("index.learn-more"),
                     href: getRelativeLocaleUrl(Astro.currentLocale || "en", "/solutions/platform"),
                     icon: "tabler:circle-arrow-right"
                 }
@@ -180,7 +180,7 @@ const metadata = {
                 icon: "flat-color-icons:voice-presentation",
                 callToAction: {
                     variant: "link",
-                    text: t("index.learnmore"),
+                    text: t("index.learn-more"),
                     href: getRelativeLocaleUrl(Astro.currentLocale || "en", "/solutions/training"),
                     icon: "tabler:circle-arrow-right"
                 }

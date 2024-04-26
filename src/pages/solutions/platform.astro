@@ -24,7 +24,7 @@ const metadata = {
         actions={[
             {
                 variant: "primary",
-                text: t("index.learnmore"),
+                text: t("index.learn-more"),
                 href: "#essential"
             }
         ]}
@@ -34,62 +34,42 @@ const metadata = {
         }}
     />
 
-    <!-- <Hero
-        tagline={t("platform.title")}
-        title={t("platform.splash")}
-        subtitle={t("platform.subtitle")}
-        actions={[
-            {
-                variant: "primary",
-                text: t("general.startexploring"),
-                href: "/"
-            }
-        ]}
-        image={{
-            src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
-            alt: "Think Ahead Hero Image"
-        }}
-    />-->
-
     <!-- Features2 Widget ************** -->
 
     <Features
         id="essential"
-        title="Platform engineering is essential for your business"
-        subtitle="Well-built and tailored infrastructure can provide you a wide range of benefits."
+        title={t("platform.essential.title")}
+        subtitle={t("platform.essential.subtitle")}
         columns={2}
         items={[
             {
-                title: "Achieving business goals",
-                description:
-                    "Platform engineering aligns technology with business goals, ensuring every investment and process improvement directly supports your strategic objectives.",
+                title: t("platform.essential.goals.title"),
+                description: t("platform.essential.goals.description"),
                 icon: "tabler:target-arrow"
             },
             {
-                title: "Response to market changes",
-                description:
-                    "In today’s dynamic market, the ability to adapt quickly is crucial. Platform engineering equips your business with technology frameworks that can easily integrate new tools and adapt to changing market demands, keeping you ahead of competitors.",
+                title: t("platform.essential.adaptation.title"),
+                description: t("platform.essential.adaptation.description"),
                 icon: "tabler:bolt"
             },
             {
-                title: "Reduced IT complexity",
-                description:
-                    "Our platforms reduce complexity and friction by standardising tools and processes across projects and teams. This cuts costs while also decreasing the time needed to onboard new developers, allowing them to contribute faster and more effectively.",
+                title: t("platform.essential.complexity.title"),
+                description: t("platform.essential.complexity.description"),
                 icon: "tabler:cloud-star"
             },
             {
-                title: "Predictability in outcomes",
-                description: `Standardisation reduces variables that lead to project delays and budget overruns. You can then set realistic expectations to consistently meet project timelines and budget, providing a predictable environment for business planning and financial forecasting.`,
+                title: t("platform.essential.predictability.title"),
+                description: t("platform.essential.predictability.description"),
                 icon: "material-symbols:show-chart-rounded"
             },
             {
-                title: "Security and compliance",
-                description: `Data security and regulatory compliance are always growing in importance. Platform engineering ensures your infrastructure is built with these in mind from the ground up. This proactively mitigates risks and protects your assets from emerging threats.`,
+                title: t("platform.essential.security.title"),
+                description: t("platform.essential.security.description"),
                 icon: "tabler:cloud-lock"
             },
             {
-                title: "Sustainability and scalability",
-                description: `We design platforms that are built to last, even through long-term growth and adaptation. Help your IT infrastructure expand seamlessly as your business grows: no constant redesigns and adjustments.`,
+                title: t("platform.essential.sustainability.title"),
+                description: t("platform.essential.sustainability.description"),
                 icon: "tabler:cloud-share"
             }
         ]}
@@ -97,30 +77,28 @@ const metadata = {
 
     <Features3
         id="solutions"
-        title="Our platform engineering solutions"
-        subtitle="There is no one-size-fits-all solution. We will help you to navigate the complex cloud-native landscape and build infrastructure that fits your needs."
+        title={t("platform.solutions.title")}
+        subtitle={t("platform.solutions.title")}
         columns={2}
         items={[
             {
-                title: "Platform Assessment and Strategy",
-                description: `Evaluate your current IT landscape: develop a strategic platform vision to align with business and user needs. Make a thorough analysis of existing infrastructure, identify gaps, then create a clear, actionable roadmap. We ensure that your platform strategy is cohesive, forward-thinking, and tailored to drive business success efficiently and effectively.`,
+                title: t("platform.solutions.assessment.title"),
+                description: t("platform.solutions.assessment.description"),
                 icon: "material-symbols:search-insights"
             },
             {
-                title: "Internal Developer Platform",
-                description:
-                    "Enable developer self-service and build golden paths so that developers can get things done. Reduce their cognitive load without abstracting away context and underlying technologies. We follow best practices by treating platforms as a product, building and continually improving based on user research.",
+                title: t("platform.solutions.developers.title"),
+                description: t("platform.solutions.developers.description"),
                 icon: "material-symbols:deployed-code-account-outline"
             },
             {
-                title: "Hybrid Cloud / Multi Cloud",
-                description:
-                    "For most enterprises hybrid cloud is inevitable, so planning is critical to make the best use of it. Split workloads across different clouds or on-premises environments in an efficient and meaningful way, while maintaining consistent security and compliance in all environments.",
+                title: t("platform.solutions.hybrid.title"),
+                description: t("platform.solutions.hybrid.description"),
                 icon: "tabler:cloud-data-connection"
             },
             {
-                title: "AI & IoT Platform",
-                description: `Leverage the predictive power of AI and the the sensor networks of the IoT. Boost reliability and sustainability by building a unified platform for real-time data analytics and actionable insights. Enhance operational efficiency, personalise experiences, and proactively manage maintenance.`,
+                title: t("platform.solutions.ai.title"),
+                description: t("platform.solutions.ai.description"),
                 icon: "tabler:brain"
             }
         ]}
@@ -164,7 +142,7 @@ const metadata = {
                 icon: "tabler:mail"
             }
         ]}
-        title={t("Interested? Get in touch!")}
+        title={t("solutions.get-in-touch")}
         subtitle={t("contact.index-description")}
     />
 </Layout>
