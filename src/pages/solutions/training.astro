@@ -1,7 +1,7 @@
 ---
 import { t, changeLanguage } from "i18next";
 import Features2 from "~/components/widgets/Features2.astro";
-import Hero from "~/components/widgets/Hero.astro";
+import Hero from "~/components/widgets/Hero2.astro";
 import { PRIMARY_LANGUAGE } from "~/i18n/utils";
 import Layout from "~/layouts/PageLayout.astro";
 
@@ -16,7 +16,22 @@ const metadata = {
 <Layout metadata={metadata}>
     <!-- Hero Widget ******************* -->
 
-    <Hero tagline={t("solutions.training.title")} title={t("training.splash")} subtitle={t("training.subtitle")} />
+    <Hero
+        tagline={t("solutions.training.title")}
+        title={t("training.splash")}
+        subtitle={t("training.subtitle")}
+        actions={[
+            {
+                variant: "primary",
+                text: t("training.view-courses"),
+                href: "#courses"
+            }
+        ]}
+        image={{
+            src: "/collaboration-mimi-thian-unsplash.jpg",
+            alt: t("images.collaboration")
+        }}
+    />
 
     <!-- TODO add a section on why we're great teachers? -->
 
@@ -29,10 +44,10 @@ const metadata = {
     <!-- Features2 Widget ************** -->
 
     <Features2
+        id="courses"
         title={t("training.courses")}
         subtitle={t("training.courses-subtitle")}
         columns={2}
-        classes={{ container: "-mt-32" }}
         items={[
             {
                 title: t("training.kubernetes.title"),
