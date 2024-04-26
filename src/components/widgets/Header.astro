@@ -169,7 +169,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
                                     {...btnProps}
                                     href={`/${Astro.currentLocale}${btnProps.href}`}
                                     text={t(btnProps.text)}
-                                    class="ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm w-auto"
+                                    class="md:min-w-44 ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm w-auto"
                                 />
                             ))}
                         </span>

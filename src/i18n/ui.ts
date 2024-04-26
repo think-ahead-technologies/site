@@ -14,7 +14,7 @@ export const ui = {
         "nav.security": "Security & Compliance",
         "nav.training": "Trainings & Workshops",
         "nav.partners": "Partners",
-        "nav.contact": "Contact",
+        "nav.contact": "Contact us",
         "nav.terms": "Terms",
         "nav.privacypolicy": "Privacy Policy",
         "nav.footnote":
