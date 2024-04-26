@@ -86,7 +86,9 @@ export default defineConfig({
                     "handshake-outline",
                     "navigate-next",
                     "person-raised-hand-outline",
+                    "search-insights",
                     "settings-heart",
+                    "show-chart-rounded",
                     "smartphone-outline",
                     "sunny-outline-rounded"
                 ],
