@@ -151,7 +151,30 @@ const metadata = {
         id="solutions"
         title={t("solutions.intro")}
         subtitle={t("solutions.subtitle")}
+        columns={2}
         items={[
+            {
+                title: t("cloud.title"),
+                description: t("platform.description"),
+                icon: "material-symbols:cloud",
+                callToAction: {
+                    variant: "link",
+                    text: t("index.learn-more"),
+                    href: getRelativeLocaleUrl(Astro.currentLocale || "en", "/solutions/cloud"),
+                    icon: "tabler:circle-arrow-right"
+                }
+            },
+            {
+                title: t("platform.title"),
+                description: t("platform.description"),
+                icon: "flat-color-icons:deployment",
+                callToAction: {
+                    variant: "link",
+                    text: t("index.learn-more"),
+                    href: getRelativeLocaleUrl(Astro.currentLocale || "en", "/solutions/platform"),
+                    icon: "tabler:circle-arrow-right"
+                }
+            },
             {
                 title: t("solutions.security.title"),
                 description: t("solutions.security.description"),
@@ -160,17 +183,6 @@ const metadata = {
                     variant: "link",
                     text: t("index.learn-more"),
                     href: getRelativeLocaleUrl(Astro.currentLocale || "en", "/solutions/security"),
-                    icon: "tabler:circle-arrow-right"
-                }
-            },
-            {
-                title: t("platform.title"),
-                description: t("platform.description"),
-                icon: "material-symbols:cloud",
-                callToAction: {
-                    variant: "link",
-                    text: t("index.learn-more"),
-                    href: getRelativeLocaleUrl(Astro.currentLocale || "en", "/solutions/platform"),
                     icon: "tabler:circle-arrow-right"
                 }
             },

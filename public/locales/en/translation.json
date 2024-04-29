@@ -139,8 +139,12 @@
         "get-in-touch": "Interested? Get in touch!"
     },
 
+    "cloud": {
+        "title": "Cloud"
+    },
+
     "platform": {
-        "title": "Platform & Cloud",
+        "title": "Platform Engineering",
         "description": "Whether you're on a public or a private cloud, we can help with the design, development and operation of your infrastructure",
         "splash": "We'll design and build your ideal cloud platform",
         "subtitle": "Our experience across many clouds and industries makes us an ideal partner for perfecting your infrastructure.",
@@ -268,6 +272,7 @@
         "servers": "Secure servers. Photo by Christina Wocintechchat on Unsplash",
         "discussing": "Discussing. Photo by Headway on Unsplash",
         "finland": "Still coding in the wintry depths of Lapland.",
+        "infrastructure": "Infrastructure. Photo by Krzysztof Kowalik on Unsplash",
         "laptops": "Laptops at a desk. Photo by Marvin Meyer on Unsplash",
         "lightbulb": "Learning. Photo by Junior Ferreira on Unsplash",
         "workshop": "Workshop. Photo by Jason Goodman on Unsplash",

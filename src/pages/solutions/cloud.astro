@@ -1,0 +1,238 @@
+---
+import { t, changeLanguage } from "i18next";
+import CallToAction from "~/components/widgets/CallToAction.astro";
+import Features from "~/components/widgets/Features.astro";
+import Features3 from "~/components/widgets/Features3.astro";
+import Hero from "~/components/widgets/Hero2.astro";
+import { PRIMARY_LANGUAGE } from "~/i18n/utils";
+import Layout from "~/layouts/PageLayout.astro";
+
+changeLanguage("de");
+
+const metadata = {
+    title: t("cloud.title"),
+    description: t("cloud.splash")
+};
+
+// TODO focus on the problem in the title
+---
+
+<Layout metadata={metadata}>
+    <!-- Hero Widget ******************* -->
+
+    <Hero
+        title={t("We'll help you make the best possible use of the Cloud")}
+        tagline={t("cloud.title")}
+        subtitle={t(
+            "Whether you are thinking of moving to the cloud, or want to optimise your existing resources, our expertise will make a difference."
+        )}
+        actions={[
+            {
+                variant: "primary",
+                text: t("index.learn-more"),
+                href: "#solutions"
+            }
+        ]}
+        image={{
+            src: "/infrastructure-krzysztof-kowalik-unsplash.jpg",
+            alt: t("images.infrastructure")
+        }}
+    />
+
+    <Features3
+        id="benefits"
+        title={t("Why's the cloud great?")}
+        subtitle={t("Loads of benefits")}
+        columns={2}
+        items={[
+            {
+                title: t("Scalability"),
+                description: t(
+                    "Your infrastructure can grow to a size that matches your demand, even during peak times - and then scale down when such intense workloads aren't necessary."
+                ),
+                icon: "material-symbols:search-insights"
+            },
+            {
+                title: t("Flexibility"),
+                description: t(
+                    "When your business changes, your infrastructure can too. Whether growing to a new scale, or spinning up a whole new business unit, ..."
+                ),
+                icon: "material-symbols:search-insights"
+            },
+            {
+                title: t("Cost control"),
+                description: t("Detailed billing allows you to track what you're using and pay for only that."),
+                icon: "material-symbols:search-insights"
+            },
+            {
+                title: t("Security control"),
+                description: t(
+                    "In an on-premises environment, it's very hard to stop an attacker once they've gained access to your network. With Role-Based Access Control (RBAC) and granular policies, you can tailor, limit and track every access."
+                ),
+                icon: "material-symbols:search-insights"
+            },
+            {
+                title: t("Availability is managed"),
+                description: t(
+                    "In case of a problem in your datacentre, you must manage procurement and staff to fix the issue. Cloud-native solutions can redeploy automatically with minimal effort, cost and downtime - often with no user intervention at all."
+                ),
+                icon: "material-symbols:search-insights"
+            },
+            {
+                title: t("Maintenance is managed"),
+                description: t(
+                    "Tools like Kubernetes can take huge effort to upgrade, and even modifying individual servers and databases can be risky. Cloud tools can allow for seamless upgrades through rolling deployments or serverless approaches."
+                ),
+                icon: "material-symbols:search-insights"
+            }
+        ]}
+    />
+
+    <Features3
+        id="challenges"
+        title={t("Example challenges")}
+        subtitle={t("Challenges specifically of the cloud, not on-prem issues that *lead* to the cloud.")}
+        columns={3}
+        items={[
+            {
+                title: t("Unsure where to start"),
+                description: t("Are you convinced of the benefits of the cloud, but unsure how to begin?"),
+                icon: "material-symbols:deployed-code-account-outline"
+            },
+            {
+                title: t("Scaling is impossible"),
+                description: t("You're on-premises and can't change stuff without loads of admin"),
+                icon: "material-symbols:deployed-code-account-outline"
+            },
+            {
+                title: t("Combining clouds"),
+                description: t(
+                    "AWS, Microsoft Azure, Scaleway - or a mix of several? Each has their benefits, and there are different ways to get the best out of them."
+                ),
+                icon: "material-symbols:search-insights"
+            },
+            {
+                title: t("Lack of strategy"),
+                description: t("Cloud is cool! Wait, what were we wanting to do with this new tool?"),
+                icon: "material-symbols:deployed-code-account-outline"
+            },
+            {
+                title: t("Connecting it all"),
+                description: t(
+                    "Your cloud infrastructure needs to work with your authentication system, locally-hosted tools and other cloud tools. We can help you design and build for an interlinked, smooth experience for users and developers."
+                ),
+                icon: "material-symbols:deployed-code-account-outline"
+            },
+            {
+                title: t("Cost"),
+                description: t(""),
+                icon: "material-symbols:deployed-code-account-outline"
+            },
+            {
+                title: t("Slow & unreliable builds"),
+                description: t(""),
+                icon: "material-symbols:deployed-code-account-outline"
+            },
+            {
+                title: t("Clunky user experience"),
+                description: t("Your "),
+                icon: "material-symbols:deployed-code-account-outline"
+            },
+            {
+                title: t("Unmanageable monster infra"),
+                description: t("Losing track of what you have, why it's useful, and how much it costs?"),
+                icon: "material-symbols:deployed-code-account-outline"
+            },
+            {
+                title: t("Security"),
+                description: t("The regulatory landscape around the cloud is constantly evolving. We can help you "),
+                icon: "tabler:cloud-data-connection",
+                callToAction: {
+                    text: "Security & Compliance",
+                    href: `${Astro.currentLocale || PRIMARY_LANGUAGE}/solutions/security`
+                }
+            }
+        ]}
+    />
+
+    <Features
+        id="solutions"
+        title={t("Our Cloud solutions")}
+        subtitle={t(
+            "Whatever your level of Cloud familiarity, we can help you make the most of the paradigm's vast possibilities."
+        )}
+        columns={2}
+        image={{
+            src: "/workshop-jason-goodman-unsplash.jpg",
+            alt: t("image.workshop")
+        }}
+        items={[
+            {
+                title: t("Cloud migration"),
+                description: t(
+                    "So you have an on-premises or single-server system, and want to gain the full benefits of the cloud? We can guide you through the relevant decisions, trade-offs and rewards - and can implement"
+                ),
+                icon: "tabler:cloud-upload"
+            },
+            {
+                title: t("Cloud solution architecture"),
+                description: t(
+                    "When designing a new system for your employees or clients, it's critical to build with the right goals in mind. We can help you determine those goals, and meet them effectively."
+                ),
+                icon: "material-symbols:design-services-outline"
+            },
+            {
+                title: t("Cloud cost savings"),
+                description: t(
+                    "The flexibility of the cloud makes it easy to pay for more than you need. We can help you find the right scale for your market position, while retaining resilience and eliminating unnecessary systems."
+                ),
+                icon: "tabler:coin-euro"
+            },
+            {
+                title: t("Site Reliability Engineering"),
+                description: t(
+                    "As your codebase grows, it becomes ever more critical that your software is deployed and runs without issues. We can help you monitor your infrastructure and ensure it always functions as intended."
+                ),
+                icon: "tabler:database-star"
+            }
+        ]}
+    />
+
+    <!-- Testimonials Widget *********** -->
+
+    <!-- <Testimonials
+    title="Words from real customers"
+    testimonials={[
+      {
+        testimonial: `The designs are not only visually appealing but also highly professional. The templates have saved me a significant amount of time while helping me make a lasting impression on my clients.`,
+        name: 'Emily Kennedy',
+        job: 'Front-end developer',
+        image: {
+          src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
+          alt: 'Emily Kennedy Image',
+        },
+      }
+    ]}
+    callToAction={{
+      target: '_blank',
+      text: 'More testimonials...',
+      href: 'https://github.com/onwidget/astrowind',
+      icon: 'tabler:chevron-right',
+    }}
+  /> -->
+
+    <!-- CallToAction Widget *********** -->
+
+    <CallToAction
+        actions={[
+            {
+                variant: "primary",
+                text: t("contact.title"),
+                href: `/${Astro.currentLocale}/contact`,
+                icon: "tabler:mail"
+            }
+        ]}
+        title={t("solutions.get-in-touch")}
+        subtitle={t("contact.index-description")}
+    />
+</Layout>
