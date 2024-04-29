@@ -51,8 +51,8 @@
         "title": "Who we are",
         "tagline": "We are",
         "splash": "Your reliable technology partner <0>from Stuttgart</0>",
-        "description": "Whether in cloud, platforms or security. Think Ahead Technologies is your reliable partner from Stuttgart.",
-        "subtitle": "Whether in cloud, platforms or security, we are ready to rise to your challenges.",
+        "description": "Whether in cloud, platforms or security, Think Ahead Technologies is your reliable partner from Stuttgart.",
+        "subtitle": "Experts in cloud, platforms and security, we are ready to rise to your challenges.",
         "values": {
             "title": "Our values",
             "subtitle": "It isn't an accident that our approach produces results — our work is built on some powerful core principles.",
@@ -215,7 +215,7 @@
             "days": "days",
             "online": "Online",
             "interactive": "Interactive",
-            "plus-vat": "+ VAT"
+            "plus-vat": "+ VAT per person"
         },
         "you-will-learn": "You will learn",
         "about": {
