@@ -10,7 +10,7 @@ import Layout from "~/layouts/PageLayout.astro";
 changeLanguage("de");
 
 const metadata = {
-    title: t("cloud.title"),
+    title: t("cloud.title", "Cloud Computing"),
     description: t("cloud.splash")
 };
 ---
@@ -19,11 +19,9 @@ const metadata = {
     <!-- Hero Widget ******************* -->
 
     <Hero
-        title={t("We'll make your cloud portfolio reliable and cost-effective")}
-        tagline={t("cloud.title")}
-        subtitle={t(
-            "Whether you are thinking of moving to the cloud, or want to optimise your existing resources, our expertise will make a difference."
-        )}
+        title={t("cloud.splash")}
+        tagline={t("cloud.title", "Cloud Computing")}
+        subtitle={t("cloud.subtitle")}
         actions={[
             {
                 variant: "primary",
@@ -32,7 +30,7 @@ const metadata = {
             },
             {
                 variant: "secondary",
-                text: t("How we can help"),
+                text: t("solutions.how-we-can-help"),
                 href: "#solutions"
             }
         ]}
@@ -44,52 +42,38 @@ const metadata = {
 
     <Features3
         id="benefits"
-        title={t("Why use the Cloud?")}
-        subtitle={t(
-            "A Cloud-native approach to your infrastructure can have numerous powerful advantages over an on-premises or single-server approach."
-        )}
+        title={t("cloud.benefits.title")}
+        subtitle={t("cloud.benefits.subtitle")}
         columns={2}
         items={[
             {
-                title: t("Scalability"),
-                description: t(
-                    "Your infrastructure can grow to a size that matches your demand, even during peak times - and then scale down automatically when such intense workloads aren't necessary."
-                ),
+                title: t("cloud.benefits.scalability.title"),
+                description: t("cloud.benefits.scalability.description"),
                 icon: "tabler:resize"
             },
             {
-                title: t("Flexibility"),
-                description: t(
-                    "When your business changes, your infrastructure can too. When you grow to a new scale, or spin up a whole new business unit, you can meet demand without needing to overthink."
-                ),
+                title: t("cloud.benefits.flexibility.title"),
+                description: t("cloud.benefits.flexibility.description"),
                 icon: "tabler:arrows-shuffle"
             },
             {
-                title: t("Cost control"),
-                description: t(
-                    "Detailed billing allows you to track what you're using and pay for that alone, while making it possible to plan for further cost reductions using real-time data."
-                ),
+                title: t("cloud.benefits.cost.title"),
+                description: t("cloud.benefits.cost.description"),
                 icon: "tabler:cloud-dollar"
             },
             {
-                title: t("Security control"),
-                description: t(
-                    "In an on-premises environment, it's very hard to stop an attacker once they've gained access to your resources. With network micro-segmentation and granular policies, you can tailor, limit and track every access."
-                ),
+                title: t("cloud.benefits.security.title"),
+                description: t("cloud.benefits.security.description"),
                 icon: "tabler:cloud-lock-open"
             },
             {
-                title: t("Availability is managed"),
-                description: t(
-                    "In case of a problem in your datacentre, you must manage procurement and staff to fix the issue. Cloud-native solutions can redeploy automatically with minimal effort, cost and downtime - often with no user intervention at all."
-                ),
+                title: t("cloud.benefits.availability.title"),
+                description: t("cloud.benefits.availability.description"),
                 icon: "tabler:database-exclamation"
             },
             {
-                title: t("Maintenance is managed"),
-                description: t(
-                    "Tools like Kubernetes can take huge effort to upgrade, and even modifying individual servers and databases can be risky. Cloud tools can allow for seamless upgrades through rolling deployments or serverless approaches."
-                ),
+                title: t("cloud.benefits.maintenance.title"),
+                description: t("cloud.benefits.maintenance.description"),
                 icon: "material-symbols:upgrade"
             }
         ]}
@@ -97,17 +81,13 @@ const metadata = {
 
     <Features3
         id="challenges"
-        title={t("Challenges of the Cloud")}
-        subtitle={t(
-            "Cloud computing can solve many problems, but nothing is perfect. There are a number of common difficulties and uncertainties we've seen regularly across companies."
-        )}
+        title={t("cloud.challenges.title")}
+        subtitle={t("cloud.challenges.subtitle")}
         columns={3}
         items={[
             {
-                title: t("Unsure where to start"),
-                description: t(
-                    "It's one thing to be convinced of the benefits of the cloud, quite another to set up your first real system."
-                ),
+                title: t("cloud.challenges.uncertainty.title"),
+                description: t("cloud.challenges.uncertainty.description"),
                 icon: "tabler:user-question"
             },
             // {
@@ -118,17 +98,13 @@ const metadata = {
             //     icon: "tabler:compass"
             // },
             {
-                title: t("Cost growth"),
-                description: t(
-                    "The Cloud offers cost control, but also many expensive features. These can grow rapidly if not paid attention to."
-                ),
+                title: t("cloud.challenges.cost.title"),
+                description: t("cloud.challenges.cost.description"),
                 icon: "tabler:businessplan"
             },
             {
-                title: t("Combining tools"),
-                description: t(
-                    "Your cloud systems must work with third-party resources and any locally-hosted tools. You may even wish to connect multiple cloud providers."
-                ),
+                title: t("cloud.challenges.combination.title"),
+                description: t("cloud.challenges.combination.description"),
                 icon: "tabler:layers-linked"
             },
             // {
@@ -139,25 +115,21 @@ const metadata = {
             //     icon: "tabler:upload"
             // },
             {
-                title: t("Clunky user experience"),
-                description: t(
-                    "Your users — developers or customers — may be confused if too many tools are introduced together."
-                ),
+                title: t("cloud.challenges.ux.title"),
+                description: t("cloud.challenges.ux.description"),
                 icon: "tabler:mood-sad-2"
             },
             {
-                title: t("Keeping track"),
-                description: t(
-                    "When it's easy to set up new resources, without clear structures it's also easy to forget what you have and what it's for."
-                ),
+                title: t("cloud.challenges.keeping-track.title"),
+                description: t("cloud.challenges.keeping-track.description"),
                 icon: "material-symbols:clinical-notes-outline"
             },
             {
-                title: t("Security and Compliance"),
-                description: t("Security is its own, critically important field."),
+                title: t("cloud.challenges.security.title"),
+                description: t("cloud.challenges.security.description"),
                 icon: "tabler:cloud-lock",
                 callToAction: {
-                    text: "Read more on our dedicated page",
+                    text: t("cloud.challenges.security.link"),
                     href: `/${Astro.currentLocale || PRIMARY_LANGUAGE}/solutions/security`,
                     icon: "tabler:circle-arrow-right"
                 }
@@ -167,38 +139,28 @@ const metadata = {
 
     <Features
         id="solutions"
-        title={t("Our Cloud solutions")}
-        subtitle={t(
-            "Whatever your level of Cloud familiarity, we can help you gain the benefits of the cloud while avoiding the pitfalls."
-        )}
+        title={t("cloud.solutions.title")}
+        subtitle={t("cloud.solutions.subtitle")}
         columns={2}
         items={[
             {
-                title: t("Cloud migration"),
-                description: t(
-                    "So you have an on-premises or single-server system, and want to gain the full benefits of the cloud? We can build a system that works for you, and make sure you have the information you need to use it effectively."
-                ),
+                title: t("cloud.solutions.migration.title"),
+                description: t("cloud.solutions.migration.description"),
                 icon: "tabler:cloud-upload"
             },
             {
-                title: t("Cloud solution architecture"),
-                description: t(
-                    "When designing a new system for your employees or clients, it's critical to build with the right goals in mind. We can help you determine those goals, and meet them effectively."
-                ),
+                title: t("cloud.solutions.architecture.title"),
+                description: t("cloud.solutions.architecture.description"),
                 icon: "material-symbols:design-services-outline"
             },
             {
-                title: t("Cloud cost savings"),
-                description: t(
-                    "The flexibility of the cloud makes it easy to pay for more than you need. We can help you find the right scale for your market position, while retaining resilience and eliminating unnecessary systems."
-                ),
+                title: t("cloud.solutions.cost.title"),
+                description: t("cloud.solutions.cost.description"),
                 icon: "tabler:coin-euro"
             },
             {
-                title: t("DevOps engineering"),
-                description: t(
-                    "As your codebase grows, it becomes ever more critical that your software is deployed and runs without issues. We can help you monitor your infrastructure and ensure it always functions as intended."
-                ),
+                title: t("cloud.solutions.devops.title"),
+                description: t("cloud.solutions.devops.description"),
                 icon: "tabler:database-star"
             }
         ]}
