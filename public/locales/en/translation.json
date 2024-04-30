@@ -164,7 +164,7 @@
             },
             "availability": {
                 "title": "Availability is managed",
-                "description": "In case of a problem in your datacentre, you must manage procurement and staff to fix the issue. Cloud-native solutions can redeploy automatically with minimal effort, cost and downtime - often with no user intervention at all."
+                "description": "In case of a problem in your data centre, you have to deal with the problem yourself. This is time-consuming, labor-intensive and costly. Cloud-native solutions can be automatically redeployed with minimal effort, cost and downtime - often even without manual user intervention."
             },
             "maintenance": {
                 "title": "Maintenance is managed",
@@ -209,15 +209,15 @@
             },
             "architecture": {
                 "title": "Cloud solution architecture",
-                "description": "When designing a new system for your employees or clients, it's critical to build with the right goals in mind. We can help you determine those goals, and meet them effectively."
+                "description": "When designing a new system for your employees or clients, it's critical to build with the right goals in mind. We help you determine those goals, and meet them effectively."
             },
             "cost": {
                 "title": "Cloud cost savings",
-                "description": "The flexibility of the cloud makes it easy to pay for more than you need. We can help you find the right scale for your market position, while retaining resilience and eliminating unnecessary systems."
+                "description": "The complexity of the cloud makes it easy to pay for more than you need. We help you keep your costs under control and make savings where it makes sense."
             },
             "devops": {
                 "title": "DevOps engineering",
-                "description": "As your codebase grows, it becomes ever more critical that your software is deployed and runs without issues. We can help you monitor your infrastructure and ensure it always functions as intended."
+                "description": "As your codebase grows, it becomes ever more critical and difficult that your software is deployed and runs without issues. We help you monitor your applications and infrastructure and keep them running optimally."
             }
         }
     },

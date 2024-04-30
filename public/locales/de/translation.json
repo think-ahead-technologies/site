@@ -137,87 +137,87 @@
             "description": "Fördern Sie das Wachstum Ihrer Mitarbeiter mit unseren interaktiven Schulungen und Workshops rund um Cloud, Sicherheit und moderne Softwareentwicklung."
         },
         "get-in-touch": "Interessiert? Sprechen Sie uns an!",
-        "how-we-can-help": "How we can help"
+        "how-we-can-help": "Wie können wir helfen?"
     },
 
     "cloud": {
-        "splash": "We'll make your cloud portfolio reliable and cost-effective",
-        "subtitle": "Whether you are thinking of moving to the cloud, or want to optimise your existing resources, our expertise will make a difference.",
+        "splash": "Wir machen Ihr Cloud-Portfolio zuverlässig und kosteneffizient",
+        "subtitle": "Ganz gleich, ob Sie über einen Wechsel in die Cloud nachdenken oder Ihre vorhandenen Ressourcen optimieren wollen, unser Fachwissen macht den Unterschied.",
         "benefits": {
-            "title": "Why use the Cloud?",
-            "subtitle": "A Cloud-native approach to your infrastructure can have numerous powerful advantages over an on-premises or single-server approach.",
+            "title": "Warum die Cloud nutzen?",
+            "subtitle": "Ein Cloud-nativer Ansatz für Ihre Infrastruktur kann zahlreiche Vorteile gegenüber einem On-Premise- oder Server-Ansatz haben.",
             "scalability": {
-                "title": "Scalability",
-                "description": "Your infrastructure can grow to a size that matches your demand, even during peak times - and then scale down automatically when such intense workloads aren't necessary."
+                "title": "Skalierbarkeit",
+                "description": "Ihre Infrastruktur wächst mit Ihren Bedarf mit, selbst zu Spitzenzeiten - und fährt auch automatisch wieder herunter, wenn solch intensive Arbeitslasten nicht erforderlich sind."
             },
             "flexibility": {
-                "title": "Flexibility",
-                "description": "When your business changes, your infrastructure can too. When you grow to a new scale, or spin up a whole new business unit, you can meet demand without needing to overthink."
+                "title": "Flexibilität",
+                "description": "Wenn sich Ihr Unternehmen ändert, kann sich auch Ihre Infrastruktur ändern. Wenn Sie eine neue Größenordnung erreichen oder einen neuen Geschäftsbereich gründen, können Sie die Nachfrage befriedigen, ohne vorab alles wissen zu müssen."
             },
             "cost": {
-                "title": "Cost control",
-                "description": "Detailed billing allows you to track what you're using and pay for that alone, while making it possible to plan for further cost reductions using real-time data."
+                "title": "Kostenkontrolle",
+                "description": "Detaillierte, verursachergerechte Abrechnungen ermöglichen es Ihnen, den Verbrauch nachzuvollziehen und anhand von Echtzeitdaten weitere Kostensenkungen zu planen."
             },
             "security": {
-                "title": "Security control",
-                "description": "In an on-premises environment, it's very hard to stop an attacker once they've gained access to your resources. With network micro-segmentation and granular policies, you can tailor, limit and track every access."
+                "title": "Sicherheit",
+                "description": "In einer klassischen Umgebung ist es schwierig, einen Angreifer zu stoppen, wenn er erst einmal Zugang zu Ihren Ressourcen erhalten hat. Dank Netzwerk-Mikrosegmentierung und granularen Richtlinien, können Sie jeden Zugriff anpassen, begrenzen und verfolgen."
             },
             "availability": {
-                "title": "Availability is managed",
-                "description": "In case of a problem in your datacentre, you must manage procurement and staff to fix the issue. Cloud-native solutions can redeploy automatically with minimal effort, cost and downtime - often with no user intervention at all."
+                "title": "Verfügbarkeit",
+                "description": "Im Falle eines Problems in Ihrem Rechenzentrum müssen Sie sich um die Behebung des Problem selbst kümmern. Das ist zeit-, personal- und kostenintensiv. Cloud-native Lösungen können mit minimalem Aufwand, Kosten und Ausfallzeiten automatisch neu bereitgestellt werden - oft sogar ohne manuellen Benutzereingriff."
             },
             "maintenance": {
-                "title": "Maintenance is managed",
-                "description": "Tools like Kubernetes can take huge effort to upgrade, and even modifying individual servers and databases can be risky. Cloud tools can allow for seamless upgrades through rolling deployments or serverless approaches."
+                "title": "Automatisierte Wartung",
+                "description": "Tools wie Kubernetes erfordern einen großem Aufwand zum Aktualisieren. Selbst die Änderung einzelner Server und Datenbanken kann riskant sein. Cloud Plattformen ermöglichen nahtlose Upgrades durch rollierende Deployments oder serverless Ansätze."
             }
         },
         "challenges": {
-            "title": "Challenges of the Cloud",
-            "subtitle": "Cloud computing can solve many problems, but nothing is perfect. There are a number of common difficulties and uncertainties we've seen regularly across companies.",
+            "title": "Herausforderungen der Cloud",
+            "subtitle": "Cloud Computing kann viele Probleme lösen, aber nichts ist perfekt. Es gibt eine Reihe gemeinsamer Schwierigkeiten und Herausforderungen, die wir regelmäßig in Unternehmen beobachten.",
             "uncertainty": {
-                "title": "Unsure where to start",
-                "description": "It's one thing to be convinced of the benefits of the cloud, quite another to set up your first real system."
+                "title": "Unsicherheit über den richtigen Einstieg",
+                "description": "Es ist eine Sache, von den Vorteilen der Cloud überzeugt zu sein, aber eine ganz andere, eine erste produktive Umgebung einzurichten."
             },
             "cost": {
-                "title": "Cost growth",
-                "description": "The Cloud offers cost control, but also many expensive features. These can grow rapidly if not paid attention to."
+                "title": "Kostenexplosion",
+                "description": "Die Cloud bietet Kostenkontrolle, aber auch viel potential für teure Fehler. Diese können schnell wachsen, wenn sie nicht beachtet werden."
             },
             "combination": {
-                "title": "Combining tools",
-                "description": "Your cloud systems must work with third-party resources and any locally-hosted tools. You may even wish to connect multiple cloud providers."
+                "title": "Integration",
+                "description": "Ihre Cloud-Systeme müssen mit einer vielzahl von Drittanbieter Ressourcen und diversen on-prem Tools zusammenarbeiten. Vielleicht möchten Sie sogar mehrere Cloud-Anbieter miteinander verbinden."
             },
             "ux": {
-                "title": "Clunky user experience",
-                "description": "Your users — developers or customers — may be confused if too many tools are introduced together."
+                "title": "Schwerfällige Benutzererfahrung",
+                "description": "Ihre Benutzer - Entwickler oder Kunden - könnten verwirrt sein, wenn zu viele Tools zusammen neu eingeführt werden."
             },
             "keeping-track": {
-                "title": "Keeping track",
-                "description": "When it's easy to set up new resources, without clear structures it's also easy to forget what you have and what it's for."
+                "title": "Den Überblick behalten",
+                "description": "Wenn es einfach ist, neue Ressourcen einzurichten, kann man ohne klare Strukturen auch leicht vergessen, was man hat und wofür es gebraucht wird."
             },
             "security": {
-                "title": "Security and Compliance",
-                "description": "Security is its own, critically important field.",
-                "link": "Read more on our dedicated page"
+                "title": "Sicherheit und Compliance",
+                "description": "Sicherheit ist ein eigener, äußerst wichtiger Bereich.",
+                "link": "Lesen Sie mehr auf unserer dedizierten Seite"
             }
         },
         "solutions": {
-            "title": "Our Cloud solutions",
-            "subtitle": "Whatever your level of Cloud familiarity, we can help you gain the benefits of the cloud while avoiding the pitfalls.",
+            "title": "Unsere Cloud-Lösungen",
+            "subtitle": "Unabhängig davon, wie gut Sie mit der Cloud vertraut sind. Wir helfen Ihnen, die Vorteile der Cloud voll auszunutzen und gleichzeitig die üblichen Fallstricke zu vermeiden.",
             "migration": {
-                "title": "Cloud migration",
-                "description": "So you have an on-premises or single-server system, and want to gain the full benefits of the cloud? We can build a system that works for you, and make sure you have the information you need to use it effectively."
+                "title": "Cloud-Migration",
+                "description": "Sie haben eine on-premise Umgebung  und möchten die Vorteile der Cloud in vollem Umfang nutzen? Wir bauen gemeinsam eine funktionierende Umgebung auf und sorgen dafür, dass Sie diese effektiv nutzen können."
             },
             "architecture": {
-                "title": "Cloud solution architecture",
-                "description": "When designing a new system for your employees or clients, it's critical to build with the right goals in mind. We can help you determine those goals, and meet them effectively."
+                "title": "Cloud Solution Architektur",
+                "description": "Wenn Sie ein neues System für Ihre Mitarbeiter oder Kunden entwerfen, ist es wichtig, die richtigen Ziele im Auge zu haben. Wir helfen Ihnen, diese Ziele zu bestimmen und sie effektiv zu erreichen."
             },
             "cost": {
-                "title": "Cloud cost savings",
-                "description": "The flexibility of the cloud makes it easy to pay for more than you need. We can help you find the right scale for your market position, while retaining resilience and eliminating unnecessary systems."
+                "title": "Cloud-Kostenkontrolle",
+                "description": "Die Komplexität der Cloud macht es einfach, für mehr zu bezahlen, als Sie benötigen. Wir helfen Ihnen Ihre Kosten im Griff zu behalten und dort Einsparungen zu erziehlen, wo es sinnvoll ist."
             },
             "devops": {
-                "title": "DevOps engineering",
-                "description": "As your codebase grows, it becomes ever more critical that your software is deployed and runs without issues. We can help you monitor your infrastructure and ensure it always functions as intended."
+                "title": "DevOps Engineering",
+                "description": "Je größer Ihre Codebasis wird, desto schwieriger und kritischer wird es sicherzustellen, dass Ihre Software ohne Probleme läuft. Wir helfen dabei, Ihre Applikationen und Infrastruktur zu überwachen und optimal zu betreiben."
             }
         }
     },
@@ -351,8 +351,8 @@
         "servers": "Sichere Server. Foto von Christina Wocintechchat auf Unsplash",
         "discussing": "Diskutieren. Foto von Headway auf Unsplash",
         "finland": "Wir programmieren auch im winterlichen Lappland, wenn es sein muss.",
-        "infrastructure": "Infrastructure. Photo by Krzysztof Kowalik on Unsplash",
-        "laptops": "Laptops at a desk. Photo by Marvin Meyer on Unsplash",
+        "infrastructure": "Infrastruktur. Foto von Krzysztof Kowalik auf Unsplash",
+        "laptops": "Laptops auf einem Tisch. Foto von Marvin Meyer auf Unsplash",
         "lightbulb": "Lernen. Foto von Junior Ferreira auf Unsplash",
         "workshop": "Workshop. Foto von Jason Goodman auf Unsplash",
         "working-together": "Zusammenarbeit. Foto von Scott Graham auf Unsplash"
