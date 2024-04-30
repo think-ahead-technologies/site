@@ -21,7 +21,7 @@ const metadata = {
     <!-- Hero Widget ******************* -->
 
     <Hero
-        title={t("We'll help you make the best possible use of the Cloud")}
+        title={t("We'll make you your cloud portfolio reliable and cost-effective")}
         tagline={t("cloud.title")}
         subtitle={t(
             "Whether you are thinking of moving to the cloud, or want to optimise your existing resources, our expertise will make a difference."
@@ -30,6 +30,11 @@ const metadata = {
             {
                 variant: "primary",
                 text: t("index.learn-more"),
+                href: "#benefits"
+            },
+            {
+                variant: "secondary",
+                text: t("How we can help"),
                 href: "#solutions"
             }
         ]}
@@ -41,115 +46,129 @@ const metadata = {
 
     <Features3
         id="benefits"
-        title={t("Why's the cloud great?")}
-        subtitle={t("Loads of benefits")}
+        title={t("Why use the Cloud?")}
+        subtitle={t(
+            "A Cloud-native approach to your infrastructure can have numerous powerful advantages over an on-premises or single-server approach."
+        )}
         columns={2}
         items={[
             {
                 title: t("Scalability"),
                 description: t(
-                    "Your infrastructure can grow to a size that matches your demand, even during peak times - and then scale down when such intense workloads aren't necessary."
+                    "Your infrastructure can grow to a size that matches your demand, even during peak times - and then scale down automatically when such intense workloads aren't necessary."
                 ),
-                icon: "material-symbols:search-insights"
+                icon: "tabler:resize"
             },
             {
                 title: t("Flexibility"),
                 description: t(
-                    "When your business changes, your infrastructure can too. Whether growing to a new scale, or spinning up a whole new business unit, ..."
+                    "When your business changes, your infrastructure can too. When you grow to a new scale, or spin up a whole new business unit, you can meet demand without needing to overthink."
                 ),
-                icon: "material-symbols:search-insights"
+                icon: "tabler:arrows-shuffle"
             },
             {
                 title: t("Cost control"),
-                description: t("Detailed billing allows you to track what you're using and pay for only that."),
-                icon: "material-symbols:search-insights"
+                description: t(
+                    "Detailed billing allows you to track what you're using and pay for that alone, while making it possible to plan for further cost reductions using real-time data."
+                ),
+                icon: "tabler:cloud-dollar"
             },
             {
                 title: t("Security control"),
                 description: t(
                     "In an on-premises environment, it's very hard to stop an attacker once they've gained access to your network. With Role-Based Access Control (RBAC) and granular policies, you can tailor, limit and track every access."
                 ),
-                icon: "material-symbols:search-insights"
+                icon: "tabler:cloud-lock-open"
             },
             {
                 title: t("Availability is managed"),
                 description: t(
                     "In case of a problem in your datacentre, you must manage procurement and staff to fix the issue. Cloud-native solutions can redeploy automatically with minimal effort, cost and downtime - often with no user intervention at all."
                 ),
-                icon: "material-symbols:search-insights"
+                icon: "tabler:database-exclamation"
             },
             {
                 title: t("Maintenance is managed"),
                 description: t(
                     "Tools like Kubernetes can take huge effort to upgrade, and even modifying individual servers and databases can be risky. Cloud tools can allow for seamless upgrades through rolling deployments or serverless approaches."
                 ),
-                icon: "material-symbols:search-insights"
+                icon: "material-symbols:upgrade"
             }
         ]}
     />
 
     <Features3
         id="challenges"
-        title={t("Example challenges")}
-        subtitle={t("Challenges specifically of the cloud, not on-prem issues that *lead* to the cloud.")}
+        title={t("Challenges of the Cloud")}
+        subtitle={t(
+            "Cloud computing can solve many problems, but nothing is perfect. There are a number of common difficulties and uncertainties we've seen regularly across companies."
+        )}
         columns={3}
         items={[
             {
                 title: t("Unsure where to start"),
-                description: t("Are you convinced of the benefits of the cloud, but unsure how to begin?"),
-                icon: "material-symbols:deployed-code-account-outline"
-            },
-            {
-                title: t("Scaling is impossible"),
-                description: t("You're on-premises and can't change stuff without loads of admin"),
-                icon: "material-symbols:deployed-code-account-outline"
-            },
-            {
-                title: t("Combining clouds"),
                 description: t(
-                    "AWS, Microsoft Azure, Scaleway - or a mix of several? Each has their benefits, and there are different ways to get the best out of them."
+                    "It's one thing to be convinced of the benefits of the cloud, quite another to set up your first real system."
                 ),
-                icon: "material-symbols:search-insights"
+                icon: "tabler:user-question"
             },
             {
-                title: t("Lack of strategy"),
-                description: t("Cloud is cool! Wait, what were we wanting to do with this new tool?"),
-                icon: "material-symbols:deployed-code-account-outline"
+                title: t("Unclear direction"),
+                description: t(
+                    "So many tools and approaches are made possible with the Cloud, that it can be hard to know where to focus your resources once you've started."
+                ),
+                icon: "tabler:compass"
+            },
+            {
+                title: t("Cost growth"),
+                description: t(
+                    "The Cloud offers cost control, but also many expensive features. These can grow rapidly if not paid attention to."
+                ),
+                icon: "tabler:businessplan"
             },
             {
                 title: t("Connecting it all"),
                 description: t(
-                    "Your cloud infrastructure needs to work with your authentication system, locally-hosted tools and other cloud tools. We can help you design and build for an interlinked, smooth experience for users and developers."
+                    "Your cloud infrastructure has to work with your authentication system, third-party resources and any locally-hosted tools."
                 ),
-                icon: "material-symbols:deployed-code-account-outline"
+                icon: "tabler:layers-linked"
             },
             {
-                title: t("Cost"),
-                description: t(""),
-                icon: "material-symbols:deployed-code-account-outline"
+                title: t("Combining clouds"),
+                description: t(
+                    "AWS, Microsoft Azure, Scaleway — perhaps a mix of several? Each has their benefits, and there are different ways to get the best out of them."
+                ),
+                icon: "tabler:cloud-data-connection"
             },
             {
-                title: t("Slow & unreliable builds"),
-                description: t(""),
-                icon: "material-symbols:deployed-code-account-outline"
+                title: t("Inconsistent or slow deployment"),
+                description: t(
+                    "As with any code system, a well-structured path to production is essential for deploying reliably while minimising errors."
+                ),
+                icon: "tabler:upload"
             },
             {
                 title: t("Clunky user experience"),
-                description: t("Your "),
-                icon: "material-symbols:deployed-code-account-outline"
+                description: t(
+                    "Your users — developers or customers — may be confused if too many tools are introduced together."
+                ),
+                icon: "tabler:mood-sad-2"
             },
             {
-                title: t("Unmanageable monster infra"),
-                description: t("Losing track of what you have, why it's useful, and how much it costs?"),
-                icon: "material-symbols:deployed-code-account-outline"
+                title: t("Keeping track"),
+                description: t(
+                    "When it's easy to set up new resources, without clear structures it's also easy to forget what you have and what it's for."
+                ),
+                icon: "material-symbols:clinical-notes-outline"
             },
             {
-                title: t("Security"),
-                description: t("The regulatory landscape around the cloud is constantly evolving. We can help you "),
-                icon: "tabler:cloud-data-connection",
+                title: t("Security and Compliance"),
+                description: t("Security is its own, critically important field."),
+                icon: "tabler:cloud-lock",
                 callToAction: {
-                    text: "Security & Compliance",
-                    href: `${Astro.currentLocale || PRIMARY_LANGUAGE}/solutions/security`
+                    text: "Read more on our dedicated page",
+                    href: `/${Astro.currentLocale || PRIMARY_LANGUAGE}/solutions/security`,
+                    icon: "tabler:circle-arrow-right"
                 }
             }
         ]}
@@ -159,7 +178,7 @@ const metadata = {
         id="solutions"
         title={t("Our Cloud solutions")}
         subtitle={t(
-            "Whatever your level of Cloud familiarity, we can help you make the most of the paradigm's vast possibilities."
+            "Whatever your level of Cloud familiarity, we can help you gain the benefits of the cloud while avoiding the pitfalls."
         )}
         columns={2}
         image={{
@@ -170,7 +189,7 @@ const metadata = {
             {
                 title: t("Cloud migration"),
                 description: t(
-                    "So you have an on-premises or single-server system, and want to gain the full benefits of the cloud? We can guide you through the relevant decisions, trade-offs and rewards - and can implement"
+                    "So you have an on-premises or single-server system, and want to gain the full benefits of the cloud? We can build a system that works for you, and make sure you have the information you need to use it effectively."
                 ),
                 icon: "tabler:cloud-upload"
             },

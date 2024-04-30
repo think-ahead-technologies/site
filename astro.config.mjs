@@ -78,6 +78,7 @@ export default defineConfig({
                     "account-balance-outline-rounded",
                     "cloud",
                     "construction",
+                    "clinical-notes-outline",
                     "dataset-linked-rounded",
                     "deployed-code-outline",
                     "deployed-code-account-outline",
@@ -92,7 +93,8 @@ export default defineConfig({
                     "settings-heart",
                     "show-chart-rounded",
                     "smartphone-outline",
-                    "sunny-outline-rounded"
+                    "sunny-outline-rounded",
+                    "upgrade"
                 ],
                 fa: ["lightbulb-o"],
                 ph: ["graduation-cap"]
