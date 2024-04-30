@@ -1,5 +1,7 @@
 import { getPermalink } from "./utils/permalinks";
 
+// NB translations for these elements are found in: /src/i18n/ui.ts
+
 export const headerData = {
     links: [
         {
@@ -47,6 +49,10 @@ export const footerData = {
         {
             title: "nav.solutions",
             links: [
+                {
+                    text: "nav.cloud",
+                    href: getPermalink("/solutions/cloud")
+                },
                 {
                     text: "nav.platform",
                     href: getPermalink("/solutions/platform")

@@ -13,15 +13,13 @@ const metadata = {
     title: t("cloud.title"),
     description: t("cloud.splash")
 };
-
-// TODO focus on the problem in the title
 ---
 
 <Layout metadata={metadata}>
     <!-- Hero Widget ******************* -->
 
     <Hero
-        title={t("We'll make you your cloud portfolio reliable and cost-effective")}
+        title={t("We'll make your cloud portfolio reliable and cost-effective")}
         tagline={t("cloud.title")}
         subtitle={t(
             "Whether you are thinking of moving to the cloud, or want to optimise your existing resources, our expertise will make a difference."
@@ -76,7 +74,7 @@ const metadata = {
             {
                 title: t("Security control"),
                 description: t(
-                    "In an on-premises environment, it's very hard to stop an attacker once they've gained access to your network. With Role-Based Access Control (RBAC) and granular policies, you can tailor, limit and track every access."
+                    "In an on-premises environment, it's very hard to stop an attacker once they've gained access to your resources. With network micro-segmentation and granular policies, you can tailor, limit and track every access."
                 ),
                 icon: "tabler:cloud-lock-open"
             },
@@ -112,13 +110,13 @@ const metadata = {
                 ),
                 icon: "tabler:user-question"
             },
-            {
-                title: t("Unclear direction"),
-                description: t(
-                    "So many tools and approaches are made possible with the Cloud, that it can be hard to know where to focus your resources once you've started."
-                ),
-                icon: "tabler:compass"
-            },
+            // {
+            //     title: t("Unclear direction"),
+            //     description: t(
+            //         "So many tools and approaches are made possible with the Cloud, that it can be hard to know where to focus your resources once you've started."
+            //     ),
+            //     icon: "tabler:compass"
+            // },
             {
                 title: t("Cost growth"),
                 description: t(
@@ -127,26 +125,19 @@ const metadata = {
                 icon: "tabler:businessplan"
             },
             {
-                title: t("Connecting it all"),
+                title: t("Combining tools"),
                 description: t(
-                    "Your cloud infrastructure has to work with your authentication system, third-party resources and any locally-hosted tools."
+                    "Your cloud systems must work with third-party resources and any locally-hosted tools. You may even wish to connect multiple cloud providers."
                 ),
                 icon: "tabler:layers-linked"
             },
-            {
-                title: t("Combining clouds"),
-                description: t(
-                    "AWS, Microsoft Azure, Scaleway — perhaps a mix of several? Each has their benefits, and there are different ways to get the best out of them."
-                ),
-                icon: "tabler:cloud-data-connection"
-            },
-            {
-                title: t("Inconsistent or slow deployment"),
-                description: t(
-                    "As with any code system, a well-structured path to production is essential for deploying reliably while minimising errors."
-                ),
-                icon: "tabler:upload"
-            },
+            // {
+            //     title: t("Inconsistent or slow deployment"),
+            //     description: t(
+            //         "As with any code system, a well-structured path to production is essential for deploying reliably while minimising errors."
+            //     ),
+            //     icon: "tabler:upload"
+            // },
             {
                 title: t("Clunky user experience"),
                 description: t(
@@ -181,10 +172,6 @@ const metadata = {
             "Whatever your level of Cloud familiarity, we can help you gain the benefits of the cloud while avoiding the pitfalls."
         )}
         columns={2}
-        image={{
-            src: "/workshop-jason-goodman-unsplash.jpg",
-            alt: t("image.workshop")
-        }}
         items={[
             {
                 title: t("Cloud migration"),
@@ -208,7 +195,7 @@ const metadata = {
                 icon: "tabler:coin-euro"
             },
             {
-                title: t("Site Reliability Engineering"),
+                title: t("DevOps engineering"),
                 description: t(
                     "As your codebase grows, it becomes ever more critical that your software is deployed and runs without issues. We can help you monitor your infrastructure and ensure it always functions as intended."
                 ),

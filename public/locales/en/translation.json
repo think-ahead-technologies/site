@@ -140,7 +140,7 @@
     },
 
     "cloud": {
-        "title": "Cloud computing"
+        "title": "Cloud Computing"
     },
 
     "platform": {
@@ -150,22 +150,22 @@
         "subtitle": "Our experience across many clouds and industries makes us an ideal partner for perfecting your infrastructure.",
         "essential": {
             "title": "Platform engineering is essential for your business",
-            "subtitle": "Well-built and tailored infrastructure can provide you a wide range of benefits.",
+            "subtitle": "Well-built and tailored infrastructure can provide you with a wide range of benefits.",
             "goals": {
                 "title": "Achieving business goals",
                 "description": "Platform engineering aligns technology with business goals, ensuring every investment and process improvement directly supports your strategic objectives."
             },
             "adaptation": {
                 "title": "Response to market changes",
-                "description": "In today’s dynamic market, the ability to adapt quickly is crucial. Platform engineering equips your business with technology frameworks that can easily integrate new tools and adapt to changing market demands, keeping you ahead of competitors."
+                "description": "In today’s dynamic market, the ability to adapt quickly is crucial. Platform engineering equips your business with technology frameworks that can easily integrate new tools and adapt to changing market demands, keeping you ahead of the competition."
             },
             "complexity": {
                 "title": "Reduced IT complexity",
                 "description": "Our platforms reduce complexity and friction by standardising tools and processes across projects and teams. This cuts costs while also decreasing the time needed to onboard new developers, allowing them to contribute faster and more effectively."
             },
             "predictability": {
-                "title": "Predictability in outcomes",
-                "description": "Standardisation reduces variables that lead to project delays and budget overruns. You can then set realistic expectations to consistently meet project timelines and budget, providing a predictable environment for business planning and financial forecasting."
+                "title": "Predictable outcomes",
+                "description": "Standardisation reduces variables that lead to project delays and budget overruns. You can then set realistic expectations to consistently meet project timelines and budgets, providing a predictable environment for business planning and financial forecasting."
             },
             "security": {
                 "title": "Security and compliance",
@@ -173,7 +173,7 @@
             },
             "sustainability": {
                 "title": "Sustainability and scalability",
-                "description": "We design platforms that are built to last, even through long-term growth and adaptation. Help your IT infrastructure expand seamlessly as your business grows: no constant redesigns and adjustments."
+                "description": "We design platforms that are built to last, even through long-term growth and adaptation. Help your IT infrastructure expand seamlessly as your business grows: no constant redesigning and rebuilding."
             }
         },
         "solutions": {
@@ -193,7 +193,7 @@
             },
             "ai": {
                 "title": "AI & IoT Platform",
-                "description": "Leverage the predictive power of AI and the the sensor networks of the IoT. Boost reliability and sustainability by building a unified platform for real-time data analytics and actionable insights. Enhance operational efficiency, personalise experiences, and proactively manage maintenance."
+                "description": "Leverage the predictive power of AI and the sensor networks of the IoT. Boost reliability and sustainability by building a unified platform for real-time data analytics and actionable insights. Enhance operational efficiency, personalise experiences, and proactively manage maintenance."
             }
         }
     },
@@ -257,7 +257,7 @@
                 }
             },
             "about": {
-                "format": "This course will be delivered through video lectures, real-time discussions, and hands-on labs, spread over three days.",
+                "format": "This course will be delivered online via seminars, real-time discussions, and hands-on labs, spread over three days.",
                 "instructors": "Learn from the best. Our instructors are seasoned Kubernetes practitioners, leveraging their extensive experience in consultancy to provide you with real-world insights and practical knowledge.",
                 "benefits": "Prepare to harness the full potential of Kubernetes for developing and managing modern cloud-native applications, significantly boosting your professional capabilities and career prospects.",
                 "schedule": "Scheduled sessions take place from Tuesday to Thursday in the last week of each month. For the coming months, these will fall on:"
