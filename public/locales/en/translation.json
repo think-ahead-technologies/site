@@ -164,7 +164,7 @@
             },
             "availability": {
                 "title": "Availability is managed",
-                "description": "In case of a problem in your data centre, you have to deal with the problem yourself. This is time-consuming, labor-intensive and costly. Cloud-native solutions can be automatically redeployed with minimal effort, cost and downtime - often even without manual user intervention."
+                "description": "In a datacentre, you must deal with any problem yourself: this is labour-intensive, slow and costly. Cloud-native solutions can redeploy automatically with minimal cost and downtime - and often without any manual user intervention."
             },
             "maintenance": {
                 "title": "Maintenance is managed",
@@ -202,10 +202,10 @@
         },
         "solutions": {
             "title": "Our Cloud solutions",
-            "subtitle": "Whatever your level of Cloud familiarity, we can help you gain the benefits of the cloud while avoiding the pitfalls.",
+            "subtitle": "Whatever your level of Cloud familiarity, we help you gain the benefits of the cloud while avoiding the pitfalls.",
             "migration": {
                 "title": "Cloud migration",
-                "description": "So you have an on-premises or single-server system, and want to gain the full benefits of the cloud? We can build a system that works for you, and make sure you have the information you need to use it effectively."
+                "description": "So you have an on-premises or single-server system, and want to gain the full benefits of the cloud? We build a system that works for you, and make sure you have the information you need to use it effectively."
             },
             "architecture": {
                 "title": "Cloud solution architecture",
@@ -213,7 +213,7 @@
             },
             "cost": {
                 "title": "Cloud cost savings",
-                "description": "The complexity of the cloud makes it easy to pay for more than you need. We help you keep your costs under control and make savings where it makes sense."
+                "description": "The complexity of the cloud makes it easy to pay for more than you need. We help you keep your costs under control and make savings where they make sense."
             },
             "devops": {
                 "title": "DevOps engineering",
