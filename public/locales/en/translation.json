@@ -152,7 +152,7 @@
             },
             "flexibility": {
                 "title": "Flexibility",
-                "description": "When your business changes, your infrastructure can too. When you grow to a new scale, or spin up a whole new business unit, you can meet demand without needing to overthink."
+                "description": "When your business changes, your infrastructure can too. When you grow to a new scale, or spin up a whole new business unit, you can meet demand with no need to overthink."
             },
             "cost": {
                 "title": "Cost control",
@@ -160,7 +160,7 @@
             },
             "security": {
                 "title": "Security control",
-                "description": "In an on-premises environment, it's very hard to stop an attacker once they've gained access to your resources. With network micro-segmentation and granular policies, you can tailor, limit and track every access."
+                "description": "In an on-premises environment, it's very hard to stop an attacker once they've gained access to your resources. But with network micro-segmentation and granular policies, you can tailor, limit and track every access."
             },
             "availability": {
                 "title": "Availability is managed",
@@ -240,7 +240,7 @@
             },
             "complexity": {
                 "title": "Reduced IT complexity",
-                "description": "Our platforms reduce complexity and friction by standardising tools and processes across projects and teams. This cuts costs while also decreasing the time needed to onboard new developers, allowing them to contribute faster and more effectively."
+                "description": "Our platforms reduce complexity and friction by unifying tools and processes across projects and teams. This cuts costs while also decreasing the time needed to onboard new developers, allowing them to contribute faster and more effectively."
             },
             "predictability": {
                 "title": "Predictable outcomes",
@@ -257,7 +257,7 @@
         },
         "solutions": {
             "title": "Our platform engineering solutions",
-            "subtitle": "There is no one-size-fits-all solution. We will help you to navigate the complex cloud-native landscape and build infrastructure that fits your needs.",
+            "subtitle": "Every platform is unique. We will help you to navigate the complex cloud-native landscape and build infrastructure that fits your needs.",
             "assessment": {
                 "title": "Platform Assessment and Strategy",
                 "description": "Evaluate your current IT landscape: develop a strategic platform vision to align with business and user needs. Make a thorough analysis of existing infrastructure, identify gaps, then create a clear, actionable roadmap. We ensure that your platform strategy is cohesive, forward-thinking, and tailored to drive business success efficiently and effectively."
@@ -332,11 +332,11 @@
                 },
                 "advanced": {
                     "title": "Advanced Kubernetes Techniques",
-                    "description": "Secure your Kubernetes environments and applications, reduce costs, and minimize the carbon footprint of your deployments."
+                    "description": "Secure your Kubernetes environments and applications, reduce costs, and take into account the carbon footprint of your deployments."
                 }
             },
             "about": {
-                "format": "This course will be delivered online via seminars, real-time discussions, and hands-on labs, spread over three days.",
+                "format": "This course will be delivered online via seminars, real-time discussions and hands-on labs, spread over three days.",
                 "instructors": "Learn from the best. Our instructors are seasoned Kubernetes practitioners, leveraging their extensive experience in consultancy to provide you with real-world insights and practical knowledge.",
                 "benefits": "Prepare to harness the full potential of Kubernetes for developing and managing modern cloud-native applications, significantly boosting your professional capabilities and career prospects.",
                 "schedule": "Scheduled sessions take place from Tuesday to Thursday in the last week of each month. For the coming months, these will fall on:"
