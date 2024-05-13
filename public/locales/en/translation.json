@@ -346,9 +346,9 @@
 
     "security": {
         "title": "Cloud Security & Compliance",
-        "description": "Egal ob public oder private Cloud. Wir unterstützen bei Entwurf, Entwicklung und Betrieb Ihrer Cloud Umgebung.",
-        "splash": "Wir entwerfen und implementieren die ideale Cloud Plattform für Sie",
-        "subtitle": "Vertrauen Sie unsere langjährige Erfahrung mit Cloud Computing über alle Industrien hinweg.",
+        "description": "Protect your business and your data with our cloud security services. We offer consulting, implementation and training on security in cloud operations, cloud development and identity and access management.",
+        "splash": "We protect your company with our cloud security services",
+        "subtitle": "Security and developer productivity are not opposites. From the idea to implementation and operation: we offer solutions throughout the entire DevOps lifecycle. So you too can achieve security by design.",
 
         "stats": {
             "title": "Your company has never faced more cyber risks",
