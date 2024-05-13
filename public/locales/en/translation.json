@@ -347,48 +347,48 @@
     "security": {
         "title": "Cloud Security & Compliance",
         "description": "Protect your business and your data with our cloud security services. We offer consulting, implementation and training on security in cloud operations, cloud development and identity and access management.",
-        "splash": "We protect your company with our cloud security services",
-        "subtitle": "Security and developer productivity are not opposites. From the idea to implementation and operation: we offer solutions throughout the entire DevOps lifecycle. So you too can achieve security by design.",
+        "splash": "We protect your survival through security excellence",
+        "subtitle": "Security and developer productivity are not opposites: you can have them both! From idea to implementation to operation, we work with the entire DevOps lifecycle. You too can achieve true security by design.",
 
         "stats": {
             "title": "Your company has never faced more cyber risks",
             "damage": {
                 "description": "Average damage caused by cyber attacks",
-                "amount": "4.35 Mio"
+                "amount": "€4.35m"
             },
             "human": {
-                "description": "of attacks were initiated by human error",
+                "description": "Attacks enabled by human error",
                 "amount": "82%"
             },
             "remediation": {
-                "description": "Average time to identify and remediate an attack",
+                "description": "to identify and remediate an attack (average)",
                 "amount": "277 days"
             },
             "problem": {
-                "description": "had a data breach / failed a cloud audit",
+                "description": "companies with a data breach or failed cloud audit",
                 "amount": "45%"
             }
         },
 
         "protect": {
             "title": "Protect your business",
-            "subtitle": "Discover how we secure your business and data.",
+            "subtitle": "We have a range of approaches which each provide meaningful protection for your business and data.",
 
             "agile": {
-                "title": "Agile methodologies for secure software architecture and development",
-                "description": "Embrace Agile methodologies to enhance the security of your software architecture and development processes, integrating agile threat modeling to identify and mitigate risks early. Our approach emphasizes continuous security testing and DevSecOps practices, ensuring security is a foundational component throughout the software creation and deployment stages."
+                "title": "Agile methodologies: secure software architecture & development",
+                "description": "Integrate agile processes with threat modelling to identify and mitigate risks early. We emphasise continuous security testing and DevSecOps practices, ensuring security is a foundational component throughout the software creation and deployment processes."
             },
             "zerotrust": {
                 "title": "Zero Trust Identity & Access Management",
-                "description": "Implement Zero Trust Identity & Access Management to safeguard against leaked credentials and passwords, ensuring all user identities are verifiable before granting secure cloud access. Our robust framework prevents unauthorized access by requiring continuous validation of every access request, securing your data and systems from potential threats."
+                "description": "Safeguard against leaked credentials and passwords, ensuring all user identities are verifiable before granting secure cloud access. We prevent unauthorized access by requiring continuous validation of every access request, shielding your data and systems from potential threats."
             },
             "supplychain": {
-                "title": "Secure Software Supplychain",
-                "description": "Strengthen your software supply chain with our security measures compliant with the Cyber Resilience Act. We implement a detailed Software Bill of Materials (SBOM), secure CI/CD practices, and build provenance verification to guard against vulnerabilities and ensure robust cyber resilience throughout the development lifecycle."
+                "title": "Secure Software Supply Chain",
+                "description": "Our measures to strengthen your software supply chain are compliant with the Cyber Resilience Act. We implement a detailed Software Bill of Materials (SBoM), secure CI/CD practices, and provenance verification to guard against vulnerabilities and ensure robust cyber resilience throughout the development lifecycle."
             },
             "cloud": {
                 "title": "Cloud Security",
-                "description": "Enhance your cloud security by implementing robust guardrails and continuous monitoring across all cloud environments to prevent misconfiguration and ensure data integrity. Our proactive approach minimizes risks and optimizes cloud operations, keeping your digital assets safe and compliant."
+                "description": "Implement robust guardrails and continuous monitoring across all cloud environments to prevent misconfiguration and ensure data integrity. Our proactive approach minimizes risks and optimises cloud operations, keeping your digital assets safe and compliant."
             }
         },
 
@@ -401,7 +401,7 @@
             },
             "implement": {
                 "title": "Implementation",
-                "description": "Leverage our hands-on implementation services to deploy cutting-edge technology solutions effectively. Our team ensures seamless integration of new systems into your existing infrastructure, minimizing disruption and maximizing performance."
+                "description": "Leverage our hands-on implementation services to deploy cutting-edge technology solutions effectively. Our team integrates new systems into your existing infrastructure seamlessly, minimizing disruption and maximizing performance."
             },
             "train": {
                 "title": "Training",

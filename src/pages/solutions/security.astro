@@ -25,8 +25,13 @@ const metadata = {
         actions={[
             {
                 variant: "primary",
-                text: t("general.startexploring"),
-                href: "#coming-soon"
+                text: t("index.learn-more"),
+                href: "#stats"
+            },
+            {
+                variant: "secondary",
+                text: t("solutions.how-we-can-help"),
+                href: "#services"
             }
         ]}
         image={{
@@ -37,21 +42,27 @@ const metadata = {
 
     <!-- Stats Widget ****************** -->
     <Stats
+        id="stats"
         title={t("security.stats.title")}
+        classes={{ title: "mt-3" }}
         stats={[
             {
+                icon: "tabler:zoom-money",
                 title: t("security.stats.damage.description"),
                 amount: t("security.stats.damage.amount").toString()
             },
             {
+                icon: "tabler:user-exclamation",
                 title: t("security.stats.human.description"),
                 amount: t("security.stats.human.amount").toString()
             },
             {
+                icon: "tabler:calendar-time",
                 title: t("security.stats.remediation.description"),
                 amount: t("security.stats.remediation.amount").toString()
             },
             {
+                icon: "tabler:clipboard-x",
                 title: t("security.stats.problem.description"),
                 amount: t("security.stats.problem.amount").toString()
             }
@@ -65,7 +76,7 @@ const metadata = {
             {
                 title: t("security.protect.agile.title"),
                 description: t("security.protect.agile.description").toString(),
-                icon: "tabler:clipboard-text"
+                icon: "material-symbols:deployed-code-account-outline"
             },
             {
                 title: t("security.protect.zerotrust.title"),
@@ -80,12 +91,13 @@ const metadata = {
             {
                 title: t("security.protect.cloud.title"),
                 description: t("security.protect.cloud.description").toString(),
-                icon: "tabler:first-aid-kit"
+                icon: "tabler:cloud-lock"
             }
         ]}
     />
 
     <Features2
+        id="services"
         title={t("security.services.title")}
         columns={3}
         items={[
