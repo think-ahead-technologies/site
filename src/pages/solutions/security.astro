@@ -1,14 +1,17 @@
 ---
 import { t, changeLanguage } from "i18next";
 import CallToAction from "~/components/widgets/CallToAction.astro";
+import Features2 from "~/components/widgets/Features2.astro";
 import Hero from "~/components/widgets/Hero2.astro";
+import Stats from "~/components/widgets/Stats.astro";
+import Steps from "~/components/widgets/Steps.astro";
 import Layout from "~/layouts/PageLayout.astro";
 
 changeLanguage("de");
 
 const metadata = {
-    title: t("solutions.security.title"),
-    description: t("solutions.security.description")
+    title: t("security.title"),
+    description: t("security.description")
 };
 ---
 
@@ -16,9 +19,9 @@ const metadata = {
     <!-- Hero Widget ******************* -->
 
     <Hero
-        tagline={t("solutions.security.title")}
-        title={t("solutions.security.splash")}
-        subtitle={t("solutions.security.subtitle")}
+        tagline={t("security.title")}
+        title={t("security.splash")}
+        subtitle={t("security.subtitle")}
         actions={[
             {
                 variant: "primary",
@@ -32,165 +35,88 @@ const metadata = {
         }}
     />
 
-    <!-- Problems the client has (what we understand)
+    <!-- Stats Widget ****************** -->
+    <Stats
+        title={t("security.stats.title")}
+        stats={[
+            {
+                title: t("security.stats.damage.description"),
+                amount: t("security.stats.damage.amount").toString()
+            },
+            {
+                title: t("security.stats.human.description"),
+                amount: t("security.stats.human.amount").toString()
+            },
+            {
+                title: t("security.stats.remediation.description"),
+                amount: t("security.stats.remediation.amount").toString()
+            },
+            {
+                title: t("security.stats.problem.description"),
+                amount: t("security.stats.problem.amount").toString()
+            }
+        ]}
+    />
 
-  How we can solve it
+    <Steps
+        title={t("security.protect.title")}
+        subtitle={t("security.protect.subtitle")}
+        items={[
+            {
+                title: t("security.protect.agile.title"),
+                description: t("security.protect.agile.description").toString(),
+                icon: "tabler:clipboard-text"
+            },
+            {
+                title: t("security.protect.zerotrust.title"),
+                description: t("security.protect.zerotrust.description").toString(),
+                icon: "tabler:shield-check"
+            },
+            {
+                title: t("security.protect.supplychain.title"),
+                description: t("security.protect.supplychain.description").toString(),
+                icon: "tabler:git-merge"
+            },
+            {
+                title: t("security.protect.cloud.title"),
+                description: t("security.protect.cloud.description").toString(),
+                icon: "tabler:first-aid-kit"
+            }
+        ]}
+    />
 
-  Our approach / details -->
-
-    <!-- Features2 Widget ************** -->
-
-    <!-- <Features2
-    title="Explore our diverse templates"
-    subtitle="Discover our selection below to streamline and elevate your projects."
-    columns={3}
-    items={[
-      {
-        title: 'Educational',
-        description:
-          'By harmonizing instructional design and visual appeal, templates streamline content creation for varied materials, expediting development and cultivating engaging educational spaces.',
-        icon: 'tabler:school',
-      },
-      {
-        title: 'Interior Design',
-        description:
-          'Crafting functional, visually appealing spaces for residential and commercial use. Templates emphasize layout, colors, and furniture setups, offering a versatile toolkit for your design vision.',
-        icon: 'tabler:home-star',
-      },
-      {
-        title: 'Photography',
-        description: `Empowering photographers, our templates facilitate captivating storytelling. With a keen focus on layout, galleries, and typography, they cater to both professionals and enthusiasts.`,
-        icon: 'tabler:photo',
-      },
-      {
-        title: 'E-commerce',
-        description:
-          'Developing engaging online stores, our E-commerce templates ensure a dynamic presence to effectively showcase products. Ideal for startups or revamps.',
-        icon: 'tabler:shopping-cart',
-      },
-      {
-        title: 'Blog',
-        description:
-          'With attention to typography, these templates empower effective content presentation for writers at any stage, ensuring visually engaging and user-friendly blogs.',
-        icon: 'tabler:article',
-      },
-      {
-        title: 'Business',
-        description:
-          'Providing polished options for effective visual communication, these templates empower both startups and established companies for a professional brand presence.',
-        icon: 'tabler:building-store',
-      },
-      {
-        title: 'Branding',
-        description:
-          'Offering pre-designed elements for a consistent brand identity, including logos and marketing materials. Ideal for new ventures or revamps.',
-        icon: 'tabler:arrow-big-up-lines',
-      },
-      {
-        title: 'Medical',
-        description: `From presentations to patient forms, these tools enhance communication effectiveness for healthcare professionals. Ideal for medical practices and research pursuits.`,
-        icon: 'tabler:vaccine',
-      },
-      {
-        title: 'Fashion Design',
-        description:
-          'With attention to detail, customization, and contemporary design, they empower designers to showcase ideas cohesively. Ideal for all levels of designers.',
-        icon: 'tabler:tie',
-      },
-    ]}
-  /> -->
-
-    <!-- Content Widget **************** -->
-
-    <!-- <Content
-    isReversed
-    items={[
-      {
-        title: 'High-Quality Designs',
-        description:
-          'Our templates feature top-tier designs that ensure a professional and polished appearance for your projects.',
-        icon: 'tabler:wand',
-      },
-      {
-        title: 'Customization Tools',
-        description:
-          'Tailor each template to your unique needs with user-friendly customization tools that let you personalize colors, fonts, and content.',
-        icon: 'tabler:settings',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
-      alt: 'Features Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Main Features</h3>
-    </Fragment>
-  </Content> -->
-
-    <!-- Content Widget **************** -->
-
-    <!-- <Content
-    isAfterContent
-    items={[
-      {
-        title: 'Time Savings',
-        description:
-          'Streamline your workflow, enabling you to create stunning materials efficiently and allocate more time to your core tasks.',
-        icon: 'tabler:clock',
-      },
-      {
-        title: 'Instant Download',
-        description:
-          'Enjoy immediate access to your chosen templates upon purchase, enabling you to begin working on your projects without delay.',
-        icon: 'tabler:file-download',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Benefits Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Benefits</h3>
-    </Fragment>
-  </Content> -->
-
-    <!-- Testimonials Widget *********** -->
-
-    <!-- <Testimonials
-    title="Words from real customers"
-    testimonials={[
-      {
-        testimonial: `The designs are not only visually appealing but also highly professional. The templates have saved me a significant amount of time while helping me make a lasting impression on my clients.`,
-        name: 'Emily Kennedy',
-        job: 'Front-end developer',
-        image: {
-          src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
-          alt: 'Emily Kennedy Image',
-        },
-      }
-    ]}
-    callToAction={{
-      target: '_blank',
-      text: 'More testimonials...',
-      href: 'https://github.com/onwidget/astrowind',
-      icon: 'tabler:chevron-right',
-    }}
-  /> -->
-
-    <!-- CallToAction Widget *********** -->
+    <Features2
+        title={t("security.services.title")}
+        columns={3}
+        items={[
+            {
+                title: t("security.services.consult.title"),
+                description: t("security.services.consult.description").toString(),
+                icon: "tabler:brain"
+            },
+            {
+                title: t("security.services.implement.title"),
+                description: t("security.services.implement.description").toString(),
+                icon: "tabler:code-dots"
+            },
+            {
+                title: t("security.services.train.title"),
+                description: t("security.services.train.description").toString(),
+                icon: "tabler:school"
+            }
+        ]}
+    />
 
     <CallToAction
-        id="coming-soon"
         actions={[
             {
                 variant: "primary",
-                text: t("general.startexploring"),
-                href: "/"
+                text: t("contact.title"),
+                href: `/${Astro.currentLocale}/contact`,
+                icon: "tabler:mail"
             }
         ]}
-        title={t("general.wip")}
-        subtitle={t("general.comingsoon")}
+        title={t("solutions.get-in-touch")}
+        subtitle={t("contact.index-description")}
     />
 </Layout>

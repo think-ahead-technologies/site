@@ -344,6 +344,72 @@
         }
     },
 
+    "security": {
+        "title": "Cloud Security und Compliance",
+        "description": "Schützen Sie Ihr Unternehmen und Ihre Daten mit unseren Cloud Security Services. Wir bieten Beratung, Umsetzung und Schulung zu Sicherheit im Cloud Betrieb, in der Cloud Entwicklung sowie im Identity und Access Management.",
+        "splash": "Wir schützen Ihr Business mit unseren Cloud Security Services",
+        "subtitle": "Sicherheit und Developer Productivity sind keine Gegensätze. Von der Idee, über die Umsetzung, bis zum Betrieb: Wir bieten Lösungen im gesamten DevOps Lebenszyklus. So erreichen auch Sie Security by design.",
+
+        "stats": {
+            "title": "Noch nie gab es für Ihr Unternehmen mehr Cyberrisiken",
+            "damage": {
+                "description": "Durchschnittlicher Schaden durch Cyberangriffe",
+                "amount": "4,35 Mio"
+            },
+            "human": {
+                "description": "der Attacken, wurden durch menschliche Fehler initiiert",
+                "amount": "82 %"
+            },
+            "remediation": {
+                "description": "Durchschnittliche Dauer, bis ein Angriff identifiziert und behoben ist",
+                "amount": "277 Tage"
+            },
+            "problem": {
+                "description": "hatten eine Datenpanne / haben einen Cloud Audit nicht bestanden",
+                "amount": "45 %"
+            }
+        },
+
+        "protect": {
+            "title": "Schützen Sie Ihr Business",
+            "subtitle": "Entdecken Sie, wie wir Ihr Unternehmen und Ihre Daten schützen.",
+
+            "agile": {
+                "title": "Agile Methoden für sichere Softwarearchitektur und -entwicklung",
+                "description": "Nutzen Sie agile Methoden, um die Sicherheit Ihrer Softwarearchitektur und -entwicklungsprozesse zu verbessern, und integrieren Sie agile Threat Modeling, um Risiken frühzeitig zu erkennen und zu mindern. Unser Ansatz legt den Schwerpunkt auf kontinuierliche Sicherheitstests und DevSecOps-Praktiken, um sicherzustellen, dass die Sicherheit in allen Phasen der Softwareerstellung und -bereitstellung eine grundlegende Komponente ist."
+            },
+            "zerotrust": {
+                "title": "Zero Trust Identitäts- & Zugriffsmanagement",
+                "description": "Implementieren Sie Zero Trust Identity & Access Management, um sich gegen den Verlust von Anmeldedaten und Passwörtern zu schützen. Stellen Sie sicher, dass Benutzeridentitäten überprüft werden, bevor ein Cloud-Zugang gewährt wird. Unser robustes Framework verhindert unbefugten Zugriff, indem es eine kontinuierliche Validierung jeder Zugriffsanfrage verlangt und Ihre Daten und Systeme vor potenziellen Bedrohungen schützt."
+            },
+            "supplychain": {
+                "title": "Sichere Software Lieferkette",
+                "description": "Stärken Sie Ihre Software-Lieferkette mit unseren Sicherheitsmaßnahmen, die mit dem Cyber Resilience Act konform sind. Wir implementieren eine detaillierte Software Bill of Materials (SBOM), sichere CI/CD-Praktiken und eine Überprüfung der Build-Provenienz, um Schwachstellen vorzubeugen und eine robuste Cyber-Resilienz während des gesamten Entwicklungslebenszyklus zu gewährleisten."
+            },
+            "cloud": {
+                "title": "Cloud Sicherheit",
+                "description": "Verbessern Sie Ihre Cloud-Sicherheit durch die Implementierung robuster Leitplanken und kontinuierlicher Überwachung aller Cloud-Umgebungen, um Fehlkonfigurationen zu verhindern und die Datenintegrität zu gewährleisten. Unser proaktiver Ansatz minimiert Risiken und optimiert den Cloud-Betrieb, damit Ihre digitalen Assets sicher und konform bleiben"
+            }
+        },
+
+        "services": {
+            "title": "Unsere Security Services",
+
+            "consult": {
+                "title": "Beratung",
+                "description": "Nutzen Sie unsere fachkundigen Consulting-Services, um die Komplexität der IT-Infrastruktur und -Strategie zu bewältigen. Wir bieten individuelle Beratung zur Optimierung Ihrer Technologieinvestitionen und helfen Ihnen dabei, Ihre IT-Lösungen auf Ihre Geschäftsziele abzustimmen und Ihr Wachstum zu fördern."
+            },
+            "implement": {
+                "title": "Umsetzung",
+                "description": "Nutzen Sie unsere praktischen Implementierungsdienste, um modernste Technologielösungen effektiv einzusetzen. Unser Team sorgt für eine nahtlose Integration neuer Systeme in Ihre bestehende Infrastruktur, um Unterbrechungen zu minimieren und die Leistung zu maximieren."
+            },
+            "train": {
+                "title": "Training & Schulungen",
+                "description": "Stärken Sie Ihr Team mit unseren umfassenden Schulungsprogrammen. Wir bieten maßgeschneiderte Schulungen an, die Ihre Mitarbeiter in die Lage versetzen, Ihre IT-Systeme effizient zu verwalten und zu warten, um einen langfristigen Erfolg zu gewährleisten."
+            }
+        }
+    },
+
     "images": {
         "cloud": "Technologie Beratung. Bild generiert mit via GPT-4.",
         "collaboration": "Zusammenarbeit. Foto von Mimi Thian auf Unsplash",
