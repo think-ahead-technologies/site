@@ -136,6 +136,21 @@
             "title": "Training & Workshops",
             "description": "Promote the growth of your employees with our interactive training and workshops on cloud, security and modern software development."
         },
+        "services": {
+            "title": "Our services",
+            "consult": {
+                "title": "Consulting",
+                "description": "Tap into our expert consulting services to navigate the complexities of IT infrastructure and strategy. We provide personalized guidance to optimize your technology investments, helping you align IT solutions with business objectives and drive growth."
+            },
+            "implement": {
+                "title": "Implementation",
+                "description": "Leverage our hands-on implementation services to deploy cutting-edge technology solutions effectively. Our team integrates new systems into your existing infrastructure seamlessly, minimizing disruption and maximizing performance."
+            },
+            "train": {
+                "title": "Training",
+                "description": "Empower your team with our comprehensive training programs designed to enhance skills and proficiency in new technologies and processes. We offer tailored training sessions that enable your staff to manage and maintain your IT systems efficiently, ensuring long-term success."
+            }
+        },
         "get-in-touch": "Interested? Get in touch!",
         "how-we-can-help": "How we can help"
     },
@@ -389,23 +404,6 @@
             "cloud": {
                 "title": "Cloud Security",
                 "description": "Implement robust guardrails and continuous monitoring across all cloud environments to prevent misconfiguration and ensure data integrity. Our proactive approach minimizes risks and optimises cloud operations, keeping your digital assets safe and compliant."
-            }
-        },
-
-        "services": {
-            "title": "Our security services",
-
-            "consult": {
-                "title": "Consulting",
-                "description": "Tap into our expert consulting services to navigate the complexities of IT infrastructure and strategy. We provide personalized guidance to optimize your technology investments, helping you align IT solutions with business objectives and drive growth."
-            },
-            "implement": {
-                "title": "Implementation",
-                "description": "Leverage our hands-on implementation services to deploy cutting-edge technology solutions effectively. Our team integrates new systems into your existing infrastructure seamlessly, minimizing disruption and maximizing performance."
-            },
-            "train": {
-                "title": "Training",
-                "description": "Empower your team with our comprehensive training programs designed to enhance skills and proficiency in new technologies and processes. We offer tailored training sessions that enable your staff to manage and maintain your IT systems efficiently, ensuring long-term success."
             }
         }
     },
