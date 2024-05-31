@@ -22,10 +22,6 @@ export const headerData = {
                 {
                     text: "nav.security",
                     href: getPermalink("/solutions/security")
-                },
-                {
-                    text: "nav.training",
-                    href: getPermalink("/solutions/training")
                 }
             ]
         }
@@ -60,10 +56,6 @@ export const footerData = {
                 {
                     text: "nav.security",
                     href: getPermalink("/solutions/security")
-                },
-                {
-                    text: "nav.training",
-                    href: getPermalink("/solutions/training")
                 }
             ]
         },

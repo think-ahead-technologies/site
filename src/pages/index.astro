@@ -151,7 +151,7 @@ const metadata = {
         id="solutions"
         title={t("solutions.intro")}
         subtitle={t("solutions.subtitle")}
-        columns={2}
+        columns={3}
         items={[
             {
                 title: t("cloud.title", "Cloud Computing"),
@@ -183,17 +183,6 @@ const metadata = {
                     variant: "link",
                     text: t("index.learn-more"),
                     href: getRelativeLocaleUrl(Astro.currentLocale || "en", "/solutions/security"),
-                    icon: "tabler:circle-arrow-right"
-                }
-            },
-            {
-                title: t("solutions.training.title"),
-                description: t("solutions.training.description"),
-                icon: "flat-color-icons:voice-presentation",
-                callToAction: {
-                    variant: "link",
-                    text: t("index.learn-more"),
-                    href: getRelativeLocaleUrl(Astro.currentLocale || "en", "/solutions/training"),
                     icon: "tabler:circle-arrow-right"
                 }
             }

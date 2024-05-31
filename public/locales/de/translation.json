@@ -132,10 +132,6 @@
             "splash": "Wir stellen sicher, dass alle Ihre Assets sicher sind. Egal wo.",
             "subtitle": "Cybersicherheit ist der Kern unserer Arbeit. Wir können Ihnen dabei helfen, Vorschriften einzuhalten oder einfach nur mit ruhigem Gewissen neue Produkte zu entwickeln."
         },
-        "training": {
-            "title": "Schulungen & Workshops",
-            "description": "Fördern Sie das Wachstum Ihrer Mitarbeiter mit unseren interaktiven Schulungen und Workshops rund um Cloud, Sicherheit und moderne Softwareentwicklung."
-        },
         "services": {
             "title": "Unsere Services",
 
@@ -146,10 +142,6 @@
             "implement": {
                 "title": "Umsetzung",
                 "description": "Nutzen Sie unsere praktischen Implementierungsdienste, um modernste Technologielösungen effektiv einzusetzen. Unser Team sorgt für eine nahtlose Integration neuer Systeme in Ihre bestehende Infrastruktur, um Unterbrechungen zu minimieren und die Leistung zu maximieren."
-            },
-            "train": {
-                "title": "Training & Schulungen",
-                "description": "Stärken Sie Ihr Team mit unseren umfassenden Schulungsprogrammen. Wir bieten maßgeschneiderte Schulungen an, die Ihre Mitarbeiter in die Lage versetzen, Ihre IT-Systeme effizient zu verwalten und zu warten, um einen langfristigen Erfolg zu gewährleisten."
             }
         },
         "get-in-touch": "Interessiert? Sprechen Sie uns an!",
@@ -293,76 +285,9 @@
         }
     },
 
-    "training": {
-        "splash": "Wir holen das Beste aus Ihren Teams",
-        "subtitle": "Unser enthusiastisches Team gibt sein umfassendes Wissen über Best Practices und aktuelle Technologien in einer Reihe von interaktiven Workshops und Trainings weiter.",
-        "view-courses": "Schulungen anzeigen",
-        "courses": "Aktuell verfügbare Schulungen und Workshops",
-        "courses-subtitle": "Melden Sie sich jetzt für einen unserer Kurse an.",
-        "coming-soon": "Weitere Kurse folgen in Kürze. Schauen Sie bald wieder vorbei!",
-        "view-more": "Mehr anzeigen",
-        "at-a-glance": {
-            "title": "Auf einem Blick",
-            "who": {
-                "title": "Zielgruppe",
-                "developers": "Entwickler",
-                "platform": "Plattform Engineers",
-                "devops": "DevOps Engineers"
-            },
-            "what": "Fakten",
-            "why": "Inhalte",
-            "days": "Tage",
-            "online": "online",
-            "interactive": "Interaktiv",
-            "plus-vat": "+ USt pro Person"
-        },
-        "you-will-learn": "Sie lernen",
-        "about": {
-            "title": "Informationen zum Kurs",
-            "instructors": "Unsere Dozenten",
-            "benefits": "Vorteile",
-            "schedule": "Termine"
-        },
-        "signup": {
-            "title": "Jetzt Anmelden",
-            "subtitle": "Sind Sie bereit Ihre Fähigkeiten auf ein neues Level zu heben? Sichern Sie sich Ihren Platz.",
-            "submit": "Anmelden",
-            "thanks": "Danke für Ihre Anfrage!",
-            "next-steps": "Unser Team meldet sich in Kürze mit weiteren Informationen und der Anmeldebestätigung."
-        },
-        "kubernetes": {
-            "title": "Kubernetes für Praktiker",
-            "description": "Das perfekte Training, um Kubernetes einfach, effizient und sicher im Alltag einsetzen zu können.",
-            "subtitle": "Egal, ob Sie neu in der Container-Orchestrierung sind oder Ihre Fähigkeiten vertiefen wollen, dieser Kurs bietet eine umfassende Einführung und einen tiefen Einblick in die Kernfunktionen von Kubernetes.",
-            "deploy": "Kubernetes deployen",
-            "manage": "Kubernetes managen",
-            "optimise": "Kubernetes optimieren",
-            "you-will-learn": {
-                "basics": {
-                    "title": "Kubernetes Grundlagen",
-                    "description": "Sie kennen die Historie von Kubernetes und verstehen die Architektur."
-                },
-                "skills": {
-                    "title": "Kubernetes im Alltag",
-                    "description": "Bereitstellen von Umgebungen, Deployen, Skalieren und Monitoren von Applikationen."
-                },
-                "advanced": {
-                    "title": "Kubernetes für Fortgeschrittene",
-                    "description": "Absichern von Kubernetes Umgebungen und Applikationen, Reduktion der Betirebskosten und der CO2 Emissionen der Deployments."
-                }
-            },
-            "about": {
-                "format": "Dieser Kurs wird durch Online-Vorträge, Echtzeit-Diskussionen und praktische Übungen an drei Tagen vermittelt.",
-                "instructors": "Lernen Sie von den Besten. Unsere Dozenten sind erfahrene Kubernetes-Praktiker, die ihre umfangreichen Erfahrungen in der Beratung nutzen, um Ihnen Einblicke in die reale Welt und praktisches Wissen zu vermitteln",
-                "benefits": "Bereiten Sie sich darauf vor, das volle Potenzial von Kubernetes für die Entwicklung und Verwaltung moderner Cloud-nativer Anwendungen zu nutzen, um Ihre beruflichen Fähigkeiten und Karriereaussichten deutlich zu verbessern.",
-                "schedule": "Die geplanten Sitzungen finden von Dienstag bis Donnerstag in der letzten Woche eines jeden Monats statt. In den kommenden Monaten fallen diese auf:"
-            }
-        }
-    },
-
     "security": {
         "title": "Cloud Security und Compliance",
-        "description": "Schützen Sie Ihr Unternehmen und Ihre Daten mit unseren Cloud Security Services. Wir bieten Beratung, Umsetzung und Schulung zu Sicherheit im Cloud Betrieb, in der Cloud Entwicklung sowie im Identity und Access Management.",
+        "description": "Schützen Sie Ihr Unternehmen und Ihre Daten mit unseren Cloud Security Services. Wir bieten Beratung und Umsetzung zu Sicherheit im Cloud Betrieb, in der Cloud Entwicklung sowie im Identity und Access Management.",
         "splash": "Wir schützen Ihr Business mit unseren Cloud Security Services",
         "subtitle": "Sicherheit und Developer Productivity sind keine Gegensätze. Von der Idee, über die Umsetzung, bis zum Betrieb: Wir bieten Lösungen im gesamten DevOps Lebenszyklus. So erreichen auch Sie Security by design.",
 

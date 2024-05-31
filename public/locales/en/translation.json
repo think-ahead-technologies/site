@@ -132,10 +132,6 @@
             "splash": "We'll ensure your assets are safe, whatever the environment",
             "subtitle": "Security is core to how we work. We can help you meet regulations or simply build with peace of mind."
         },
-        "training": {
-            "title": "Training & Workshops",
-            "description": "Promote the growth of your employees with our interactive training and workshops on cloud, security and modern software development."
-        },
         "services": {
             "title": "Our services",
             "consult": {
@@ -145,10 +141,6 @@
             "implement": {
                 "title": "Implementation",
                 "description": "Leverage our hands-on implementation services to deploy cutting-edge technology solutions effectively. Our team integrates new systems into your existing infrastructure seamlessly, minimizing disruption and maximizing performance."
-            },
-            "train": {
-                "title": "Training",
-                "description": "Empower your team with our comprehensive training programs designed to enhance skills and proficiency in new technologies and processes. We offer tailored training sessions that enable your staff to manage and maintain your IT systems efficiently, ensuring long-term success."
             }
         },
         "get-in-touch": "Interested? Get in touch!",
@@ -292,76 +284,9 @@
         }
     },
 
-    "training": {
-        "splash": "We'll make your team's best even better",
-        "subtitle": "Our enthusiastic team shares our deep knowledge of best practices and current technologies in a range of interactive workshops and seminars.",
-        "view-courses": "View courses",
-        "courses": "Currently available training courses",
-        "courses-subtitle": "Sign up now to one of our practical, expert-led courses.",
-        "coming-soon": "More courses will be released in the near future. Watch this space!",
-        "view-more": "View more",
-        "at-a-glance": {
-            "title": "At a glance",
-            "who": {
-                "title": "Who?",
-                "developers": "Developers",
-                "platform": "Platform engineers",
-                "devops": "DevOps engineers"
-            },
-            "what": "What?",
-            "why": "Why?",
-            "days": "days",
-            "online": "Online",
-            "interactive": "Interactive",
-            "plus-vat": "+ VAT per person"
-        },
-        "you-will-learn": "You will learn",
-        "about": {
-            "title": "About the course",
-            "instructors": "Instructor Profile",
-            "benefits": "Benefits",
-            "schedule": "Schedule"
-        },
-        "signup": {
-            "title": "Sign up now",
-            "subtitle": "Ready to take your skills to the next level? Enter your details to request your spot in our next session.",
-            "submit": "Sign up",
-            "thanks": "Thanks for signing up!",
-            "next-steps": "Our team will be in touch soon with more information and course dates."
-        },
-        "kubernetes": {
-            "title": "Practical Kubernetes",
-            "description": "The perfect training, to utilize Kubernetes in production in a simple, efficient and secure way.",
-            "subtitle": "Whether you are new to container orchestration or looking to formalize your skills, this course offers a comprehensive introduction and deep dive into Kubernetes' core functionalities.",
-            "deploy": "Deploy Kubernetes",
-            "manage": "Manage Kubernetes",
-            "optimise": "Optimise Kubernetes",
-            "you-will-learn": {
-                "basics": {
-                    "title": "Foundational Kubernetes Knowledge",
-                    "description": "Understand the history and architecture of Kubernetes."
-                },
-                "skills": {
-                    "title": "Practical Kubernetes Skills",
-                    "description": "Set up environments, deploy applications, scale and monitor their performance efficiently."
-                },
-                "advanced": {
-                    "title": "Advanced Kubernetes Techniques",
-                    "description": "Secure your Kubernetes environments and applications, reduce costs, and take into account the carbon footprint of your deployments."
-                }
-            },
-            "about": {
-                "format": "This course will be delivered online via seminars, real-time discussions and hands-on labs, spread over three days.",
-                "instructors": "Learn from the best. Our instructors are seasoned Kubernetes practitioners, leveraging their extensive experience in consultancy to provide you with real-world insights and practical knowledge.",
-                "benefits": "Prepare to harness the full potential of Kubernetes for developing and managing modern cloud-native applications, significantly boosting your professional capabilities and career prospects.",
-                "schedule": "Scheduled sessions take place from Tuesday to Thursday in the last week of each month. For the coming months, these will fall on:"
-            }
-        }
-    },
-
     "security": {
         "title": "Cloud Security & Compliance",
-        "description": "Protect your business and your data with our cloud security services. We offer consulting, implementation and training on security in cloud operations, cloud development and identity and access management.",
+        "description": "Protect your business and your data with our cloud security services. We offer consulting on and implementation of security in cloud operations, cloud development and identity and access management.",
         "splash": "We protect your survival through security excellence",
         "subtitle": "Security and developer productivity are not opposites: you can have them both! From idea to implementation to operation, we work with the entire DevOps lifecycle. You too can achieve true security by design.",
 
