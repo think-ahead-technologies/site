@@ -13,9 +13,9 @@ export function getLangFromUrl(url: string | URL) {
 }
 
 export function useTranslations(lang: keyof typeof ui) {
-    return function t(key: keyof (typeof ui)[typeof defaultLang] | undefined | null) {
+    return function t(key: TranslationKey | undefined | null, fallback: string = "") {
         if (!key) {
-            return "";
+            return fallback;
         }
         return ui[lang][key] || ui[defaultLang][key];
     };

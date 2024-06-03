@@ -1,0 +1,216 @@
+---
+import { t, changeLanguage } from "i18next";
+import Layout from "~/layouts/PageLayout.astro";
+import Hero from "~/components/widgets/Hero.astro";
+import CallToAction from "~/components/widgets/CallToAction.astro";
+import Content from "~/components/widgets/Content.astro";
+import { PRIMARY_LANGUAGE } from "~/i18n/utils";
+import { Image } from "astro:assets";
+import teleportIcon from "~/icons/teleport.png";
+import Icon from "node_modules/astro-icon/components/Icon.astro";
+import Brands from "~/components/widgets/Brands.astro";
+
+changeLanguage("de");
+
+const metadata = {
+    title: t("partners.title"),
+    description: t("partners.splash")
+};
+---
+
+<Layout metadata={metadata}>
+    <!-- Hero Widget ******************* -->
+
+    <Hero
+        tagline={t("partners.title")}
+        title={t("partners.splash")}
+        subtitle={t("partners.subtitle")}
+        actions={[
+            { text: t("partners.teleport.title", "Teleport"), href: "#teleport", variant: "primary" },
+            { text: t("partners.microsoft.title", "Microsoft"), href: "#microsoft", variant: "primary" }
+        ]}
+    />
+
+    <!-- Features2 Widget ************** -->
+
+    <!-- <Features2 id="about-us" title={t("who-we-are.title")} subtitle={t("who-we-are.description")}>
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+    </Features2> -->
+
+    <!-- Features3 Widget ************** -->
+
+    <!-- <Features3
+     title={t("who-we-are.title")}
+     subtitle={t("who-we-are.description")}
+     columns={3}
+     isBeforeContent={true}
+     items={[
+         {
+             title: "Small team",
+             description:
+                 "Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.",
+             icon: "tabler:template"
+         },
+         {
+             title: "Broad experience",
+             description:
+                 "Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.",
+             icon: "tabler:template"
+         },
+         {
+             title: "Enthusiastic",
+             description:
+                 "Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.",
+             icon: "tabler:template"
+         }
+     ]}
+ /> -->
+
+    <!-- Content Widget **************** -->
+
+    <Content
+        id="teleport"
+        items={[
+            {
+                title: t("partners.tagline"),
+                icon: "tabler:quote",
+                description: t("partners.teleport.tagline")
+            },
+            {
+                title: t("partners.what"),
+                icon: "tabler:zoom-question",
+                description: t("partners.teleport.who")
+            },
+            {
+                title: t("partners.why"),
+                icon: "tabler:star",
+                description: t("partners.teleport.why")
+            },
+            {
+                title: t("partners.us"),
+                icon: "think-ahead",
+                description: t("partners.teleport.us")
+            }
+        ]}
+    >
+        <Fragment slot="content">
+            <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2 flex items-center">
+                <Image src={teleportIcon} alt="Teleport logo" class="h-6 w-6 mr-3" />
+                <a href="https://goteleport.com/" target="_blank">
+                    {t("partners.teleport.title", "Teleport")}
+                </a>
+                <Icon name="tabler:external-link" class="h-4 -ml-1" />
+            </h3>
+            <!-- {t("who-we-are.subtitle")} -->
+        </Fragment>
+
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+    </Content>
+
+    <Content
+        id="microsoft"
+        isReversed={true}
+        items={[
+            {
+                title: t("partners.tagline"),
+                icon: "tabler:quote",
+                description: t("partners.microsoft.tagline")
+            },
+            {
+                title: t("partners.what"),
+                icon: "tabler:heart-handshake",
+                description: t("partners.microsoft.who")
+            },
+            {
+                title: t("partners.why"),
+                icon: "tabler:star",
+                description: t("partners.microsoft.why")
+            },
+            {
+                title: t("partners.us"),
+                icon: "think-ahead",
+                description: t("partners.microsoft.us")
+            }
+        ]}
+    >
+        <Fragment slot="content">
+            <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2 flex items-center">
+                <Icon name="microsoft" class="h-6 w-6 mr-3" />
+                {t("partners.microsoft.title", "Microsoft")}
+            </h3>
+            <!-- {t("who-we-are.subtitle")} -->
+        </Fragment>
+
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+    </Content>
+
+    <!-- Stats Widget ****************** -->
+
+    <!-- <Stats
+    title="Discover the impressive impact of Astrowind"
+    subtitle="The numbers below reflect the trust our users have placed in us and the remarkable outcomes we've helped them achieve."
+    stats={[
+      { title: 'Downloads', amount: '182K' },
+      { title: 'Websites Launched', amount: '87' },
+      { title: 'User Ratings', amount: '4.8' },
+      { title: 'Satisfied Clients', amount: '116K' },
+    ]}
+  /> -->
+
+    <!-- Brands Widget ****************** -->
+
+    <!-- <Brands
+    title="Partnerships & Collaborations"
+    subtitle="At Astrowind, we believe in the power of collaboration to drive innovation and create exceptional experiences."
+    icons={[]}
+    images={[
+      {
+        src: 'https://image.com/something-something.png',
+        alt: 'CompanyName',
+      }
+    ]}
+  /> -->
+
+    <!-- Features Widget *************** -->
+
+    <!-- <Features
+    id="features"
+    title="Main features of our templates"
+    subtitle="Possess several key characteristics to effectively cater to the needs of startups and entrepreneurs."
+    columns={3}
+    items={[
+      {
+        title: 'Modern and Professional Design',
+        description:
+          'Have a contemporary design that reflects current design trends and gives a professional impression.',
+        icon: 'tabler:artboard',
+      },
+      {
+        title: 'Compatibility',
+        description: 'The templates work seamlessly across various content management systems and website builders.',
+        icon: 'tabler:plug-connected',
+      },
+    ]}
+  /> -->
+
+    <!-- CallToAction Widget *********** -->
+
+    <CallToAction
+        title={t("contact.header")}
+        subtitle={t("contact.index-description")}
+        actions={[
+            {
+                variant: "primary",
+                text: t("contact.title"),
+                href: `/${Astro.currentLocale || PRIMARY_LANGUAGE}/contact`,
+                icon: "tabler:mail"
+            }
+        ]}
+    />
+</Layout>

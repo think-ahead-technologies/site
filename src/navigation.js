@@ -24,13 +24,11 @@ export const headerData = {
                     href: getPermalink("/solutions/security")
                 }
             ]
+        },
+        {
+            text: "nav.partners",
+            href: getPermalink(`/partners`)
         }
-        // {
-        //   text: 'nav.partners',
-        //   links: [
-        //     { text: 'TODO', href: getPermalink('/partners/todo') }
-        //   ],
-        // },
         // {
         //     text: "nav.blog",
         //     href: getBlogPermalink()
@@ -56,6 +54,19 @@ export const footerData = {
                 {
                     text: "nav.security",
                     href: getPermalink("/solutions/security")
+                }
+            ]
+        },
+        {
+            title: "nav.partners",
+            links: [
+                {
+                    text: "nav.partners.teleport",
+                    href: getPermalink("/partners#teleport")
+                },
+                {
+                    text: "nav.partners.microsoft",
+                    href: getPermalink("/partners#microsoft")
                 }
             ]
         },
