@@ -335,22 +335,23 @@
 
     "partners": {
         "title": "Our partners",
-        "splash": "Our consulting is all the stronger for our industry-expert partners",
-        "subtitle": "We can facilitate your access to cutting-edge cloud and security technologies.",
+        "splash": "We deliver even greater value for you alongside our partners",
+        "index-subtitle": "Our partnerships allow us to offer you an even greater depth and range of possibilities.",
+        "page-subtitle": "",
         "tagline": "In their own words",
         "what": "What?",
         "why": "Why?",
         "us": "What we provide",
         "teleport": {
-            "tagline": "The easiest and most secure way to access and protect all your infrastructure.",
+            "tagline": "“The easiest and most secure way to access and protect all your infrastructure.”",
             "who": "An established security provider, Teleport allows simple but highly secure access to your infrastructure for technical users. It can run on any cloud and has integrations with numerous tools and access providers such as Slack and Microsoft Entra ID.",
             "why": "Teleport combines a certificate-based passwordless approach with detailed logging and privilege analysis to keep your systems as locked-down as possible — all while making your developers' lives easier.",
             "us": "With deep knowledge of the product, we can help you get started by considering your needs and what subscription (if any) makes sense for you. We can then walk you through setting up Teleport."
         },
         "microsoft": {
-            "tagline": "Our mission is to empower every person and every organization on the planet to achieve more.",
-            "who": "An industry behemoth, Microsoft provides its Azure cloud as well as countless household-name tools.",
-            "why": "Microsoft's tools integrate directly with your business' suite, allowing for a simpler, more streamlined journey into the Cloud.",
+            "tagline": "“Azure. Limitless innovation.”",
+            "who": "An industry behemoth, Microsoft Azure provides a wide range of cloud technologies from simple virtual machines to cutting-edge AI tools.",
+            "why": "Microsoft Azure integrates directly with your business' suite, allowing for a simpler, more streamlined journey into the Cloud.",
             "us": "As an official AI and Cloud Partner, we can help you capitalise on the potential of the Azure cloud and myriad related services."
         }
     },

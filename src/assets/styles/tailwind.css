@@ -88,3 +88,13 @@
 .dd *:first-child {
     margin-top: 0;
 }
+
+/* Custom */
+
+html:not(.dark) .dark-mode-only {
+    display: none;
+}
+
+html.dark .light-mode-only {
+    display: none;
+}

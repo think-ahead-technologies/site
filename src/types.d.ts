@@ -85,6 +85,12 @@ export interface MetaDataTwitter {
     cardType?: string;
 }
 
+export interface IconWithLink {
+    name: string;
+    href?: string;
+    class?: string;
+}
+
 export interface Image {
     src: string;
     alt?: TranslatedString;
@@ -250,7 +256,7 @@ export interface Testimonials extends Omit<Headline, "classes">, Widget {
 }
 
 export interface Brands extends Omit<Headline, "classes">, Widget {
-    icons?: Array<string>;
+    icons?: Array<IconWithLink>;
     images?: Array<Image>;
 }
 

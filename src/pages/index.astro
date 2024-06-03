@@ -8,6 +8,7 @@ import { Trans } from "astro-i18next/components";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import Content from "~/components/widgets/Content.astro";
 import { PRIMARY_LANGUAGE } from "~/i18n/utils";
+import Brands from "~/components/widgets/Brands.astro";
 
 changeLanguage("de");
 
@@ -193,6 +194,26 @@ const metadata = {
         </Fragment>
     </Features2>
 
+    <Brands
+        title={t("partners.title")}
+        subtitle={t("partners.index-subtitle")}
+        icons={[
+            {
+                name: "teleport-white",
+                class: "dark-mode-only",
+                href: getRelativeLocaleUrl(Astro.currentLocale || "en", "/partners#teleport")
+            },
+            {
+                name: "teleport",
+                class: "light-mode-only",
+                href: getRelativeLocaleUrl(Astro.currentLocale || "en", "/partners#teleport")
+            },
+            {
+                name: "microsoft",
+                href: getRelativeLocaleUrl(Astro.currentLocale || "en", "/partners#microsoft")
+            }
+        ]}
+    />
     <!-- Features Widget *************** -->
 
     <!-- <Features

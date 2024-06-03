@@ -3,12 +3,9 @@ import { t, changeLanguage } from "i18next";
 import Layout from "~/layouts/PageLayout.astro";
 import Hero from "~/components/widgets/Hero.astro";
 import CallToAction from "~/components/widgets/CallToAction.astro";
-import Content from "~/components/widgets/Content.astro";
 import { PRIMARY_LANGUAGE } from "~/i18n/utils";
-import { Image } from "astro:assets";
-import teleportIcon from "~/icons/teleport.png";
 import Icon from "node_modules/astro-icon/components/Icon.astro";
-import Brands from "~/components/widgets/Brands.astro";
+import Features from "~/components/widgets/Features.astro";
 
 changeLanguage("de");
 
@@ -24,10 +21,10 @@ const metadata = {
     <Hero
         tagline={t("partners.title")}
         title={t("partners.splash")}
-        subtitle={t("partners.subtitle")}
+        subtitle={t("partners.page-subtitle")}
         actions={[
             { text: t("partners.teleport.title", "Teleport"), href: "#teleport", variant: "primary" },
-            { text: t("partners.microsoft.title", "Microsoft"), href: "#microsoft", variant: "primary" }
+            { text: t("partners.microsoft.title", "Microsoft Azure"), href: "#microsoft", variant: "primary" }
         ]}
     />
 
@@ -70,14 +67,12 @@ const metadata = {
 
     <!-- Content Widget **************** -->
 
-    <Content
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2 flex items-center"></h3>
+    <Features
         id="teleport"
+        subtitle={t("partners.teleport.tagline")}
+        columns={3}
         items={[
-            {
-                title: t("partners.tagline"),
-                icon: "tabler:quote",
-                description: t("partners.teleport.tagline")
-            },
             {
                 title: t("partners.what"),
                 icon: "tabler:zoom-question",
@@ -95,34 +90,24 @@ const metadata = {
             }
         ]}
     >
-        <Fragment slot="content">
-            <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2 flex items-center">
-                <Image src={teleportIcon} alt="Teleport logo" class="h-6 w-6 mr-3" />
-                <a href="https://goteleport.com/" target="_blank">
-                    {t("partners.teleport.title", "Teleport")}
-                </a>
+        <Fragment slot="title">
+            <a href="https://goteleport.com/" target="_blank" class="flex items-center justify-center">
+                <Icon name="teleport" class="h-6 w-6 mr-3 light-mode-only" />
+                <Icon name="teleport-white" class="h-6 w-6 mr-3 dark-mode-only" />
+                {t("partners.teleport.title", "Teleport")}
                 <Icon name="tabler:external-link" class="h-4 -ml-1" />
-            </h3>
-            <!-- {t("who-we-are.subtitle")} -->
+            </a>
         </Fragment>
+    </Features>
 
-        <Fragment slot="bg">
-            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-        </Fragment>
-    </Content>
-
-    <Content
+    <Features
         id="microsoft"
-        isReversed={true}
+        subtitle={t("partners.microsoft.tagline")}
+        columns={3}
         items={[
             {
-                title: t("partners.tagline"),
-                icon: "tabler:quote",
-                description: t("partners.microsoft.tagline")
-            },
-            {
                 title: t("partners.what"),
-                icon: "tabler:heart-handshake",
+                icon: "tabler:zoom-question",
                 description: t("partners.microsoft.who")
             },
             {
@@ -137,18 +122,13 @@ const metadata = {
             }
         ]}
     >
-        <Fragment slot="content">
-            <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2 flex items-center">
+        <Fragment slot="title">
+            <span class="flex items-center justify-center">
                 <Icon name="microsoft" class="h-6 w-6 mr-3" />
-                {t("partners.microsoft.title", "Microsoft")}
-            </h3>
-            <!-- {t("who-we-are.subtitle")} -->
+                {t("partners.microsoft.title", "Microsoft Azure")}
+            </span>
         </Fragment>
-
-        <Fragment slot="bg">
-            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-        </Fragment>
-    </Content>
+    </Features>
 
     <!-- Stats Widget ****************** -->
 
