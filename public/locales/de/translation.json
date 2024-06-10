@@ -335,24 +335,24 @@
     },
 
     "partners": {
-        "title": "Our partners",
-        "splash": "We deliver even greater value for you alongside our partners",
+        "title": "Unsere Partner",
+        "splash": "Durch unsere Partnerschaften, können wir sogar noch mehr Wert schaffen",
         "subtitle": "",
-        "tagline": "In their own words",
-        "what": "What?",
-        "why": "Why?",
-        "us": "What we provide",
+        "tagline": "In eigenen Worten",
+        "what": "Was?",
+        "why": "Wieso?",
+        "us": "Was wir bieten",
         "teleport": {
-            "tagline": "“The easiest and most secure way to access and protect all your infrastructure.”",
-            "who": "An established security provider, Teleport allows simple but highly secure access to your infrastructure for technical users. It can run on any cloud and has integrations with numerous tools and access providers such as Slack and Microsoft Entra ID.",
-            "why": "Teleport combines a certificate-based passwordless approach with detailed logging and privilege analysis to keep your systems as locked-down as possible — all while making your developers' lives easier.",
-            "us": "With deep knowledge of the product, we can help you get started by considering your needs and what subscription (if any) makes sense for you. We can then walk you through setting up Teleport."
+            "tagline": "“Der einfachste und sicherste Weg, auf Ihre gesamte Infrastruktur zuzugreifen und sie zu schützen.”",
+            "who": "Teleport ist ein etablierter Sicherheitsanbieter, der einen einfachen, aber hochsicheren Zugang zu Ihrer Infrastruktur ermöglicht. Es kann auf jeder Cloud laufen und hat Integrationen mit zahlreichen Tools und Zugangssystemen wie Slack und Microsoft Entra ID.",
+            "why": "Teleport kombiniert einen zertifikatsbasierten, passwortlosen Ansatz mit detaillierter Protokollierung und Privilegienanalyse, um Ihre Systeme so gut wie möglich abzusichern - und gleichzeitig das Leben Ihrer Benutzer zu erleichtern.",
+            "us": "Da wir das Produkt sehr gut kennen, können wir Ihnen bei den ersten Schritten helfen, indem wir Ihre Bedürfnisse berücksichtigen und überlegen, welches Abonnement für Sie sinnvoll ist. Außerdem können wir Sie mit der Einrichtung und Integration in Ihre infrastrukturlandschaft unterstützen ."
         },
         "microsoft": {
-            "tagline": "“Azure. Limitless innovation.”",
-            "who": "An industry behemoth, Microsoft Azure provides a wide range of cloud technologies from simple virtual machines to cutting-edge AI tools.",
-            "why": "Microsoft Azure integrates directly with your business' suite, allowing for a simpler, more streamlined journey into the Cloud.",
-            "us": "As an official AI and Cloud Partner, we can help you capitalise on the potential of the Azure cloud and myriad related services."
+            "tagline": "“Azure. Grenzenlose Innovation.”",
+            "who": "Der Branchenriese Microsoft Azure bietet eine breite Palette an Cloud-Technologien, von einfachen virtuellen Maschinen bis hin zu hochmodernen KI-Tools.",
+            "why": "Microsoft Azure lässt sich direkt in Ihres Unternehmenslandschaft integrieren und ermöglicht so einen einfacheren und effizienteren Weg in die Cloud.",
+            "us": "Als offizieller KI- und Cloud-Partner können wir Ihnen helfen, das Potenzial der Azure-Cloud und zahlreicher damit verbundener Dienste zu nutzen."
         }
     },
 
