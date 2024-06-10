@@ -30,7 +30,7 @@ const {
                         />
                     );
                     return icon.name && icon.href ? (
-                        <a href={icon.href} class={icon.class || ""}>
+                        <a href={icon.href} class={icon.class || ""} title={icon.title}>
                             {iconElement}
                         </a>
                     ) : (

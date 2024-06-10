@@ -89,6 +89,7 @@ export interface IconWithLink {
     name: string;
     href?: string;
     class?: string;
+    title?: TranslatedString;
 }
 
 export interface Image {

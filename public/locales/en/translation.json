@@ -346,7 +346,7 @@
             "tagline": "“The easiest and most secure way to access and protect all your infrastructure.”",
             "who": "An established security provider, Teleport allows simple but highly secure access to your infrastructure for technical users. It can run on any cloud and has integrations with numerous tools and access providers such as Slack and Microsoft Entra ID.",
             "why": "Teleport combines a certificate-based passwordless approach with detailed logging and privilege analysis to keep your systems as locked-down as possible — all while making your developers' lives easier.",
-            "us": "With deep knowledge of the product, we can help you get started by considering your needs and what subscription (if any) makes sense for you. We can then walk you through setting up Teleport."
+            "us": "With deep knowledge of the product, we can help you get started by considering your needs and what subscription (if any) makes sense for you. We can then walk you through setting up Teleport and integrating it with the rest of your deployed infrastructure."
         },
         "microsoft": {
             "tagline": "“Azure. Limitless innovation.”",
