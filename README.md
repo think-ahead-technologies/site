@@ -1,6 +1,6 @@
 # <img src="https://raw.githubusercontent.com/think-ahead-technologies/site/main/src/assets/images/think-ahead.svg" alt="Logo" height="36"> Think Ahead public website
 
-Static public site for _Think Ahead Technologies GmbH_, built on [Astro 4.0](https://astro.build/) and deployed in [🇬🇧 English](https://think-ahead.tech/en) and [🇩🇪 German](https://think-ahead.tech/) using [Netlify](https://app.netlify.com/sites/think-ahead-technologies/overview).
+Static public site for _Think Ahead Technologies GmbH_, built on [Astro 4.0](https://astro.build/) and deployed in [🇬🇧 English](https://think-ahead.tech/en) and [🇩🇪 German](https://think-ahead.tech/de) using [Netlify](https://app.netlify.com/sites/think-ahead-technologies/overview).
 
 <br>
 
@@ -33,7 +33,9 @@ Static public site for _Think Ahead Technologies GmbH_, built on [Astro 4.0](htt
     ```
     -   This hook will check formatting, and ensure no translations are missed.
     -   To fix formatting, run: `npm run format`
-    -   To fix translations, manually modify the [English](./public/locales/en/translation.json) and [German](./public/locales/de/translation.json) locale files, then run `npm run i18n:check` to verify nothing has been missed.
+    -   To fix translations, manually modify the [English](./public/locales/en/translation.json) and [German](./public/locales/de/translation.json) locale files.
+        -   To verify nothing has been missed, you can run: `npm run i18n:check`
+        -   This will also be executed automatically by the above pre-commit hook.
 
 ### Deployment
 
@@ -41,7 +43,7 @@ The site is deployed automatically on a push to the [`main` branch](https://gith
 
 ### Images
 
-When resizing images, limiting them to their dimensions on the page (e.g. 768px for an illustration image on the [Who we are](/public/finland.jpg) page), and Quality of 60%. Thus:
+When resizing images, limiting them to their dimensions on the page (e.g. 768px for an [illustration image](/public/finland.jpg) on the [Who we are](https://think-ahead.tech/en/who-we-are) page), and Quality of 60%. Thus:
 
 ```bash
     convert source-image.jpg -resize 768x -quality 60 output-image.jpg
