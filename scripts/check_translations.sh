@@ -7,6 +7,7 @@ command -v jq >/dev/null \
 
 de=public/locales/de/translation.json
 en=public/locales/en/translation.json
+any=public/locales/*/*.json
 
 FLATTEN='. | [paths(scalars) as $path | {"key": $path | join("."), "value": getpath($path)}] | from_entries'
 KEYS="$FLATTEN | keys"
@@ -46,5 +47,12 @@ only $en $de "Paths that are missing in English:" || changes=true
 common $de $en "Paths with the same text in English and German:" || changes=true
 
 if $changes; then
+    exit 1
+fi
+
+unstaged=$(git diff --exit-code --name-only $any)
+if [ -n "$unstaged" ]; then
+    echo "Warning: the following translation file(s) have unstaged changes:" >&2
+    echo "$unstaged"
     exit 1
 fi
