@@ -101,10 +101,6 @@ const metadata = {
             </h3>
             {t("who-we-are.impact.subtitle")}
         </Fragment>
-
-        <Fragment slot="bg">
-            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-        </Fragment>
     </Content>
 
     <!-- Stats Widget ****************** -->
@@ -173,7 +169,11 @@ const metadata = {
                 ]
             }
         ]}
-    />
+    >
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+    </Stats>
 
     <!-- Features3 Widget ************** -->
 

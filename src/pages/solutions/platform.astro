@@ -40,7 +40,7 @@ const metadata = {
         }}
     />
 
-    <!-- Features2 Widget ************** -->
+    <!-- Why You Should Care section *********** -->
 
     <Features
         id="essential"
@@ -79,7 +79,13 @@ const metadata = {
                 icon: "tabler:cloud-share"
             }
         ]}
-    />
+    >
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+    </Features>
+
+    <!-- Our Platform Solutions sectio *********** -->
 
     <Features3
         id="solutions"
@@ -114,28 +120,7 @@ const metadata = {
         }}
     />
 
-    <!-- Testimonials Widget *********** -->
-
-    <!-- <Testimonials
-    title="Words from real customers"
-    testimonials={[
-      {
-        testimonial: `The designs are not only visually appealing but also highly professional. The templates have saved me a significant amount of time while helping me make a lasting impression on my clients.`,
-        name: 'Emily Kennedy',
-        job: 'Front-end developer',
-        image: {
-          src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
-          alt: 'Emily Kennedy Image',
-        },
-      }
-    ]}
-    callToAction={{
-      target: '_blank',
-      text: 'More testimonials...',
-      href: 'https://github.com/onwidget/astrowind',
-      icon: 'tabler:chevron-right',
-    }}
-  /> -->
+    <!-- Our Services section (common across Solutions pages) *********** -->
 
     <Features2
         id="services"
@@ -153,9 +138,13 @@ const metadata = {
                 icon: "tabler:code-dots"
             }
         ]}
-    />
+    >
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+    </Features2>
 
-    <!-- CallToAction Widget *********** -->
+    <!-- Contact Us widget *********** -->
 
     <CallToAction
         actions={[

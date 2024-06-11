@@ -40,7 +40,8 @@ const metadata = {
         }}
     />
 
-    <!-- Stats Widget ****************** -->
+    <!-- Stats widget ****************** -->
+
     <Stats
         id="stats"
         title={t("security.stats.title")}
@@ -67,7 +68,13 @@ const metadata = {
                 amount: t("security.stats.problem.amount").toString()
             }
         ]}
-    />
+    >
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+    </Stats>
+
+    <!-- Our Security Solutions section -->
 
     <Steps
         title={t("security.protect.title")}
@@ -96,6 +103,8 @@ const metadata = {
         ]}
     />
 
+    <!-- Our Services section (common across Solutions pages) *********** -->
+
     <Features2
         id="services"
         title={t("solutions.services.title")}
@@ -112,7 +121,13 @@ const metadata = {
                 icon: "tabler:code-dots"
             }
         ]}
-    />
+    >
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+    </Features2>
+
+    <!-- Contact Us widget *********** -->
 
     <CallToAction
         actions={[

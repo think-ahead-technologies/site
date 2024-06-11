@@ -16,7 +16,7 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-    <!-- Hero Widget ******************* -->
+    <!-- Hero widget ******************* -->
 
     <Hero
         tagline={t("partners.title")}
@@ -27,44 +27,7 @@ const metadata = {
         ]}
     />
 
-    <!-- Features2 Widget ************** -->
-
-    <!-- <Features2 id="about-us" title={t("who-we-are.title")} subtitle={t("who-we-are.description")}>
-        <Fragment slot="bg">
-            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-        </Fragment>
-    </Features2> -->
-
-    <!-- Features3 Widget ************** -->
-
-    <!-- <Features3
-     title={t("who-we-are.title")}
-     subtitle={t("who-we-are.description")}
-     columns={3}
-     isBeforeContent={true}
-     items={[
-         {
-             title: "Small team",
-             description:
-                 "Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.",
-             icon: "tabler:template"
-         },
-         {
-             title: "Broad experience",
-             description:
-                 "Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.",
-             icon: "tabler:template"
-         },
-         {
-             title: "Enthusiastic",
-             description:
-                 "Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.",
-             icon: "tabler:template"
-         }
-     ]}
- /> -->
-
-    <!-- Content Widget **************** -->
+    <!-- Teleport section *********** -->
 
     <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2 flex items-center"></h3>
     <Features
@@ -99,6 +62,8 @@ const metadata = {
         </Fragment>
     </Features>
 
+    <!-- Microsoft section *********** -->
+
     <Features
         id="microsoft"
         subtitle={t("partners.microsoft.tagline")}
@@ -127,58 +92,12 @@ const metadata = {
                 {t("partners.microsoft.title", "Microsoft Azure")}
             </span>
         </Fragment>
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
     </Features>
 
-    <!-- Stats Widget ****************** -->
-
-    <!-- <Stats
-    title="Discover the impressive impact of Astrowind"
-    subtitle="The numbers below reflect the trust our users have placed in us and the remarkable outcomes we've helped them achieve."
-    stats={[
-      { title: 'Downloads', amount: '182K' },
-      { title: 'Websites Launched', amount: '87' },
-      { title: 'User Ratings', amount: '4.8' },
-      { title: 'Satisfied Clients', amount: '116K' },
-    ]}
-  /> -->
-
-    <!-- Brands Widget ****************** -->
-
-    <!-- <Brands
-    title="Partnerships & Collaborations"
-    subtitle="At Astrowind, we believe in the power of collaboration to drive innovation and create exceptional experiences."
-    icons={[]}
-    images={[
-      {
-        src: 'https://image.com/something-something.png',
-        alt: 'CompanyName',
-      }
-    ]}
-  /> -->
-
-    <!-- Features Widget *************** -->
-
-    <!-- <Features
-    id="features"
-    title="Main features of our templates"
-    subtitle="Possess several key characteristics to effectively cater to the needs of startups and entrepreneurs."
-    columns={3}
-    items={[
-      {
-        title: 'Modern and Professional Design',
-        description:
-          'Have a contemporary design that reflects current design trends and gives a professional impression.',
-        icon: 'tabler:artboard',
-      },
-      {
-        title: 'Compatibility',
-        description: 'The templates work seamlessly across various content management systems and website builders.',
-        icon: 'tabler:plug-connected',
-      },
-    ]}
-  /> -->
-
-    <!-- CallToAction Widget *********** -->
+    <!-- Contact Us widget *********** -->
 
     <CallToAction
         title={t("contact.header")}

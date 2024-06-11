@@ -17,7 +17,7 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-    <!-- Hero Widget ******************* -->
+    <!-- Hero widget ******************* -->
 
     <Hero
         title={t("cloud.splash")}
@@ -40,6 +40,8 @@ const metadata = {
             alt: t("images.infrastructure")
         }}
     />
+
+    <!-- Cloud Benefits section *********** -->
 
     <Features3
         id="benefits"
@@ -78,7 +80,13 @@ const metadata = {
                 icon: "material-symbols:upgrade"
             }
         ]}
-    />
+    >
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+    </Features3>
+
+    <!-- Cloud Challenges section *********** -->
 
     <Features3
         id="challenges"
@@ -138,6 +146,8 @@ const metadata = {
         ]}
     />
 
+    <!-- Our Cloud Solutions section *********** -->
+
     <Features
         id="solutions"
         title={t("cloud.solutions.title")}
@@ -165,30 +175,13 @@ const metadata = {
                 icon: "tabler:database-star"
             }
         ]}
-    />
+    >
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+    </Features>
 
-    <!-- Testimonials Widget *********** -->
-
-    <!-- <Testimonials
-    title="Words from real customers"
-    testimonials={[
-      {
-        testimonial: `The designs are not only visually appealing but also highly professional. The templates have saved me a significant amount of time while helping me make a lasting impression on my clients.`,
-        name: 'Emily Kennedy',
-        job: 'Front-end developer',
-        image: {
-          src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
-          alt: 'Emily Kennedy Image',
-        },
-      }
-    ]}
-    callToAction={{
-      target: '_blank',
-      text: 'More testimonials...',
-      href: 'https://github.com/onwidget/astrowind',
-      icon: 'tabler:chevron-right',
-    }}
-  /> -->
+    <!-- Our Services section (common across Solutions pages) *********** -->
 
     <Features2
         id="services"
@@ -206,9 +199,13 @@ const metadata = {
                 icon: "tabler:code-dots"
             }
         ]}
-    />
+    >
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+    </Features2>
 
-    <!-- CallToAction Widget *********** -->
+    <!-- Contact Us widget *********** -->
 
     <CallToAction
         actions={[

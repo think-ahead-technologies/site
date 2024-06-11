@@ -12,6 +12,7 @@ const metadata = {
 };
 ---
 
+<!-- Contact form ************** -->
 <Layout metadata={metadata}>
     <ContactUs
         name="Contact form"
@@ -44,22 +45,12 @@ const metadata = {
         button={t("contact.form.submit")}
     />
 
-    <!-- Features2 Widget ************** -->
+    <!-- Contact details section ************** -->
 
     <Features2
         title={t("contact.methods.title")}
         subtitle={t("contact.methods.subtitle")}
         items={[
-            //   {
-            //     title: 'Contact sales',
-            //     description:
-            //       'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
-            //   },
-            //   {
-            //     title: 'Technical support',
-            //     description:
-            //       'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
-            //   },
             {
                 title: t("contact.email.title", "Email"),
                 description: "contact@think-ahead.tech",
@@ -83,5 +74,9 @@ const metadata = {
                 icon: "tabler:map-pin"
             }
         ]}
-    />
+    >
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+    </Features2>
 </Layout>
