@@ -1,4 +1,5 @@
 import { getPermalink } from "./utils/permalinks";
+import { getBlogPermalink } from "./utils/permalinks";
 
 // NB translations for these elements are found in: /src/i18n/ui.ts
 
@@ -28,11 +29,11 @@ export const headerData = {
         {
             text: "nav.partners",
             href: getPermalink(`/partners`)
+        },
+        {
+            text: "nav.blog",
+            href: getBlogPermalink()
         }
-        // {
-        //     text: "nav.blog",
-        //     href: getBlogPermalink()
-        // }
     ],
     actions: [{ text: "nav.contact", href: "/contact" }]
 };
