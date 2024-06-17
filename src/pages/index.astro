@@ -7,8 +7,8 @@ import Features2 from "~/components/widgets/Features2.astro";
 import { Trans } from "astro-i18next/components";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import Content from "~/components/widgets/Content.astro";
-import { PRIMARY_LANGUAGE } from "~/i18n/utils";
 import Brands from "~/components/widgets/Brands.astro";
+import { getPagePermalink } from "~/utils/permalinks";
 
 changeLanguage("de");
 
@@ -165,7 +165,7 @@ const metadata = {
             {
                 variant: "primary",
                 text: t("contact.title"),
-                href: `/${Astro.currentLocale || PRIMARY_LANGUAGE}/contact`,
+                href: getPagePermalink("/contact", Astro.currentLocale),
                 icon: "tabler:mail"
             }
         ]}

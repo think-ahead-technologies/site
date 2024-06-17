@@ -46,7 +46,7 @@ const { Content } = post;
                                 ·{" "}
                                 <a
                                     class="capitalize hover:underline inline-block"
-                                    href={getPermalink(post.category, "category")}
+                                    href={getPermalink(post.category, "category", Astro.currentLocale)}
                                 >
                                     {post.category.replaceAll("-", " ")}
                                 </a>

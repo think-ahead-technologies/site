@@ -20,6 +20,7 @@ export const GET = async () => {
         site: import.meta.env.SITE,
 
         items: posts.map((post) => ({
+            // TODO this doesn't (can't) reference the locale, so will be broken
             link: getPermalink(post.permalink, "post"),
             title: post.title,
             description: post.excerpt,

@@ -2,13 +2,13 @@
 import type { Form as Props } from "~/types";
 import Button from "~/components/ui/Button.astro";
 import { Trans } from "astro-i18next/components";
-import { PRIMARY_LANGUAGE } from "~/i18n/utils";
+import { getPagePermalink } from "~/utils/permalinks";
 
 const { name, target, inputs, textarea, disclaimer, button = "Contact us", description = "" } = Astro.props;
 ---
 
 <form
-    action=`/${Astro.currentLocale || PRIMARY_LANGUAGE}${target}`
+    action={getPagePermalink(target, Astro.currentLocale)}
     data-netlify="true"
     name={name}
     class=`plausible-event-name=${name.replaceAll(" ", "+")}+submission`

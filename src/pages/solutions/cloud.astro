@@ -5,8 +5,8 @@ import Features from "~/components/widgets/Features.astro";
 import Features2 from "~/components/widgets/Features2.astro";
 import Features3 from "~/components/widgets/Features3.astro";
 import Hero from "~/components/widgets/Hero2.astro";
-import { PRIMARY_LANGUAGE } from "~/i18n/utils";
 import Layout from "~/layouts/PageLayout.astro";
+import { getPagePermalink } from "~/utils/permalinks";
 
 changeLanguage("de");
 
@@ -139,7 +139,7 @@ const metadata = {
                 icon: "tabler:cloud-lock",
                 callToAction: {
                     text: t("cloud.challenges.security.link"),
-                    href: `/${Astro.currentLocale || PRIMARY_LANGUAGE}/solutions/security`,
+                    href: getPagePermalink("/solutions/security", Astro.currentLocale),
                     icon: "tabler:circle-arrow-right"
                 }
             }

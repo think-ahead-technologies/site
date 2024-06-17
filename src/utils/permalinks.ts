@@ -3,8 +3,16 @@ import slugify from "limax";
 import { SITE, APP_BLOG } from "astrowind:config";
 
 import { trim } from "~/utils/utils";
+import { PRIMARY_LANGUAGE } from "~/i18n/utils";
+
+/**
+ * Null (default) indicates we're dealing with locales elsewhere, e.g. in the Header components.
+ * Otherwise, a locale will be prepended to the path, defaulting to PRIMARY_LANGUAGE if missing.
+ */
+type LocaleParameter = string | null | undefined;
 
 export const trimSlash = (s: string) => trim(trim(s, "/"));
+
 const createPath = (...params: string[]) => {
     const paths = params
         .map((el) => trimSlash(el))
@@ -38,8 +46,11 @@ export const getCanonical = (path = ""): string | URL => {
     return url;
 };
 
+export const getPagePermalink = (slug = "", locale: LocaleParameter = null): string =>
+    getPermalink(slug, "page", locale);
+
 /** */
-export const getPermalink = (slug = "", type = "page"): string => {
+export const getPermalink = (slug = "", type = "page", locale: LocaleParameter = null): string => {
     let permalink: string;
 
     switch (type) {
@@ -61,7 +72,7 @@ export const getPermalink = (slug = "", type = "page"): string => {
             break;
     }
 
-    return definitivePermalink(permalink);
+    return definitivePermalink(permalink, locale);
 };
 
 /** */
@@ -79,4 +90,7 @@ export const getAsset = (path: string): string =>
         .join("/");
 
 /** */
-const definitivePermalink = (permalink: string): string => createPath(BASE_PATHNAME, permalink);
+const definitivePermalink = (permalink: string, locale: LocaleParameter): string =>
+    locale === null
+        ? createPath(BASE_PATHNAME, permalink)
+        : createPath(locale || PRIMARY_LANGUAGE, BASE_PATHNAME, permalink);
