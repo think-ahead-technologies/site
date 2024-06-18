@@ -33,9 +33,10 @@ export default defineConfig({
     i18n: {
         locales: ["en", "de"],
         defaultLocale: "de",
-        fallback: {
-            en: "de"
-        },
+        // fallback: {
+        //     // NB fallback pages will cause the blog to not produce EN pages.
+        //     en: "de"
+        // },
         routing: {
             prefixDefaultLocale: true
         }
