@@ -20,7 +20,9 @@ const title = t("404.title");
                 <p class="mt-4 mb-8 text-lg text-muted dark:text-slate-400">
                     {t("404.go-home")}
                 </p>
-                <a rel="noopener noreferrer" href={getHomePermalink()} class="btn ml-4">{t("404.to-homepage")}</a>
+                <a rel="noopener noreferrer" href={getHomePermalink(Astro.currentLocale)} class="btn ml-4"
+                    >{t("404.to-homepage")}</a
+                >
             </div>
         </div>
     </section>

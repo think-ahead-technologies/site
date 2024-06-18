@@ -9,8 +9,8 @@ import WidgetWrapper from "~/components/ui/WidgetWrapper.astro";
 import type { Widget } from "~/types";
 
 export interface Props extends Widget {
-    title?: string;
-    linkText?: string;
+    title?: string | null;
+    linkText?: string | null;
     linkUrl?: string | URL;
     information?: string;
     postIds: string[];
@@ -19,7 +19,7 @@ export interface Props extends Widget {
 const {
     title = await Astro.slots.render("title"),
     linkText = "View all posts",
-    linkUrl = getBlogPermalink(),
+    linkUrl = getBlogPermalink(Astro.currentLocale),
     information = await Astro.slots.render("information"),
     postIds = [],
 

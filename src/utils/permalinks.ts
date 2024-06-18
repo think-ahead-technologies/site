@@ -76,10 +76,10 @@ export const getPermalink = (slug = "", type = "page", locale: LocaleParameter =
 };
 
 /** */
-export const getHomePermalink = (): string => getPermalink("/");
+export const getHomePermalink = (locale: LocaleParameter = null): string => getPagePermalink("/", locale);
 
 /** */
-export const getBlogPermalink = (): string => getPermalink(BLOG_BASE);
+export const getBlogPermalink = (locale: LocaleParameter): string => getPagePermalink(BLOG_BASE, locale);
 
 /** */
 export const getAsset = (path: string): string =>

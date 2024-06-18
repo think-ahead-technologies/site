@@ -411,6 +411,9 @@
     },
 
     "blog": {
-        "subtitle": "News, tutorials, resources and other thoughts from the team"
+        "subtitle": "News, tutorials, resources and other thoughts from the team",
+        "back-to-blog": "Back to blog",
+        "related-posts": "Related posts",
+        "view-all-posts": "View all posts"
     }
 }

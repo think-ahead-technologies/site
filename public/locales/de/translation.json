@@ -412,6 +412,9 @@
     },
 
     "blog": {
-        "subtitle": "Neuigkeiten, Anleitungen, Erfahrungsberichte und andere Ideen vom Think Ahead Team"
+        "subtitle": "Neuigkeiten, Anleitungen, Erfahrungsberichte und andere Ideen vom Think Ahead Team",
+        "back-to-blog": "Zurück zum Blog",
+        "related-posts": "Verwandte Beiträge",
+        "view-all-posts": "Alle Beiträge anzeigen"
     }
 }
