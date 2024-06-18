@@ -98,3 +98,8 @@ html:not(.dark) .dark-mode-only {
 html.dark .light-mode-only {
     display: none;
 }
+
+sup {
+    margin-left: 0.08em;
+    margin-right: 0.08em;
+}
