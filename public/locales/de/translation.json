@@ -228,6 +228,7 @@
                 "description": "Je größer Ihre Codebasis wird, desto schwieriger und kritischer wird es sicherzustellen, dass Ihre Software ohne Probleme läuft. Wir helfen dabei, Ihre Applikationen und Infrastruktur zu überwachen und optimal zu betreiben."
             }
         },
+        "provider_list": "Wir arbeiten mit Microsoft Azure, Google Cloud Platform und Amazon Web Services.",
         "providers": {
             "title": "Cloud-Anbieter, mit denen wir arbeiten",
             "subtitle": "Wir verfügen über Expertise in allen wichtigen Cloud-Plattformen, um Ihren Anforderungen gerecht zu werden.",
