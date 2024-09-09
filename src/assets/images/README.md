@@ -15,6 +15,7 @@ On any update to the base logo, consider updating _all_ the following files:
 -   [apple-touch-icon.png](../favicons/apple-touch-icon.png), a 180x180px export from Inkscape
 -   [favicon.ico](../favicons/favicon.ico), converted with [ImageMagick](https://imagemagick.org/):
     -   `magick ../favicons/apple-touch-icon.png ../favicons/favicon.ico`
+-   [icons/think-ahead.svg](/src/icons/think-ahead.svg) icon file, an all-white version for use within page content.
 -   Logo files within the company Drive, both with and without the company name as text.
 
 ## Preview images
