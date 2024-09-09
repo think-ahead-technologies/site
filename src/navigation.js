@@ -23,6 +23,10 @@ export const headerData = {
                 {
                     text: "nav.security",
                     href: getPermalink("/solutions/security")
+                },
+                {
+                    text: "nav.cicd",
+                    href: getPermalink("/solutions/ci-cd")
                 }
             ]
         },

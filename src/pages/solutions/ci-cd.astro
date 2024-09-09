@@ -1,0 +1,157 @@
+---
+import { t, changeLanguage } from "i18next";
+import CallToAction from "~/components/widgets/CallToAction.astro";
+import Features from "~/components/widgets/Features.astro";
+import Features2 from "~/components/widgets/Features2.astro";
+import Features3 from "~/components/widgets/Features3.astro";
+import Hero from "~/components/widgets/Hero2.astro";
+import { PRIMARY_LANGUAGE } from "~/i18n/utils";
+import Layout from "~/layouts/PageLayout.astro";
+
+changeLanguage("de");
+
+const metadata = {
+    title: t("cicd.title"),
+    description: t("cicd.description")
+};
+---
+
+<Layout metadata={metadata}>
+    <!-- Hero Widget ******************* -->
+
+    <Hero
+        title={t("cicd.splash")}
+        tagline={t("cicd.title")}
+        subtitle={t("cicd.subtitle")}
+        actions={[
+            {
+                variant: "primary",
+                text: t("index.learn-more"),
+                href: "#benefits"
+            },
+            {
+                variant: "secondary",
+                text: t("solutions.how-we-can-help"),
+                href: "#solutions"
+            }
+        ]}
+        image={{
+            src: "/cicd-pipeline-image.jpg",
+            alt: t("images.cicd")
+        }}
+    />
+
+    <!-- CI/CD Benefits section *********** -->
+
+    <Features3
+        id="benefits"
+        title={t("cicd.benefits.title")}
+        subtitle={t("cicd.benefits.subtitle")}
+        columns={2}
+        items={[
+            {
+                title: t("cicd.benefits.faster-delivery.title"),
+                description: t("cicd.benefits.faster-delivery.description"),
+                icon: "tabler:rocket"
+            },
+            {
+                title: t("cicd.benefits.quality.title"),
+                description: t("cicd.benefits.quality.description"),
+                icon: "tabler:certificate"
+            },
+            {
+                title: t("cicd.benefits.consistency.title"),
+                description: t("cicd.benefits.consistency.description"),
+                icon: "tabler:repeat"
+            },
+            {
+                title: t("cicd.benefits.feedback.title"),
+                description: t("cicd.benefits.feedback.description"),
+                icon: "tabler:message-2"
+            },
+            {
+                title: t("cicd.benefits.efficiency.title"),
+                description: t("cicd.benefits.efficiency.description"),
+                icon: "tabler:chart-arrows"
+            },
+            {
+                title: t("cicd.benefits.collaboration.title"),
+                description: t("cicd.benefits.collaboration.description"),
+                icon: "tabler:users"
+            }
+        ]}
+    >
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+    </Features3>
+
+    <!-- Our CI/CD Solutions section *********** -->
+
+    <Features
+        id="solutions"
+        title={t("cicd.solutions.title")}
+        subtitle={t("cicd.solutions.subtitle")}
+        columns={3}
+        items={[
+            {
+                title: t("cicd.solutions.github.title"),
+                description: t("cicd.solutions.github.description"),
+                icon: "tabler:brand-github"
+            },
+            {
+                title: t("cicd.solutions.gitlab.title"),
+                description: t("cicd.solutions.gitlab.description"),
+                icon: "tabler:brand-gitlab"
+            },
+            {
+                title: t("cicd.solutions.azure.title"),
+                description: t("cicd.solutions.azure.description"),
+                icon: "tabler:brand-azure"
+            }
+        ]}
+    >
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+    </Features>
+
+    <!-- Our Services section (common across Solutions pages) *********** -->
+
+    <Features2
+        id="services"
+        title={t("solutions.services.title")}
+        columns={2}
+        items={[
+            {
+                title: t("solutions.services.consult.title"),
+                description: t("solutions.services.consult.description").toString(),
+                icon: "tabler:brain"
+            },
+            {
+                title: t("solutions.services.implement.title"),
+                description: t("solutions.services.implement.description").toString(),
+                icon: "tabler:code-dots"
+            }
+        ]}
+    >
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+    </Features2>
+
+    <!-- Contact Us widget *********** -->
+
+    <CallToAction
+        actions={[
+            {
+                variant: "primary",
+                text: t("contact.title"),
+                href: `/${Astro.currentLocale}/contact`,
+                icon: "tabler:mail"
+            }
+        ]}
+        title={t("solutions.get-in-touch")}
+        subtitle={t("contact.index-description")}
+    />
+</Layout>

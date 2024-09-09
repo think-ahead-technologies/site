@@ -243,7 +243,7 @@
             },
             "adaptation": {
                 "title": "Response to market changes",
-                "description": "In today’s dynamic market, the ability to adapt quickly is crucial. Platform engineering equips your business with technology frameworks that can easily integrate new tools and adapt to changing market demands, keeping you ahead of the competition."
+                "description": "In today's dynamic market, the ability to adapt quickly is crucial. Platform engineering equips your business with technology frameworks that can easily integrate new tools and adapt to changing market demands, keeping you ahead of the competition."
             },
             "complexity": {
                 "title": "Reduced IT complexity",
@@ -366,7 +366,8 @@
         "laptops": "Laptops at a desk. Photo by Marvin Meyer on Unsplash",
         "lightbulb": "Learning. Photo by Junior Ferreira on Unsplash",
         "workshop": "Workshop. Photo by Jason Goodman on Unsplash",
-        "working-together": "Working together. Photo by Scott Graham on Unsplash"
+        "working-together": "Working together. Photo by Scott Graham on Unsplash",
+        "cicd": "CI/CD pipeline visualization"
     },
 
     "contact": {
@@ -411,9 +412,60 @@
     },
 
     "blog": {
-        "subtitle": "News, tutorials, resources and other thoughts from the team",
         "back-to-blog": "Back to blog",
         "related-posts": "Related posts",
-        "view-all-posts": "View all posts"
+        "view-all-posts": "View all posts",
+        "subtitle": "News, tutorials, resources and other thoughts from the team"
+    },
+
+    "cicd": {
+        "title": "CI/CD Solutions",
+        "description": "Streamline your development process with our Continuous Integration and Continuous Delivery solutions for GitHub, GitLab, and Azure DevOps.",
+        "splash": "Accelerate your development with powerful CI/CD pipelines",
+        "subtitle": "We help you implement and optimize CI/CD workflows using GitHub, GitLab, and Azure DevOps to boost your team's productivity and software quality.",
+        "benefits": {
+            "title": "Why implement CI/CD?",
+            "subtitle": "Continuous Integration and Continuous Delivery offer numerous advantages for modern software development teams.",
+            "faster-delivery": {
+                "title": "Faster Delivery",
+                "description": "Automate your build and deployment processes to release new features and fixes more quickly and frequently."
+            },
+            "quality": {
+                "title": "Improved Quality",
+                "description": "Catch and fix bugs earlier in the development cycle with automated testing and continuous integration."
+            },
+            "consistency": {
+                "title": "Consistency",
+                "description": "Ensure consistent builds and deployments across different environments, reducing 'it works on my machine' issues."
+            },
+            "feedback": {
+                "title": "Faster Feedback",
+                "description": "Get immediate feedback on code changes, allowing for quicker iterations and improvements."
+            },
+            "efficiency": {
+                "title": "Increased Efficiency",
+                "description": "Reduce manual tasks and human error, allowing your team to focus on writing code and delivering value."
+            },
+            "collaboration": {
+                "title": "Better Collaboration",
+                "description": "Facilitate better teamwork with increased visibility into the development process and shared responsibility for quality."
+            }
+        },
+        "solutions": {
+            "title": "Our CI/CD solutions",
+            "subtitle": "We specialize in implementing and optimizing CI/CD pipelines using popular platforms to suit your team's needs.",
+            "github": {
+                "title": "GitHub Actions",
+                "description": "Leverage GitHub's built-in CI/CD solution to automate your software workflow directly from your repository."
+            },
+            "gitlab": {
+                "title": "GitLab CI/CD",
+                "description": "Utilize GitLab's powerful and flexible CI/CD capabilities for end-to-end DevOps workflows."
+            },
+            "azure": {
+                "title": "Azure DevOps",
+                "description": "Implement comprehensive CI/CD pipelines with Azure DevOps, integrating seamlessly with other Microsoft tools and services."
+            }
+        }
     }
 }
