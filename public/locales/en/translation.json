@@ -226,7 +226,15 @@
                 "title": "DevOps engineering",
                 "description": "As your codebase grows, it becomes ever more critical and difficult that your software is deployed and runs without issues. We help you monitor your applications and infrastructure and keep them running optimally."
             }
-        }
+        },
+        "providers": {
+            "title": "Cloud Providers We Work With",
+            "subtitle": "We have expertise across major cloud platforms to suit your needs.",
+            "azure": "Leverage Azure's comprehensive suite of cloud services and seamless integration with Microsoft tools.",
+            "gcp": "Utilize Google's cutting-edge technology and robust infrastructure for your cloud solutions.",
+            "aws": "Benefit from AWS's extensive global network and wide range of cloud services."
+        },
+        "explore-services": "Explore Cloud Services"
     },
 
     "platform": {
@@ -281,7 +289,8 @@
                 "title": "AI & IoT Platform",
                 "description": "Leverage the predictive power of AI and the sensor networks of the IoT. Boost reliability and sustainability by building a unified platform for real-time data analytics and actionable insights. Enhance operational efficiency, personalise experiences, and proactively manage maintenance."
             }
-        }
+        },
+        "discover-solutions": "Discover Platform Solutions"
     },
 
     "security": {
@@ -330,7 +339,8 @@
                 "title": "Cloud Security",
                 "description": "Implement robust guardrails and continuous monitoring across all cloud environments to prevent misconfiguration and ensure data integrity. Our proactive approach minimizes risks and optimises cloud operations, keeping your digital assets safe and compliant."
             }
-        }
+        },
+        "enhance-security": "Enhance Your Security"
     },
 
     "partners": {
@@ -452,8 +462,8 @@
             }
         },
         "solutions": {
-            "title": "Our CI/CD Solutions",
-            "subtitle": "We specialize in implementing and optimizing CI/CD pipelines to suit your team's needs.",
+            "title": "Our CI/CD solutions",
+            "subtitle": "We specialize in implementing and optimizing CI/CD pipelines using popular platforms to suit your team's needs.",
             "automation": {
                 "title": "CI/CD Automation",
                 "description": "Automate your build, test, and deployment processes to increase efficiency and reduce human error."
@@ -469,7 +479,7 @@
         },
         "platforms": {
             "title": "CI/CD Platform Experience",
-            "subtitle": "We have extensive experience with popular CI/CD platforms to best serve your needs.",
+            "subtitle": "We have extensive experience with common CI/CD platforms to best meet your needs.",
             "github": {
                 "title": "GitHub Actions",
                 "description": "Leverage GitHub's built-in CI/CD solution to automate your software workflow directly from your repository."
@@ -482,6 +492,7 @@
                 "title": "Azure DevOps",
                 "description": "Implement comprehensive CI/CD pipelines with Azure DevOps, integrating seamlessly with other Microsoft tools and services."
             }
-        }
+        },
+        "optimize-pipeline": "Optimize Your CI/CD Pipeline"
     }
 }

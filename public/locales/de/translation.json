@@ -172,7 +172,7 @@
             },
             "availability": {
                 "title": "Verfügbarkeit",
-                "description": "Im Falle eines Problems in Ihrem Rechenzentrum müssen Sie sich um die Behebung des Problem selbst kümmern. Das ist zeit-, personal- und kostenintensiv. Cloud-native Lösungen können mit minimalem Aufwand, Kosten und Ausfallzeiten automatisch neu bereitgestellt werden - oft sogar ohne manuellen Benutzereingriff."
+                "description": "Im Falle eines Problems in Ihrem Rechenzentrum müssen Sie um die Behebung des Problem selbst kümmern. Das ist zeit-, personal- und kostenintensiv. Cloud-native Lösungen können mit minimalem Aufwand, Kosten und Ausfallzeiten automatisch neu bereitgestellt werden - oft sogar ohne manuellen Benutzereingriff."
             },
             "maintenance": {
                 "title": "Automatisierte Wartung",
@@ -227,7 +227,15 @@
                 "title": "DevOps Engineering",
                 "description": "Je größer Ihre Codebasis wird, desto schwieriger und kritischer wird es sicherzustellen, dass Ihre Software ohne Probleme läuft. Wir helfen dabei, Ihre Applikationen und Infrastruktur zu überwachen und optimal zu betreiben."
             }
-        }
+        },
+        "providers": {
+            "title": "Cloud-Anbieter, mit denen wir arbeiten",
+            "subtitle": "Wir verfügen über Expertise in allen wichtigen Cloud-Plattformen, um Ihren Anforderungen gerecht zu werden.",
+            "azure": "Nutzen Sie Azures umfassendes Angebot an Cloud-Diensten und die nahtlose Integration mit Microsoft-Tools.",
+            "gcp": "Nutzen Sie Googles modernste Technologie und robuste Infrastruktur für Ihre Cloud-Lösungen.",
+            "aws": "Profitieren Sie vom umfangreichen globalen Netzwerk und der breiten Palette an Cloud-Diensten von AWS."
+        },
+        "explore-services": "Cloud-Dienste erkunden"
     },
 
     "platform": {
@@ -282,7 +290,8 @@
                 "title": "AI & IoT Plattform",
                 "description": "Nutzen Sie die Vorhersagekraft von KI und die Sensornetzwerke des IoT. Steigern Sie Zuverlässigkeit und Nachhaltigkeit durch den Aufbau einer einheitlichen Plattform für Echtzeit-Datenanalysen und nützliche Erkenntnisse. Verbessern Sie die betriebliche Effizienz, personalisieren Sie Erlebnisse und warten Sie Ihre Anlagen proaktiv."
             }
-        }
+        },
+        "discover-solutions": "Plattformlösungen entdecken"
     },
 
     "security": {
@@ -331,7 +340,8 @@
                 "title": "Cloud Sicherheit",
                 "description": "Verbessern Sie Ihre Cloud-Sicherheit durch die Implementierung robuster Leitplanken und kontinuierlicher Überwachung aller Cloud-Umgebungen, um Fehlkonfigurationen zu verhindern und die Datenintegrität zu gewährleisten. Unser proaktiver Ansatz minimiert Risiken und optimiert den Cloud-Betrieb, damit Ihre digitalen Assets sicher und konform bleiben"
             }
-        }
+        },
+        "enhance-security": "Ihre Sicherheit verbessern"
     },
 
     "partners": {
@@ -483,6 +493,7 @@
                 "title": "Azure DevOps ",
                 "description": "Implementieren Sie umfassende CI/CD-Pipelines mit Azure DevOps, die sich nahtlos in andere Microsoft-Tools und -Dienste integrieren lassen."
             }
-        }
+        },
+        "optimize-pipeline": "CI/CD-Pipeline optimieren"
     }
 }
