@@ -455,6 +455,22 @@
         "solutions": {
             "title": "Unsere CI/CD-Lösungen",
             "subtitle": "Wir sind spezialisiert auf die Implementierung und Optimierung von CI/CD-Pipelines mit beliebten Plattformen, um den Bedürfnissen Ihres Teams gerecht zu werden.",
+            "automation": {
+                "title": "CI/CD-Automatisierung",
+                "description": "Automatisieren Sie Ihre Build-, Test- und Bereitstellungsprozesse, um die Effizienz zu steigern und menschliche Fehler zu reduzieren."
+            },
+            "optimization": {
+                "title": "Pipeline-Optimierung",
+                "description": "Verbessern Sie die Leistung und Zuverlässigkeit Ihrer bestehenden CI/CD-Pipelines für schnellere und stabilere Releases."
+            },
+            "migration": {
+                "title": "CI/CD-Migration",
+                "description": "Migrieren Sie Ihre bestehenden CI/CD-Workflows nahtlos zu modernen, cloudbasierten Lösungen für verbesserte Skalierbarkeit und Flexibilität."
+            }
+        },
+        "platforms": {
+            "title": "CI/CD-Plattform-Erfahrung",
+            "subtitle": "Wir verfügen über umfangreiche Erfahrung mit gängigen CI/CD-Plattformen, um Ihre Bedürfnisse optimal zu erfüllen.",
             "github": {
                 "title": "GitHub Actions ",
                 "description": "Nutzen Sie die integrierte CI/CD-Lösung von GitHub, um Ihren Software-Workflow direkt aus Ihrem Repository zu automatisieren."
