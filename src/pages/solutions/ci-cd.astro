@@ -95,19 +95,19 @@ const metadata = {
         columns={3}
         items={[
             {
-                title: t("cicd.solutions.github.title"),
-                description: t("cicd.solutions.github.description"),
-                icon: "tabler:brand-github"
+                title: t("cicd.solutions.automation.title"),
+                description: t("cicd.solutions.automation.description"),
+                icon: "tabler:robot"
             },
             {
-                title: t("cicd.solutions.gitlab.title"),
-                description: t("cicd.solutions.gitlab.description"),
-                icon: "tabler:brand-gitlab"
+                title: t("cicd.solutions.optimization.title"),
+                description: t("cicd.solutions.optimization.description"),
+                icon: "tabler:chart-arrows"
             },
             {
-                title: t("cicd.solutions.azure.title"),
-                description: t("cicd.solutions.azure.description"),
-                icon: "tabler:brand-azure"
+                title: t("cicd.solutions.migration.title"),
+                description: t("cicd.solutions.migration.description"),
+                icon: "tabler:transfer"
             }
         ]}
     >
@@ -115,6 +115,35 @@ const metadata = {
             <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
         </Fragment>
     </Features>
+
+    <!-- CI/CD Platform Experience section *********** -->
+
+    <Features2
+        title={t("cicd.platforms.title")}
+        subtitle={t("cicd.platforms.subtitle")}
+        columns={3}
+        items={[
+            {
+                title: t("cicd.platforms.github.title"),
+                description: t("cicd.platforms.github.description"),
+                icon: "tabler:brand-github"
+            },
+            {
+                title: t("cicd.platforms.gitlab.title"),
+                description: t("cicd.platforms.gitlab.description"),
+                icon: "tabler:brand-gitlab"
+            },
+            {
+                title: t("cicd.platforms.azure.title"),
+                description: t("cicd.platforms.azure.description"),
+                icon: "tabler:brand-azure"
+            }
+        ]}
+    >
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+    </Features2>
 
     <!-- Our Services section (common across Solutions pages) *********** -->
 
