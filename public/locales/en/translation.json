@@ -50,7 +50,7 @@
     "who-we-are": {
         "title": "Who we are",
         "tagline": "We are",
-        "splash": "Your reliable technology partner <0>from Stuttgart</0>",
+        "splash": "Your reliable technology consultants <0>from Stuttgart</0>",
         "description": "Whether in cloud, platforms or security, Think Ahead Technologies is your reliable partner from Stuttgart.",
         "subtitle": "Experts in cloud, platforms and security, we are ready to rise to your challenges.",
         "values": {
@@ -124,7 +124,7 @@
     },
 
     "solutions": {
-        "intro": "What solutions do we provide?",
+        "intro": "What IT consulting solutions do we provide?",
         "subtitle": "We have a wide range of skills and experience to help you with your infrastruture needs",
         "security": {
             "title": "Security & Compliance",
@@ -383,7 +383,7 @@
 
     "contact": {
         "title": "Contact us",
-        "header": "Let's get to know each other!",
+        "header": "Meet your technology consultants!",
         "index-description": "Let's discuss how we can help you build the infrastructure you want to work with.",
         "methods": {
             "title": "Or, let's meet!",
