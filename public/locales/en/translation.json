@@ -227,12 +227,13 @@
                 "description": "As your codebase grows, it becomes ever more critical and difficult that your software is deployed and runs without issues. We help you monitor your applications and infrastructure and keep them running optimally."
             }
         },
+        "provider_list": "We work with Microsoft Azure, Google Cloud Platform, and Amazon Web Services.",
         "providers": {
             "title": "Cloud Providers We Work With",
             "subtitle": "We have expertise across major cloud platforms to suit your needs.",
             "azure": "Leverage Azure's comprehensive suite of cloud services and seamless integration with Microsoft tools.",
             "gcp": "Utilize Google's cutting-edge technology and robust infrastructure for your cloud solutions.",
-            "aws": "Benefit from AWS's extensive global network and wide range of cloud services."
+            "aws": "Benefit from Amazon's extensive global network and wide range of cloud services."
         },
         "explore-services": "Explore Cloud Services"
     },
