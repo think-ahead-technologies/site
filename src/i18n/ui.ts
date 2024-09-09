@@ -34,7 +34,7 @@ export const ui = {
         "nav.solutions": "Unsere Lösungen",
         "nav.cloud": "Cloud Computing",
         "nav.platform": "Plattform Engineering",
-        "nav.cicd": "Continuous Integration & Continuous Delivery",
+        "nav.cicd": "Continuous Integration & Automation",
         "nav.security": "Sicherheit & Compliance",
         "nav.partners": "Unsere Partner",
         "nav.partners.teleport": "Teleport",
