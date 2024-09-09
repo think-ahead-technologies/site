@@ -367,7 +367,8 @@
         "laptops": "Laptops auf einem Tisch. Foto von Marvin Meyer auf Unsplash",
         "lightbulb": "Lernen. Foto von Junior Ferreira auf Unsplash",
         "workshop": "Workshop. Foto von Jason Goodman auf Unsplash",
-        "working-together": "Zusammenarbeit. Foto von Scott Graham auf Unsplash"
+        "working-together": "Zusammenarbeit. Foto von Scott Graham auf Unsplash",
+        "cicd": "CI/CD Pipeline Visualisierung"
     },
 
     "contact": {
@@ -416,5 +417,56 @@
         "back-to-blog": "Zurück zum Blog",
         "related-posts": "Verwandte Beiträge",
         "view-all-posts": "Alle Beiträge anzeigen"
+    },
+
+    "cicd": {
+        "title": "CI/CD-Lösungen",
+        "description": "Optimieren Sie Ihren Entwicklungsprozess mit unseren Continuous Integration und Continuous Delivery Lösungen für GitHub, GitLab und Azure DevOps.",
+        "splash": "Beschleunigen Sie Ihre Entwicklung mit leistungsstarken CI/CD-Pipelines",
+        "subtitle": "Wir helfen Ihnen bei der Implementierung und Optimierung von CI/CD-Workflows mit GitHub, GitLab und Azure DevOps, um die Produktivität Ihres Teams und die Softwarequalität zu steigern.",
+        "benefits": {
+            "title": "Warum CI/CD implementieren?",
+            "subtitle": "Continuous Integration und Continuous Delivery bieten zahlreiche Vorteile für moderne Softwareentwicklungsteams.",
+            "faster-delivery": {
+                "title": "Schnellere Bereitstellung",
+                "description": "Automatisieren Sie Ihre Build- und Bereitstellungsprozesse, um neue Funktionen und Fehlerbehebungen schneller und häufiger zu veröffentlichen."
+            },
+            "quality": {
+                "title": "Verbesserte Qualität",
+                "description": "Entdecken und beheben Sie Fehler früher im Entwicklungszyklus durch automatisierte Tests und kontinuierliche Integration."
+            },
+            "consistency": {
+                "title": "Konsistenz",
+                "description": "Sorgen Sie für konsistente Builds und Bereitstellungen in verschiedenen Umgebungen und reduzieren Sie 'Bei mir funktioniert es'-Probleme."
+            },
+            "feedback": {
+                "title": "Schnelleres Feedback",
+                "description": "Erhalten Sie sofortiges Feedback zu Codeänderungen, was schnellere Iterationen und Verbesserungen ermöglicht."
+            },
+            "efficiency": {
+                "title": "Erhöhte Effizienz",
+                "description": "Reduzieren Sie manuelle Aufgaben und menschliche Fehler, damit sich Ihr Team auf das Schreiben von Code und die Wertschöpfung konzentrieren kann."
+            },
+            "collaboration": {
+                "title": "Bessere Zusammenarbeit",
+                "description": "Fördern Sie eine bessere Teamarbeit durch erhöhte Transparenz im Entwicklungsprozess und gemeinsame Verantwortung für Qualität."
+            }
+        },
+        "solutions": {
+            "title": "Unsere CI/CD-Lösungen",
+            "subtitle": "Wir sind spezialisiert auf die Implementierung und Optimierung von CI/CD-Pipelines mit beliebten Plattformen, um den Bedürfnissen Ihres Teams gerecht zu werden.",
+            "github": {
+                "title": "GitHub Actions ",
+                "description": "Nutzen Sie die integrierte CI/CD-Lösung von GitHub, um Ihren Software-Workflow direkt aus Ihrem Repository zu automatisieren."
+            },
+            "gitlab": {
+                "title": "GitLab CI/CD ",
+                "description": "Nutzen Sie die leistungsstarken und flexiblen CI/CD-Funktionen von GitLab für End-to-End-DevOps-Workflows."
+            },
+            "azure": {
+                "title": "Azure DevOps ",
+                "description": "Implementieren Sie umfassende CI/CD-Pipelines mit Azure DevOps, die sich nahtlos in andere Microsoft-Tools und -Dienste integrieren lassen."
+            }
+        }
     }
 }
