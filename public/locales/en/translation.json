@@ -229,13 +229,13 @@
         },
         "provider_list": "We work with Microsoft Azure, Google Cloud Platform, and Amazon Web Services.",
         "providers": {
-            "title": "Cloud Providers We Work With",
+            "title": "Cloud Providers we work with",
             "subtitle": "We have expertise across major cloud platforms to suit your needs.",
             "azure": "Leverage Azure's comprehensive suite of cloud services and seamless integration with Microsoft tools.",
             "gcp": "Utilize Google's cutting-edge technology and robust infrastructure for your cloud solutions.",
             "aws": "Benefit from Amazon's extensive global network and wide range of cloud services."
         },
-        "explore-services": "Explore Cloud Services"
+        "explore-services": "Explore Cloud services"
     },
 
     "platform": {
@@ -272,14 +272,14 @@
             }
         },
         "solutions": {
-            "title": "Our platform engineering solutions",
+            "title": "Our Platform Engineering solutions",
             "subtitle": "Every platform is unique. We will help you to navigate the complex cloud-native landscape and build infrastructure that fits your needs.",
             "assessment": {
-                "title": "Platform Assessment and Strategy",
+                "title": "Platform assessment and strategy",
                 "description": "Evaluate your current IT landscape: develop a strategic platform vision to align with business and user needs. Make a thorough analysis of existing infrastructure, identify gaps, then create a clear, actionable roadmap. We ensure that your platform strategy is cohesive, forward-thinking, and tailored to drive business success efficiently and effectively."
             },
             "developers": {
-                "title": "Internal Developer Platform",
+                "title": "Internal developer platform",
                 "description": "Enable developer self-service and build golden paths so that developers can get things done. Reduce their cognitive load without abstracting away context and underlying technologies. We follow best practices by treating platforms as a product, building and continually improving based on user research."
             },
             "hybrid": {
@@ -287,11 +287,11 @@
                 "description": "For most enterprises hybrid cloud is inevitable, so planning is critical to make the best use of it. Split workloads across different clouds or on-premises environments in an efficient and meaningful way, while maintaining consistent security and compliance in all environments."
             },
             "ai": {
-                "title": "AI & IoT Platform",
+                "title": "AI & IoT platform",
                 "description": "Leverage the predictive power of AI and the sensor networks of the IoT. Boost reliability and sustainability by building a unified platform for real-time data analytics and actionable insights. Enhance operational efficiency, personalise experiences, and proactively manage maintenance."
             }
         },
-        "discover-solutions": "Discover Platform Solutions"
+        "discover-solutions": "Discover platform solutions"
     },
 
     "security": {
@@ -337,11 +337,11 @@
                 "description": "Our measures to strengthen your software supply chain are compliant with the Cyber Resilience Act. We implement a detailed Software Bill of Materials (SBoM), secure CI/CD practices, and provenance verification to guard against vulnerabilities and ensure robust cyber resilience throughout the development lifecycle."
             },
             "cloud": {
-                "title": "Cloud Security",
+                "title": "Cloud security",
                 "description": "Implement robust guardrails and continuous monitoring across all cloud environments to prevent misconfiguration and ensure data integrity. Our proactive approach minimizes risks and optimises cloud operations, keeping your digital assets safe and compliant."
             }
         },
-        "enhance-security": "Enhance your Security"
+        "enhance-security": "Enhance your security"
     },
 
     "partners": {
@@ -430,7 +430,7 @@
     },
 
     "cicd": {
-        "title": "CI/CD Solutions",
+        "title": "CI/CD solutions",
         "description": "Streamline your development process with our Continuous Integration and Continuous Delivery solutions for GitHub, GitLab, and Azure DevOps.",
         "splash": "Accelerate your development with powerful CI/CD pipelines",
         "subtitle": "We help you implement and optimize CI/CD workflows using GitHub, GitLab, and Azure DevOps to boost your team's productivity and software quality.",
@@ -438,11 +438,11 @@
             "title": "Why implement CI/CD?",
             "subtitle": "Continuous Integration and Continuous Delivery offer numerous advantages for modern software development teams.",
             "faster-delivery": {
-                "title": "Faster Delivery",
+                "title": "Faster delivery",
                 "description": "Automate your build and deployment processes to release new features and fixes more quickly and frequently."
             },
             "quality": {
-                "title": "Improved Quality",
+                "title": "Improved quality",
                 "description": "Catch and fix bugs earlier in the development cycle with automated testing and continuous integration."
             },
             "consistency": {
@@ -450,15 +450,15 @@
                 "description": "Ensure consistent builds and deployments across different environments, reducing 'it works on my machine' issues."
             },
             "feedback": {
-                "title": "Faster Feedback",
+                "title": "Faster feedback",
                 "description": "Get immediate feedback on code changes, allowing for quicker iterations and improvements."
             },
             "efficiency": {
-                "title": "Increased Efficiency",
+                "title": "Increased efficiency",
                 "description": "Reduce manual tasks and human error, allowing your team to focus on writing code and delivering value."
             },
             "collaboration": {
-                "title": "Better Collaboration",
+                "title": "Better collaboration",
                 "description": "Facilitate better teamwork with increased visibility into the development process and shared responsibility for quality."
             }
         },
@@ -466,20 +466,20 @@
             "title": "Our CI/CD solutions",
             "subtitle": "We specialize in implementing and optimizing CI/CD pipelines using popular platforms to suit your team's needs.",
             "automation": {
-                "title": "CI/CD Automation",
+                "title": "CI/CD automation",
                 "description": "Automate your build, test, and deployment processes to increase efficiency and reduce human error."
             },
             "optimization": {
-                "title": "Pipeline Optimization",
+                "title": "Pipeline optimization",
                 "description": "Improve the performance and reliability of your existing CI/CD pipelines for faster and more stable releases."
             },
             "migration": {
-                "title": "CI/CD Migration",
+                "title": "CI/CD migration",
                 "description": "Seamlessly migrate your existing CI/CD workflows to modern, cloud-based solutions for improved scalability and flexibility."
             }
         },
         "platforms": {
-            "title": "CI/CD Platform Experience",
+            "title": "CI/CD platform experience",
             "subtitle": "We have extensive experience with common CI/CD platforms to best meet your needs.",
             "github": {
                 "title": "GitHub Actions",
@@ -494,6 +494,6 @@
                 "description": "Implement comprehensive CI/CD pipelines with Azure DevOps, integrating seamlessly with other Microsoft tools and services."
             }
         },
-        "optimize-pipeline": "Optimize your CI/CD Pipeline"
+        "optimize-pipeline": "Optimize your CI/CD pipeline"
     }
 }
