@@ -340,7 +340,7 @@
                 "description": "Implement robust guardrails and continuous monitoring across all cloud environments to prevent misconfiguration and ensure data integrity. Our proactive approach minimizes risks and optimises cloud operations, keeping your digital assets safe and compliant."
             }
         },
-        "enhance-security": "Enhance Your Security"
+        "enhance-security": "Enhance your Security"
     },
 
     "partners": {
@@ -493,6 +493,6 @@
                 "description": "Implement comprehensive CI/CD pipelines with Azure DevOps, integrating seamlessly with other Microsoft tools and services."
             }
         },
-        "optimize-pipeline": "Optimize Your CI/CD Pipeline"
+        "optimize-pipeline": "Optimize your CI/CD Pipeline"
     }
 }
