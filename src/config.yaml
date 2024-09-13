@@ -28,7 +28,6 @@ metadata:
 i18n:
     language: de
     textDirection: ltr
-
 apps:
     blog:
         isEnabled: true
@@ -42,7 +41,7 @@ apps:
 
         list:
             isEnabled: true
-            pathname: "blog" # Blog main path, you can change this to "articles" (/articles)
+            pathname: "articles" # Blog main path, you can change this to "articles" (/articles)
             robots:
                 index: true
 
@@ -54,9 +53,9 @@ apps:
 
         tag:
             isEnabled: true
-            pathname: "tag" # Tag main path /tag/some-tag, you can change this to "topics" (/topics/some-category)
+            pathname: "topics" # Tag main path /tag/some-tag, you can change this to "topics" (/topics/some-category)
             robots:
-                index: false
+                index: true
 
         isRelatedPostsEnabled: true
         relatedPostsCount: 4
