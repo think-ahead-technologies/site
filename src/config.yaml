@@ -27,7 +27,10 @@ metadata:
 
 i18n:
     language: de
+    defaultLocale: "de"
     textDirection: ltr
+    routing:
+        prefixDefaultLocale: true,
 apps:
     blog:
         isEnabled: true
