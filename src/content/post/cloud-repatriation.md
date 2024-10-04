@@ -18,15 +18,15 @@ Cloud repatriation is not about abandoning the cloud entirely. Instead, it’s *
 
 Several factors are prompting companies to reconsider their cloud-first strategies and explore repatriation.
 
-#### 1.	Cost Management:
+#### 1. Cost Management:
 
 One of the primary reasons companies move workloads back on-premise is the **escalating and unpredictable costs** associated with cloud environments. Public clouds operate on a pay-per-use model, which can be cost-effective for some workloads, but as operations scale, companies may face hidden costs for data transfer, storage, and egress. A [CIO report](https://www.cio.com/article/2520890/the-great-repatriation-it-leaders-reset-cloud-strategies-to-optimize-value.html#:~:text=IT%20leader%20and%20former%20CIO%20Stanley%20Mwangi%20Chege%20has%20heard) found that many companies experience bill shock as cloud usage scales unexpectedly. For companies with stable, predictable workloads, running infrastructure on-premise can provide more consistent and lower operational costs.
 
-#### 2.	Data Sovereignty and Compliance:
+#### 2. Data Sovereignty and Compliance:
 
 With stricter regulations like GDPR and DORA in Europe or BSI Grundschutz in Germany, organizations must ensure that certain types of data stay within specific geographical boundaries. This becomes challenging when data is stored in the public cloud, where jurisdiction over data can become murky. Repatriating sensitive data to on-prem infrastructure helps companies comply with stringent regulatory requirements while maintaining greater control over data security.
 
-#### 3.	Performance and Latency:
+#### 3. Performance and Latency:
 
 Some workloads, especially those requiring low-latency performance or real-time processing, may perform better in an on-prem environment. This is particularly relevant in industries such as financial services and manufacturing, where milliseconds matter. Cloud environments, while flexible, may not always offer the performance guarantees that certain applications require.
 
@@ -40,19 +40,19 @@ Moreover, open-source solutions such as [Harvester](https://github.com/harvester
 
 While there are valid reasons to move workloads out of the public cloud, there are also scenarios where cloud repatriation may not be the right choice:
 
-#### 1.	Reacting to Short-Term Costs:
+#### 1. Reacting to Short-Term Costs:
 
 Cloud repatriation involves significant costs in terms of infrastructure setup, application refactoring, and operational changes. If your decision is based solely on short-term cloud billing issues, optimizing your cloud usage through better cost management tools, like [Cloudability](https://www.apptio.com/products/cloudability/) or [Opencost](https://www.opencost.io/), might be a more effective solution.
 
-#### 2.	Fear of the Cloud:
+#### 2. Fear of the Cloud:
 
 Some organizations repatriate workloads due to concerns about security or complexity without fully understanding modern cloud capabilities. Today’s public clouds offer robust security features, and there are tools available to help manage multicloud environments. Fear alone should not drive cloud repatriation.
 
-#### 3.	Over-Optimizing for Performance:
+#### 3. Over-Optimizing for Performance:
 
 Not all applications require ultra-low latency or dedicated infrastructure. Moving non-critical workloads back to on-premise just for marginal performance gains might not be worth the costs and effort.
 
-#### 4.	Hype:
+#### 4. Hype:
 
 Some companies, like [37Signals](https://basecamp.com/cloud-exit#:~:text=Leaving%20the%20cloud%20will%20save%20us%20$7%20million%20over%20five) (Basecamp), have been vocal about their successes in fully moving back to on-premises infrastructure. Their results, which include significant cost savings, are often highlighted in cloud repatriation discussions. However, it’s important to remember that these outcomes are specific to their circumstances. Decisions should always be made on a **case-by-case** basis, taking into account factors like workload, scalability needs, and financial considerations. Following the hype without proper evaluation can lead to suboptimal results for your specific environment
 
@@ -60,23 +60,23 @@ Some companies, like [37Signals](https://basecamp.com/cloud-exit#:~:text=Leaving
 
 Moving workloads from the cloud back to on-prem infrastructure is a complex process that requires careful planning.
 
-#### 1.	Tech Estate Assessment:
+#### 1. Tech Estate Assessment:
 
-Start by evaluating your current cloud infrastructure to identify which workloads would benefit from repatriation. Assess the cost-effectiveness, performance needs, and compliance requirements of each workload. This audit helps uncover which applications are better suited for on-premise. Keep the [7 Rs of migration strategies](https://docs.aws.amazon.com/prescriptive-guidance/latest/large-migration-guide/migration-strategies.html#:~:text=There%20are%20seven%20migration%20strategies%20for%20moving%20applications%20to%20the) in mind (Retire, Retain, Rehost, Relocate, Repurchase, Replatform, Refactor). Make sure you identify pattern in your workloads, like common technologies, criticality of data, performance requirements etc. Based on these pattern you might need different target environments. 
-	
-#### 2.	Prioritize Workloads:
+Start by evaluating your current cloud infrastructure to identify which workloads would benefit from repatriation. Assess the cost-effectiveness, performance needs, and compliance requirements of each workload. This audit helps uncover which applications are better suited for on-premise. Keep the [7 Rs of migration strategies](https://docs.aws.amazon.com/prescriptive-guidance/latest/large-migration-guide/migration-strategies.html#:~:text=There%20are%20seven%20migration%20strategies%20for%20moving%20applications%20to%20the) in mind (Retire, Retain, Rehost, Relocate, Repurchase, Replatform, Refactor). Make sure you identify pattern in your workloads, like common technologies, criticality of data, performance requirements etc. Based on these pattern you might need different target environments.
+
+#### 2. Prioritize Workloads:
 
 Identify high-priority workloads based on their business importance, compliance demands, and data intensity. These workloads, especially those with strict compliance requirements, should be repatriated first to limit disruptions. Don't forget: The biggest business values are either risk reduction or cost reduction. Does the potential value justify the effort?
 
 #### 3. Prepare your Environments:
 
-Before moving any workloads, ensure that your on-premises environment is ready to handle the workloads. Start by assessing your existing capacity and infrastructure. Determine whether your current setup can accommodate the workloads identified in your assessment. This involves checking storage, compute, and networking resources, as well as evaluating cooling and power requirements. If a new platform is necessary, begin by building just enough to support the target environments identified in Step 1. Start small and scale only as needed to avoid unnecessary upfront costs. 
+Before moving any workloads, ensure that your on-premises environment is ready to handle the workloads. Start by assessing your existing capacity and infrastructure. Determine whether your current setup can accommodate the workloads identified in your assessment. This involves checking storage, compute, and networking resources, as well as evaluating cooling and power requirements. If a new platform is necessary, begin by building just enough to support the target environments identified in Step 1. Start small and scale only as needed to avoid unnecessary upfront costs.
 
-#### 4.	Prepare for the Migration:
+#### 4. Prepare for the Migration:
 
 Repatriation can involve challenges, such as data migration, downtime, and application refactoring. Prepare for these obstacles by creating a detailed migration plan. Automate the migration process as much as possible. Ensure the staff practices this plan on a small scale. Remember: Hope is not a strategy!
 
-#### 5.	Scale your Migration:
+#### 5. Scale your Migration:
 
 Once you’ve successfully migrated workloads on a small scale and tested them thoroughly, it’s time to scale out. Begin by migrating all applications that share the same target platform as your initial workloads. This staged, platform-focused approach ensures consistency and minimizes surprises during larger migrations. Again, automation is crucial. Automate as much of the process as possible—whether it’s provisioning infrastructure, configuring environments, or transferring data.
 
