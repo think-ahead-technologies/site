@@ -1,6 +1,8 @@
 ---
 import { Icon } from "astro-icon/components";
 
+import { t } from "i18next";
+
 export interface Props {
     text: string;
     url: string | URL;
@@ -11,7 +13,7 @@ const { text, url, class: className = "inline-block" } = Astro.props;
 ---
 
 <div class={className}>
-    <span class="align-super font-bold text-slate-500 dark:text-slate-400">Share:</span>
+    <span class="align-super font-bold text-slate-500 dark:text-slate-400">{t("blog.share")}:</span>
     <button
         class="ml-2 rtl:ml-0 rtl:mr-2"
         title="Twitter Share"

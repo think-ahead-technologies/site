@@ -425,6 +425,8 @@
 
     "blog": {
         "subtitle": "Neuigkeiten, Anleitungen, Erfahrungsberichte und andere Ideen vom Think Ahead Team",
+        "article-length": "Minuten zu lesen",
+        "share": "Teilen",
         "back-to-blog": "Zurück zum Blog",
         "related-posts": "Verwandte Beiträge",
         "view-all-posts": "Alle Beiträge anzeigen"
