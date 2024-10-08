@@ -4,7 +4,7 @@ title: "Identity Aware Proxies: Die bessere Alternative zum VPN?"
 excerpt: "Traditionelle Virtual Private Networks (VPNs) waren lange Zeit die bevorzugte Lösung, um Remote-Zugriff auf Unternehmensressourcen zu gewähren. Doch die zunehmende Komplexität von Netzwerken und die steigenden Cyberrisiken haben die Schwächen von VPNs offengelegt. Hier kommen Identity-Aware Proxies (IAP) ins Spiel – eine fortschrittlichere, sicherere und skalierbarere Alternative.
 
 In diesem Blogbeitrag werfen wir einen Blick darauf, was Identity-Aware Proxies sind, wie sie sich von VPNs unterscheiden und warum sie die Zukunft des sicheren Zugriffs für moderne Unternehmen sind."
-# image: <image.url>
+image: /identity-aware-proxy-dall-e.jpg
 draft: false
 tags:
     - cloud
