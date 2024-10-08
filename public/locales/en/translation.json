@@ -424,6 +424,8 @@
 
     "blog": {
         "back-to-blog": "Back to blog",
+        "article-length": "min read",
+        "share": "Share",
         "related-posts": "Related posts",
         "view-all-posts": "View all posts",
         "subtitle": "News, tutorials, resources and other thoughts from the team"

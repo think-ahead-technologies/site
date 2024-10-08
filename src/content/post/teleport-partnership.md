@@ -1,5 +1,5 @@
 ---
-publishDate: 2023-07-15T00:00:00Z
+publishDate: 2024-06-18T00:00:00Z
 title: "Think Ahead Technologies: Your Official Teleport Reseller and Support Partner"
 excerpt: At Think Ahead Technologies, we are excited to announce that we are now an official reseller for Teleport, the leading platform for secure access to applications and infrastructure. This partnership allows us to offer unparalleled support to our clients as they adopt Teleport Enterprise, enhancing their security and operational efficiency.
 image: https://goteleport.com/blog/_next/image/?url=%2Fblog%2Fstatic%2Fog-image.png&w=1080&q=80
