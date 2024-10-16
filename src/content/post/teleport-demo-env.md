@@ -6,6 +6,7 @@ excerpt:
 
     To fulfil these goals we have set up a demo environment, with open-source code, which you can view on GitHub. We've built it with a few key priorities in mind.
 image: https://goteleport.com/blog/_next/image/?url=%2Fblog%2Fstatic%2Fog-image.png&w=1080&q=80
+draft: true
 tags:
     - teleport
     - security
