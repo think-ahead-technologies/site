@@ -6,6 +6,7 @@ excerpt:
 
     To fulfil these goals we have set up a demo environment, with open-source code. We explore the priorities we've kept in mind while developing that codebase.
 image: https://goteleport.com/blog/_next/image/?url=%2Fblog%2Fstatic%2Fog-image.png&w=1080&q=80
+draft: false
 tags:
     - coding
     - infrastructure-as-code

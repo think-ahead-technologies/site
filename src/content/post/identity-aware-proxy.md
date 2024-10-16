@@ -5,7 +5,7 @@ excerpt: "Traditionelle Virtual Private Networks (VPNs) waren lange Zeit die bev
 
 In diesem Blogbeitrag werfen wir einen Blick darauf, was Identity-Aware Proxies sind, wie sie sich von VPNs unterscheiden und warum sie die Zukunft des sicheren Zugriffs für moderne Unternehmen sind."
 image: /identity-aware-proxy-dall-e.jpg
-draft: false
+draft: true
 tags:
     - cloud
     - architecture
