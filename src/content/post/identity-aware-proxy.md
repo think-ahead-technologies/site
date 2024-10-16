@@ -10,6 +10,7 @@ tags:
     - cloud
     - architecture
     - zero-trust
+    - deutsch
 ---
 
 ### Was ist ein Identity-Aware Proxy?

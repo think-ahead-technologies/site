@@ -1,10 +1,10 @@
 {
     "index": {
-        "title": "Your experts for cloud, platform and security",
+        "title": "Secure, effective, cloud-native IT consultancy to empower your business",
         "splash": {
-            "surtitle": "Expensive, complex cloud infrastructure isn't actually safer",
-            "title": "Let's <0>Think Ahead</0> together",
-            "subtitle": "Pioneering <0>secure</0>, <0>simple</0> and <0>effective</0> cloud solutions for your <0>digital future</0>.",
+            "surtitle": "Cloud infrastructure doesn't have to be expensive or complex",
+            "title": "<0>Secure</0>, <0>effective</0>, <0>cloud-native</0><br/> IT consulting to empower your business",
+            "subtitle": "Let's <0>Think Ahead</0> together.",
             "description": "Pioneering secure, simple and effective cloud solutions for your digital future."
         },
         "who-we-are": {
@@ -124,7 +124,7 @@
     },
 
     "solutions": {
-        "intro": "What IT consulting solutions do we provide?",
+        "intro": "Our IT consultancy solutions",
         "subtitle": "We have a wide range of skills and experience to help you with your infrastruture needs",
         "security": {
             "title": "Security & Compliance",
@@ -425,6 +425,9 @@
     "blog": {
         "back-to-blog": "Back to blog",
         "article-length": "min read",
+        "posts-by-tag": "Posts with topic:",
+        "tag": "Topic",
+        "page": "Page",
         "share": "Share",
         "related-posts": "Related posts",
         "view-all-posts": "View all posts",

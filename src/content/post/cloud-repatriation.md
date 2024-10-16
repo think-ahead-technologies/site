@@ -8,6 +8,7 @@ tags:
     - strategy
     - on-premises
     - architecture
+    - english
 ---
 
 ## What is Cloud Repatriation?
