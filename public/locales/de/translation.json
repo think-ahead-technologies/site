@@ -1,10 +1,10 @@
 {
     "index": {
-        "title": "Experten für Cloud, Plattform und Sicherheit",
+        "title": "IT-Beratung für die sichere, effektive, Cloud-native Digitalisierung des Mittelstands",
         "splash": {
-            "surtitle": "Teure, komplexe Cloud-Infrastruktur ist nicht gleich sicher",
-            "title": "Es geht auch anders. Mit <0>Think Ahead</0>!",
-            "subtitle": "Wir sind Pioniere für <0>sichere</0>, <0>einfache</0> und <0>effektive</0> Cloud Lösungen für Ihre <0>digitale Zukunft</0>.",
+            "surtitle": "Cloud-Infrastruktur muss nicht teuer oder komplex sein",
+            "title": "Digitalisierung für den Mittelstand<br/> <0>Sicher</0>, <0>effektiv</0>, <0>Cloud-nativ</0>",
+            "subtitle": "Es geht auch anders. Mit <0>Think Ahead</0>!",
             "description": "Wir sind Pioniere für sichere, einfache und effektive Cloud Lösungen für Ihre digitale Zukunft."
         },
         "who-we-are": {
@@ -124,7 +124,7 @@
     },
 
     "solutions": {
-        "intro": "Welche IT Beratungslösungen bieten wir an?",
+        "intro": "Unsere IT-Consulting Lösungen",
         "subtitle": "Passend zu Ihren Infrastruktur Anforderungen bieten wir ein breites Spektrum an Kompetenzen und Erfahrung",
         "security": {
             "title": "Sicherheit & Compliance",
@@ -426,6 +426,9 @@
     "blog": {
         "subtitle": "Neuigkeiten, Anleitungen, Erfahrungsberichte und andere Ideen vom Think Ahead Team",
         "article-length": "Minuten zu lesen",
+        "posts-by-tag": "Beiträge zum Thema:",
+        "tag": "Thema",
+        "page": "Seite",
         "share": "Teilen",
         "back-to-blog": "Zurück zum Blog",
         "related-posts": "Verwandte Beiträge",

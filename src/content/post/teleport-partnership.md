@@ -8,6 +8,7 @@ tags:
     - teleport
     - zero-trust
     - security
+    - english
 ---
 
 ## Why Choose Teleport Enterprise?

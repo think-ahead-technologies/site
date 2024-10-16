@@ -36,7 +36,7 @@ const metadata = {
     >
         <Fragment slot="title">
             <Trans i18nKey="index.splash.title"
-                >Let's <span class="text-accent dark:text-white highlight">Think Ahead</span> together</Trans
+                >Let's <span class="text-accent highlight">Think Ahead</span> together</Trans
             >
         </Fragment>
 
@@ -48,41 +48,6 @@ const metadata = {
             >
         </Fragment>
     </Hero>
-
-    <!-- Who We Are section **************** -->
-
-    <Content
-        isReversed
-        items={[
-            {
-                title: t("index.who-we-are.accessible.title"),
-                icon: "tabler:map-pin",
-                description: t("index.who-we-are.accessible.description")
-            },
-            {
-                title: t("index.who-we-are.experienced.title"),
-                icon: "tabler:heart-handshake",
-                description: t("index.who-we-are.experienced.description")
-            },
-            {
-                title: t("index.who-we-are.enthusiastic.title"),
-                icon: "tabler:device-desktop-heart",
-                description: t("index.who-we-are.enthusiastic.description")
-            }
-        ]}
-        image={{ src: "/cloud-dall-e.jpg", alt: t("images.cloud") }}
-    >
-        <Fragment slot="content">
-            <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-                <Trans i18nKey="who-we-are.splash"><strong></strong></Trans>
-            </h3>
-            {t("who-we-are.subtitle")}
-        </Fragment>
-
-        <Fragment slot="bg">
-            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-        </Fragment>
-    </Content>
 
     <!-- Solutions section ************** -->
 
@@ -138,6 +103,41 @@ const metadata = {
             }
         ]}
     />
+
+    <!-- Who We Are section **************** -->
+
+    <Content
+        isReversed
+        items={[
+            {
+                title: t("index.who-we-are.accessible.title"),
+                icon: "tabler:map-pin",
+                description: t("index.who-we-are.accessible.description")
+            },
+            {
+                title: t("index.who-we-are.experienced.title"),
+                icon: "tabler:heart-handshake",
+                description: t("index.who-we-are.experienced.description")
+            },
+            {
+                title: t("index.who-we-are.enthusiastic.title"),
+                icon: "tabler:device-desktop-heart",
+                description: t("index.who-we-are.enthusiastic.description")
+            }
+        ]}
+        image={{ src: "/cloud-dall-e.jpg", alt: t("images.cloud") }}
+    >
+        <Fragment slot="content">
+            <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+                <Trans i18nKey="who-we-are.splash"><strong></strong></Trans>
+            </h3>
+            {t("who-we-are.subtitle")}
+        </Fragment>
+
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+    </Content>
 
     <!-- Partners section *********** -->
 

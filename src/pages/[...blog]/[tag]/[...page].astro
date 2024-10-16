@@ -6,6 +6,7 @@ import Layout from "~/layouts/PageLayout.astro";
 import BlogList from "~/components/blog/List.astro";
 import Headline from "~/components/blog/Headline.astro";
 import Pagination from "~/components/blog/Pagination.astro";
+import { t } from "i18next";
 
 changeLanguage("de");
 
@@ -17,7 +18,7 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 const { page, tag } = Astro.props as Props;
 const currentPage = page.currentPage ?? 1;
 const metadata = {
-    title: `Posts by tag '${tag}'${currentPage > 1 ? ` — Page ${currentPage} ` : ""}`,
+    title: `${t("blog.posts-by-tag")} ${tag}${currentPage > 1 ? ` — ${t("blog.page")} ${currentPage} ` : ""}`,
     robots: {
         index: blogTagRobots?.index,
         follow: blogTagRobots?.follow
@@ -27,7 +28,7 @@ const metadata = {
 
 <Layout metadata={metadata}>
     <section class="px-4 md:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
-        <Headline>Tag: {tag}</Headline>
+        <Headline>{t("blog.tag")}: {tag}</Headline>
         <BlogList posts={page.data} />
         <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
     </section>
