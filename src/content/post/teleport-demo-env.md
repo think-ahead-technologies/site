@@ -8,8 +8,8 @@ excerpt:
 image: https://goteleport.com/blog/_next/image/?url=%2Fblog%2Fstatic%2Fog-image.png&w=1080&q=80
 tags:
     - teleport
-    - security
     - coding
+    - infrastructure-as-code
     - architecture
     - english
 ---
