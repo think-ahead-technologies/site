@@ -1,28 +1,22 @@
 ---
-publishDate: 2024-10-11T00:00:00Z
+publishDate: 2024-10-24T00:00:00Z
 title: "Creating our Teleport demonstration environment"
 excerpt:
     With our partner Teleport, our goal is to provide a comprehensive service to our customers. This means both being knowledgeable about the product itself that we are selling, and also being able to apply it to client systems in ways that are simple both for us and for those we work with.
 
-    To fulfil these goals we have set up a demo environment, with open-source code, which you can view on GitHub. We've built it with a few key priorities in mind.
+    To fulfil these goals we have set up a demo environment, with open-source code. We explore the priorities we've kept in mind while developing that codebase.
 image: https://goteleport.com/blog/_next/image/?url=%2Fblog%2Fstatic%2Fog-image.png&w=1080&q=80
 tags:
-    - teleport
     - coding
     - infrastructure-as-code
     - architecture
+    - teleport
     - english
 ---
 
-## The situation
-
-With our partner Teleport, our goal is to provide a comprehensive service to our customers. This means both being knowledgeable about the product itself that we are selling, and also being able to apply it to client systems in ways that are simple both for us and for those we work with.
-
-To fulfil these goals we have set up a demo environment, with open-source code, which you can <a href="https://github.com/think-ahead-technologies/teleport-demo" target="_blank">view on GitHub</a>. We've built it with a few key priorities in mind.
-
 ## Priority 1: easy to access
 
-The most important thing about a demonstration environment is that it can be _used_ as such. There are a few aspects to this, but the main ones are that the code should **contain all that's needed**, be **easy to run** and intuitively **compartmentalised** to make it **easy to talk through**.
+The most important thing about a demonstration environment is that it can be _used_ as such. The first step toward this is that it be accessible; as such, we've made it available <a href="https://github.com/think-ahead-technologies/teleport-demo" target="_blank">on GitHub</a>. Beyond this, there are a few aspects to consider. Principally: the code should **contain all that's needed**, be **easy to run** and intuitively **compartmentalised** to make it **easy to talk through**.
 
 The most basic way to achieve this is to implement **everything as-code** - from the different cloud resources, implemented in Terraform, through the small bash scripts needed to set these up, to the deployment pipelines we can trigger at will. This allows anyone -- a first-timer looking at the code, someone who's half implemented their own stack but wants to check, or even ourselves when returning to the demo after a period on other work -- can find objective answers to practical questions. What order should the steps be deployed? Check the relevant GitHub Actions config. Where is a given resource referenced? Check the Terraform. How do we set up a new Teleport resource machine? Check its userdata script.
 
@@ -46,11 +40,13 @@ As for the deployment type: both Kubernetes and instances are provided by just a
 
 ## Challenges
 
-Of course, no coding project proceeds flawlessly, and our demo has had its challenges. Given our broad control of the goals and deployment processes these were gnerally smaller than in many other projects, but it's always worth taking stock!
+Of course, no coding project proceeds flawlessly, and our demo has had its challenges. Given our broad control of the goals and deployment processes these were generally smaller than in many other projects, but it's always worth taking stock!
 
-The main sticking points came from the difference between our demo and the business contexts in which Teleport is normally deployed. Specifically, **Teleport expects long-lived systems**, with persistent databases and Kubernetes clusters, while our demo will be used intermittently and we have no need for its resources when we aren't using it - so we destroy it completely between times. As such, a few extra steps are needed to recreate database structures from scratch. Similarly, the Teleport auth system generates credentials when set up which can then be retrieved by proxies down the line - but on Kubernetes we have usually been setting both up simultaneously, leading to some slightly complicated dependencies!
+The main sticking points came from the difference between our demo and the business contexts in which Teleport is normally deployed. Specifically, **Teleport expects long-lived systems**, with persistent databases and Kubernetes clusters, while our demo will be used intermittently and we have no need for its resources when we aren't using it - so we destroy it completely between times. As such, a few extra steps are needed to recreate database structures from scratch.
 
-Unrelated to the Teleport product, the implementation of **Kubernetes on Terraform** was harder than anticipated. Beyond the cluster itself, a few Kubernetes resources needed to be deployed by Terraform directly, notably those related to secrets and credentials. However, the Terraform Kubernetes provider currently has a limitation where the CustomResourceDefinition of any resource must be present during `terraform plan`. This required us to split our Kubernetes resources into several stacks, as secrets have to be deployed after their secret provider, which in turn can only be deployed once the cluster itself is up and running.
+Unrelated to the Teleport product, the implementation of **Kubernetes resources via Terraform** was harder than anticipated. Beyond the cluster itself, a few Kubernetes resources needed to be deployed by Terraform directly, notably those related to secrets and credentials. However, the Terraform Kubernetes provider currently has a limitation where the CustomResourceDefinition of any resource must be present during `terraform plan`.
+
+Our **solution** was to split our Kubernetes resources into several stacks, as secrets have to be deployed after their secret provider, which in turn can only be deployed once the cluster itself is up and running. With secrets then available, we solved the problem definitively for other resources by using Flux, a **GitOps** tool, to manage the Kubernetes resource configuration. (We could also have used GitOps for secret deployment, but Terraform allowed us to avoid the complexity of secret encryption with e.g. SOPS.)
 
 Overall, though, these challenges provided good opportunities to get to know the Teleport product in ever more detail, and we're pleased with the demo codebase we've produced. Have a look around!
 

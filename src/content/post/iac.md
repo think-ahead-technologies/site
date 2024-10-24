@@ -1,5 +1,5 @@
 ---
-publishDate: 2024-10-07T00:00:00Z
+publishDate: 2024-10-30T00:00:00Z
 title: "Infrastructure as Code: what and why?"
 excerpt: Infrastructure as Code is a powerful concept that has grown in popularity in recent years. We explore how it works, the benefits it brings over more manual alternatives, and some of the wider implications of the technology.
 image: /iac-pixabay-pexels.jpg
