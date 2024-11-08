@@ -1,7 +1,7 @@
 import path from "path";
 import { fileURLToPath } from "url";
 
-import { defineConfig, squooshImageService } from "astro/config";
+import { defineConfig } from "astro/config";
 
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
@@ -97,6 +97,15 @@ export default defineConfig({
                     "sunny-outline-rounded",
                     "upgrade"
                 ],
+                "simple-icons": [
+                    "amazonwebservices",
+                    "googlecloud",
+                    "hetzner",
+                    "microsoftazure",
+                    "openstack",
+                    "redhatopenshift",
+                    "scaleway"
+                ],
                 fa: ["lightbulb-o"],
                 ph: ["graduation-cap"]
             }
@@ -123,10 +132,6 @@ export default defineConfig({
 
         astrowind()
     ],
-
-    image: {
-        service: squooshImageService()
-    },
 
     markdown: {
         remarkPlugins: [readingTimeRemarkPlugin],
