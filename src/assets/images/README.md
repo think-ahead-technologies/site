@@ -16,8 +16,12 @@ On any update to the base logo, consider updating _all_ the following files:
 -   [apple-touch-icon.png](../favicons/apple-touch-icon.png), a 180x180px export from Inkscape
 -   [favicon.ico](../favicons/favicon.ico), converted with [ImageMagick](https://imagemagick.org/):
     -   `magick ../favicons/apple-touch-icon.png ../favicons/favicon.ico`
--   [icons/think-ahead.svg](/src/icons/think-ahead.svg) icon file, an all-white version for use within page content.
--   Logo files within the company Drive, both with and without the company name as text.
+-   [icons/think-ahead.svg](/src/icons/think-ahead.svg) icon file, an all-white version for use within page content
+    -   `cp ./think-ahead.png ../../icons/think-ahead.svg`
+-   Logo files within the [company file system](https://thinkahead.sharepoint.com/:f:/s/ThinkAheadTechnologiesGmbH/EkISb5ajXihNjwjZGcPV_VABcTClGviyqIl9LIcasXODjw?e=cX1bbP), both with and without the company name as text:
+    -   `think-ahead.svg`, another copy of the master file
+    -   `think-ahead.png`, a 900x900px export from Inkscape
+    -   Several 96 DPI exports from Inkscape including Think Ahead text in various orientations, e.g. `think-ahead-text-below.png`
 
 ## Preview images
 
@@ -42,4 +46,4 @@ The main requirement for these is that they shouldn't be big enough to bloat the
 Around 300KB seems to be a decent balance between visual quality and speed of loading.
 If files are too large, consider reducing them with [ImageMagick](https://imagemagick.org/):
 
--   `magick <source-file> -quality 20% <output-file>
+-   `magick <source-file> -quality 20% <output-file>`
