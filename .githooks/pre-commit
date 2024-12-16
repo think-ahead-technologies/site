@@ -3,3 +3,4 @@
 npm run format:check
 npm run i18n:check
 npm run img:check
+npm run build
