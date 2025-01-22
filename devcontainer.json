@@ -1,8 +1,9 @@
 {
     "name": "Node.js",
-    "build": {
-        "dockerfile": "Dockerfile"
-    },
+    "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+    // "build": {
+    //     "dockerfile": "Dockerfile"
+    // },
     "features": {
         "ghcr.io/devcontainers/features/common-utils:2": {
             "installZsh": "true",
