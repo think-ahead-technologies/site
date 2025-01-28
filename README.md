@@ -15,27 +15,27 @@ Static public site for _Think Ahead Technologies GmbH_, built on [Astro 4.0](htt
 
 ### Prerequisites
 
--   `node.js v20` and `npm`
+- `node.js v20` and `npm`
 
 ### Setup
 
--   Install the project using npm.
+- Install the project using npm.
     ```sh
     npm install
     ```
--   Run the local development environment. This will create a server on [localhost:4321](http://localhost:4321/).
+- Run the local development environment. This will create a server on [localhost:4321](http://localhost:4321/).
     ```sh
     npm run dev
     ```
--   Set up the [pre-commit](.githooks/pre-commit) validation hook.
+- Set up the [pre-commit](.githooks/pre-commit) validation hook.
     ```sh
     (cd .git/hooks && ln -s ../../.githooks/pre-commit pre-commit)
     ```
-    -   This hook will check formatting, and ensure no translations are missed.
-    -   To fix formatting, run: `npm run format`
-    -   To fix translations, manually modify the [English](./public/locales/en/translation.json) and [German](./public/locales/de/translation.json) locale files.
-        -   To verify nothing has been missed, you can run: `npm run i18n:check`
-        -   This will also be executed automatically by the above pre-commit hook.
+    - This hook will check formatting, and ensure no translations are missed.
+    - To fix formatting, run: `npm run format`
+    - To fix translations, manually modify the [English](./public/locales/en/translation.json) and [German](./public/locales/de/translation.json) locale files.
+        - To verify nothing has been missed, you can run: `npm run i18n:check`
+        - This will also be executed automatically by the above pre-commit hook.
 
 ### Deployment
 

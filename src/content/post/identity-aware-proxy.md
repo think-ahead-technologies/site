@@ -66,10 +66,10 @@ VPNs haben möglicherweise noch ihre Berechtigung in bestimmten Umgebungen oder 
 
 Verwenden Sie IAP, wenn:
 
--   Ihre Mitarbeiter über verschiedene Standorte verteilt arbeiten.
--   Sie sicheren, granularen Zugriff auf spezifische Anwendungen benötigen.
--   Sie ein Zero-Trust-Sicherheitsmodell einführen möchten.
--   Sie die Angriffsfläche Ihres Netzwerks reduzieren und nicht mehr ausschließlich auf perimeterbasierte Sicherheit setzen wollen.
+- Ihre Mitarbeiter über verschiedene Standorte verteilt arbeiten.
+- Sie sicheren, granularen Zugriff auf spezifische Anwendungen benötigen.
+- Sie ein Zero-Trust-Sicherheitsmodell einführen möchten.
+- Sie die Angriffsfläche Ihres Netzwerks reduzieren und nicht mehr ausschließlich auf perimeterbasierte Sicherheit setzen wollen.
 
 ### Welche Optionen gibt es?
 
