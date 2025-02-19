@@ -30,3 +30,6 @@ src/pages/de/**
 pnpm-lock.yaml
 
 .astro
+
+# Jetbrains
+.idea
