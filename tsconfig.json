@@ -1,16 +1,14 @@
 {
-  "extends": "astro/tsconfigs/base",
-  "compilerOptions": {
-    "moduleResolution": "Bundler",
-    "strictNullChecks": true,
-    "allowJs": true,
-    "baseUrl": ".",
-    "paths": {
-      "~/*": [
-        "src/*"
-      ]
-    },
-    "jsx": "react-jsx",
-    "jsxImportSource": "react"
-  }
+    "extends": "astro/tsconfigs/base",
+    "compilerOptions": {
+        "moduleResolution": "Bundler",
+        "strictNullChecks": true,
+        "allowJs": true,
+        "baseUrl": ".",
+        "paths": {
+            "~/*": ["src/*"]
+        },
+        "jsx": "react-jsx",
+        "jsxImportSource": "react"
+    }
 }

@@ -44,84 +44,94 @@ export default defineConfig({
         }
     },
 
-    integrations: [tailwind({
-        applyBaseStyles: false
-    }), sitemap({
-        filter: sitemapIgnoreRoot,
-        i18n: {
-            defaultLocale: "de",
-            locales: {
-                en: "en",
-                de: "de" // The `defaultLocale` value must present in `locales` keys
+    integrations: [
+        tailwind({
+            applyBaseStyles: false
+        }),
+        sitemap({
+            filter: sitemapIgnoreRoot,
+            i18n: {
+                defaultLocale: "de",
+                locales: {
+                    en: "en",
+                    de: "de" // The `defaultLocale` value must present in `locales` keys
+                }
             }
-        }
-    }), mdx(), astroI18next(), icon({
-        include: {
-            tabler: ["*"],
-            "flat-color-icons": [
-                "template",
-                "gallery",
-                "approval",
-                "deployment",
-                "document",
-                "advertising",
-                "currency-exchange",
-                "voice-presentation",
-                "business-contact",
-                "settings",
-                "lock",
-                "database"
-            ],
-            "material-symbols": [
-                "account-balance-outline-rounded",
-                "cloud",
-                "construction",
-                "clinical-notes-outline",
-                "dataset-linked-rounded",
-                "deployed-code-outline",
-                "deployed-code-account-outline",
-                "deployed-code-history-outline",
-                "design-services-outline",
-                "emoji-people",
-                "euro-symbol-rounded",
-                "handshake-outline",
-                "navigate-next",
-                "person-raised-hand-outline",
-                "search-insights",
-                "settings-heart",
-                "show-chart-rounded",
-                "smartphone-outline",
-                "sunny-outline-rounded",
-                "upgrade"
-            ],
-            "simple-icons": [
-                "amazonwebservices",
-                "googlecloud",
-                "hetzner",
-                "microsoftazure",
-                "openstack",
-                "redhatopenshift",
-                "scaleway"
-            ],
-            fa: ["lightbulb-o"],
-            ph: ["graduation-cap"]
-        }
-    }), ...whenExternalScripts(() =>
-        partytown({
-            config: { forward: ["dataLayer.push"] }
-        })
-    ), compress({
-        CSS: true,
-        HTML: {
-            "html-minifier-terser": {
-                removeAttributeQuotes: false
+        }),
+        mdx(),
+        astroI18next(),
+        icon({
+            include: {
+                tabler: ["*"],
+                "flat-color-icons": [
+                    "template",
+                    "gallery",
+                    "approval",
+                    "deployment",
+                    "document",
+                    "advertising",
+                    "currency-exchange",
+                    "voice-presentation",
+                    "business-contact",
+                    "settings",
+                    "lock",
+                    "database"
+                ],
+                "material-symbols": [
+                    "account-balance-outline-rounded",
+                    "cloud",
+                    "construction",
+                    "clinical-notes-outline",
+                    "dataset-linked-rounded",
+                    "deployed-code-outline",
+                    "deployed-code-account-outline",
+                    "deployed-code-history-outline",
+                    "design-services-outline",
+                    "emoji-people",
+                    "euro-symbol-rounded",
+                    "handshake-outline",
+                    "navigate-next",
+                    "person-raised-hand-outline",
+                    "search-insights",
+                    "settings-heart",
+                    "show-chart-rounded",
+                    "smartphone-outline",
+                    "sunny-outline-rounded",
+                    "upgrade"
+                ],
+                "simple-icons": [
+                    "amazonwebservices",
+                    "googlecloud",
+                    "hetzner",
+                    "microsoftazure",
+                    "openstack",
+                    "redhatopenshift",
+                    "scaleway"
+                ],
+                fa: ["lightbulb-o"],
+                ph: ["graduation-cap"]
             }
-        },
-        Image: false,
-        JavaScript: true,
-        SVG: false,
-        Logger: 1
-    }), astrowind(), react()],
+        }),
+        ...whenExternalScripts(() =>
+            partytown({
+                config: { forward: ["dataLayer.push"] }
+            })
+        ),
+        compress({
+            CSS: true,
+            HTML: {
+                "html-minifier-terser": {
+                    removeAttributeQuotes: false
+                }
+            },
+            Image: false,
+            JavaScript: true,
+            SVG: false,
+            Logger: 1
+        }),
+        astrowind(),
+        react()
+    ],
 
     markdown: {
         remarkPlugins: [readingTimeRemarkPlugin],
