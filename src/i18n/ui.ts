@@ -21,7 +21,7 @@ export const ui = {
         "nav.terms": "About",
         "nav.privacypolicy": "Privacy Policy",
         "nav.footnote":
-            'Copyright © <span class="dark:text-muted">Think Ahead Technologies GmbH</span> 2024 · All rights reserved.',
+            'Copyright © <span class="dark:text-muted">Think Ahead Technologies GmbH</span> 2025 · All rights reserved.',
         "nav.blog": "Our insights",
         "nav.languages": "Languages",
         "lang.en": "English",
@@ -43,7 +43,7 @@ export const ui = {
         "nav.terms": "Impressum",
         "nav.privacypolicy": "Datenschutz",
         "nav.footnote":
-            'Copyright © <span class="dark:text-muted">Think Ahead Technologies GmbH</span> 2024 · Alle Rechte vorbehalten.',
+            'Copyright © <span class="dark:text-muted">Think Ahead Technologies GmbH</span> 2025 · Alle Rechte vorbehalten.',
         "nav.blog": "Unsere Einblicke",
         "nav.languages": "Sprache",
         "lang.en": "English",

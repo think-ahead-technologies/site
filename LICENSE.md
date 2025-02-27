@@ -1,4 +1,4 @@
-Copyright (c) 2024 Think Ahead Technologies GmbH
+Copyright (c) 2025 Think Ahead Technologies GmbH
 
                      GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
