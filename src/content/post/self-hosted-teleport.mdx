@@ -2,6 +2,7 @@
 publishDate: 2025-03-01T00:00:00Z
 title: "Self-hosting Teleport with Terraform and GitOps"
 excerpt: Self-hosting is a powerful approach to running your own infrastructure. In this blog post, we’ll explore how you can set up Teleport on your own infrastructure, using Terraform and GitOps.
+author: Philipp Gerhard
 
 [//]: # (image: /iac-pixabay-pexels.jpg)
 
@@ -20,7 +21,7 @@ Unlike Passwords, Secrets and VPNs it uses cryptographic identities and is built
 Teleport's platform is offered both as an open-source and commercial product. 
 And for those wishing to self-host it, it is possible to self-host both the open-source and the enterprise variant.
 
-In this guide we will be demonstrating how to set up a highly-available Teleport Access deployment. 
+In this guide we will be demonstrating how to set up a Teleport deployment on the Azure. 
 Our goal is to make this setup easily reproducible and to avoid as many manual steps as possible. 
 Therefore, we will be making use of both infrastructure as code (IaC), as well as GitOps. 
 Our IaC tool of choice will be Terraform and for GitOps we will be relying on ArgoCD.
@@ -36,7 +37,7 @@ Before getting started with this guide make sure you have the following tools in
 - Terraform
 - VSCode or another editor of your choice
 
-Due to my personal setup all the shell commands and scripts mentioned in this guide (and provided in the GitHub repository at the end) will be using `Bash`.
+All the shell commands and scripts mentioned in this guide (and provided in the GitHub repository at the end) will be using `Bash`.
 Aside from the tools mentioned above you'll need to have a domain name. 
 This guide will work with any registrar that allows the creation of `NS` records for the domain name.
 
@@ -65,6 +66,8 @@ At the end of this guide we will have the following resources in Azure
       - External DNS
       - Teleport
     - Azure DNS Zone
+
+To estimate the cost of these resources please use the [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/)
 
 Now let's get started...
 
@@ -329,7 +332,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
 ```
 The Kubernetes cluster will host all the services required to deploy Teleport. 
 Note the following
-- since we are deploying a highly-available configuration we have set the node count to 3
+- by using 3 nodes we can ensure zero downtime upgrades. It does not provide high availability though as all nodes are deployed in the same zone.
 - we have enabled workload identity in order to allow use to configure access in the cluster using managed identities. 
 The workloads will the be able to fetch a token using OIDC which is why we have enabled OIDC
 
@@ -467,7 +470,8 @@ In this case this will be used in order to connect to the database and the stora
 - a database, in this guide we are creating a high-available setup, which is why we are going to be using `Azure Database for PostgreSQL Flexible Server`
 - a storage account, this will be used for storing session recordings created by Teleport
 
-To set up all these resources add the following code to your `main.tf`
+To set up all these resources add the following code to your `main.tf` and replace the values in the first `azurerm_postgresql_flexible_server_active_directory_administrator` block with an actual group from your Entra ID.
+
 ```terraform
 # Teleport
 resource "azurerm_user_assigned_identity" "teleport_identity" {
@@ -523,16 +527,16 @@ resource "azurerm_postgresql_flexible_server_database" "teleport" {
 resource "azurerm_postgresql_flexible_server_firewall_rule" "teleport" {
   name             = "AllowAccessFromAzure"
   server_id        = azurerm_postgresql_flexible_server.teleport.id
-  start_ip_address = "0.0.0.0"
-  end_ip_address   = "0.0.0.0"
+  start_ip_address = "0.0.0.0" # make this more restrictive in production!
+  end_ip_address   = "0.0.0.0" # make this more restrictive in production!
 }
 
 resource "azurerm_postgresql_flexible_server_active_directory_administrator" "teleport" {
   server_name         = azurerm_postgresql_flexible_server.teleport.name
   resource_group_name = azurerm_resource_group.teleport_rg.name
   tenant_id           = data.azurerm_client_config.current.tenant_id
-  object_id           = "fa0bb52e-1e2b-40ac-baf5-7a218cd6eac7"
-  principal_name      = "access"
+  object_id           = "ffffffff-ffff-ffff-ffff-ffffffffffff" # replace this with an EntraID group id 
+  principal_name      = "access" # replace this with an EntraID group name
   principal_type      = "Group"
 }
 
