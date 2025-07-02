@@ -15,7 +15,7 @@
             },
             "experienced": {
                 "title": "Experienced and knowledgeable",
-                "description": "We've seen it all, with 15 years of cloud experience in businesses large and small, across a range of industries and countries."
+                "description": "We've seen it all, with 24 years of cloud experience in businesses large and small, across a range of industries and countries."
             },
             "enthusiastic": {
                 "title": "Enthusiastic and dependable",
@@ -111,7 +111,8 @@
                 "public": "Public sector",
                 "academic": "Academic",
                 "insurance": "Insurance",
-                "consumer-electronics": "Consumer electronics"
+                "consumer-electronics": "Consumer electronics",
+                "scientific": "Scientific"
             },
             "countries": {
                 "title": "Countries",

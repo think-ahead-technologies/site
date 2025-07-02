@@ -15,7 +15,7 @@
             },
             "experienced": {
                 "title": "Erfahren und sachkundig",
-                "description": "Mit über 15 Jahren Cloud Erfahrung vom Mittelstand bis hin zu internationalen Konzernen über alle Industrien hinweg. Wir haben schon alles gesehen."
+                "description": "Mit über 24 Jahren Cloud Erfahrung vom Mittelstand bis hin zu internationalen Konzernen über alle Industrien hinweg. Wir haben schon alles gesehen."
             },
             "enthusiastic": {
                 "title": "Enthusiatisch und verlässlich",
@@ -109,9 +109,10 @@
                 "retail": "Handel",
                 "energy": "Energie",
                 "public": "Öffentlicher Dienst",
-                "academic": "Wissenschaft",
+                "academic": "Universität",
                 "insurance": "Versicherung",
-                "consumer-electronics": "Unterhaltungselektronik"
+                "consumer-electronics": "Unterhaltungselektronik",
+                "scientific": "Wissenschaft"
             },
             "countries": {
                 "title": "Länder",
