@@ -11,6 +11,7 @@ import icon from "astro-icon";
 import compress from "astro-compress";
 
 import astroI18next from "astro-i18next";
+import astroI18nextReloader from "./astro-i18next-reloader";
 import { sitemapIgnoreRoot } from "./src/i18n/utils";
 
 import astrowind from "./src/integration";
@@ -60,6 +61,7 @@ export default defineConfig({
         }),
         mdx(),
         astroI18next(),
+        astroI18nextReloader(),
         icon({
             include: {
                 tabler: ["*"],
