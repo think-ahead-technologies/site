@@ -111,11 +111,8 @@ export default defineConfig({
                     "scaleway"
                 ],
                 fa: ["lightbulb-o"],
-                ph: [
-                    "graduation-cap",
-                    "microscope-bold"
-                ]
-                }
+                ph: ["graduation-cap", "microscope-bold"]
+            }
         }),
         ...whenExternalScripts(() =>
             partytown({

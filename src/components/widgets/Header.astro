@@ -101,22 +101,48 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
                                         />
                                     </button>
                                     <ul class="dropdown-menu md:backdrop-blur-md dark:md:bg-dark rounded md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white/90 md:min-w-[200px] drop-shadow-xl">
-                                        {links.map(({ text: text2, href: href2 }) => (
-                                            <li>
-                                                <a
-                                                    class:list={[
-                                                        "first:rounded-t last:rounded-b md:hover:bg-gray-100 hover:text-link dark:hover:text-white dark:hover:bg-gray-700 py-2 px-5 block whitespace-no-wrap",
-                                                        {
-                                                            "aw-link-active": href2 === currentPath
-                                                        }
-                                                    ]}
-                                                    href={getRelativeLocaleUrl(
-                                                        Astro.currentLocale || PRIMARY_LANGUAGE,
-                                                        href2
-                                                    )}
-                                                >
-                                                    {t(text2)}
-                                                </a>
+                                        {links.map(({ text: text2, href: href2, links: links2 }) => (
+                                            <li class={links2?.length ? "dropdown-submenu" : ""}>
+                                                {links2?.length ? (
+                                                    <>
+                                                        <div class="submenu-header py-2 px-5 text-xs uppercase tracking-wider text-muted font-semibold md:pt-3 md:pb-1">
+                                                            {t(text2)}
+                                                        </div>
+                                                        <div class="dropdown-submenu-menu md:pl-0 pl-2">
+                                                            {links2.map(({ text: text3, href: href3 }) => (
+                                                                <a
+                                                                    class:list={[
+                                                                        "block py-2 px-5 md:hover:bg-gray-100 hover:text-link dark:hover:text-white dark:hover:bg-gray-700 whitespace-no-wrap transition-colors",
+                                                                        {
+                                                                            "aw-link-active": href3 === currentPath
+                                                                        }
+                                                                    ]}
+                                                                    href={getRelativeLocaleUrl(
+                                                                        Astro.currentLocale || PRIMARY_LANGUAGE,
+                                                                        href3
+                                                                    )}
+                                                                >
+                                                                    {t(text3)}
+                                                                </a>
+                                                            ))}
+                                                        </div>
+                                                    </>
+                                                ) : (
+                                                    <a
+                                                        class:list={[
+                                                            "first:rounded-t last:rounded-b md:hover:bg-gray-100 hover:text-link dark:hover:text-white dark:hover:bg-gray-700 py-2 px-5 block whitespace-no-wrap transition-colors",
+                                                            {
+                                                                "aw-link-active": href2 === currentPath
+                                                            }
+                                                        ]}
+                                                        href={getRelativeLocaleUrl(
+                                                            Astro.currentLocale || PRIMARY_LANGUAGE,
+                                                            href2
+                                                        )}
+                                                    >
+                                                        {t(text2)}
+                                                    </a>
+                                                )}
                                             </li>
                                         ))}
                                     </ul>

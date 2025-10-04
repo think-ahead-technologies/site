@@ -6,6 +6,7 @@ import Hero from "~/components/widgets/Hero2.astro";
 import Stats from "~/components/widgets/Stats.astro";
 import Steps from "~/components/widgets/Steps.astro";
 import Layout from "~/layouts/PageLayout.astro";
+import { getPagePermalink } from "~/utils/permalinks";
 
 changeLanguage("de");
 
@@ -93,7 +94,13 @@ const metadata = {
             {
                 title: t("security.protect.supplychain.title"),
                 description: t("security.protect.supplychain.description").toString(),
-                icon: "tabler:git-merge"
+                icon: "tabler:git-merge",
+                callToAction: {
+                    variant: "link",
+                    text: t("security.protect.supplychain.link"),
+                    href: getPagePermalink("/supply-chain-security-analysis", Astro.currentLocale),
+                    icon: "tabler:arrow-right"
+                }
             },
             {
                 title: t("security.protect.cloud.title"),
@@ -108,7 +115,7 @@ const metadata = {
     <Features2
         id="services"
         title={t("solutions.services.title")}
-        columns={2}
+        columns={3}
         items={[
             {
                 title: t("solutions.services.consult.title"),
@@ -119,6 +126,17 @@ const metadata = {
                 title: t("solutions.services.implement.title"),
                 description: t("solutions.services.implement.description").toString(),
                 icon: "tabler:code-dots"
+            },
+            {
+                title: t("solutions.services.assessment.title"),
+                description: t("solutions.services.assessment.description").toString(),
+                icon: "tabler:chart-dots-3",
+                callToAction: {
+                    variant: "link",
+                    text: t("supply-chain.cta.button"),
+                    href: getPagePermalink("/contact", Astro.currentLocale),
+                    icon: "tabler:calendar"
+                }
             }
         ]}
     >

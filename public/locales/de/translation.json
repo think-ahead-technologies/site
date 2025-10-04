@@ -143,6 +143,10 @@
             "implement": {
                 "title": "Umsetzung",
                 "description": "Nutzen Sie unsere praktischen Implementierungsdienste, um modernste Technologielösungen effektiv einzusetzen. Unser Team sorgt für eine nahtlose Integration neuer Systeme in Ihre bestehende Infrastruktur, um Unterbrechungen zu minimieren und die Leistung zu maximieren."
+            },
+            "assessment": {
+                "title": "Software Supply Chain Sicherheits Assessment",
+                "description": "Bewerten Sie Ihre CI/CD-Sicherheitslage mit unserem umfassenden Assessment basierend auf unserem 4-Stufen-Reifegradmodell. Wir identifizieren Schwachstellen, prüfen die Compliance mit CRA und NIS2 und liefern eine klare Roadmap zur Stärkung Ihrer Software-Lieferkette gegen moderne Bedrohungen."
             }
         },
         "get-in-touch": "Interessiert? Sprechen Sie uns an!",
@@ -336,7 +340,8 @@
             },
             "supplychain": {
                 "title": "Sichere Software Lieferkette",
-                "description": "Stärken Sie Ihre Software-Lieferkette mit unseren Sicherheitsmaßnahmen, die mit dem Cyber Resilience Act konform sind. Wir implementieren eine detaillierte Software Bill of Materials (SBOM), sichere CI/CD-Praktiken und eine Überprüfung der Build-Provenienz, um Schwachstellen vorzubeugen und eine robuste Cyber-Resilienz während des gesamten Entwicklungslebenszyklus zu gewährleisten."
+                "description": "Schützen Sie Ihre CI/CD-Pipelines vor raffinierten Supply-Chain-Angriffen mit unserem bewährten 4-Stufen-Reifegradmodell. Von grundlegender Hygiene bis zu fortgeschrittenen Zero-Trust-Kontrollen helfen wir Ihnen, CRA- und NIS2-Compliance zu erreichen und gleichzeitig Ihre Sicherheitslage zu stärken. Erfahren Sie mehr über unseren umfassenden Ansatz und unsere Bedrohungsanalyse.",
+                "link": "Unser Supply Chain Security Framework erkunden"
             },
             "cloud": {
                 "title": "Cloud Sicherheit",
@@ -413,6 +418,13 @@
             "title": "Vielen Dank für Ihre Nachricht!",
             "subtitle": "Unser Team meldet sich bald bei Ihnen.",
             "home-link": "Weiter entdecken"
+        }
+    },
+
+    "supply-chain": {
+        "cta": {
+            "title": "Bereit, Ihre Supply Chain Security zu stärken?",
+            "button": "Sicherheitsbewertung vereinbaren"
         }
     },
 

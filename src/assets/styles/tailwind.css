@@ -64,6 +64,28 @@
     display: block;
 }
 
+.dropdown-submenu .submenu-header {
+    cursor: default;
+    pointer-events: none;
+}
+
+.dropdown-submenu .dropdown-submenu-menu {
+    display: block;
+}
+
+/* Add a subtle divider before submenu sections */
+.dropdown-submenu:not(:first-child) .submenu-header {
+    border-top: 1px solid rgba(156, 163, 175, 0.2);
+    margin-top: 0.25rem;
+    padding-top: 0.75rem;
+}
+
+/* Smooth transitions for all menu items */
+.dropdown-menu a,
+.dropdown-submenu-menu a {
+    transition: all 0.15s ease-in-out;
+}
+
 [astro-icon].icon-light > * {
     stroke-width: 1.2;
 }

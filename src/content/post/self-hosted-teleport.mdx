@@ -7,26 +7,30 @@ excerpt: Self-hosting is a powerful approach to running your own infrastructure.
 
 draft: false
 tags:
-- infrastructure-as-code
-- terraform
-- teleport
-- cloud
-- coding
-- english
+    - infrastructure-as-code
+    - terraform
+    - teleport
+    - cloud
+    - coding
+    - english
 ---
+
 ## Introduction
-Teleport is a platform that enables access and also protects infrastructure. 
-Unlike Passwords, Secrets and VPNs it uses cryptographic identities and is built around zero-trust principles. 
-Teleport's platform is offered both as an open-source and commercial product. 
+
+Teleport is a platform that enables access and also protects infrastructure.
+Unlike Passwords, Secrets and VPNs it uses cryptographic identities and is built around zero-trust principles.
+Teleport's platform is offered both as an open-source and commercial product.
 And for those wishing to self-host it, it is possible to self-host both the open-source and the enterprise variant.
 
-In this guide we will be demonstrating how to set up a Teleport deployment on the Azure. 
-Our goal is to make this setup easily reproducible and to avoid as many manual steps as possible. 
-Therefore, we will be making use of both infrastructure as code (IaC), as well as GitOps. 
+In this guide we will be demonstrating how to set up a Teleport deployment on the Azure.
+Our goal is to make this setup easily reproducible and to avoid as many manual steps as possible.
+Therefore, we will be making use of both infrastructure as code (IaC), as well as GitOps.
 Our IaC tool of choice will be Terraform and for GitOps we will be relying on ArgoCD.
 
 ### Prerequisites
+
 Before getting started with this guide make sure you have the following tools installed
+
 - Azure subscription
 - Azure CLI
 - GitHub repository
@@ -37,52 +41,57 @@ Before getting started with this guide make sure you have the following tools in
 - VSCode or another editor of your choice
 
 All the shell commands and scripts mentioned in this guide (and provided in the GitHub repository at the end) will be using `Bash`.
-Aside from the tools mentioned above you'll need to have a domain name. 
+Aside from the tools mentioned above you'll need to have a domain name.
 This guide will work with any registrar that allows the creation of `NS` records for the domain name.
 
 ## Overview of the steps
+
 Broadly speaking we will be carrying out the following steps in order to get Teleport setup
 
 1. Setup Terraform state storage
 2. Create required infrastructure
 3. Configure DNS for Azure infrastructure
 4. Configure Git repository for GitOps
-6. Install ArgoCD
-7. Setup ArgoCD resources
-8. Create initial user
+5. Install ArgoCD
+6. Setup ArgoCD resources
+7. Create initial user
 
 At the end of this guide we will have the following resources in Azure
+
 - Subscription
-  - Resource Group - `selfhosted-teleport-mgmt`
-    - Storage Account - `tfstate...`
-  - Resource Group - `selfhosted-teleport`
-    - Storage Account
-    - Key Vault
-    - Flexible PostgresDB
-    - Azure Kubernetes Service
-    - Managed Identities
-      - Cert Manager
-      - External DNS
-      - Teleport
-    - Azure DNS Zone
+    - Resource Group - `selfhosted-teleport-mgmt`
+        - Storage Account - `tfstate...`
+    - Resource Group - `selfhosted-teleport`
+        - Storage Account
+        - Key Vault
+        - Flexible PostgresDB
+        - Azure Kubernetes Service
+        - Managed Identities
+            - Cert Manager
+            - External DNS
+            - Teleport
+        - Azure DNS Zone
 
 To estimate the cost of these resources please use the [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/)
 
 Now let's get started...
 
 ### Step 1 - Setup Terraform State Storage
-When working on non-trivial infrastructure projects with Terraform it is highly recommended to store the state somewhere other than your machine. 
-However, we can not use Terraform to create the state since then we'd once again have state to manage. 
+
+When working on non-trivial infrastructure projects with Terraform it is highly recommended to store the state somewhere other than your machine.
+However, we can not use Terraform to create the state since then we'd once again have state to manage.
 This is why we are going to fall back on using the Azure CLI.
-Since this state is not managed by Terraform it is advisable to keep it separated from the resources that are managed by Terraform. 
-This is why we will create a new resource group to contain the state. 
+Since this state is not managed by Terraform it is advisable to keep it separated from the resources that are managed by Terraform.
+This is why we will create a new resource group to contain the state.
 The following bash script
+
 - Creates a new resource group
 - Creates a new storage account
 - Creates a new blob container
 - Prints the details of the resources to the command line
 
 **Noteworthy**
+
 - Terraform state contains sensitive information, it is therefore essentially to make sure that its content is protected. Hence, the storage account is created using blob level encryption
 - Storage account names must be globally unique in Azure and there are relatively strict length limits. The script automatically appends the current time in seconds to the name to meet this requirement
 
@@ -126,33 +135,38 @@ echo "Resource Group: $resource_group"
 echo "Storage Account Name: $storage_account_name"
 echo "Container Name: $container_name"
 ```
+
 Create a new file called `tf-state-setup.sh` and paste the above code into it.
 Execute the script with `bash tf-state-setup.sh`.
 
 ### Step 2 - Create Required Infrastructure
-Now that we have a bucket in which to store our Terraform state we can leave the Azure CLI behind and move on to using Terraform. 
+
+Now that we have a bucket in which to store our Terraform state we can leave the Azure CLI behind and move on to using Terraform.
 As a first step we will be creating all the infrastructure components that we will need. This will include
-  - Resource Group
-  - Azure Kubernetes Service
-  - Azure Key Vault
-  - Azure DNS
-  - PostgresDB
-  - Managed identities
-  - Storage Account
+
+- Resource Group
+- Azure Kubernetes Service
+- Azure Key Vault
+- Azure DNS
+- PostgresDB
+- Managed identities
+- Storage Account
 
 In order to make things more maintainable and readable we will be creating the following files for our Terraform modules
-  - `backend.tf` - Configuration of Terraform state backend for module
-  - `outputs.tf` - All outputs of the module
-  - `providers.tf` - All providers required by the module
-  - `variables.tf` - All variables exposed by the module
-  - `main.tf` - All resource definitions
 
-The first module that we will create is for the infrastructure of the Teleport cluster. 
+- `backend.tf` - Configuration of Terraform state backend for module
+- `outputs.tf` - All outputs of the module
+- `providers.tf` - All providers required by the module
+- `variables.tf` - All variables exposed by the module
+- `main.tf` - All resource definitions
+
+The first module that we will create is for the infrastructure of the Teleport cluster.
 So create a new folder called `infra` and create the files mentioned above.
 
 #### `backend.tf`
-As mentioned above this file is responsible for configuring the Terraform state backend. 
-It is important to note that the state is stored in a separate resource group from the resources that are managed by Terraform. 
+
+As mentioned above this file is responsible for configuring the Terraform state backend.
+It is important to note that the state is stored in a separate resource group from the resources that are managed by Terraform.
 This is why we need to specify the resource group in the `backend` block.
 
 ```terraform
@@ -169,8 +183,9 @@ terraform {
 Ensure that the `storage_account_name` matchs the name from the script output.
 
 #### `variables.tf`
-The variables file is responsible for defining all the variables that are needed by this stack. 
-Using variables makes it easier to change the configuration of the stack without having to modify the Terraform code. 
+
+The variables file is responsible for defining all the variables that are needed by this stack.
+Using variables makes it easier to change the configuration of the stack without having to modify the Terraform code.
 This is especially useful when you want to use the same stack for multiple environments.
 
 ```terraform
@@ -210,7 +225,8 @@ variable "cluster_name" {
 ```
 
 #### `providers.tf`
-Since we will be creating our infrastructure in Azure we need to make sure that we are using the correct provider. 
+
+Since we will be creating our infrastructure in Azure we need to make sure that we are using the correct provider.
 Additionally, we will be using the `time` to randomize the names of the resources that are created (e.g. storage account names), as well as the `tls` provider to generate certificates.
 
 ```terraform
@@ -242,8 +258,9 @@ provider "azurerm" {
 ```
 
 #### `outputs.tf`
-This file is responsible for defining all the outputs of the stack. 
-One noteworthy output is the `azure_dns_name_servers` output, you will need to use this output in your domain registrar's NS records. 
+
+This file is responsible for defining all the outputs of the stack.
+One noteworthy output is the `azure_dns_name_servers` output, you will need to use this output in your domain registrar's NS records.
 The other outputs are used later on in this guide to make it easier to hydrate the ArgoCD configuration.
 
 ```terraform
@@ -274,10 +291,13 @@ output "storage-account-name" {
 ```
 
 #### `main.tf`
+
 ##### Resource Group
+
 Inside the main.tf file we will be creating all the resources that are part of the stack.
 Firstly we will be creating the resource group.
 Add the following code to the `main.tf` file
+
 ```terraform
 data "azurerm_client_config" "current" {}
 
@@ -288,18 +308,22 @@ resource "azurerm_resource_group" "teleport_rg" {
 ```
 
 ##### DNS Zone
+
 The resource group will be used to hold all the resources that are part of the stack.
 Next we will be creating the DNS zone.
 Add the following code to the `main.tf` file
+
 ```terraform
 resource "azurerm_dns_zone" "public_dns_zone" {
   name                = var.domain_name
   resource_group_name = azurerm_resource_group.teleport_rg.name
 }
 ```
+
 The DNS zone will allow us to configure Azure DNS to resolve host names for the various services that are part of the stack.
 
 ##### Kubernetes Cluster
+
 Next we will be creating the Kubernetes cluster.
 Add the following code to the `main.tf` file
 
@@ -329,21 +353,26 @@ resource "azurerm_kubernetes_cluster" "aks" {
   workload_identity_enabled = true
 }
 ```
-The Kubernetes cluster will host all the services required to deploy Teleport. 
+
+The Kubernetes cluster will host all the services required to deploy Teleport.
 Note the following
+
 - by using 3 nodes we can ensure zero downtime upgrades. It does not provide high availability though as all nodes are deployed in the same zone.
-- we have enabled workload identity in order to allow use to configure access in the cluster using managed identities. 
-The workloads will the be able to fetch a token using OIDC which is why we have enabled OIDC
+- we have enabled workload identity in order to allow use to configure access in the cluster using managed identities.
+  The workloads will the be able to fetch a token using OIDC which is why we have enabled OIDC
 
 ##### ArgoCD
+
 For ArgoCD we will use GitHub as the source of truth for our cluster configuration.
 In order to securely store the SSH keys we will use Azure Key Vault.
-In this guide we will create the key using the corresponding Terraform resource, however you can also generate the keys using the OpenSSH directly and then import them. 
+In this guide we will create the key using the corresponding Terraform resource, however you can also generate the keys using the OpenSSH directly and then import them.
 A potential downside of using the Terraform resource is that you will need to store the private key in the Terraform state, which means that if someone has access to the state they will also have access to the key.  
-Add the following code to the `main.tf` file. This 
+Add the following code to the `main.tf` file. This
+
 - creates a TLS key for ArgoCD
 - creates a key vault
 - creates a secret in the key vault
+
 ```terraform
 # ArgoCD
 ## Github Access
@@ -389,11 +418,13 @@ resource "azurerm_key_vault_secret" "argo_repo_private_key_secret" {
 ```
 
 ##### Cert-Manager
-Since we are exposing our cluster to the internet we will need to issue certificates for our ingress controllers. 
-By integrating with cert-manager it will allow us to automate the process. 
-Since cert-manager will need to modify the DNS Zone we will need to give it the required permissions. 
-As stated above we will be using Managed Identities for this. 
+
+Since we are exposing our cluster to the internet we will need to issue certificates for our ingress controllers.
+By integrating with cert-manager it will allow us to automate the process.
+Since cert-manager will need to modify the DNS Zone we will need to give it the required permissions.
+As stated above we will be using Managed Identities for this.
 Add the following code to the `main.tf` file.
+
 ```terraform
 # Cert-Manager
 ## Azure Identity
@@ -418,14 +449,17 @@ resource "azurerm_role_assignment" "dns_zone_contributor" {
   principal_id         = azurerm_user_assigned_identity.cert_manager_identity.principal_id
 }
 ```
+
 When creating these resources in your own setup make sure that the `subject` for the `azurerm_federated_identity_credential` matches what you have configured in ArgoCD.
 The format is `system:serviceaccount:<KUBERNETES_NAMESPACE>:<ARGOCD_APPLICATION_METADATA_NAME>`
 
 ##### ExternalDNS
-To register the actual host names in the DNS zone we are going to be using `ExternalDNS`. 
+
+To register the actual host names in the DNS zone we are going to be using `ExternalDNS`.
 `ExternalDNS` automatically inspects the Kubernetes resources we have deployed in our cluster and exposes them.
-Similarly to `cert-manager` `ExternalDNS` will need to interact with the AzureDNS and needs permissions for this. 
+Similarly to `cert-manager` `ExternalDNS` will need to interact with the AzureDNS and needs permissions for this.
 Add the following code to the `main.tf` file
+
 ```terraform
 # ExternalDNS
 ## Azure Identity
@@ -456,16 +490,19 @@ resource "azurerm_role_assignment" "external_dns_resource_group_reader" {
   principal_id         = azurerm_user_assigned_identity.external_dns_identity.principal_id
 }
 ```
-As you may have noticed we are creating an additional role assignment for `ExternalDNS` compared to `cert-manager`. 
-This additional role assignment is required in order to allow `ExternalDNS` to inspect all the networks that are available within the resource group. 
+
+As you may have noticed we are creating an additional role assignment for `ExternalDNS` compared to `cert-manager`.
+This additional role assignment is required in order to allow `ExternalDNS` to inspect all the networks that are available within the resource group.
 It will not make any modifications, hence why the `Reader` role is sufficient.  
-Also the same caveat applies here as to `cert-manager` when it comes to the `subject` of the `azurerm_federated_identity_credential`. 
+Also the same caveat applies here as to `cert-manager` when it comes to the `subject` of the `azurerm_federated_identity_credential`.
 If you are following this guide you should not have any issues, but be careful when making you own modifications
 
 ##### Teleport
+
 At this point we are ready to create the resources for the Teleport cluster. The resources required for teleport are
-- a managed identity which follows the same logic as the ones we created for `ExternalDNS` and `cert-manager`. 
-In this case this will be used in order to connect to the database and the storage account
+
+- a managed identity which follows the same logic as the ones we created for `ExternalDNS` and `cert-manager`.
+  In this case this will be used in order to connect to the database and the storage account
 - a database, in this guide we are creating a high-available setup, which is why we are going to be using `Azure Database for PostgreSQL Flexible Server`
 - a storage account, this will be used for storing session recordings created by Teleport
 
@@ -534,7 +571,7 @@ resource "azurerm_postgresql_flexible_server_active_directory_administrator" "te
   server_name         = azurerm_postgresql_flexible_server.teleport.name
   resource_group_name = azurerm_resource_group.teleport_rg.name
   tenant_id           = data.azurerm_client_config.current.tenant_id
-  object_id           = "ffffffff-ffff-ffff-ffff-ffffffffffff" # replace this with an EntraID group id 
+  object_id           = "ffffffff-ffff-ffff-ffff-ffffffffffff" # replace this with an EntraID group id
   principal_name      = "access" # replace this with an EntraID group name
   principal_type      = "Group"
 }
@@ -578,9 +615,10 @@ resource "azurerm_role_assignment" "blob_data_owner" {
 }
 ```
 
-If you feel that the `main.tf` has grown too large it is completely valid to split its content into multiple files. 
-While a common recommendation is to split files within a stack based on resource type (e.g. a file for networking resources, another for users), I recommend splitting it based on the resources that are likely to change together. 
+If you feel that the `main.tf` has grown too large it is completely valid to split its content into multiple files.
+While a common recommendation is to split files within a stack based on resource type (e.g. a file for networking resources, another for users), I recommend splitting it based on the resources that are likely to change together.
 For this setup this could result in splitting the `main.tf` into the following files
+
 - `resource-group.tf`
 - `dns.tf`
 - `kubernetes.tf`
@@ -590,7 +628,9 @@ For this setup this could result in splitting the `main.tf` into the following f
 - `teleport.tf`
 
 ### Apply the files
+
 Once you've added all the contents to the files you should have the following file structure
+
 ```text
 repository-root/
 |-- tf/
@@ -602,8 +642,8 @@ repository-root/
 |------ main.tf
 ```
 
-Open your shell and navigate into the directory `infra`. 
-Two of the variables we are using are `subscription_id` and `tenant_id`. 
+Open your shell and navigate into the directory `infra`.
+Two of the variables we are using are `subscription_id` and `tenant_id`.
 To retrieve these values we are using the Azure CLI and storing them in `terraform.tfvars`
 
 ```shell
@@ -613,34 +653,37 @@ echo "subscription_id = \"$subscription_id\"" > terraform.tfvars
 echo "tenant_id = \"$tenant_id\"" >> terraform.tfvars
 ```
 
-Since the Azure CLI is not the fastest these commands may take a while to execute. 
-If this is the first time you're running the terraform stack you'll need to initialise it. 
+Since the Azure CLI is not the fastest these commands may take a while to execute.
+If this is the first time you're running the terraform stack you'll need to initialise it.
 
 ```shell
 terraform init
 ```
 
-This will download all the providers from the `providers.tf` and set up the connection to the state bucket in Azure. 
-Once Terraform has successfully be initialised we are ready to create the resources. 
+This will download all the providers from the `providers.tf` and set up the connection to the state bucket in Azure.
+Once Terraform has successfully be initialised we are ready to create the resources.
 To do this run
+
 ```shell
 terraform apply
 ```
 
-This will inspect all the resources in the Azure and determine the changes that need to be made. 
-The changes that will be applied are listed, to apply them we need to confirm the so called plan. 
-After confirming the plan Terraform will execute the changes in Azure. 
+This will inspect all the resources in the Azure and determine the changes that need to be made.
+The changes that will be applied are listed, to apply them we need to confirm the so called plan.
+After confirming the plan Terraform will execute the changes in Azure.
 Once the changes have been applied the outputs will be printed to the console.
 
 ### Connect to the cluster
 
 ## Step 3 - Configure DNS for Azure Infrastructure
-In the outputs from the previous step you will see the `azure_dns_name_servers` output. 
-This output contains the name servers for the Azure DNS zone. 
-In order to configure the DNS zone you will need to add the name servers to your DNS provider as NS records. 
+
+In the outputs from the previous step you will see the `azure_dns_name_servers` output.
+This output contains the name servers for the Azure DNS zone.
+In order to configure the DNS zone you will need to add the name servers to your DNS provider as NS records.
 Once this is done it may take a while for the changes to propagate (up to 24 hours).
 To check if NS records are propagated we can use the dig online tool at [https://www.digwebinterface.com](https://www.digwebinterface.com).
 Select the following options
+
 - Type: NS
 - Hostnames: \<YOUR DOMAIN\>
 - Options: Trace
@@ -649,23 +692,26 @@ Select the following options
 At the bottom of the dig output we expect to see the NS records matching the name servers we added to the Azure DNS zone.
 
 ## Step 4 - Configure Git repository for GitOps
-Once, or even while, the DNS zone is propagated we can configure the Git repository for GitOps. 
-Firstly we need to create a new repository in GitHub. 
-To make this easier we will use the Deploy Key feature of GitHub. 
-This will allow ArgoCD to fetch changes from the Git repository without having to use a personal access token. 
-In order to create the Deploy Key we will need to download the public key from the Azure Key Vault created in the previous step. 
-To access this go to the Azure Portal, navigate to the resource group and select the Key Vault. 
+
+Once, or even while, the DNS zone is propagated we can configure the Git repository for GitOps.
+Firstly we need to create a new repository in GitHub.
+To make this easier we will use the Deploy Key feature of GitHub.
+This will allow ArgoCD to fetch changes from the Git repository without having to use a personal access token.
+In order to create the Deploy Key we will need to download the public key from the Azure Key Vault created in the previous step.
+To access this go to the Azure Portal, navigate to the resource group and select the Key Vault.
 In the key vault access the secrets and select the public key.
-With the value of the public key go to your GitHub repository and access the settings. In the Security section select Deploy keys. 
+With the value of the public key go to your GitHub repository and access the settings. In the Security section select Deploy keys.
 Create a new entry with the value of the public key and a name of your choice, personally I used the name `GitOps`.
 
 ## Step 5 - Install ArgoCD
-At this point we have prepared everything we need to start using ArgoCD. 
+
+At this point we have prepared everything we need to start using ArgoCD.
 In order to install ArgoCD we will use the Helm chart from [https://argoproj.github.io/argo-helm](https://argoproj.github.io/argo-helm).
 Note that this is a community maintained Helm chart, but in our testing it worked without any issues.
-Inside our project folder we will create a separate stack for the ArgoCD installation. 
-And it will contain the same files as our previous Terraform stack. 
+Inside our project folder we will create a separate stack for the ArgoCD installation.
+And it will contain the same files as our previous Terraform stack.
 So create inside the project folder we are going to be creating the following structure:
+
 ```text
 repository-root/
 |-- tf/
@@ -684,7 +730,9 @@ The `backend.tf` in the `k8s` stack is the same as the one in the `infra` stack,
 Since we do not need any outputs from this stack the `outputs.tf` can be empty, we are still creating it to have it ready for future use.
 
 #### `variables.tf`
+
 In the `variables.tf` file in the `k8s` stack we need to add the following variables:
+
 ```terraform
 variable "subscription_id" {
   description = "Azure subscription ID"
@@ -708,11 +756,14 @@ variable "cluster_name" {
   default     = "selfhosted-teleport-cluster"
 }
 ```
+
 Note that the resource group name here must match the name of the resource group that was created in the previous step.
 
 #### `providers.tf`
-Since we are going to be using Terraform to create Kubernetes resources and interact with Helm we need to add the providers for this. 
+
+Since we are going to be using Terraform to create Kubernetes resources and interact with Helm we need to add the providers for this.
 Add the following content to the `providers.tf` file in the `k8s` stack:
+
 ```terraform
 terraform {
   required_providers {
@@ -767,8 +818,10 @@ Note that we are using the `data` block to retrieve the Kubernetes cluster infor
 The data block is defined in the `main.tf` file in the `k8s` stack.
 
 #### `main.tf`
-Inside the `main.tf` we are simply going to be installing a Helm chart into the Kubernetes cluster. 
+
+Inside the `main.tf` we are simply going to be installing a Helm chart into the Kubernetes cluster.
 This makes it extremely simply, and all we need to do is add the following code:
+
 ```terraform
 data "azurerm_resource_group" "teleport_rg" {
   name = var.resource_group_name
@@ -794,8 +847,9 @@ resource "helm_release" "argocd" {
 }
 ```
 
-And that's it, we are now ready to apply the changes for this stack to our cluster. 
-To do this follow the same steps as for the infra stack. 
+And that's it, we are now ready to apply the changes for this stack to our cluster.
+To do this follow the same steps as for the infra stack.
+
 - Use your shell to navigate to the `k8s` stack
 - Run `terraform init`
 - Set up the `terraform.tfvars` file with the values from the previous step
@@ -803,7 +857,8 @@ To do this follow the same steps as for the infra stack.
 - Wait for the changes to be applied
 
 ### (Optional) Connect to ArgoCD
-In case we want to see the changes we are making to the cluster using GitOps, we can open the ArgoCD UI. 
+
+In case we want to see the changes we are making to the cluster using GitOps, we can open the ArgoCD UI.
 Since there is no ingress for ArgoCD, we are going to use port forwarding to access it.
 To do this we need to connect to the cluster, the easiest way is to locate the cluster in your Azure Portal and run the following command
 
@@ -827,13 +882,15 @@ kubectl --context=selfhosted-teleport-cluster --namespace argocd port-forward se
 ```
 
 Now we can open the ArgoCD UI in our browser by navigating to `http://localhost:8080`.
-After logging in with the username `admin` we be on the ArgoCD dashboard. 
+After logging in with the username `admin` we be on the ArgoCD dashboard.
 Currently, this should be empty, in the next step we are going to be setting up our resources using GitOps.
 
 ## Step 6 - Setup ArgoCD resources
+
 In order to make it this deployment maintainable and simple to update we are going to be using GitOps.
 This means that we are going to be using GitHub as the source of truth for our cluster configuration.
 The following resources will be managed using GitOps:
+
 - cert-manager
 - external-dns
 - Teleport
@@ -847,8 +904,10 @@ This is why we will be using the App of Apps pattern.
 With the app of app pattern will create a single new application in Terraform and this will be responsible for deploying further applications.
 
 ### Create App of Apps
-To create the seed application for the app of apps pattern we will create a new Terraform stack called `argocd`. 
+
+To create the seed application for the app of apps pattern we will create a new Terraform stack called `argocd`.
 Let's up the project to having the following structure
+
 ```text
 repository-root/
 |-- tf/
@@ -866,13 +925,15 @@ repository-root/
 |------ ...
 ```
 
-Just like the `k8s` stack the `backend.tf` is almost identical to the one in the `infra` stack. 
-We will simply update the `key` to be `terraform-argocd.tfstate`. 
+Just like the `k8s` stack the `backend.tf` is almost identical to the one in the `infra` stack.
+We will simply update the `key` to be `terraform-argocd.tfstate`.
 Also, we are going to create the `output.tf` file but for now we will leave it empty.
 
 #### `providers.tf`
-Just like the `k8s` we will be creating Kubernetes resources using Terraform, but this time there is no need to interact with Helm. 
+
+Just like the `k8s` we will be creating Kubernetes resources using Terraform, but this time there is no need to interact with Helm.
 Add the following content to the `providers.tf` file in the `argocd` stack:
+
 ```terraform
 terraform {
   required_providers {
@@ -909,9 +970,11 @@ provider "kubernetes" {
 ```
 
 #### `variables.tf`
-In order to be able to access the existing infrastructure we will be using the `data` resource. 
+
+In order to be able to access the existing infrastructure we will be using the `data` resource.
 Since the names of resources may change we are going to be passing them in as variables.
 Add the following content to the `variables.tf` file in the `argocd` stack:
+
 ```terraform
 variable "subscription_id" {
   description = "Azure subscription ID"
@@ -937,11 +1000,13 @@ variable "cluster_name" {
 ```
 
 #### `main.tf`
-In the `main.tf` we need to 
-- create a Kubernetes secret that ArgoCD will use to access the GitHub repository. 
-This secret will contain the private key for the GitHub repository and 
-this key is stored in the Azure Key Vault. 
-So to make it accessible we are declaring a `data` block for that resource
+
+In the `main.tf` we need to
+
+- create a Kubernetes secret that ArgoCD will use to access the GitHub repository.
+  This secret will contain the private key for the GitHub repository and
+  this key is stored in the Azure Key Vault.
+  So to make it accessible we are declaring a `data` block for that resource
 - create the App of Apps pointing to a specific folder in our GitHub repository
 
 To achieve this lets add the following to our `main.tf` file:
@@ -1035,7 +1100,9 @@ At this point the application is empty and not deploying anything yet.
 To do this we need to populate the repository without application manifests.
 
 ### Populate GitHub repository
+
 In the GitHub repository we created we will need the following structure
+
 ```text
 repository-root/
 |-- argocd/
@@ -1073,6 +1140,7 @@ All the ArgoCD application configurations can be found in the [GitHub repository
 Rather than going over every file in detail we are going to focus on some noteworthy aspects.
 
 ### Handling OIDC Subjects
+
 Earlier we mentioned that the subject for the federated identities must match the ArgoCD configuration.
 The configuration in question is controlled by the application configuration in the root application.
 As an example we will look at the `helm-cert-manager` application.
@@ -1083,48 +1151,51 @@ The corresponding ArgoCD configuration is:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: helm-cert-manager
-  namespace: argocd
-  finalizers:
-  - resources-finalizer.argocd.argoproj.io
+    name: helm-cert-manager
+    namespace: argocd
+    finalizers:
+        - resources-finalizer.argocd.argoproj.io
 spec:
-  destination:
-    namespace: cert-manager
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: argocd/infra/helm-cert-manager
-    repoURL: git@github.com:think-ahead-technologies/blog-self-hosted-teleport.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-    - CreateNamespace=true
+    destination:
+        namespace: cert-manager
+        server: https://kubernetes.default.svc
+    project: default
+    source:
+        path: argocd/infra/helm-cert-manager
+        repoURL: git@github.com:think-ahead-technologies/blog-self-hosted-teleport.git
+        targetRevision: HEAD
+    syncPolicy:
+        automated:
+            prune: true
+            selfHeal: true
+        syncOptions:
+            - CreateNamespace=true
 ```
 
-Note the `spec.destination.namespace` which is the namespace that ArgoCD will deploy the application to. 
+Note the `spec.destination.namespace` which is the namespace that ArgoCD will deploy the application to.
 This has to match the namespace from the subject.
 Also note the `metadata.name` which is the name that ArgoCD will set for the application.
 This is the name that the application will use for authentication.
 We can see this pattern repeated in the configuration of `helm-external-dns` and `helm-teleport`.
 
 ### Client IDs and Storage Account
-The `outputs.tf` for the `infra` stack contained various client IDs. 
+
+The `outputs.tf` for the `infra` stack contained various client IDs.
 These need to be updated in their respective locations:
+
 - cert-manager identity: `cluster-issuer-production.yaml` and `cluster-issuer.yaml`
 - external-dns: `values.yaml` found at `argocd/infra/helm-external-dns`
 - Teleport: `values.yaml` found at `argocd/infra/helm-teleport`
 
-Finally, we need to set the correct storage account name for Teleport. 
+Finally, we need to set the correct storage account name for Teleport.
 This setting must be set in the `values.yaml` file found at `argocd/infra/helm-teleport`.
 
 ### Deploying the applications
+
 At this point we are ready to deploy all the applications.
 To do this simply commit the files to the GitHub repository and push them to the `main` branch.
 ArgoCD will then pick them up from there and deploy them to the cluster.
-You can watch the progress of the deployments in the ArgoCD dashboard. 
+You can watch the progress of the deployments in the ArgoCD dashboard.
 Note that the application for `cert-manager` may have an application that is shown as `out-of-sync`, however this is simply a health check that is not being handled correctly.
 Also be aware that Teleport will create certificates using LetsEncrypt, so it may take a while for the certificates to be ready.
 Only once the certificates will the Teleport application be successfully deployed
@@ -1132,9 +1203,10 @@ Therefore do not be alarmed if the entire deployment takes 15-20 minutes.
 We can see that everything is ready once the Teleport application is shown as `synced` in the ArgoCD dashboard.
 
 ## Step 7 - Create initial user
+
 Now that the cluster is up and running we need to create the initial user for Teleport.
 To do this we will be using the `kubectl` command line tool.
-Simply run the following command to create the initial user, the command will return a URL which will allow us to set the initial password. 
+Simply run the following command to create the initial user, the command will return a URL which will allow us to set the initial password.
 Note that this URL will only be valid for one hour.
 It is also obvious that we do not want to expose this URL since it will allow anyone to create the initial user and set the password.
 

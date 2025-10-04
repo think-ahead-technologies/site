@@ -142,6 +142,10 @@
             "implement": {
                 "title": "Implementation",
                 "description": "Leverage our hands-on implementation services to deploy cutting-edge technology solutions effectively. Our team integrates new systems into your existing infrastructure seamlessly, minimizing disruption and maximizing performance."
+            },
+            "assessment": {
+                "title": "Software Supply Chain Security Assessment",
+                "description": "Evaluate your CI/CD security posture with our comprehensive assessment based on our 4-level maturity model. We identify vulnerabilities, assess compliance with CRA and NIS2, and provide a clear roadmap to strengthen your software supply chain against modern threats."
             }
         },
         "get-in-touch": "Interested? Get in touch!",
@@ -335,7 +339,8 @@
             },
             "supplychain": {
                 "title": "Secure Software Supply Chain",
-                "description": "Our measures to strengthen your software supply chain are compliant with the Cyber Resilience Act. We implement a detailed Software Bill of Materials (SBoM), secure CI/CD practices, and provenance verification to guard against vulnerabilities and ensure robust cyber resilience throughout the development lifecycle."
+                "description": "Protect your CI/CD pipelines from sophisticated supply chain attacks using our proven 4-level maturity framework. From baseline hygiene to advanced zero-trust controls, we help you achieve CRA and NIS2 compliance while strengthening your security posture. Learn more about our comprehensive approach and threat analysis.",
+                "link": "Explore our Supply Chain Security Framework"
             },
             "cloud": {
                 "title": "Cloud security",
@@ -412,6 +417,13 @@
             "title": "Thanks for getting in touch!",
             "subtitle": "Our team will get back to you as soon as we can.",
             "home-link": "Keep exploring"
+        }
+    },
+
+    "supply-chain": {
+        "cta": {
+            "title": "Ready to Strengthen Your Supply Chain Security?",
+            "button": "Schedule Security Assessment"
         }
     },
 

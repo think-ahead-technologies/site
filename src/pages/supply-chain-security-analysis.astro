@@ -1,0 +1,484 @@
+---
+// ABOUTME: Supply Chain Security Analysis page with interactive charts and maturity framework
+// ABOUTME: Presents 2025 threat landscape data with Chart.js visualizations
+import Layout from "~/layouts/PageLayout.astro";
+import CallToAction from "~/components/widgets/CallToAction.astro";
+import type { MetaData } from "~/types";
+import { t, changeLanguage } from "i18next";
+import { getPagePermalink } from "~/utils/permalinks";
+
+changeLanguage("de");
+
+const metadata: MetaData = {
+    title: "Software Supply Chain Security: 2025 Risk & Maturity Framework",
+    description:
+        "A 2025 analysis of escalating threats targeting CI/CD pipelines and a framework for building resilience."
+};
+---
+
+<Layout metadata={metadata}>
+    <div class="container mx-auto px-4 md:px-8 py-12">
+        <header class="text-center mb-16">
+            <h1 class="text-4xl md:text-6xl font-black text-default mb-4">The New Frontline:</h1>
+            <h2 class="text-2xl md:text-3xl font-bold text-accent mb-6">Securing the Software Supply Chain</h2>
+            <p class="max-w-3xl mx-auto mt-4 text-lg text-muted">
+                A 2025 analysis of escalating threats targeting CI/CD pipelines and a framework for building resilience.
+            </p>
+        </header>
+
+        <section id="threat-landscape" class="mb-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div
+                    class="kpi-card rounded-lg shadow-xl p-6 flex flex-col justify-center items-center bg-page border-l-4 border-accent h-full"
+                >
+                    <div class="text-6xl font-black text-default">$60B</div>
+                    <div class="text-lg text-accent mt-2 text-center">
+                        Projected Global Cost of Supply Chain Attacks in 2025
+                    </div>
+                </div>
+                <div
+                    class="kpi-card rounded-lg shadow-xl p-6 flex flex-col justify-center items-center bg-page border-l-4 border-accent h-full"
+                >
+                    <div class="text-6xl font-black text-default">45%</div>
+                    <div class="text-lg text-accent mt-2 text-center">
+                        of Organizations Predicted to Face Attacks by 2025 (Gartner)
+                    </div>
+                </div>
+                <div
+                    class="kpi-card rounded-lg shadow-xl p-6 flex flex-col justify-center items-center bg-page border-l-4 border-accent h-full"
+                >
+                    <div class="text-6xl font-black text-default">~2x</div>
+                    <div class="text-lg text-accent mt-2 text-center">
+                        Increase in Attack Rate from Early 2024 to Mid-2025
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="key-incidents" class="mb-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+                <div class="bg-page dark:bg-slate-800 rounded-lg shadow-xl p-8 flex flex-col">
+                    <h3 class="text-3xl font-bold text-default mb-6">Escalating Attack Sophistication</h3>
+                    <p class="mb-6 text-lg text-muted">
+                        High-profile breaches demonstrate a clear trend: adversaries are systematically targeting the
+                        tools, libraries, and infrastructure developers trust. From injecting backdoors into widely-used
+                        libraries to hijacking build processes, the entire software delivery lifecycle is under siege.
+                    </p>
+                    <div class="relative pl-12 border-l-2 border-dashed border-muted/30 flex-grow">
+                        <div class="timeline-item relative mb-8">
+                            <h4 class="font-bold text-accent">2020: SolarWinds</h4>
+                            <p class="text-sm text-muted">
+                                Malware injected into Orion updates, compromising over 18,000 customers.
+                            </p>
+                        </div>
+                        <div class="timeline-item relative mb-8">
+                            <h4 class="font-bold text-accent">2023: 3CX Desktop App</h4>
+                            <p class="text-sm text-muted">
+                                A trojanized library infected the build process, delivering malware to 600,000
+                                organizations.
+                            </p>
+                        </div>
+                        <div class="timeline-item relative mb-8">
+                            <h4 class="font-bold text-accent">2024: XZ Utils & Polyfill.io</h4>
+                            <p class="text-sm text-muted">
+                                A stealth backdoor was inserted into a core Linux library, while a popular CDN was
+                                hijacked.
+                            </p>
+                        </div>
+                        <div class="timeline-item relative">
+                            <h4 class="font-bold text-accent">2025: Red Hat GitLab & Hugging Face</h4>
+                            <p class="text-sm text-muted">
+                                A major vendor's internal repositories were breached, while malicious AI/ML models were
+                                discovered on a public hub.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-page dark:bg-slate-800 rounded-lg shadow-xl p-8 flex flex-col">
+                    <h3 class="text-3xl font-bold text-default mb-4 text-center">
+                        Monthly Attack Incidents (2024-2025)
+                    </h3>
+                    <p class="text-center mb-4 text-muted">
+                        The rate of supply chain incidents has surged, with attackers averaging nearly 26 incidents per
+                        month since April 2025, a dramatic increase from the previous year.
+                    </p>
+                    <div class="chart-container h-[400px] flex-grow">
+                        <canvas id="attackTrendChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="risk-vectors" class="mb-20">
+            <h3 class="text-4xl font-bold text-default text-center mb-4">
+                The CI/CD Pipeline: An Adversary's "Crown Jewels"
+            </h3>
+            <p class="text-xl text-center max-w-4xl mx-auto mb-12 text-muted">
+                CI/CD pipelines are prime targets because they centralize access to source code, credentials, and
+                production systems. Compromising the pipeline provides an efficient path to an organization's most
+                valuable assets. The following are the top risk vectors identified in recent attacks.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+                <div class="bg-page dark:bg-slate-800 rounded-lg shadow-xl p-6 flex flex-col h-full">
+                    <div class="text-4xl mb-3">🔑</div>
+                    <h4 class="text-xl font-bold text-default mb-2">Credential & Secret Leakage</h4>
+                    <p class="text-muted flex-grow">
+                        Exposed tokens, keys, and credentials in code, scripts, or logs grant attackers direct access to
+                        systems.
+                    </p>
+                </div>
+                <div class="bg-page dark:bg-slate-800 rounded-lg shadow-xl p-6 flex flex-col h-full">
+                    <div class="text-4xl mb-3">📦</div>
+                    <h4 class="text-xl font-bold text-default mb-2">Malicious Dependencies</h4>
+                    <p class="text-muted flex-grow">
+                        Trojanized libraries and dependency confusion attacks inject malware directly into the build
+                        process.
+                    </p>
+                </div>
+                <div class="bg-page dark:bg-slate-800 rounded-lg shadow-xl p-6 flex flex-col h-full">
+                    <div class="text-4xl mb-3">🛠️</div>
+                    <h4 class="text-xl font-bold text-default mb-2">Poisoned Pipeline Execution</h4>
+                    <p class="text-muted flex-grow">
+                        Altering pipeline configurations (e.g., YAML files) allows attackers to execute arbitrary
+                        commands during a build.
+                    </p>
+                </div>
+                <div class="bg-page dark:bg-slate-800 rounded-lg shadow-xl p-6 flex flex-col h-full">
+                    <div class="text-4xl mb-3">🛡️</div>
+                    <h4 class="text-xl font-bold text-default mb-2">Artifact Tampering</h4>
+                    <p class="text-muted flex-grow">
+                        Unsigned or improperly verified build artifacts (binaries, containers) are swapped with
+                        malicious versions post-build.
+                    </p>
+                </div>
+                <div class="bg-page dark:bg-slate-800 rounded-lg shadow-xl p-6 flex flex-col h-full">
+                    <div class="text-4xl mb-3">📤</div>
+                    <h4 class="text-xl font-bold text-default mb-2">Code & Data Exfiltration</h4>
+                    <p class="text-muted flex-grow">
+                        A compromised pipeline is used to siphon proprietary source code, internal data, and sensitive
+                        customer information.
+                    </p>
+                </div>
+                <div class="bg-page dark:bg-slate-800 rounded-lg shadow-xl p-6 flex flex-col h-full">
+                    <div class="text-4xl mb-3">🧠</div>
+                    <h4 class="text-xl font-bold text-default mb-2">Emerging AI/ML Risks</h4>
+                    <p class="text-muted flex-grow">
+                        Novel threats include poisoned training data, backdoored models, and prompt injection attacks
+                        targeting the AI/ML supply chain.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="maturity-model" class="mb-20">
+            <h3 class="text-4xl font-bold text-default text-center mb-4">A Unified CI/CD Security Maturity Model</h3>
+            <p class="text-xl text-center max-w-4xl mx-auto mb-12 text-muted">
+                To combat these threats, organizations can adopt a structured, four-level maturity framework. Each level
+                builds upon the last, introducing progressively stronger controls to measurably reduce risk and align
+                with global compliance standards.
+            </p>
+            <div class="flex flex-col md:flex-row items-stretch justify-center space-y-8 md:space-y-0 md:space-x-4">
+                <div
+                    class="bg-page dark:bg-slate-800 rounded-lg shadow-xl p-6 text-center w-full md:w-1/4 flex flex-col"
+                >
+                    <div class="text-2xl font-bold text-accent mb-2">Level 1</div>
+                    <h4 class="text-xl font-bold text-default mb-2">Baseline Hygiene</h4>
+                    <p class="text-sm text-muted flex-grow">
+                        Establish fundamental controls like MFA, protected branches, and basic dependency scanning to
+                        eliminate low-hanging fruit.
+                    </p>
+                </div>
+                <div class="flow-arrow hidden md:flex items-center text-accent text-2xl">→</div>
+                <div
+                    class="bg-page dark:bg-slate-800 rounded-lg shadow-xl p-6 text-center w-full md:w-1/4 flex flex-col"
+                >
+                    <div class="text-2xl font-bold text-accent mb-2">Level 2</div>
+                    <h4 class="text-xl font-bold text-default mb-2">Preventive Automation</h4>
+                    <p class="text-sm text-muted flex-grow">
+                        Implement automated guardrails such as gated PR pipelines, artifact signing, secret scanning,
+                        and SBOM generation.
+                    </p>
+                </div>
+                <div class="flow-arrow hidden md:flex items-center text-accent text-2xl">→</div>
+                <div
+                    class="bg-page dark:bg-slate-800 rounded-lg shadow-xl p-6 text-center w-full md:w-1/4 flex flex-col"
+                >
+                    <div class="text-2xl font-bold text-accent mb-2">Level 3</div>
+                    <h4 class="text-xl font-bold text-default mb-2">Real-Time Oversight</h4>
+                    <p class="text-sm text-muted flex-grow">
+                        Enforce real-time checks, including SBOM validation in CI, Just-In-Time (JIT) access, and
+                        anomaly detection monitoring.
+                    </p>
+                </div>
+                <div class="flow-arrow hidden md:flex items-center text-accent text-2xl">→</div>
+                <div
+                    class="bg-page dark:bg-slate-800 rounded-lg shadow-xl p-6 text-center w-full md:w-1/4 flex flex-col"
+                >
+                    <div class="text-2xl font-bold text-accent mb-2">Level 4</div>
+                    <h4 class="text-xl font-bold text-default mb-2">Advanced / Zero Trust</h4>
+                    <p class="text-sm text-muted flex-grow">
+                        Adopt an "assume breach" posture with reproducible builds, end-to-end provenance, and zero-trust
+                        networking for all CI/CD components.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="compliance" class="mb-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+                <div class="bg-page dark:bg-slate-800 rounded-lg shadow-xl p-8 flex flex-col">
+                    <h3 class="text-3xl font-bold text-default mb-4 text-center">
+                        Gartner's Prediction: Organizational Risk
+                    </h3>
+                    <p class="text-center mb-4 text-muted">
+                        Gartner's forecast that nearly half of all organizations will experience a software supply chain
+                        attack by 2025 underscores the urgency of adopting mature security practices.
+                    </p>
+                    <div class="chart-container flex-grow">
+                        <canvas id="gartnerPredictionChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-page dark:bg-slate-800 rounded-lg shadow-xl p-8 flex flex-col">
+                    <h3 class="text-3xl font-bold text-default mb-6">Mapping Maturity to Global Compliance</h3>
+                    <p class="mb-6 text-lg text-muted">
+                        Advancing through the maturity model not only strengthens security but also ensures alignment
+                        with key international regulations, turning compliance from a burden into a byproduct of good
+                        practice.
+                    </p>
+                    <div class="flex-grow">
+                        <div class="mb-6">
+                            <h4 class="text-xl font-bold text-accent mb-2">EU Cyber Resilience Act (CRA)</h4>
+                            <p class="mb-2 text-muted">
+                                Mandates secure-by-design principles and vulnerability reporting, with full SBOM
+                                compliance required by December 2027.
+                            </p>
+                            <ul class="list-disc list-inside text-sm space-y-1 text-muted">
+                                <li>
+                                    <span class="font-semibold text-default">Level 2:</span> SBOM generation meets initial
+                                    requirements.
+                                </li>
+                                <li>
+                                    <span class="font-semibold text-default">Level 3:</span> Enforced SBOM usage satisfies
+                                    core CRA mandates.
+                                </li>
+                                <li>
+                                    <span class="font-semibold text-default">Level 4:</span> Automated reporting aligns with
+                                    CRA disclosure timelines.
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-accent mb-2">EU NIS2 Directive</h4>
+                            <p class="mb-2 text-muted">
+                                Requires comprehensive supply chain risk management and structured incident handling for
+                                critical sectors.
+                            </p>
+                            <ul class="list-disc list-inside text-sm space-y-1 text-muted">
+                                <li>
+                                    <span class="font-semibold text-default">Level 3:</span> Supplier security reviews directly
+                                    support NIS2 rules.
+                                </li>
+                                <li>
+                                    <span class="font-semibold text-default">Level 4:</span> Continuous supplier risk scoring
+                                    institutionalizes compliance.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <CallToAction
+        title={t("supply-chain.cta.title")}
+        actions={[
+            {
+                variant: "primary",
+                text: t("supply-chain.cta.button"),
+                href: getPagePermalink("/contact", Astro.currentLocale),
+                icon: "tabler:calendar"
+            }
+        ]}
+    />
+</Layout>
+
+<style>
+    .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -2.75rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: var(--aw-color-accent);
+        border: 4px solid var(--aw-color-bg-page);
+    }
+
+    .chart-container {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 300px;
+        max-height: 400px;
+    }
+
+    @media (min-width: 768px) {
+        .chart-container {
+            height: 350px;
+        }
+    }
+</style>
+
+<script>
+    import Chart from "chart.js/auto";
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const isDark = document.documentElement.classList.contains("dark");
+        const chartTextColor = isDark ? "#CCD6F6" : "#334155";
+        const chartGridColor = isDark ? "rgba(204, 214, 246, 0.1)" : "rgba(51, 65, 85, 0.1)";
+        const primaryAccentColor =
+            getComputedStyle(document.documentElement).getPropertyValue("--aw-color-accent").trim() || "#24BC77";
+        const bgColor = isDark ? "#1e293b" : "#f8fafc";
+
+        const processLabel = (label: string | string[]): string | string[] => {
+            if (typeof label !== "string" || label.length <= 16) {
+                return label;
+            }
+            const words = label.split(" ");
+            const lines: string[] = [];
+            let currentLine = "";
+            for (const word of words) {
+                if ((currentLine + " " + word).trim().length > 16) {
+                    lines.push(currentLine.trim());
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + " " + word).trim();
+                }
+            }
+            if (currentLine) {
+                lines.push(currentLine.trim());
+            }
+            return lines;
+        };
+
+        const tooltipTitleCallback = (tooltipItems: any[]) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(" ");
+            } else {
+                return label;
+            }
+        };
+
+        const commonChartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    labels: {
+                        color: chartTextColor,
+                        font: {
+                            size: 14
+                        }
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    ticks: { color: chartTextColor, font: { size: 12 } },
+                    grid: { color: chartGridColor }
+                },
+                y: {
+                    ticks: { color: chartTextColor, font: { size: 12 } },
+                    grid: { color: chartGridColor }
+                }
+            }
+        };
+
+        const gartnerCtx = document.getElementById("gartnerPredictionChart") as HTMLCanvasElement;
+        if (gartnerCtx) {
+            new Chart(gartnerCtx, {
+                type: "doughnut",
+                data: {
+                    labels: ["Organizations Facing Attacks", "Organizations Not (Yet) Facing Attacks"],
+                    datasets: [
+                        {
+                            label: "% of Organizations",
+                            data: [45, 55],
+                            backgroundColor: [primaryAccentColor, bgColor],
+                            borderColor: [chartTextColor],
+                            borderWidth: 2,
+                            hoverOffset: 4
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: "bottom",
+                            labels: {
+                                color: chartTextColor,
+                                font: { size: 14 }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                title: tooltipTitleCallback
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        const attackTrendCtx = document.getElementById("attackTrendChart") as HTMLCanvasElement;
+        if (attackTrendCtx) {
+            new Chart(attackTrendCtx, {
+                type: "line",
+                data: {
+                    labels: ["Early 2024", "Mid 2024", "Late 2024", "Early 2025", "Mid 2025"],
+                    datasets: [
+                        {
+                            label: "Avg. Monthly Incidents",
+                            data: [13, 15, 18, 22, 26],
+                            fill: true,
+                            backgroundColor: primaryAccentColor + "33",
+                            borderColor: primaryAccentColor,
+                            pointBackgroundColor: primaryAccentColor,
+                            tension: 0.4
+                        }
+                    ]
+                },
+                options: {
+                    ...commonChartOptions,
+                    scales: {
+                        x: {
+                            title: { display: true, text: "Time Period", color: chartTextColor },
+                            ticks: { color: chartTextColor },
+                            grid: { color: chartGridColor }
+                        },
+                        y: {
+                            title: { display: true, text: "Incidents per Month", color: chartTextColor },
+                            beginAtZero: true,
+                            ticks: { color: chartTextColor },
+                            grid: { color: chartGridColor }
+                        }
+                    }
+                }
+            });
+        }
+    });
+</script>

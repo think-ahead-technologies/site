@@ -35,8 +35,22 @@ export const headerData = {
             href: getPermalink(`/partners`)
         },
         {
-            text: "nav.blog",
-            href: getBlogPermalink()
+            text: "nav.insights",
+            links: [
+                {
+                    text: "nav.blog",
+                    href: getBlogPermalink()
+                },
+                {
+                    text: "nav.featured-topics",
+                    links: [
+                        {
+                            text: "nav.supply-chain-security",
+                            href: getPermalink("/supply-chain-security-analysis")
+                        }
+                    ]
+                }
+            ]
         }
     ],
     actions: [{ text: "nav.contact", href: "/contact" }]
