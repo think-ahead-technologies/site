@@ -7,22 +7,21 @@ import type { MetaData } from "~/types";
 import { t, changeLanguage } from "i18next";
 import { getPagePermalink } from "~/utils/permalinks";
 
-changeLanguage("de");
+changeLanguage("en");
 
 const metadata: MetaData = {
-    title: "Software Supply Chain Security: 2025 Risk & Maturity Framework",
-    description:
-        "A 2025 analysis of escalating threats targeting CI/CD pipelines and a framework for building resilience."
+    title: t("supply-chain.metadata.title"),
+    description: t("supply-chain.metadata.description")
 };
 ---
 
 <Layout metadata={metadata}>
     <div class="container mx-auto px-4 md:px-8 py-12">
         <header class="text-center mb-16">
-            <h1 class="text-4xl md:text-6xl font-black text-default mb-4">The New Frontline:</h1>
-            <h2 class="text-2xl md:text-3xl font-bold text-accent mb-6">Securing the Software Supply Chain</h2>
+            <h1 class="text-4xl md:text-6xl font-black text-default mb-4">{t("supply-chain.hero.title")}</h1>
+            <h2 class="text-2xl md:text-3xl font-bold text-accent mb-6">{t("supply-chain.hero.subtitle")}</h2>
             <p class="max-w-3xl mx-auto mt-4 text-lg text-muted">
-                A 2025 analysis of escalating threats targeting CI/CD pipelines and a framework for building resilience.
+                {t("supply-chain.hero.description")}
             </p>
         </header>
 
@@ -31,9 +30,9 @@ const metadata: MetaData = {
                 <div
                     class="kpi-card rounded-lg shadow-xl p-6 flex flex-col justify-center items-center bg-page border-l-4 border-accent h-full"
                 >
-                    <div class="text-6xl font-black text-default">$60B</div>
+                    <div class="text-6xl font-black text-default">{t("supply-chain.kpis.cost.value")}</div>
                     <div class="text-lg text-accent mt-2 text-center">
-                        Projected Global Cost of Supply Chain Attacks in 2025
+                        {t("supply-chain.kpis.cost.label")}
                     </div>
                 </div>
                 <div
@@ -41,7 +40,7 @@ const metadata: MetaData = {
                 >
                     <div class="text-6xl font-black text-default">45%</div>
                     <div class="text-lg text-accent mt-2 text-center">
-                        of Organizations Predicted to Face Attacks by 2025 (Gartner)
+                        {t("supply-chain.kpis.organizations.label")}
                     </div>
                 </div>
                 <div
@@ -49,7 +48,7 @@ const metadata: MetaData = {
                 >
                     <div class="text-6xl font-black text-default">~2x</div>
                     <div class="text-lg text-accent mt-2 text-center">
-                        Increase in Attack Rate from Early 2024 to Mid-2025
+                        {t("supply-chain.kpis.increase.label")}
                     </div>
                 </div>
             </div>
@@ -58,49 +57,43 @@ const metadata: MetaData = {
         <section id="key-incidents" class="mb-20">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
                 <div class="bg-page dark:bg-slate-800 rounded-lg shadow-xl p-8 flex flex-col">
-                    <h3 class="text-3xl font-bold text-default mb-6">Escalating Attack Sophistication</h3>
+                    <h3 class="text-3xl font-bold text-default mb-6">{t("supply-chain.incidents.title")}</h3>
                     <p class="mb-6 text-lg text-muted">
-                        High-profile breaches demonstrate a clear trend: adversaries are systematically targeting the
-                        tools, libraries, and infrastructure developers trust. From injecting backdoors into widely-used
-                        libraries to hijacking build processes, the entire software delivery lifecycle is under siege.
+                        {t("supply-chain.incidents.description")}
                     </p>
                     <div class="relative pl-12 border-l-2 border-dashed border-muted/30 flex-grow">
                         <div class="timeline-item relative mb-8">
                             <h4 class="font-bold text-accent">2020: SolarWinds</h4>
                             <p class="text-sm text-muted">
-                                Malware injected into Orion updates, compromising over 18,000 customers.
+                                {t("supply-chain.incidents.timeline.2020.description")}
                             </p>
                         </div>
                         <div class="timeline-item relative mb-8">
                             <h4 class="font-bold text-accent">2023: 3CX Desktop App</h4>
                             <p class="text-sm text-muted">
-                                A trojanized library infected the build process, delivering malware to 600,000
-                                organizations.
+                                {t("supply-chain.incidents.timeline.2023.description")}
                             </p>
                         </div>
                         <div class="timeline-item relative mb-8">
                             <h4 class="font-bold text-accent">2024: XZ Utils & Polyfill.io</h4>
                             <p class="text-sm text-muted">
-                                A stealth backdoor was inserted into a core Linux library, while a popular CDN was
-                                hijacked.
+                                {t("supply-chain.incidents.timeline.2024.description")}
                             </p>
                         </div>
                         <div class="timeline-item relative">
                             <h4 class="font-bold text-accent">2025: Red Hat GitLab & Hugging Face</h4>
                             <p class="text-sm text-muted">
-                                A major vendor's internal repositories were breached, while malicious AI/ML models were
-                                discovered on a public hub.
+                                {t("supply-chain.incidents.timeline.2025.description")}
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="bg-page dark:bg-slate-800 rounded-lg shadow-xl p-8 flex flex-col">
                     <h3 class="text-3xl font-bold text-default mb-4 text-center">
-                        Monthly Attack Incidents (2024-2025)
+                        {t("supply-chain.incidents.chart.title")}
                     </h3>
                     <p class="text-center mb-4 text-muted">
-                        The rate of supply chain incidents has surged, with attackers averaging nearly 26 incidents per
-                        month since April 2025, a dramatic increase from the previous year.
+                        {t("supply-chain.incidents.chart.description")}
                     </p>
                     <div class="chart-container h-[400px] flex-grow">
                         <canvas id="attackTrendChart"></canvas>
@@ -111,81 +104,70 @@ const metadata: MetaData = {
 
         <section id="risk-vectors" class="mb-20">
             <h3 class="text-4xl font-bold text-default text-center mb-4">
-                The CI/CD Pipeline: An Adversary's "Crown Jewels"
+                {t("supply-chain.risks.title")}
             </h3>
             <p class="text-xl text-center max-w-4xl mx-auto mb-12 text-muted">
-                CI/CD pipelines are prime targets because they centralize access to source code, credentials, and
-                production systems. Compromising the pipeline provides an efficient path to an organization's most
-                valuable assets. The following are the top risk vectors identified in recent attacks.
+                {t("supply-chain.risks.description")}
             </p>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
                 <div class="bg-page dark:bg-slate-800 rounded-lg shadow-xl p-6 flex flex-col h-full">
                     <div class="text-4xl mb-3">🔑</div>
                     <h4 class="text-xl font-bold text-default mb-2">Credential & Secret Leakage</h4>
                     <p class="text-muted flex-grow">
-                        Exposed tokens, keys, and credentials in code, scripts, or logs grant attackers direct access to
-                        systems.
+                        {t("supply-chain.risks.credentials.description")}
                     </p>
                 </div>
                 <div class="bg-page dark:bg-slate-800 rounded-lg shadow-xl p-6 flex flex-col h-full">
                     <div class="text-4xl mb-3">📦</div>
-                    <h4 class="text-xl font-bold text-default mb-2">Malicious Dependencies</h4>
+                    <h4 class="text-xl font-bold text-default mb-2">{t("supply-chain.risks.dependencies.title")}</h4>
                     <p class="text-muted flex-grow">
-                        Trojanized libraries and dependency confusion attacks inject malware directly into the build
-                        process.
+                        {t("supply-chain.risks.dependencies.description")}
                     </p>
                 </div>
                 <div class="bg-page dark:bg-slate-800 rounded-lg shadow-xl p-6 flex flex-col h-full">
                     <div class="text-4xl mb-3">🛠️</div>
                     <h4 class="text-xl font-bold text-default mb-2">Poisoned Pipeline Execution</h4>
                     <p class="text-muted flex-grow">
-                        Altering pipeline configurations (e.g., YAML files) allows attackers to execute arbitrary
-                        commands during a build.
+                        {t("supply-chain.risks.pipeline.description")}
                     </p>
                 </div>
                 <div class="bg-page dark:bg-slate-800 rounded-lg shadow-xl p-6 flex flex-col h-full">
                     <div class="text-4xl mb-3">🛡️</div>
                     <h4 class="text-xl font-bold text-default mb-2">Artifact Tampering</h4>
                     <p class="text-muted flex-grow">
-                        Unsigned or improperly verified build artifacts (binaries, containers) are swapped with
-                        malicious versions post-build.
+                        {t("supply-chain.risks.artifacts.description")}
                     </p>
                 </div>
                 <div class="bg-page dark:bg-slate-800 rounded-lg shadow-xl p-6 flex flex-col h-full">
                     <div class="text-4xl mb-3">📤</div>
-                    <h4 class="text-xl font-bold text-default mb-2">Code & Data Exfiltration</h4>
+                    <h4 class="text-xl font-bold text-default mb-2">{t("supply-chain.risks.exfiltration.title")}</h4>
                     <p class="text-muted flex-grow">
-                        A compromised pipeline is used to siphon proprietary source code, internal data, and sensitive
-                        customer information.
+                        {t("supply-chain.risks.exfiltration.description")}
                     </p>
                 </div>
                 <div class="bg-page dark:bg-slate-800 rounded-lg shadow-xl p-6 flex flex-col h-full">
                     <div class="text-4xl mb-3">🧠</div>
-                    <h4 class="text-xl font-bold text-default mb-2">Emerging AI/ML Risks</h4>
+                    <h4 class="text-xl font-bold text-default mb-2">{t("supply-chain.risks.aiml.title")}</h4>
                     <p class="text-muted flex-grow">
-                        Novel threats include poisoned training data, backdoored models, and prompt injection attacks
-                        targeting the AI/ML supply chain.
+                        {t("supply-chain.risks.aiml.description")}
                     </p>
                 </div>
             </div>
         </section>
 
         <section id="maturity-model" class="mb-20">
-            <h3 class="text-4xl font-bold text-default text-center mb-4">A Unified CI/CD Security Maturity Model</h3>
+            <h3 class="text-4xl font-bold text-default text-center mb-4">{t("supply-chain.maturity.title")}</h3>
             <p class="text-xl text-center max-w-4xl mx-auto mb-12 text-muted">
-                To combat these threats, organizations can adopt a structured, four-level maturity framework. Each level
-                builds upon the last, introducing progressively stronger controls to measurably reduce risk and align
-                with global compliance standards.
+                {t("supply-chain.maturity.description")}
             </p>
             <div class="flex flex-col md:flex-row items-stretch justify-center space-y-8 md:space-y-0 md:space-x-4">
                 <div
                     class="bg-page dark:bg-slate-800 rounded-lg shadow-xl p-6 text-center w-full md:w-1/4 flex flex-col"
                 >
                     <div class="text-2xl font-bold text-accent mb-2">Level 1</div>
-                    <h4 class="text-xl font-bold text-default mb-2">Baseline Hygiene</h4>
+                    <h4 class="text-xl font-bold text-default mb-2">{t("supply-chain.maturity.level1.title")}</h4>
                     <p class="text-sm text-muted flex-grow">
-                        Establish fundamental controls like MFA, protected branches, and basic dependency scanning to
-                        eliminate low-hanging fruit.
+                        {t("supply-chain.maturity.level1.description")}
                     </p>
                 </div>
                 <div class="flow-arrow hidden md:flex items-center text-accent text-2xl">→</div>
@@ -193,10 +175,9 @@ const metadata: MetaData = {
                     class="bg-page dark:bg-slate-800 rounded-lg shadow-xl p-6 text-center w-full md:w-1/4 flex flex-col"
                 >
                     <div class="text-2xl font-bold text-accent mb-2">Level 2</div>
-                    <h4 class="text-xl font-bold text-default mb-2">Preventive Automation</h4>
+                    <h4 class="text-xl font-bold text-default mb-2">{t("supply-chain.maturity.level2.title")}</h4>
                     <p class="text-sm text-muted flex-grow">
-                        Implement automated guardrails such as gated PR pipelines, artifact signing, secret scanning,
-                        and SBOM generation.
+                        {t("supply-chain.maturity.level2.description")}
                     </p>
                 </div>
                 <div class="flow-arrow hidden md:flex items-center text-accent text-2xl">→</div>
@@ -204,10 +185,9 @@ const metadata: MetaData = {
                     class="bg-page dark:bg-slate-800 rounded-lg shadow-xl p-6 text-center w-full md:w-1/4 flex flex-col"
                 >
                     <div class="text-2xl font-bold text-accent mb-2">Level 3</div>
-                    <h4 class="text-xl font-bold text-default mb-2">Real-Time Oversight</h4>
+                    <h4 class="text-xl font-bold text-default mb-2">{t("supply-chain.maturity.level3.title")}</h4>
                     <p class="text-sm text-muted flex-grow">
-                        Enforce real-time checks, including SBOM validation in CI, Just-In-Time (JIT) access, and
-                        anomaly detection monitoring.
+                        {t("supply-chain.maturity.level3.description")}
                     </p>
                 </div>
                 <div class="flow-arrow hidden md:flex items-center text-accent text-2xl">→</div>
@@ -215,10 +195,9 @@ const metadata: MetaData = {
                     class="bg-page dark:bg-slate-800 rounded-lg shadow-xl p-6 text-center w-full md:w-1/4 flex flex-col"
                 >
                     <div class="text-2xl font-bold text-accent mb-2">Level 4</div>
-                    <h4 class="text-xl font-bold text-default mb-2">Advanced / Zero Trust</h4>
+                    <h4 class="text-xl font-bold text-default mb-2">{t("supply-chain.maturity.level4.title")}</h4>
                     <p class="text-sm text-muted flex-grow">
-                        Adopt an "assume breach" posture with reproducible builds, end-to-end provenance, and zero-trust
-                        networking for all CI/CD components.
+                        {t("supply-chain.maturity.level4.description")}
                     </p>
                 </div>
             </div>
@@ -228,63 +207,107 @@ const metadata: MetaData = {
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
                 <div class="bg-page dark:bg-slate-800 rounded-lg shadow-xl p-8 flex flex-col">
                     <h3 class="text-3xl font-bold text-default mb-4 text-center">
-                        Gartner's Prediction: Organizational Risk
+                        {t("supply-chain.compliance.gartner.title")}
                     </h3>
                     <p class="text-center mb-4 text-muted">
-                        Gartner's forecast that nearly half of all organizations will experience a software supply chain
-                        attack by 2025 underscores the urgency of adopting mature security practices.
+                        {t("supply-chain.compliance.gartner.description")}
                     </p>
                     <div class="chart-container flex-grow">
                         <canvas id="gartnerPredictionChart"></canvas>
                     </div>
                 </div>
                 <div class="bg-page dark:bg-slate-800 rounded-lg shadow-xl p-8 flex flex-col">
-                    <h3 class="text-3xl font-bold text-default mb-6">Mapping Maturity to Global Compliance</h3>
+                    <h3 class="text-3xl font-bold text-default mb-6">{t("supply-chain.compliance.mapping.title")}</h3>
                     <p class="mb-6 text-lg text-muted">
-                        Advancing through the maturity model not only strengthens security but also ensures alignment
-                        with key international regulations, turning compliance from a burden into a byproduct of good
-                        practice.
+                        {t("supply-chain.compliance.mapping.description")}
                     </p>
                     <div class="flex-grow">
                         <div class="mb-6">
                             <h4 class="text-xl font-bold text-accent mb-2">EU Cyber Resilience Act (CRA)</h4>
                             <p class="mb-2 text-muted">
-                                Mandates secure-by-design principles and vulnerability reporting, with full SBOM
-                                compliance required by December 2027.
+                                {t("supply-chain.compliance.mapping.cra.description")}
                             </p>
                             <ul class="list-disc list-inside text-sm space-y-1 text-muted">
                                 <li>
-                                    <span class="font-semibold text-default">Level 2:</span> SBOM generation meets initial
-                                    requirements.
+                                    <span class="font-semibold text-default">Level 2:</span>
+                                    {t("supply-chain.compliance.mapping.cra.level2")}
                                 </li>
                                 <li>
-                                    <span class="font-semibold text-default">Level 3:</span> Enforced SBOM usage satisfies
-                                    core CRA mandates.
+                                    <span class="font-semibold text-default">Level 3:</span>
+                                    {t("supply-chain.compliance.mapping.cra.level3")}
                                 </li>
                                 <li>
-                                    <span class="font-semibold text-default">Level 4:</span> Automated reporting aligns with
-                                    CRA disclosure timelines.
+                                    <span class="font-semibold text-default">Level 4:</span>
+                                    {t("supply-chain.compliance.mapping.cra.level4")}
                                 </li>
                             </ul>
                         </div>
                         <div>
-                            <h4 class="text-xl font-bold text-accent mb-2">EU NIS2 Directive</h4>
+                            <h4 class="text-xl font-bold text-accent mb-2">
+                                {t("supply-chain.compliance.mapping.nis2.title")}
+                            </h4>
                             <p class="mb-2 text-muted">
-                                Requires comprehensive supply chain risk management and structured incident handling for
-                                critical sectors.
+                                {t("supply-chain.compliance.mapping.nis2.description")}
                             </p>
                             <ul class="list-disc list-inside text-sm space-y-1 text-muted">
                                 <li>
-                                    <span class="font-semibold text-default">Level 3:</span> Supplier security reviews directly
-                                    support NIS2 rules.
+                                    <span class="font-semibold text-default">Level 3:</span>
+                                    {t("supply-chain.compliance.mapping.nis2.level3")}
                                 </li>
                                 <li>
-                                    <span class="font-semibold text-default">Level 4:</span> Continuous supplier risk scoring
-                                    institutionalizes compliance.
+                                    <span class="font-semibold text-default">Level 4:</span>
+                                    {t("supply-chain.compliance.mapping.nis2.level4")}
                                 </li>
                             </ul>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="our-services" class="mb-20">
+            <h3 class="text-4xl font-bold text-default text-center mb-4">
+                {t("supply-chain.services.title")}
+            </h3>
+            <p class="text-xl text-center max-w-4xl mx-auto mb-12 text-muted">
+                {t("supply-chain.services.description")}
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+                <div class="bg-page dark:bg-slate-800 rounded-lg shadow-xl p-8 flex flex-col h-full">
+                    <div class="text-5xl mb-4 text-center">📊</div>
+                    <h4 class="text-2xl font-bold text-accent mb-3 text-center">
+                        {t("supply-chain.services.assessment.title")}
+                    </h4>
+                    <p class="text-muted flex-grow">
+                        {t("supply-chain.services.assessment.description")}
+                    </p>
+                </div>
+                <div class="bg-page dark:bg-slate-800 rounded-lg shadow-xl p-8 flex flex-col h-full">
+                    <div class="text-5xl mb-4 text-center">🔒</div>
+                    <h4 class="text-2xl font-bold text-accent mb-3 text-center">
+                        {t("supply-chain.services.hardening.title")}
+                    </h4>
+                    <p class="text-muted flex-grow">
+                        {t("supply-chain.services.hardening.description")}
+                    </p>
+                </div>
+                <div class="bg-page dark:bg-slate-800 rounded-lg shadow-xl p-8 flex flex-col h-full">
+                    <div class="text-5xl mb-4 text-center">✍️</div>
+                    <h4 class="text-2xl font-bold text-accent mb-3 text-center">
+                        {t("supply-chain.services.builds.title")}
+                    </h4>
+                    <p class="text-muted flex-grow">
+                        {t("supply-chain.services.builds.description")}
+                    </p>
+                </div>
+                <div class="bg-page dark:bg-slate-800 rounded-lg shadow-xl p-8 flex flex-col h-full">
+                    <div class="text-5xl mb-4 text-center">📦</div>
+                    <h4 class="text-2xl font-bold text-accent mb-3 text-center">
+                        {t("supply-chain.services.containers.title")}
+                    </h4>
+                    <p class="text-muted flex-grow">
+                        {t("supply-chain.services.containers.description")}
+                    </p>
                 </div>
             </div>
         </section>
@@ -320,16 +343,13 @@ const metadata: MetaData = {
     .chart-container {
         position: relative;
         width: 100%;
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-        height: 300px;
-        max-height: 400px;
+        height: 100%;
+        min-height: 300px;
     }
 
     @media (min-width: 768px) {
         .chart-container {
-            height: 350px;
+            min-height: 350px;
         }
     }
 </style>
@@ -337,7 +357,7 @@ const metadata: MetaData = {
 <script>
     import Chart from "chart.js/auto";
 
-    document.addEventListener("DOMContentLoaded", () => {
+    function initCharts() {
         const isDark = document.documentElement.classList.contains("dark");
         const chartTextColor = isDark ? "#CCD6F6" : "#334155";
         const chartGridColor = isDark ? "rgba(204, 214, 246, 0.1)" : "rgba(51, 65, 85, 0.1)";
@@ -458,6 +478,7 @@ const metadata: MetaData = {
                             backgroundColor: primaryAccentColor + "33",
                             borderColor: primaryAccentColor,
                             pointBackgroundColor: primaryAccentColor,
+                            borderWidth: 2,
                             tension: 0.4
                         }
                     ]
@@ -480,5 +501,12 @@ const metadata: MetaData = {
                 }
             });
         }
-    });
+    }
+
+    // Try multiple methods to ensure DOM is ready
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initCharts);
+    } else {
+        initCharts();
+    }
 </script>

@@ -425,6 +425,137 @@
         "cta": {
             "title": "Bereit, Ihre Supply Chain Security zu stärken?",
             "button": "Sicherheitsbewertung vereinbaren"
+        },
+        "metadata": {
+            "title": "Software Supply Chain Security: 2025 Risiken & Maturity Framework",
+            "description": "Eine Analyse zur eskalierenden Bedrohungslage für CI/CD-Pipelines und ein Framework zum Aufbau von Resilienz."
+        },
+        "hero": {
+            "title": "Die neue Frontlinie:",
+            "subtitle": "Sicherung der Software Supply Chain",
+            "description": "Eine Analyse zur eskalierenden Bedrohungslage für CI/CD-Pipelines und ein Framework zum Aufbau von Resilienz"
+        },
+        "kpis": {
+            "cost": {
+                "value": "$60 Mrd.",
+                "label": "Prognostizierte globale Kosten von Supply Chain-Angriffen 2025"
+            },
+            "organizations": {
+                "label": "der Organisationen werden laut Gartner bis 2025 Angriffe erleben"
+            },
+            "increase": {
+                "label": "Anstieg der Angriffsrate von Anfang 2024 bis Mitte 2025"
+            }
+        },
+        "incidents": {
+            "title": "Zunehmende Angriffskomplexität",
+            "description": "Hochkarätige Sicherheitsverletzungen zeigen einen klaren Trend: Angreifer zielen systematisch auf die Tools, Bibliotheken und Infrastrukturen, denen Entwickler vertrauen. Vom Einschleusen von Backdoors in weit verbreitete Bibliotheken bis zur Manipulation von Build-Prozessen – der gesamte Software-Delivery-Lifecycle steht unter Beschuss.",
+            "timeline": {
+                "2020": {
+                    "description": "Malware in Orion-Updates eingeschleust, über 18.000 Kunden kompromittiert."
+                },
+                "2023": {
+                    "description": "Eine trojanisierte Bibliothek infizierte den Build-Prozess und verteilte Malware an 600.000 Organisationen."
+                },
+                "2024": {
+                    "description": "Eine versteckte Backdoor wurde in eine zentrale Linux-Bibliothek eingebaut, während ein beliebtes CDN gekapert wurde."
+                },
+                "2025": {
+                    "description": "Die internen Repositories eines großen Anbieters wurden kompromittiert, während bösartige KI/ML-Modelle auf einem öffentlichen Hub entdeckt wurden."
+                }
+            }
+        },
+        "risks": {
+            "title": "Die CI/CD Pipeline: Die \"Kronjuwelen\" eines Angreifers",
+            "description": "CI/CD-Pipelines sind bevorzugte Ziele, da sie den Zugriff auf Quellcode, Zugangsdaten und Produktionssysteme zentralisieren. Die Kompromittierung der Pipeline bietet einen effizienten Pfad zu den wertvollsten Assets einer Organisation. Im Folgenden die wichtigsten Risikovektoren aus aktuellen Angriffen.",
+            "credentials": {
+                "description": "Exponierte Tokens, Schlüssel und Zugangsdaten in Code, Skripten oder Logs gewähren Angreifern direkten Zugriff auf Systeme."
+            },
+            "dependencies": {
+                "title": "Bösartige Dependencies",
+                "description": "Trojanisierte Bibliotheken und Dependency-Confusion-Angriffe schleusen Malware direkt in den Build-Prozess ein."
+            },
+            "pipeline": {
+                "description": "Die Manipulation von Pipeline-Konfigurationen (z.B. YAML-Dateien) ermöglicht Angreifern die Ausführung beliebiger Befehle während eines Builds."
+            },
+            "artifacts": {
+                "description": "Unsignierte oder unzureichend verifizierte Build-Artefakte (Binaries, Container) werden nach dem Build durch bösartige Versionen ersetzt."
+            },
+            "exfiltration": {
+                "title": "Code- & Datenexfiltration",
+                "description": "Eine kompromittierte Pipeline wird genutzt, um proprietären Quellcode, interne Daten und sensible Kundeninformationen abzuschöpfen."
+            },
+            "aiml": {
+                "title": "Aufkommende KI/ML-Risiken",
+                "description": "Neuartige Bedrohungen umfassen vergiftete Trainingsdaten, Backdoors in Modellen und Prompt-Injection-Angriffe auf die KI/ML Supply Chain."
+            }
+        },
+        "maturity": {
+            "title": "Ein einheitliches CI/CD-Security-Reifegradmodell",
+            "description": "Um diesen Bedrohungen zu begegnen, können Organisationen ein strukturiertes, vierstufiges Reifegradmodell einführen. Jede Stufe baut auf der vorherigen auf und führt progressiv stärkere Kontrollen ein, um Risiken messbar zu reduzieren und sich mit globalen Compliance-Standards zu synchronisieren.",
+            "level1": {
+                "title": "Basis-Hygiene",
+                "description": "Etablierung grundlegender Kontrollen wie MFA, geschützte Branches und einfaches Dependency-Scanning, um die niedrig hängenden Früchte zu eliminieren."
+            },
+            "level2": {
+                "title": "Präventive Automatisierung",
+                "description": "Implementierung automatisierter Leitplanken wie Gated-PR-Pipelines, Artifact-Signierung, Secret-Scanning und SBOM-Generierung."
+            },
+            "level3": {
+                "title": "Echtzeit-Überwachung",
+                "description": "Durchsetzung von Echtzeit-Prüfungen, einschließlich SBOM-Validierung in CI, Just-In-Time (JIT)-Zugriff und Anomalie-Erkennung."
+            },
+            "level4": {
+                "title": "Erweitert / Zero Trust",
+                "description": "Übernahme einer \"Assume Breach\"-Haltung mit reproduzierbaren Builds, End-to-End-Provenance und Zero-Trust-Networking für alle CI/CD-Komponenten."
+            }
+        },
+        "compliance": {
+            "gartner": {
+                "title": "Gartner-Prognose: Organisatorisches Risiko",
+                "description": "Gartners Prognose, dass bis 2025 fast die Hälfte aller Organisationen einen Software-Supply-Chain-Angriff erleben wird, unterstreicht die Dringlichkeit der Einführung ausgereifter Sicherheitspraktiken.",
+                "chartLabels": {
+                    "attacked": "Angegriffene Organizationen",
+                    "notAttacked": "(Noch) nicht angegriffene Organizationen"
+                },
+                "chartDataLabel": "% der Organisationen"
+            },
+            "mapping": {
+                "title": "Mapping von Reifegrad zu globaler Compliance",
+                "description": "Der Fortschritt durch das Reifegradmodell stärkt nicht nur die Sicherheit, sondern gewährleistet auch die Abstimmung mit wichtigen internationalen Vorschriften und verwandelt Compliance von einer Last in ein Nebenprodukt guter Praxis.",
+                "cra": {
+                    "description": "Verlangt Secure-by-Design-Prinzipien und Vulnerability-Reporting, mit vollständiger SBOM-Compliance bis Dezember 2027.",
+                    "level2": "SBOM-Generierung erfüllt erste Anforderungen.",
+                    "level3": "Durchgesetzte SBOM-Nutzung erfüllt zentrale CRA-Anforderungen.",
+                    "level4": "Automatisiertes Reporting entspricht CRA-Offenlegungsfristen."
+                },
+                "nis2": {
+                    "title": "EU NIS2-Richtlinie",
+                    "description": "Erfordert umfassendes Supply-Chain-Risikomanagement und strukturierte Incident-Behandlung für kritische Sektoren.",
+                    "level3": "Supplier-Security-Reviews unterstützen NIS2-Vorschriften direkt.",
+                    "level4": "Kontinuierliches Supplier-Risk-Scoring institutionalisiert Compliance."
+                }
+            }
+        },
+        "services": {
+            "title": "Wie wir helfen können: Supply Chain Security Services",
+            "description": "Wir unterstützen Organisationen beim Aufbau widerstandsfähiger, sicherer Software Supply Chains durch umfassende Assessments und praktische Implementierung.",
+            "assessment": {
+                "title": "Reifegradanalyse",
+                "description": "Umfassende Bewertung Ihrer aktuellen CI/CD-Sicherheitsstellung anhand unseres vierstufigen Reifegradmodells. Wir identifizieren Lücken, priorisieren Risiken und liefern eine klare Roadmap mit messbaren Meilensteinen für den Fortschritt durch jede Stufe."
+            },
+            "hardening": {
+                "title": "CI/CD Pipeline Härtung",
+                "description": "Stärkung Ihrer Build-Infrastruktur mit Defense-in-Depth-Kontrollen: Durchsetzung von Least-Privilege-Zugriff, Implementierung von Pipeline-as-Code-Reviews, Deployment von Runtime-Security-Monitoring und Etablierung sicheren Secret-Managements zur Vermeidung von Credential-Leakage."
+            },
+            "builds": {
+                "title": "Signierte & Verifizierbare Builds",
+                "description": "Implementierung kryptografischer Signierung für alle Build-Artefakte und Etablierung von End-to-End-Provenance mittels SLSA-Frameworks und in-toto-Attestierungen. Stellen Sie sicher, dass jedes Artefakt mit manipulationssicherer Verifikation auf seinen Quell-Commit zurückverfolgt werden kann."
+            },
+            "containers": {
+                "title": "Container Härtung",
+                "description": "Sicherung Ihrer Container Supply Chain vom Base Image bis zum Production Deployment: Vulnerability Scanning, minimale Base Images, Runtime-Security-Policies, Image-Signierung und kontinuierliches Compliance-Monitoring zur Verhinderung containerbasierter Angriffe."
+            }
         }
     },
 
