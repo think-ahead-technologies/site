@@ -66,8 +66,8 @@ Einwilligung ist jede von der betroffenen Person freiwillig für den bestimmten 
 Verantwortlicher im Sinne der Datenschutz-Grundverordnung, sonstiger in den Mitgliedstaaten der Europäischen Union geltenden Datenschutzgesetze und anderer Bestimmungen mit datenschutzrechtlichem Charakter ist die:
 
 Think Ahead Technologies GmbH
-Lautenschlagerstraße 16
-70173 Stuttgart
+Sophienstraße 32
+70178 Stuttgart
 
 Geschäftsführer: Waldemar Kindler
 

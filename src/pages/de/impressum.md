@@ -6,8 +6,8 @@ layout: "~/layouts/MarkdownLayout.astro"
 _Letzte Änderung_: 18 Juni 2024
 
 Think Ahead Technologies GmbH<br>
-Lautenschlagerstraße 16<br>
-70173 Stuttgart<br>
+Sophienstraße 32<br>
+70178 Stuttgart<br>
 Deutschland
 
 Handelsregister: AG Stuttgart, HRB 794174
