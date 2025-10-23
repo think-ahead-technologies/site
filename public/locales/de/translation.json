@@ -351,6 +351,102 @@
         "enhance-security": "Ihre Sicherheit verbessern"
     },
 
+    "cra": {
+        "description": "Navigieren Sie selbstbewusst durch den EU Cyber Resilience Act. Wir helfen Herstellern von Produkten mit digitalen Elementen, CRA-Compliance durch umfassende Sicherheitsbewertungen, SBOM-Management und Schwachstellenüberwachung zu erreichen.",
+        "splash": "Meistern Sie CRA-Compliance und stärken Sie Ihre Produktsicherheit",
+        "subtitle": "Der Cyber Resilience Act setzt neue Sicherheitsstandards für Produkte mit digitalen Elementen. Von Maschinen bis IoT-Geräten führen wir Sie durch Compliance-Anforderungen und bauen gleichzeitig Sicherheitsfähigkeiten auf, die Ihr Unternehmen schützen.",
+
+        "stats": {
+            "title": "CRA-Compliance ist nun verpflichtend",
+            "deadline": {
+                "description": "Finale Compliance-Deadline",
+                "amount": "Dez 2027"
+            },
+            "penalty": {
+                "description": "Maximale Strafe bei Nichteinhaltung",
+                "amount": "15 Mio €"
+            },
+            "response": {
+                "description": "Erforderliche Benachrichtigungszeit für Schwachstellen"
+            },
+            "scope": {
+                "description": "Betroffene Produkte: Maschinen, Industrieanlagen, IoT, Smart Appliances",
+                "amount": "Breit"
+            }
+        },
+
+        "requirements": {
+            "title": "Zentrale CRA-Compliance-Anforderungen",
+            "subtitle": "Der Cyber Resilience Act verlangt Sicherheit über den gesamten Produktlebenszyklus. Wir helfen Ihnen, alle wichtigen Anforderungen effizient zu erfüllen.",
+
+            "security": {
+                "title": "Security by Design",
+                "description": "Integrieren Sie Sicherheit von der Produktkonzeption an mit umfassender Risikobewertung. Dokumentieren Sie Ihre sicheren Entwicklungsprozesse und weisen Sie Konformität durch Selbstbewertung oder Drittzertifizierung nach."
+            },
+            "sbom": {
+                "description": "Führen Sie umfassende Dokumentation aller Softwarekomponenten durch automatisierte SBOM-Erfassung und -Speicherung. Verfolgen Sie Abhängigkeiten, Lizenzen und Komponentenversionen für vollständige Supply-Chain-Transparenz."
+            },
+            "vulnerabilities": {
+                "title": "Schwachstellenmanagement",
+                "description": "Identifizieren, melden und kommunizieren Sie Schwachstellen über zentralisierte Plattformen innerhalb der geforderten Fristen. Implementieren Sie kontinuierliche Überwachung und automatisierte Bedrohungserkennung während des gesamten Produkt-Support-Lebenszyklus."
+            },
+            "support": {
+                "title": "Lebenszyklus-Sicherheit",
+                "description": "Gewährleisten Sie Sicherheit während der gesamten Produkt-Support-Periode mit fortlaufender Schwachstellenbehebung, Firmware-Analyse und Compliance-Reporting-Funktionen."
+            }
+        },
+
+        "solutions": {
+            "title": "Unsere CRA-Compliance-Lösungen",
+            "subtitle": "Wir bieten End-to-End-Unterstützung für CRA-Compliance, von der ersten Bewertung bis zur laufenden Schwachstellenverwaltung.",
+
+            "assessment": {
+                "title": "Sicherheitsreife-Bewertung",
+                "description": "Bewerten Sie Ihre aktuelle Sicherheitslage mit unserem bewährten 4-Stufen-Reifegradmodell. Wir identifizieren Lücken gegenüber CRA-Anforderungen, priorisieren Maßnahmen und liefern eine klare Roadmap mit erreichbaren Meilensteinen für die Compliance."
+            },
+            "platform": {
+                "title": "Compliance-Plattform",
+                "description": "Nutzen Sie unsere integrierte Plattform für automatisierte SBOM-Erfassung, Schwachstellenerkennung, Firmware- und Binary-Analyse, automatisierte Bedrohungsmodellierung und umfassendes Compliance-Reporting. Reduzieren Sie manuelle Compliance-Arbeit um 80%."
+            },
+            "implementation": {
+                "title": "Experten-Implementierung",
+                "description": "Arbeiten Sie mit unserem erfahrenen Team zusammen, um CRA-Compliance-Fähigkeiten in Ihrer Organisation aufzubauen. Wir bieten praktische Implementierungsberatung, Kompetenzaufbau und fortlaufende Unterstützung bei der Schwachstellenbehebung."
+            },
+            "monitoring": {
+                "title": "Kontinuierliche Überwachung",
+                "description": "Erhalten Sie Compliance durch automatisierte kontinuierliche Überwachung, Echtzeit-Schwachstellenwarnungen und optimiertes Reporting. Beschleunigen Sie Produktfreigaben ohne Kompromisse bei Sicherheit oder Compliance-Standards."
+            }
+        },
+
+        "benefits": {
+            "title": "Warum in CRA-Compliance investieren?",
+            "subtitle": "Über die Erfüllung regulatorischer Anforderungen hinaus liefert CRA-Compliance greifbare Geschäftsvorteile.",
+
+            "automation": {
+                "title": "Reduzierung manueller Arbeit",
+                "description": "Unsere Automatisierung reduziert manuelle Compliance-Arbeit um etwa 80% und gibt Ihrem Team Freiraum, sich auf Innovation und Produktentwicklung zu konzentrieren."
+            },
+            "speed": {
+                "title": "Beschleunigte Releases",
+                "description": "Optimierte Sicherheitsprozesse und automatisierte Prüfungen ermöglichen schnellere Produktfreigaben ohne Kompromisse bei Sicherheitsstandards oder Compliance-Anforderungen."
+            },
+            "trust": {
+                "title": "Kundenvertrauen aufbauen",
+                "description": "Demonstrieren Sie Ihr Engagement für Sicherheit durch transparente Praktiken und CRA-Compliance, differenzieren Sie Ihre Produkte im Markt und bauen Sie Kundenvertrauen auf."
+            },
+            "market": {
+                "title": "Marktzugang schützen",
+                "description": "Sichern Sie den fortgesetzten Zugang zu EU-Märkten durch Erfüllung verpflichtender CRA-Anforderungen. Nichteinhaltung kann zu erheblichen Strafen und Marktausschluss führen."
+            }
+        },
+
+        "external-link": {
+            "title": "Mehr über CRA-Compliance erfahren",
+            "description": "Besuchen Sie unsere dedizierte Cyber Resilience Act Plattform für detaillierte Informationen, Ressourcen und Tools.",
+            "button": "cyber-resilience.tech besuchen"
+        }
+    },
+
     "partners": {
         "title": "Unsere Partner",
         "splash": "Durch unsere Partnerschaften, können wir sogar noch mehr Wert schaffen",

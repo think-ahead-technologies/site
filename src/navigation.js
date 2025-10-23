@@ -21,12 +21,21 @@ export const headerData = {
                     href: getPermalink("/solutions/platform")
                 },
                 {
-                    text: "nav.security",
-                    href: getPermalink("/solutions/security")
-                },
-                {
                     text: "nav.cicd",
                     href: getPermalink("/solutions/ci-cd")
+                },
+                {
+                    text: "nav.security",
+                    links: [
+                        {
+                            text: "nav.security-solutions",
+                            href: getPermalink("/solutions/security")
+                        },
+                        {
+                            text: "nav.cra",
+                            href: getPermalink("/solutions/cra")
+                        }
+                    ]
                 }
             ]
         },
@@ -71,8 +80,12 @@ export const footerData = {
                     href: getPermalink("/solutions/platform")
                 },
                 {
-                    text: "nav.security",
+                    text: "nav.security-solutions",
                     href: getPermalink("/solutions/security")
+                },
+                {
+                    text: "nav.cra",
+                    href: getPermalink("/solutions/cra")
                 },
                 {
                     text: "nav.cicd",

@@ -1,0 +1,236 @@
+---
+import { t, changeLanguage } from "i18next";
+import CallToAction from "~/components/widgets/CallToAction.astro";
+import Features2 from "~/components/widgets/Features2.astro";
+import Hero from "~/components/widgets/Hero2.astro";
+import Stats from "~/components/widgets/Stats.astro";
+import Steps from "~/components/widgets/Steps.astro";
+import Layout from "~/layouts/PageLayout.astro";
+import { getPagePermalink } from "~/utils/permalinks";
+
+changeLanguage("de");
+
+const metadata = {
+    title: "Cyber Resilience Act Compliance",
+    description: t("cra.description")
+};
+---
+
+<Layout metadata={metadata}>
+    <!-- Hero Widget ******************* -->
+
+    <Hero
+        tagline="Cyber Resilience Act Compliance"
+        title={t("cra.splash")}
+        subtitle={t("cra.subtitle")}
+        actions={[
+            {
+                variant: "primary",
+                text: t("index.learn-more"),
+                href: "#stats"
+            },
+            {
+                variant: "secondary",
+                text: t("solutions.how-we-can-help"),
+                href: "#services"
+            }
+        ]}
+        image={{
+            src: "/servers-christina-wocintechchat-com-unsplash.jpg",
+            alt: t("images.servers")
+        }}
+    />
+
+    <!-- Stats widget ****************** -->
+
+    <Stats
+        id="stats"
+        title={t("cra.stats.title")}
+        classes={{ title: "mt-3" }}
+        stats={[
+            {
+                icon: "tabler:calendar-due",
+                title: t("cra.stats.deadline.description"),
+                amount: t("cra.stats.deadline.amount").toString()
+            },
+            {
+                icon: "tabler:alert-triangle",
+                title: t("cra.stats.penalty.description"),
+                amount: t("cra.stats.penalty.amount").toString()
+            },
+            {
+                icon: "tabler:clock-bolt",
+                title: t("cra.stats.response.description"),
+                amount: "24h"
+            },
+            {
+                icon: "tabler:package",
+                title: t("cra.stats.scope.description"),
+                amount: t("cra.stats.scope.amount").toString()
+            }
+        ]}
+    >
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+    </Stats>
+
+    <!-- CRA Requirements section -->
+
+    <Steps
+        title={t("cra.requirements.title")}
+        subtitle={t("cra.requirements.subtitle")}
+        items={[
+            {
+                title: t("cra.requirements.security.title"),
+                description: t("cra.requirements.security.description").toString(),
+                icon: "tabler:shield-lock"
+            },
+            {
+                title: "Software Bill of Materials (SBOM)",
+                description: t("cra.requirements.sbom.description").toString(),
+                icon: "tabler:file-code"
+            },
+            {
+                title: t("cra.requirements.vulnerabilities.title"),
+                description: t("cra.requirements.vulnerabilities.description").toString(),
+                icon: "tabler:bug"
+            },
+            {
+                title: t("cra.requirements.support.title"),
+                description: t("cra.requirements.support.description").toString(),
+                icon: "tabler:heart-handshake"
+            }
+        ]}
+    />
+
+    <!-- Our CRA Solutions section -->
+
+    <Features2
+        id="solutions"
+        title={t("cra.solutions.title")}
+        subtitle={t("cra.solutions.subtitle")}
+        columns={2}
+        items={[
+            {
+                title: t("cra.solutions.assessment.title"),
+                description: t("cra.solutions.assessment.description").toString(),
+                icon: "tabler:checklist"
+            },
+            {
+                title: t("cra.solutions.platform.title"),
+                description: t("cra.solutions.platform.description").toString(),
+                icon: "tabler:dashboard"
+            },
+            {
+                title: t("cra.solutions.implementation.title"),
+                description: t("cra.solutions.implementation.description").toString(),
+                icon: "tabler:users"
+            },
+            {
+                title: t("cra.solutions.monitoring.title"),
+                description: t("cra.solutions.monitoring.description").toString(),
+                icon: "tabler:telescope"
+            }
+        ]}
+    >
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+    </Features2>
+
+    <!-- Benefits section -->
+
+    <Steps
+        title={t("cra.benefits.title")}
+        subtitle={t("cra.benefits.subtitle")}
+        items={[
+            {
+                title: t("cra.benefits.automation.title"),
+                description: t("cra.benefits.automation.description").toString(),
+                icon: "tabler:robot"
+            },
+            {
+                title: t("cra.benefits.speed.title"),
+                description: t("cra.benefits.speed.description").toString(),
+                icon: "tabler:rocket"
+            },
+            {
+                title: t("cra.benefits.trust.title"),
+                description: t("cra.benefits.trust.description").toString(),
+                icon: "tabler:award"
+            },
+            {
+                title: t("cra.benefits.market.title"),
+                description: t("cra.benefits.market.description").toString(),
+                icon: "tabler:world"
+            }
+        ]}
+    />
+
+    <!-- External Link to cyber-resilience.tech -->
+
+    <CallToAction
+        actions={[
+            {
+                variant: "primary",
+                text: t("cra.external-link.button"),
+                href: "https://cyber-resilience.tech/",
+                icon: "tabler:external-link",
+                target: "_blank"
+            }
+        ]}
+        title={t("cra.external-link.title")}
+        subtitle={t("cra.external-link.description")}
+    />
+
+    <!-- Our Services section (common across Solutions pages) *********** -->
+
+    <Features2
+        id="services"
+        title={t("solutions.services.title")}
+        columns={3}
+        items={[
+            {
+                title: t("solutions.services.consult.title"),
+                description: t("solutions.services.consult.description").toString(),
+                icon: "tabler:brain"
+            },
+            {
+                title: t("solutions.services.implement.title"),
+                description: t("solutions.services.implement.description").toString(),
+                icon: "tabler:code-dots"
+            },
+            {
+                title: t("solutions.services.assessment.title"),
+                description: t("solutions.services.assessment.description").toString(),
+                icon: "tabler:chart-dots-3",
+                callToAction: {
+                    variant: "link",
+                    text: t("supply-chain.cta.button"),
+                    href: getPagePermalink("/contact", Astro.currentLocale),
+                    icon: "tabler:calendar"
+                }
+            }
+        ]}
+    >
+        <Fragment slot="bg">
+            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+    </Features2>
+
+    <!-- Contact Us widget *********** -->
+
+    <CallToAction
+        actions={[
+            {
+                variant: "primary",
+                text: t("contact.title"),
+                href: `/${Astro.currentLocale}/contact`,
+                icon: "tabler:mail"
+            }
+        ]}
+        title={t("solutions.get-in-touch")}
+        subtitle={t("contact.index-description")}
+    />
+</Layout>

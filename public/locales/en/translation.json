@@ -350,6 +350,102 @@
         "enhance-security": "Enhance your security"
     },
 
+    "cra": {
+        "description": "Navigate the EU Cyber Resilience Act with confidence. We help manufacturers of products with digital elements achieve CRA compliance through comprehensive security assessments, SBOM management, and vulnerability monitoring.",
+        "splash": "Master CRA compliance and strengthen your product security",
+        "subtitle": "The Cyber Resilience Act sets new security standards for products with digital elements. From machinery to IoT devices, we guide you through compliance requirements while building security capabilities that protect your business.",
+
+        "stats": {
+            "title": "CRA compliance is now mandatory",
+            "deadline": {
+                "description": "Final compliance deadline",
+                "amount": "Dec 2027"
+            },
+            "penalty": {
+                "description": "Maximum penalty for non-compliance",
+                "amount": "€15M"
+            },
+            "response": {
+                "description": "Required vulnerability notification time"
+            },
+            "scope": {
+                "description": "Products affected include machinery, industrial equipment, IoT, smart appliances",
+                "amount": "Wide"
+            }
+        },
+
+        "requirements": {
+            "title": "Core CRA compliance requirements",
+            "subtitle": "The Cyber Resilience Act mandates security throughout the product lifecycle. We help you meet all key requirements efficiently.",
+
+            "security": {
+                "title": "Security by design",
+                "description": "Integrate security from product inception with comprehensive risk evaluation. Document your secure development processes and demonstrate conformity through self-assessment or third-party certification frameworks."
+            },
+            "sbom": {
+                "description": "Maintain comprehensive documentation of all software components through automated SBOM collection and storage. Track dependencies, licenses, and component versions for complete supply chain visibility."
+            },
+            "vulnerabilities": {
+                "title": "Vulnerability management",
+                "description": "Identify, report, and communicate vulnerabilities via centralized platforms within required timeframes. Implement continuous monitoring and automated threat detection throughout product support lifecycles."
+            },
+            "support": {
+                "title": "Lifecycle security",
+                "description": "Maintain security throughout the entire product support period with ongoing vulnerability remediation, firmware analysis, and compliance reporting capabilities."
+            }
+        },
+
+        "solutions": {
+            "title": "Our CRA compliance solutions",
+            "subtitle": "We provide end-to-end support for CRA compliance, from initial assessment to ongoing vulnerability management.",
+
+            "assessment": {
+                "title": "Security maturity assessment",
+                "description": "Evaluate your current security posture using our proven 4-stage maturity model. We identify gaps against CRA requirements, prioritize actions, and deliver a clear roadmap with achievable milestones for compliance."
+            },
+            "platform": {
+                "title": "Compliance platform",
+                "description": "Leverage our integrated platform for automated SBOM collection, vulnerability detection, firmware and binary analysis, automated threat modeling, and comprehensive compliance reporting. Reduce manual compliance work by 80%."
+            },
+            "implementation": {
+                "title": "Expert implementation",
+                "description": "Work with our experienced team to build CRA compliance capabilities within your organization. We provide hands-on implementation guidance, capability building, and ongoing vulnerability remediation support."
+            },
+            "monitoring": {
+                "title": "Continuous monitoring",
+                "description": "Maintain compliance with automated continuous monitoring, real-time vulnerability alerts, and streamlined reporting. Accelerate product releases without compromising security or compliance standards."
+            }
+        },
+
+        "benefits": {
+            "title": "Why invest in CRA compliance?",
+            "subtitle": "Beyond meeting regulatory requirements, CRA compliance delivers tangible business benefits.",
+
+            "automation": {
+                "title": "Reduce manual work",
+                "description": "Our automation reduces manual compliance work by approximately 80%, freeing your team to focus on innovation and product development."
+            },
+            "speed": {
+                "title": "Accelerate releases",
+                "description": "Streamlined security processes and automated checks enable faster product releases without compromising security standards or compliance requirements."
+            },
+            "trust": {
+                "title": "Build customer trust",
+                "description": "Demonstrate commitment to security through transparent practices and CRA compliance, differentiating your products in the market and building customer confidence."
+            },
+            "market": {
+                "title": "Protect market access",
+                "description": "Ensure continued access to EU markets by meeting mandatory CRA requirements. Non-compliance could result in significant fines and market exclusion."
+            }
+        },
+
+        "external-link": {
+            "title": "Learn more about CRA compliance",
+            "description": "Visit our dedicated Cyber Resilience Act platform for detailed information, resources, and tools.",
+            "button": "Visit cyber-resilience.tech"
+        }
+    },
+
     "partners": {
         "title": "Our partners",
         "splash": "We deliver even greater value for you alongside our partners",

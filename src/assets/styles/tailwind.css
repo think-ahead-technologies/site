@@ -80,6 +80,13 @@
     padding-top: 0.75rem;
 }
 
+/* Add spacing after submenu groups to separate from following items */
+.dropdown-submenu {
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(156, 163, 175, 0.15);
+}
+
 /* Smooth transitions for all menu items */
 .dropdown-menu a,
 .dropdown-submenu-menu a {
