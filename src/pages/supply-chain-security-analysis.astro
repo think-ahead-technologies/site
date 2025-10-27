@@ -40,7 +40,7 @@ const metadata: MetaData = {
                 >
                     <div class="text-6xl font-black text-default">45%</div>
                     <div class="text-lg text-accent mt-2 text-center">
-                        {t("supply-chain.kpis.organizations.label")}
+                        {t("supply-chain.kpis.organisations.label")}
                     </div>
                 </div>
                 <div
@@ -92,9 +92,6 @@ const metadata: MetaData = {
                     <h3 class="text-3xl font-bold text-default mb-4 text-center">
                         {t("supply-chain.incidents.chart.title")}
                     </h3>
-                    <p class="text-center mb-4 text-muted">
-                        {t("supply-chain.incidents.chart.description")}
-                    </p>
                     <div class="chart-container h-[400px] flex-grow">
                         <canvas id="attackTrendChart"></canvas>
                     </div>
@@ -112,7 +109,7 @@ const metadata: MetaData = {
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
                 <div class="bg-page dark:bg-slate-800 rounded-lg shadow-xl p-6 flex flex-col h-full">
                     <div class="text-4xl mb-3">🔑</div>
-                    <h4 class="text-xl font-bold text-default mb-2">Credential & Secret Leakage</h4>
+                    <h4 class="text-xl font-bold text-default mb-2">{t("supply-chain.risks.credentials.title")}</h4>
                     <p class="text-muted flex-grow">
                         {t("supply-chain.risks.credentials.description")}
                     </p>
@@ -126,14 +123,14 @@ const metadata: MetaData = {
                 </div>
                 <div class="bg-page dark:bg-slate-800 rounded-lg shadow-xl p-6 flex flex-col h-full">
                     <div class="text-4xl mb-3">🛠️</div>
-                    <h4 class="text-xl font-bold text-default mb-2">Poisoned Pipeline Execution</h4>
+                    <h4 class="text-xl font-bold text-default mb-2">{t("supply-chain.risks.pipeline.title")}</h4>
                     <p class="text-muted flex-grow">
                         {t("supply-chain.risks.pipeline.description")}
                     </p>
                 </div>
                 <div class="bg-page dark:bg-slate-800 rounded-lg shadow-xl p-6 flex flex-col h-full">
                     <div class="text-4xl mb-3">🛡️</div>
-                    <h4 class="text-xl font-bold text-default mb-2">Artifact Tampering</h4>
+                    <h4 class="text-xl font-bold text-default mb-2">{t("supply-chain.risks.artifacts.title")}</h4>
                     <p class="text-muted flex-grow">
                         {t("supply-chain.risks.artifacts.description")}
                     </p>
@@ -365,27 +362,6 @@ const metadata: MetaData = {
             getComputedStyle(document.documentElement).getPropertyValue("--aw-color-accent").trim() || "#24BC77";
         const bgColor = isDark ? "#1e293b" : "#f8fafc";
 
-        const processLabel = (label: string | string[]): string | string[] => {
-            if (typeof label !== "string" || label.length <= 16) {
-                return label;
-            }
-            const words = label.split(" ");
-            const lines: string[] = [];
-            let currentLine = "";
-            for (const word of words) {
-                if ((currentLine + " " + word).trim().length > 16) {
-                    lines.push(currentLine.trim());
-                    currentLine = word;
-                } else {
-                    currentLine = (currentLine + " " + word).trim();
-                }
-            }
-            if (currentLine) {
-                lines.push(currentLine.trim());
-            }
-            return lines;
-        };
-
         const tooltipTitleCallback = (tooltipItems: any[]) => {
             const item = tooltipItems[0];
             let label = item.chart.data.labels[item.dataIndex];
@@ -431,10 +407,10 @@ const metadata: MetaData = {
             new Chart(gartnerCtx, {
                 type: "doughnut",
                 data: {
-                    labels: ["Organizations Facing Attacks", "Organizations Not (Yet) Facing Attacks"],
+                    labels: ["Organizations facing attacks", "Organizations not (yet) facing attacks"],
                     datasets: [
                         {
-                            label: "% of Organizations",
+                            label: "% of organizations",
                             data: [45, 55],
                             backgroundColor: [primaryAccentColor, bgColor],
                             borderColor: [chartTextColor],
@@ -472,7 +448,7 @@ const metadata: MetaData = {
                     labels: ["Early 2024", "Mid 2024", "Late 2024", "Early 2025", "Mid 2025"],
                     datasets: [
                         {
-                            label: "Avg. Monthly Incidents",
+                            label: "Avg. monthly incidents",
                             data: [13, 15, 18, 22, 26],
                             fill: true,
                             backgroundColor: primaryAccentColor + "33",
@@ -487,12 +463,12 @@ const metadata: MetaData = {
                     ...commonChartOptions,
                     scales: {
                         x: {
-                            title: { display: true, text: "Time Period", color: chartTextColor },
+                            title: { display: true, text: "Time period", color: chartTextColor },
                             ticks: { color: chartTextColor },
                             grid: { color: chartGridColor }
                         },
                         y: {
-                            title: { display: true, text: "Incidents per Month", color: chartTextColor },
+                            title: { display: true, text: "Incidents reported", color: chartTextColor },
                             beginAtZero: true,
                             ticks: { color: chartTextColor },
                             grid: { color: chartGridColor }

@@ -409,7 +409,7 @@
             },
             "implementation": {
                 "title": "Expert implementation",
-                "description": "Work with our experienced team to build CRA compliance capabilities within your organization. We provide hands-on implementation guidance, capability building, and ongoing vulnerability remediation support."
+                "description": "Work with our experienced team to build CRA compliance capabilities within your organisation. We provide hands-on implementation guidance, capability building, and ongoing vulnerability remediation support."
             },
             "monitoring": {
                 "title": "Continuous monitoring",
@@ -533,24 +533,27 @@
         "kpis": {
             "cost": {
                 "value": "$60B",
-                "label": "Projected Global Cost of Supply Chain Attacks in 2025"
+                "label": "Projected global cost of supply chain attacks in 2025"
             },
-            "organizations": {
-                "label": "of Organizations Predicted to Face Attacks by 2025 (Gartner)"
+            "organisations": {
+                "label": "of organisations expected to face attacks by 2025 (Gartner)"
             },
             "increase": {
-                "label": "Increase in Attack Rate from Early 2024 to Mid-2025"
+                "label": "Increase in attack rate from early 2024 to mid-2025"
             }
         },
         "incidents": {
-            "title": "Escalating Attack Sophistication",
+            "title": "Escalating attack sophistication",
             "description": "High-profile breaches demonstrate a clear trend: adversaries are systematically targeting the tools, libraries, and infrastructure developers trust. From injecting backdoors into widely-used libraries to hijacking build processes, the entire software delivery lifecycle is under siege.",
+            "chart": {
+                "title": "Supply chain incidents"
+            },
             "timeline": {
                 "2020": {
                     "description": "Malware injected into Orion updates, compromising over 18,000 customers."
                 },
                 "2023": {
-                    "description": "A trojanized library infected the build process, delivering malware to 600,000 organizations."
+                    "description": "A trojanized library infected the build process, delivering malware to 600,000 organisations."
                 },
                 "2024": {
                     "description": "A stealth backdoor was inserted into a core Linux library, while a popular CDN was hijacked."
@@ -561,62 +564,65 @@
             }
         },
         "risks": {
-            "title": "The CI/CD Pipeline: An Adversary's \"Crown Jewels\"",
-            "description": "CI/CD pipelines are prime targets because they centralize access to source code, credentials, and production systems. Compromising the pipeline provides an efficient path to an organization's most valuable assets. The following are the top risk vectors identified in recent attacks.",
+            "title": "The CI/CD pipeline: an adversary's \"Crown Jewels\"",
+            "description": "CI/CD pipelines are prime targets because they centralize access to source code, credentials, and production systems. Compromising the pipeline provides an efficient path to an organisation's most valuable assets. The following are the top risk vectors identified in recent attacks.",
             "credentials": {
+                "title": "Credential & Secret Leakage",
                 "description": "Exposed tokens, keys, and credentials in code, scripts, or logs grant attackers direct access to systems."
             },
             "dependencies": {
-                "title": "Malicious Dependencies",
+                "title": "Malicious dependencies",
                 "description": "Trojanized libraries and dependency confusion attacks inject malware directly into the build process."
             },
             "pipeline": {
+                "title": "Poisoned Pipeline Execution",
                 "description": "Altering pipeline configurations (e.g., YAML files) allows attackers to execute arbitrary commands during a build."
             },
             "artifacts": {
+                "title": "Artifact Tampering",
                 "description": "Unsigned or improperly verified build artifacts (binaries, containers) are swapped with malicious versions post-build."
             },
             "exfiltration": {
-                "title": "Code & Data Exfiltration",
+                "title": "Code and data exfiltration",
                 "description": "A compromised pipeline is used to siphon proprietary source code, internal data, and sensitive customer information."
             },
             "aiml": {
-                "title": "Emerging AI/ML Risks",
+                "title": "Emerging AI/ML risks",
                 "description": "Novel threats include poisoned training data, backdoored models, and prompt injection attacks targeting the AI/ML supply chain."
             }
         },
         "maturity": {
-            "title": "A Unified CI/CD Security Maturity Model",
-            "description": "To combat these threats, organizations can adopt a structured, four-level maturity framework. Each level builds upon the last, introducing progressively stronger controls to measurably reduce risk and align with global compliance standards.",
+            "title": "A unified CI/CD security maturity model",
+            "description": "To combat these threats, organisations can adopt a structured, four-level maturity framework. Each level builds upon the last, introducing progressively stronger controls to measurably reduce risk and align with global compliance standards.",
             "level1": {
-                "title": "Baseline Hygiene",
+                "title": "Baseline hygiene",
                 "description": "Establish fundamental controls like MFA, protected branches, and basic dependency scanning to eliminate low-hanging fruit."
             },
             "level2": {
-                "title": "Preventive Automation",
+                "title": "Preventive automation",
                 "description": "Implement automated guardrails such as gated PR pipelines, artifact signing, secret scanning, and SBOM generation."
             },
             "level3": {
-                "title": "Real-Time Oversight",
+                "title": "Real-Time oversight",
                 "description": "Enforce real-time checks, including SBOM validation in CI, Just-In-Time (JIT) access, and anomaly detection monitoring."
             },
             "level4": {
-                "title": "Advanced / Zero Trust",
+                "title": "Advanced / zero trust",
                 "description": "Adopt an \"assume breach\" posture with reproducible builds, end-to-end provenance, and zero-trust networking for all CI/CD components."
             }
         },
         "compliance": {
             "gartner": {
-                "title": "Gartner's Prediction: Organizational Risk",
-                "description": "Gartner's forecast that nearly half of all organizations will experience a software supply chain attack by 2025 underscores the urgency of adopting mature security practices.",
+                "title": "Gartner's prediction: organisational risk",
+                "description": "Gartner's forecast that nearly half of all organisations will experience a software supply chain attack by 2025 underscores the urgency of adopting mature security practices.",
                 "chartLabels": {
-                    "attacked": "Organizations Facing Attacks",
-                    "notAttacked": "Organizations Not (Yet) Facing Attacks"
+                    "attacked": "Organisations facing attacks",
+                    "notAttacked": "Organisations not (yet) facing attacks"
                 },
-                "chartDataLabel": "% of Organizations"
+                "chartDataLabel": "% of organisations"
             },
             "mapping": {
-                "title": "Mapping Maturity to Global Compliance",
+                "title": "Mapping maturity to global compliance",
                 "description": "Advancing through the maturity model not only strengthens security but also ensures alignment with key international regulations, turning compliance from a burden into a byproduct of good practice.",
                 "cra": {
                     "description": "Mandates secure-by-design principles and vulnerability reporting, with full SBOM compliance required by December 2027.",
@@ -628,27 +634,27 @@
                     "title": "EU NIS2 Directive",
                     "description": "Requires comprehensive supply chain risk management and structured incident handling for critical sectors.",
                     "level3": "Supplier security reviews directly support NIS2 rules.",
-                    "level4": "Continuous supplier risk scoring institutionalizes compliance."
+                    "level4": "Continuous supplier risk scoring institutionalises compliance."
                 }
             }
         },
         "services": {
-            "title": "How We Can Help: Supply Chain Security Services",
-            "description": "We help organizations build resilient, secure software supply chains through comprehensive assessments and hands-on implementation.",
+            "title": "How we can help: supply chain security services",
+            "description": "We help organisations build resilient, secure software supply chains through comprehensive assessments and hands-on implementation.",
             "assessment": {
-                "title": "Maturity Assessment",
+                "title": "Maturity assessment",
                 "description": "Comprehensive evaluation of your current CI/CD security posture against our four-level maturity framework. We identify gaps, prioritize risks, and provide a clear roadmap to advance through each level with measurable milestones."
             },
             "hardening": {
-                "title": "CI/CD Pipeline Hardening",
+                "title": "CI/CD pipeline hardening",
                 "description": "Strengthen your build infrastructure with defense-in-depth controls: enforce least-privilege access, implement pipeline-as-code reviews, deploy runtime security monitoring, and establish secure secret management to prevent credential leakage."
             },
             "builds": {
-                "title": "Signed & Verifiable Builds",
+                "title": "Signed & verifiable builds",
                 "description": "Implement cryptographic signing for all build artifacts and establish end-to-end provenance using SLSA frameworks and in-toto attestations. Ensure every artifact can be traced back to its source commit with tamper-proof verification."
             },
             "containers": {
-                "title": "Container Hardening",
+                "title": "Container hardening",
                 "description": "Secure your container supply chain from base image to production deployment: vulnerability scanning, minimal base images, runtime security policies, image signing, and continuous compliance monitoring to prevent container-based attacks."
             }
         }

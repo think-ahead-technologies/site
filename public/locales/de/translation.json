@@ -536,7 +536,7 @@
                 "value": "$60 Mrd.",
                 "label": "Prognostizierte globale Kosten von Supply Chain-Angriffen 2025"
             },
-            "organizations": {
+            "organisations": {
                 "label": "der Organisationen werden laut Gartner bis 2025 Angriffe erleben"
             },
             "increase": {
@@ -546,6 +546,9 @@
         "incidents": {
             "title": "Zunehmende Angriffskomplexität",
             "description": "Hochkarätige Sicherheitsverletzungen zeigen einen klaren Trend: Angreifer zielen systematisch auf die Tools, Bibliotheken und Infrastrukturen, denen Entwickler vertrauen. Vom Einschleusen von Backdoors in weit verbreitete Bibliotheken bis zur Manipulation von Build-Prozessen – der gesamte Software-Delivery-Lifecycle steht unter Beschuss.",
+            "chart": {
+                "title": "Vorfälle in der Supply Chain"
+            },
             "timeline": {
                 "2020": {
                     "description": "Malware in Orion-Updates eingeschleust, über 18.000 Kunden kompromittiert."
@@ -565,6 +568,7 @@
             "title": "Die CI/CD Pipeline: Die \"Kronjuwelen\" eines Angreifers",
             "description": "CI/CD-Pipelines sind bevorzugte Ziele, da sie den Zugriff auf Quellcode, Zugangsdaten und Produktionssysteme zentralisieren. Die Kompromittierung der Pipeline bietet einen effizienten Pfad zu den wertvollsten Assets einer Organisation. Im Folgenden die wichtigsten Risikovektoren aus aktuellen Angriffen.",
             "credentials": {
+                "title": "Zugangsdaten und geheime Informationen",
                 "description": "Exponierte Tokens, Schlüssel und Zugangsdaten in Code, Skripten oder Logs gewähren Angreifern direkten Zugriff auf Systeme."
             },
             "dependencies": {
@@ -572,9 +576,11 @@
                 "description": "Trojanisierte Bibliotheken und Dependency-Confusion-Angriffe schleusen Malware direkt in den Build-Prozess ein."
             },
             "pipeline": {
+                "title": "Vergiftete Pipeline-Ausführung",
                 "description": "Die Manipulation von Pipeline-Konfigurationen (z.B. YAML-Dateien) ermöglicht Angreifern die Ausführung beliebiger Befehle während eines Builds."
             },
             "artifacts": {
+                "title": "Manipulierte Build-Artefakte",
                 "description": "Unsignierte oder unzureichend verifizierte Build-Artefakte (Binaries, Container) werden nach dem Build durch bösartige Versionen ersetzt."
             },
             "exfiltration": {
