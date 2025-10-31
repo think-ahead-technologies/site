@@ -56,6 +56,10 @@ export const headerData = {
                         {
                             text: "nav.supply-chain-security",
                             href: getPermalink("/supply-chain-security-analysis")
+                        },
+                        {
+                            text: "nav.rdes-white-paper",
+                            href: getPermalink("/rdes-white-paper")
                         }
                     ]
                 }
