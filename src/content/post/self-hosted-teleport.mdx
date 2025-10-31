@@ -2,8 +2,7 @@
 publishDate: 2025-03-01T00:00:00Z
 title: "Self-hosting Teleport with Terraform and GitOps"
 excerpt: Self-hosting is a powerful approach to running your own infrastructure. In this blog post, we’ll explore how you can set up Teleport on your own infrastructure, using Terraform and GitOps.
-
-[//]: # (image: /iac-pixabay-pexels.jpg)
+image: /self-hosted-teleport.svg
 
 draft: false
 tags:
@@ -366,7 +365,7 @@ Note the following
 For ArgoCD we will use GitHub as the source of truth for our cluster configuration.
 In order to securely store the SSH keys we will use Azure Key Vault.
 In this guide we will create the key using the corresponding Terraform resource, however you can also generate the keys using the OpenSSH directly and then import them.
-A potential downside of using the Terraform resource is that you will need to store the private key in the Terraform state, which means that if someone has access to the state they will also have access to the key.  
+A potential downside of using the Terraform resource is that you will need to store the private key in the Terraform state, which means that if someone has access to the state they will also have access to the key.
 Add the following code to the `main.tf` file. This
 
 - creates a TLS key for ArgoCD
@@ -493,7 +492,7 @@ resource "azurerm_role_assignment" "external_dns_resource_group_reader" {
 
 As you may have noticed we are creating an additional role assignment for `ExternalDNS` compared to `cert-manager`.
 This additional role assignment is required in order to allow `ExternalDNS` to inspect all the networks that are available within the resource group.
-It will not make any modifications, hence why the `Reader` role is sufficient.  
+It will not make any modifications, hence why the `Reader` role is sufficient.
 Also the same caveat applies here as to `cert-manager` when it comes to the `subject` of the `azurerm_federated_identity_credential`.
 If you are following this guide you should not have any issues, but be careful when making you own modifications
 
