@@ -50,7 +50,7 @@
     "who-we-are": {
         "title": "Wer wir sind",
         "tagline": "Wir sind",
-        "splash": "Ihre verlässliche Technologie Beratung <0>aus Stuttgart</0>",
+        "splash": "Ihre verlässliche Technologie-Beratung <0>aus Stuttgart</0>",
         "description": "Egal ob Cloud, Plattformen oder Sicherheit. Think Ahead Technologies ist Ihr verlässlicher Partner aus Stuttgart",
         "subtitle": "Experten in Cloud, Plattformen und Sicherheit. Wir sind bereit für Ihre Herausforderungen.",
         "values": {
@@ -58,7 +58,7 @@
             "subtitle": "Unser Erfolg ist kein Zufall — unsere Arbeit basiert auf einem starken Wertesystem.",
             "proactivity": {
                 "title": "Sei proaktiv",
-                "description": "Ein Problem erst dann zu lösen, wenn man danach gefragt wird, ist bereits zu spät . Wir halten immer Ausschau nach Verbesserungsmöglichkeiten."
+                "description": "Ein Problem erst dann zu lösen, wenn man danach gefragt wird, ist bereits zu spät. Wir halten immer Ausschau nach Verbesserungsmöglichkeiten."
             },
             "learning": {
                 "title": "Lerne schnell",
@@ -66,7 +66,7 @@
             },
             "trustworthiness": {
                 "title": "Verdiene dir Vertrauen",
-                "description": "Wir sind der festen Überzeugung, dass bei Fragen oder Probleme, eine direkte und offene Kommunikation zur effektivsten und angenehmsten Zusammenarbeit führt.."
+                "description": "Wir sind der festen Überzeugung, dass bei Fragen oder Probleme eine direkte und offene Kommunikation zur effektivsten und angenehmsten Zusammenarbeit führt."
             },
             "cheerfulness": {
                 "title": "Schenke ein Lächeln",
@@ -85,7 +85,7 @@
                 "description": "Von der Vereinfachung und Automatisierung von Deployment bis hin zur Einführung maßgeschneiderter Tools gibt es viele Möglichkeiten, bei Ihrer Infrastruktur Geld zu sparen."
             },
             "focus": {
-                "title": "Fokus auf das wesentliche",
+                "title": "Fokus auf das Wesentliche",
                 "description": "Investieren Sie dort, wo es am meisten bewirkt, statt in überteuerte Infrastrukturprojekte."
             },
             "adaptation": {
@@ -161,7 +161,7 @@
             "subtitle": "Ein Cloud-nativer Ansatz für Ihre Infrastruktur kann zahlreiche Vorteile gegenüber einem On-Premise- oder Server-Ansatz haben.",
             "scalability": {
                 "title": "Skalierbarkeit",
-                "description": "Ihre Infrastruktur wächst mit Ihren Bedarf mit, selbst zu Spitzenzeiten - und fährt auch automatisch wieder herunter, wenn solch intensive Arbeitslasten nicht erforderlich sind."
+                "description": "Ihre Infrastruktur wächst mit Ihrem Bedarf mit, selbst zu Spitzenzeiten - und fährt auch automatisch wieder herunter, wenn solch intensive Arbeitslasten nicht erforderlich sind."
             },
             "flexibility": {
                 "title": "Flexibilität",
@@ -177,11 +177,11 @@
             },
             "availability": {
                 "title": "Verfügbarkeit",
-                "description": "Im Falle eines Problems in Ihrem Rechenzentrum müssen Sie um die Behebung des Problem selbst kümmern. Das ist zeit-, personal- und kostenintensiv. Cloud-native Lösungen können mit minimalem Aufwand, Kosten und Ausfallzeiten automatisch neu bereitgestellt werden - oft sogar ohne manuellen Benutzereingriff."
+                "description": "Im Falle eines Problems in Ihrem Rechenzentrum müssen Sie sich um die Behebung des Problem selbst kümmern. Das ist zeit-, personal- und kostenintensiv. Cloud-native Lösungen können mit minimalem Aufwand, Kosten und Ausfallzeiten automatisch neu bereitgestellt werden - oft sogar ohne manuellen Benutzereingriff."
             },
             "maintenance": {
                 "title": "Automatisierte Wartung",
-                "description": "Tools wie Kubernetes erfordern einen großem Aufwand zum Aktualisieren. Selbst die Änderung einzelner Server und Datenbanken kann riskant sein. Cloud Plattformen ermöglichen nahtlose Upgrades durch rollierende Deployments oder serverless Ansätze."
+                "description": "Das Aktualisieren von Tools wie Kubernetes ist sehr aufwändig. Selbst die Änderung einzelner Server und Datenbanken kann riskant sein. Cloud Plattformen ermöglichen nahtlose Upgrades durch rollierende Deployments oder serverlose Ansätze."
             }
         },
         "challenges": {
@@ -193,11 +193,11 @@
             },
             "cost": {
                 "title": "Kostenexplosion",
-                "description": "Die Cloud bietet Kostenkontrolle, aber auch viel potential für teure Fehler. Diese können schnell wachsen, wenn sie nicht beachtet werden."
+                "description": "Die Cloud bietet Kostenkontrolle, aber auch viel Potenzial für teure Fehler. Diese können schnell wachsen, wenn sie nicht beachtet werden."
             },
             "combination": {
                 "title": "Integration",
-                "description": "Ihre Cloud-Systeme müssen mit einer vielzahl von Drittanbieter Ressourcen und diversen on-prem Tools zusammenarbeiten. Vielleicht möchten Sie sogar mehrere Cloud-Anbieter miteinander verbinden."
+                "description": "Ihre Cloud-Systeme müssen mit einer Vielzahl von Drittanbieter Ressourcen und diversen on-prem Tools zusammenarbeiten. Vielleicht möchten Sie sogar mehrere Cloud-Anbieter miteinander verbinden."
             },
             "ux": {
                 "title": "Schwerfällige Benutzererfahrung",
@@ -221,7 +221,7 @@
                 "description": "Sie haben eine on-premise Umgebung  und möchten die Vorteile der Cloud in vollem Umfang nutzen? Wir bauen gemeinsam eine funktionierende Umgebung auf und sorgen dafür, dass Sie diese effektiv nutzen können."
             },
             "architecture": {
-                "title": "Cloud Solution Architektur",
+                "title": "Cloud-Solution-Architektur",
                 "description": "Wenn Sie ein neues System für Ihre Mitarbeiter oder Kunden entwerfen, ist es wichtig, die richtigen Ziele im Auge zu haben. Wir helfen Ihnen, diese Ziele zu bestimmen und sie effektiv zu erreichen."
             },
             "cost": {
@@ -248,7 +248,7 @@
         "title": "Plattform Engineering",
         "description": "Egal ob public oder private Cloud. Wir unterstützen bei Entwurf, Entwicklung und Betrieb Ihrer Cloud Umgebung.",
         "splash": "Wir entwerfen und implementieren die ideale Cloud Plattform für Sie",
-        "subtitle": "Vertrauen Sie unsere langjährige Erfahrung mit Cloud Computing über alle Industrien hinweg.",
+        "subtitle": "Vertrauen Sie unserer langjährige Erfahrung mit Cloud Computing über alle Industrien hinweg.",
         "essential": {
             "title": "Plattform Engineering ist für Ihr Unternehmen unerlässlich",
             "subtitle": "Eine gut ausgebaute und maßgeschneiderte Infrastruktur kann Ihnen eine Vielzahl von Vorteilen bieten.",
@@ -258,7 +258,7 @@
             },
             "adaptation": {
                 "title": "Reaktion auf Marktveränderungen",
-                "description": "Auf dem dynamischen Markt von heute ist die Fähigkeit zur schnellen Anpassung von entscheidender Bedeutung. Plattform Engineering stattet Ihr Unternehmen mit einem technologischen Framework aus, das neue Tools leicht integrieren und sich an veränderte Marktanforderungen anpassen kann, so dass Sie der Konkurrenz immer einen Schritt voraus sind."
+                "description": "Auf dem dynamischen Markt von heute ist die Fähigkeit zur schnellen Anpassung von entscheidender Bedeutung. Plattform Engineering stattet Ihr Unternehmen mit einem technologischen Framework aus, das neue Tools leicht integrieren und sich an veränderte Marktanforderungen anpassen kann, sodass Sie der Konkurrenz immer einen Schritt voraus sind."
             },
             "complexity": {
                 "title": "Geringere IT-Komplexität",
@@ -313,16 +313,14 @@
                 "amount": "4,35 Mio"
             },
             "human": {
-                "description": "der Attacken, wurden durch menschliche Fehler initiiert",
-                "amount": "82 %"
+                "description": "der Attacken, wurden durch menschliche Fehler initiiert"
             },
             "remediation": {
                 "description": "Durchschnittliche Dauer, bis ein Angriff identifiziert und behoben ist",
                 "amount": "277 Tage"
             },
             "problem": {
-                "description": "hatten eine Datenpanne / haben einen Cloud Audit nicht bestanden",
-                "amount": "45 %"
+                "description": "hatten eine Datenpanne / haben einen Cloud Audit nicht bestanden"
             }
         },
 
@@ -345,7 +343,7 @@
             },
             "cloud": {
                 "title": "Cloud Sicherheit",
-                "description": "Verbessern Sie Ihre Cloud-Sicherheit durch die Implementierung robuster Leitplanken und kontinuierlicher Überwachung aller Cloud-Umgebungen, um Fehlkonfigurationen zu verhindern und die Datenintegrität zu gewährleisten. Unser proaktiver Ansatz minimiert Risiken und optimiert den Cloud-Betrieb, damit Ihre digitalen Assets sicher und konform bleiben"
+                "description": "Verbessern Sie Ihre Cloud-Sicherheit durch die Implementierung robuster Leitplanken und kontinuierlicher Überwachung aller Cloud-Umgebungen, um Fehlkonfigurationen zu verhindern und die Datenintegrität zu gewährleisten. Unser proaktiver Ansatz minimiert Risiken und optimiert den Cloud-Betrieb, damit Ihre digitalen Assets sicher und konform bleiben."
             }
         },
         "enhance-security": "Ihre Sicherheit verbessern"
@@ -449,7 +447,7 @@
 
     "partners": {
         "title": "Unsere Partner",
-        "splash": "Durch unsere Partnerschaften, können wir sogar noch mehr Wert schaffen",
+        "splash": "Durch unsere Partnerschaften können wir noch mehr Wert schaffen",
         "index-subtitle": "Unsere offizielle Partnerschaften ermöglichen es uns, Ihnen eine noch größere Bandbreite an Möglichkeiten zu bieten.",
         "tagline": "In eigenen Worten",
         "what": "Was?",
@@ -459,7 +457,7 @@
             "tagline": "“Der einfachste und sicherste Weg, auf Ihre gesamte Infrastruktur zuzugreifen und sie zu schützen.”",
             "who": "Teleport ist ein etablierter Sicherheitsanbieter, der einen einfachen, aber hochsicheren Zugang zu Ihrer Infrastruktur ermöglicht. Es kann auf jeder Cloud laufen und hat Integrationen mit zahlreichen Tools und Zugangssystemen wie Slack und Microsoft Entra ID.",
             "why": "Teleport kombiniert einen zertifikatsbasierten, passwortlosen Ansatz mit detaillierter Protokollierung und Privilegienanalyse, um Ihre Systeme so gut wie möglich abzusichern - und gleichzeitig das Leben Ihrer Benutzer zu erleichtern.",
-            "us": "Da wir das Produkt sehr gut kennen, können wir Ihnen bei den ersten Schritten helfen, indem wir Ihre Bedürfnisse berücksichtigen und überlegen, welches Abonnement für Sie sinnvoll ist. Außerdem können wir Sie mit der Einrichtung und Integration in Ihre infrastrukturlandschaft unterstützen ."
+            "us": "Da wir das Produkt sehr gut kennen, können wir Ihnen bei den ersten Schritten helfen, indem wir Ihre Bedürfnisse berücksichtigen und überlegen, welches Abonnement für Sie sinnvoll ist. Außerdem können wir Sie mit der Einrichtung und Integration in Ihre Infrastrukturlandschaft unterstützen."
         },
         "microsoft": {
             "tagline": "“Azure. Grenzenlose Innovation.”",
@@ -486,8 +484,8 @@
 
     "contact": {
         "title": "Kontaktieren Sie uns",
-        "header": "Treffen Sie Ihre Technologie Berater!",
-        "index-description": "Wir freuen uns über einen Austausch über eine Cloud Infrastruktur mit der Sie gerne arbeiten.",
+        "header": "Treffen Sie Ihre Technologie-Berater!",
+        "index-description": "Wir freuen uns über einen Austausch über eine Cloud Infrastruktur, mit der Sie gerne arbeiten.",
         "methods": {
             "title": "Oder lassen Sie uns direkt reden!",
             "subtitle": "Unser Team freut sich über einen persönlichen Austausch."
@@ -498,7 +496,7 @@
         },
         "videocall": {
             "title": "Videokonferenz",
-            "description": "Gerne beraten wir Sie persöhnlich in einem ersten kostenlosen Kennenlerngespräch.",
+            "description": "Gerne beraten wir Sie persönlich in einem ersten kostenlosen Kennenlerngespräch.",
             "booknow": "Jetzt buchen"
         },
         "form": {
@@ -732,7 +730,7 @@
         },
         "platforms": {
             "title": "CI/CD-Plattform-Erfahrung",
-            "subtitle": "Wir verfügen über umfangreiche Erfahrung mit gängigen CI/CD-Plattformen, um Ihre Bedürfnisse optimal zu erfüllen.",
+            "subtitle": "Wir verfügen über umfangreiche Erfahrung mit gängigen CI/CD-Plattformen, um Ihre Bedürfnisse optimal zu treffen.",
             "github": {
                 "title": "GitHub Actions ",
                 "description": "Nutzen Sie die integrierte CI/CD-Lösung von GitHub, um Ihren Software-Workflow direkt aus Ihrem Repository zu automatisieren."

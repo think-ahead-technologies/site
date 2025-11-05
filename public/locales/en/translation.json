@@ -312,16 +312,14 @@
                 "amount": "€4.35m"
             },
             "human": {
-                "description": "Attacks enabled by human error",
-                "amount": "82%"
+                "description": "Attacks enabled by human error"
             },
             "remediation": {
                 "description": "to identify and remediate an attack (average)",
                 "amount": "277 days"
             },
             "problem": {
-                "description": "companies with a data breach or failed cloud audit",
-                "amount": "45%"
+                "description": "companies with a data breach or failed cloud audit"
             }
         },
 
